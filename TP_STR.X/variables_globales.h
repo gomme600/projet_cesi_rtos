@@ -87,6 +87,13 @@ unsigned char alarme_active             @0x703;
 //Error
 unsigned char error_active             @0x704;
 
+//4 bytes long
+unsigned int choc_time                 @0x705;
+unsigned char choc_time_1              @0x708;
+unsigned char choc_time_2              @0x707;
+unsigned char choc_time_3              @0x706;
+unsigned char choc_time_4              @0x705;
+
 
 #ifdef	__cplusplus
 }

@@ -9456,6 +9456,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 "88
 [v _error_active `uc ~T0 @X0 1 e@1796 ]
 [; ;variables_globales.h: 88: unsigned char error_active @0x704;
+"91
+[v _choc_time `ui ~T0 @X0 1 e@1797 ]
+[; ;variables_globales.h: 91: unsigned int choc_time @0x705;
+"92
+[v _choc_time_1 `uc ~T0 @X0 1 e@1800 ]
+[; ;variables_globales.h: 92: unsigned char choc_time_1 @0x708;
+"93
+[v _choc_time_2 `uc ~T0 @X0 1 e@1799 ]
+[; ;variables_globales.h: 93: unsigned char choc_time_2 @0x707;
+"94
+[v _choc_time_3 `uc ~T0 @X0 1 e@1798 ]
+[; ;variables_globales.h: 94: unsigned char choc_time_3 @0x706;
+"95
+[v _choc_time_4 `uc ~T0 @X0 1 e@1797 ]
+[; ;variables_globales.h: 95: unsigned char choc_time_4 @0x705;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();

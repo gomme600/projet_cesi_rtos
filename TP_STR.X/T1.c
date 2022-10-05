@@ -141,7 +141,13 @@ void tache1()
         draw_string("alarme_siege=");
         draw_hex8((alarme_active >> 6) & 0x01);
         goto_lico(14,20);
-        draw_string("alarme7=");
-        draw_hex8((alarme_active >> 7) & 0x01);
+        draw_string("erreur_choc=");
+        draw_hex8((error_active >> 2) & 0x01);
+        goto_lico(15,20);
+        draw_string("choc_time=");
+        draw_hex8(choc_time_1);
+        draw_hex8(choc_time_2);
+        draw_hex8(choc_time_3);
+        draw_hex8(choc_time_4);
     }
 }

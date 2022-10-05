@@ -11981,6 +11981,13 @@ unsigned char alarme_active @0x703;
 
 unsigned char error_active @0x704;
 
+
+unsigned int choc_time @0x705;
+unsigned char choc_time_1 @0x708;
+unsigned char choc_time_2 @0x707;
+unsigned char choc_time_3 @0x706;
+unsigned char choc_time_4 @0x705;
+
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
 void write_c_aff(unsigned char command);
@@ -12080,6 +12087,11 @@ while (PIR1bits.TX1IF==0); TXREG1='O';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='U';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='R';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='S';while (TXSTA1bits.TRMT==0);
+
+while (PIR1bits.TX1IF==0); TXREG1=0x0A;while (TXSTA1bits.TRMT==0);
+
+while (PIR1bits.TX1IF==0); TXREG1=0x0d;while (TXSTA1bits.TRMT==0);
+
 
 
 for (a=0;a<65000;a++)

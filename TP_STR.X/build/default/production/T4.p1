@@ -9273,6 +9273,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 "88
 [v _error_active `uc ~T0 @X0 1 e@1796 ]
 [; ;variables_globales.h: 88: unsigned char error_active @0x704;
+"91
+[v _choc_time `ui ~T0 @X0 1 e@1797 ]
+[; ;variables_globales.h: 91: unsigned int choc_time @0x705;
+"92
+[v _choc_time_1 `uc ~T0 @X0 1 e@1800 ]
+[; ;variables_globales.h: 92: unsigned char choc_time_1 @0x708;
+"93
+[v _choc_time_2 `uc ~T0 @X0 1 e@1799 ]
+[; ;variables_globales.h: 93: unsigned char choc_time_2 @0x707;
+"94
+[v _choc_time_3 `uc ~T0 @X0 1 e@1798 ]
+[; ;variables_globales.h: 94: unsigned char choc_time_3 @0x706;
+"95
+[v _choc_time_4 `uc ~T0 @X0 1 e@1797 ]
+[; ;variables_globales.h: 95: unsigned char choc_time_4 @0x705;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9592,29 +9607,55 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 1329 ]
 [e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1330  ]
 [e :U 1331 ]
-[; ;T4.c: 28: for (a=0;a<65000;a++)
-"28
+[; ;T4.c: 27: while (PIR1bits.TX1IF==0); TXREG1=0x0A;while (TXSTA1bits.TRMT==0);
+"27
+[e $U 1332  ]
+[e :U 1333 ]
+[e :U 1332 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1333  ]
+[e :U 1334 ]
+[e = _TXREG1 -> -> 10 `i `uc ]
+[e $U 1335  ]
+[e :U 1336 ]
+[e :U 1335 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1336  ]
+[e :U 1337 ]
+[; ;T4.c: 29: while (PIR1bits.TX1IF==0); TXREG1=0x0d;while (TXSTA1bits.TRMT==0);
+"29
+[e $U 1338  ]
+[e :U 1339 ]
+[e :U 1338 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1339  ]
+[e :U 1340 ]
+[e = _TXREG1 -> -> 13 `i `uc ]
+[e $U 1341  ]
+[e :U 1342 ]
+[e :U 1341 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1342  ]
+[e :U 1343 ]
+[; ;T4.c: 33: for (a=0;a<65000;a++)
+"33
 {
 [e = _a -> -> 0 `i `ui ]
-[e $ < -> _a `l -> 65000 `l 1332  ]
-[e $U 1333  ]
-"29
-[e :U 1332 ]
-[; ;T4.c: 29: ;
-"28
+[e $ < -> _a `l -> 65000 `l 1344  ]
+[e $U 1345  ]
+"34
+[e :U 1344 ]
+[; ;T4.c: 34: ;
+"33
 [e ++ _a -> -> 1 `i `ui ]
-[e $ < -> _a `l -> 65000 `l 1332  ]
-[e :U 1333 ]
-"29
+[e $ < -> _a `l -> 65000 `l 1344  ]
+[e :U 1345 ]
+"34
 }
-"30
+"35
 }
 [e :U 1239 ]
 "6
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;T4.c: 30: }
-[; ;T4.c: 31: }
-"31
+[; ;T4.c: 35: }
+[; ;T4.c: 36: }
+"36
 [e :UE 1238 ]
 }

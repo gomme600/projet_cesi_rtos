@@ -9395,6 +9395,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 "88
 [v _error_active `uc ~T0 @X0 1 e@1796 ]
 [; ;variables_globales.h: 88: unsigned char error_active @0x704;
+"91
+[v _choc_time `ui ~T0 @X0 1 e@1797 ]
+[; ;variables_globales.h: 91: unsigned int choc_time @0x705;
+"92
+[v _choc_time_1 `uc ~T0 @X0 1 e@1800 ]
+[; ;variables_globales.h: 92: unsigned char choc_time_1 @0x708;
+"93
+[v _choc_time_2 `uc ~T0 @X0 1 e@1799 ]
+[; ;variables_globales.h: 93: unsigned char choc_time_2 @0x707;
+"94
+[v _choc_time_3 `uc ~T0 @X0 1 e@1798 ]
+[; ;variables_globales.h: 94: unsigned char choc_time_3 @0x706;
+"95
+[v _choc_time_4 `uc ~T0 @X0 1 e@1797 ]
+[; ;variables_globales.h: 95: unsigned char choc_time_4 @0x705;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9916,21 +9931,39 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T1.c: 143: goto_lico(14,20);
 "143
 [e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 144: draw_string("alarme7=");
+[; ;T1.c: 144: draw_string("erreur_choc=");
 "144
 [e ( _draw_string (1 -> :s 26C `*uc ]
-[; ;T1.c: 145: draw_hex8((alarme_active >> 7) & 0x01);
+[; ;T1.c: 145: draw_hex8((error_active >> 2) & 0x01);
 "145
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 7 `i -> 1 `i `uc ]
+[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 2 `i -> 1 `i `uc ]
+[; ;T1.c: 146: goto_lico(15,20);
 "146
+[e ( _goto_lico (2 , -> -> 15 `i `uc -> -> 20 `i `uc ]
+[; ;T1.c: 147: draw_string("choc_time=");
+"147
+[e ( _draw_string (1 -> :s 27C `*uc ]
+[; ;T1.c: 148: draw_hex8(choc_time_1);
+"148
+[e ( _draw_hex8 (1 _choc_time_1 ]
+[; ;T1.c: 149: draw_hex8(choc_time_2);
+"149
+[e ( _draw_hex8 (1 _choc_time_2 ]
+[; ;T1.c: 150: draw_hex8(choc_time_3);
+"150
+[e ( _draw_hex8 (1 _choc_time_3 ]
+[; ;T1.c: 151: draw_hex8(choc_time_4);
+"151
+[e ( _draw_hex8 (1 _choc_time_4 ]
+"152
 }
 [e :U 1239 ]
 "30
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;T1.c: 146: }
-[; ;T1.c: 147: }
-"147
+[; ;T1.c: 152: }
+[; ;T1.c: 153: }
+"153
 [e :UE 1238 ]
 }
 [a 2C 65 86 0 ]
@@ -9939,12 +9972,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 17C 120 61 0 ]
 [a 19C 97 108 97 114 109 101 95 101 97 117 61 0 ]
 [a 24C 97 108 97 114 109 101 95 102 114 101 105 110 61 0 ]
+[a 27C 99 104 111 99 95 116 105 109 101 61 0 ]
 [a 20C 97 108 97 114 109 101 95 104 117 105 108 101 61 0 ]
 [a 23C 97 108 97 114 109 101 95 99 108 101 61 0 ]
 [a 22C 97 108 97 114 109 101 95 98 97 116 116 101 114 105 101 61 0 ]
 [a 25C 97 108 97 114 109 101 95 115 105 101 103 101 61 0 ]
+[a 26C 101 114 114 101 117 114 95 99 104 111 99 61 0 ]
 [a 21C 97 108 97 114 109 101 95 99 104 111 99 61 0 ]
-[a 26C 97 108 97 114 109 101 55 61 0 ]
 [a 6C 84 101 109 112 46 32 69 97 117 58 0 ]
 [a 16C 89 45 74 111 121 115 116 105 99 107 58 0 ]
 [a 15C 88 45 74 111 121 115 116 105 99 107 58 0 ]

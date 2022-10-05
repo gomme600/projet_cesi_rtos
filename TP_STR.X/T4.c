@@ -23,6 +23,11 @@ void tache4()
         while (PIR1bits.TX1IF==0);   TXREG1='U';while (TXSTA1bits.TRMT==0);
         while (PIR1bits.TX1IF==0);   TXREG1='R';while (TXSTA1bits.TRMT==0);
         while (PIR1bits.TX1IF==0);   TXREG1='S';while (TXSTA1bits.TRMT==0);
+        //New line
+        while (PIR1bits.TX1IF==0);   TXREG1=0x0A;while (TXSTA1bits.TRMT==0);
+        //Carriage return
+        while (PIR1bits.TX1IF==0);   TXREG1=0x0d;while (TXSTA1bits.TRMT==0);
+        
         //RXTX_libre=1;
         //V(SEM_RXTX);
         for (a=0;a<65000;a++)

@@ -11981,6 +11981,13 @@ unsigned char alarme_active @0x703;
 
 unsigned char error_active @0x704;
 
+
+unsigned int choc_time @0x705;
+unsigned char choc_time_1 @0x708;
+unsigned char choc_time_2 @0x707;
+unsigned char choc_time_3 @0x706;
+unsigned char choc_time_4 @0x705;
+
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
 void write_c_aff(unsigned char command);
@@ -12087,56 +12094,65 @@ while(1)
 
 if (PORTBbits.RB2==1 && vitesse>0)
 alarme_active = setBit(alarme_active, 6);
-
 else
 alarme_active = clearBit(alarme_active, 6);
 
-
 if (n_octet_badge==0)
 alarme_active = setBit(alarme_active, 4);
-
 else
 alarme_active = clearBit(alarme_active, 4);
 
-
 if (PORTBbits.RB3==0)
+{
+choc_time++;
+if (choc_time>3000)
 alarme_active = setBit(alarme_active, 2);
-
+if (choc_time>6000)
+error_active = setBit(alarme_active, 2);
+}
 else
-alarme_active = clearBit(alarme_active, 2);
+{
+if (choc_time==0)
+{
 
+
+
+choc_time++;
+}
+
+choc_time--;
+}
 
 if (PORTEbits.RE4==0 && vitesse>0)
 alarme_active = setBit(alarme_active, 5);
-
 else
 alarme_active = clearBit(alarme_active, 5);
 
-
 if (lecture_8bit_analogique(2)>200)
 alarme_active = setBit(alarme_active, 0);
-
 else
 alarme_active = clearBit(alarme_active, 0);
 
-
 if (lecture_8bit_analogique(3)>200)
 alarme_active = setBit(alarme_active, 1);
-
 else
 alarme_active = clearBit(alarme_active, 1);
 
-
 if (batterie<25)
 alarme_active = setBit(alarme_active, 3);
-
 else
 alarme_active = clearBit(alarme_active, 3);
 
 
-
 buz=!buz;
 
+
+
+if (PORTEbits.RE0==0 & PORTEbits.RE1==0)
+{
+alarme_active = 0;
+error_active = 0;
+}
 
 }
 }
