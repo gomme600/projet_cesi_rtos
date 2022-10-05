@@ -9329,6 +9329,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "79
 [v _STKPTR_T6 `uc ~T0 @X0 1 e@1539 ]
 [; ;variables_globales.h: 79: unsigned char STKPTR_T6 @0x603;
+"85
+[v _alarme_active `uc ~T0 @X0 1 e@1795 ]
+[; ;variables_globales.h: 85: unsigned char alarme_active @0x703;
+"88
+[v _error_active `uc ~T0 @X0 1 e@1796 ]
+[; ;variables_globales.h: 88: unsigned char error_active @0x704;
 "22 semaphore.h
 [v _Val_sem_cna `uc ~T0 @X0 1 e ]
 [; ;semaphore.h: 22: unsigned char Val_sem_cna;

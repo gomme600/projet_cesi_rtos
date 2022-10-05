@@ -11975,6 +11975,12 @@ unsigned char STKPTR_T4 @0x403;
 unsigned char STKPTR_T5 @0x503;
 unsigned char STKPTR_T6 @0x603;
 
+# 85
+unsigned char alarme_active @0x703;
+
+
+unsigned char error_active @0x704;
+
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
 void write_c_aff(unsigned char command);
@@ -12167,6 +12173,18 @@ plot1(TP_x,TP_y);
 else
 {
 asm(" nop");
+}
+
+
+if (alarme_active==1)
+{
+goto_lico(11,0);
+draw_string("alarme=1");
+}
+else
+{
+goto_lico(11,0);
+draw_string("alarme=0");
 }
 }
 }

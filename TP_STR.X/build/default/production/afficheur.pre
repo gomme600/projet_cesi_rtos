@@ -11975,6 +11975,12 @@ unsigned char STKPTR_T4 @0x403;
 unsigned char STKPTR_T5 @0x503;
 unsigned char STKPTR_T6 @0x603;
 
+# 85
+unsigned char alarme_active @0x703;
+
+
+unsigned char error_active @0x704;
+
 # 22 "semaphore.h"
 unsigned char Val_sem_cna;
 unsigned char Val_sem_rxtx;

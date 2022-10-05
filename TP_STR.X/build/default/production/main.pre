@@ -11975,6 +11975,12 @@ unsigned char STKPTR_T4 @0x403;
 unsigned char STKPTR_T5 @0x503;
 unsigned char STKPTR_T6 @0x603;
 
+# 85
+unsigned char alarme_active @0x703;
+
+
+unsigned char error_active @0x704;
+
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
 void write_c_aff(unsigned char command);
@@ -12067,6 +12073,26 @@ while(1)
 asm(" nop");
 }
 
+void PWM1_Init(unsigned char period){
+
+
+
+CCP1CON &= 0xCF;
+CCP1CON |= 0x0C;
+
+
+PR2 = period;
+T2CON = 0x02;
+TMR2ON = 1;
+
+}
+
+void PWM1_setDC(unsigned int dutycycle){
+
+CCPR1L = dutycycle>>2;
+CCP1CON &= 0xCF;
+CCP1CON |= ((dutycycle<<4)&0x30);
+}
 
 void initialisation_des_ports()
 {
@@ -12100,8 +12126,17 @@ TRISDbits.TRISD2=0;
 TRISDbits.TRISD3=0;
 
 
+TRISJbits.TRISJ7=0;
+
+
 INTCON2bits.RBPU=0;
 PADCFG1bits.REPU=1;
+
+
+PWM1_Init(0x270);
+
+
+PWM1_setDC(512);
 
 }
 

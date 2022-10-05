@@ -9307,6 +9307,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "79
 [v _STKPTR_T6 `uc ~T0 @X0 1 e@1539 ]
 [; ;variables_globales.h: 79: unsigned char STKPTR_T6 @0x603;
+"85
+[v _alarme_active `uc ~T0 @X0 1 e@1795 ]
+[; ;variables_globales.h: 85: unsigned char alarme_active @0x703;
+"88
+[v _error_active `uc ~T0 @X0 1 e@1796 ]
+[; ;variables_globales.h: 88: unsigned char error_active @0x704;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9418,9 +9424,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;systeme.h: 20: void interrupt fonction_d_interruption();
 [; ;systeme.h: 21: void initialisation_du_systeme();
 "20 systeme.h
-[v F10277 `(v ~T0 @X0 1 tf ]
+[v F10279 `(v ~T0 @X0 1 tf ]
 "18 systeme.c
-[v _fonction_d_interruption `IF10277 ~T0 @X0 1 e ]
+[v _fonction_d_interruption `IF10279 ~T0 @X0 1 e ]
 {
 [; ;systeme.c: 17: void interrupt fonction_d_interruption()
 [; ;systeme.c: 18: {

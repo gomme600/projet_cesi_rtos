@@ -78,8 +78,14 @@ unsigned char STKPTR_T4             @0x403;
 unsigned char STKPTR_T5             @0x503;
 unsigned char STKPTR_T6             @0x603;
 
+//Global sensors and actioners
 
+//A mettre dans externe?
+//Alarm
+unsigned char alarme_active             @0x703;
 
+//Error
+unsigned char error_active             @0x704;
 
 
 #ifdef	__cplusplus

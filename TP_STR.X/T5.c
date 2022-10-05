@@ -1,33 +1,29 @@
 #include "T5.h"
 
+//Alarme
+
+int buz=1;
+
 void tache5()
 {
     unsigned int a;
     while(1)
     {
-        //P(SEM_RXTX);
-        //while(RXTX_libre==0);
-        //RXTX_libre=0;
-        while (PIR1bits.TX1IF==0);   TXREG1='t';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='a';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='c';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='h';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='e';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='5';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='_';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='e';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='n';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='_';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='c';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='o';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='u';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='r';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='s';while (TXSTA1bits.TRMT==0);
-        //RXTX_libre=1;
-        //V(SEM_RXTX);
-        for (a=0;a<65000;a++)
-            ;
-        for (a=0;a<65000;a++)
-            ;
+        
+        //Si personne dans siege et vitesse > 0
+        if (SIEGE==1 && vitesse>0) 
+            alarme_active=1;
+        else
+            alarme_active=0;
+        
+        if (n_octet_badge==0)
+            alarme_active=1;
+        else
+            alarme_active=0;
+        
+        // Buzzer alume
+        buz=!buz;
+        //RJ7=buz;
+        
     }
 }

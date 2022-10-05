@@ -32,6 +32,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1164 . . . . . . ]
 "18388
 [v _INTCONbits `VS1164 ~T0 @X0 0 e@4082 ]
+"14313
+[v _CCP1CON `Vuc ~T0 @X0 0 e@4027 ]
+"16957
+[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
+"16887
+[v _T2CON `Vuc ~T0 @X0 0 e@4042 ]
+"21443
+[v _TMR2ON `Vb ~T0 @X0 0 e@32338 ]
+"14510
+[v _CCPR1L `Vuc ~T0 @X0 0 e@4028 ]
 "1548
 [v _MEMCON `Vuc ~T0 @X0 0 e@3878 ]
 "1416
@@ -140,6 +150,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S724 . . ]
 "11331
 [v _TRISDbits `VS724 ~T0 @X0 0 e@3989 ]
+[s S735 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S735 . TRISJ0 TRISJ1 TRISJ2 TRISJ3 TRISJ4 TRISJ5 TRISJ6 TRISJ7 ]
+[u S734 `S735 1 ]
+[n S734 . . ]
+"11613
+[v _TRISJbits `VS734 ~T0 @X0 0 e@3994 ]
 [s S1161 :7 `uc 1 :1 `uc 1 ]
 [n S1161 . . NOT_RBPU ]
 [s S1162 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -9430,6 +9446,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "79
 [v _STKPTR_T6 `uc ~T0 @X0 1 e@1539 ]
 [; ;variables_globales.h: 79: unsigned char STKPTR_T6 @0x603;
+"85
+[v _alarme_active `uc ~T0 @X0 1 e@1795 ]
+[; ;variables_globales.h: 85: unsigned char alarme_active @0x703;
+"88
+[v _error_active `uc ~T0 @X0 1 e@1796 ]
+[; ;variables_globales.h: 88: unsigned char error_active @0x704;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9577,141 +9599,196 @@ Version 3.2 HI-TECH Software Intermediate Code
 "17
 [e :UE 1238 ]
 }
-"21
-[v _initialisation_des_ports `(v ~T0 @X0 1 ef ]
+"19
+[v _PWM1_Init `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 20: void initialisation_des_ports()
-[; ;main.c: 21: {
-[e :U _initialisation_des_ports ]
+[; ;main.c: 19: void PWM1_Init(unsigned char period){
+[e :U _PWM1_Init ]
+[v _period `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 23: MEMCON=0xA0;
+[; ;main.c: 23: CCP1CON &= 0xCF;
 "23
-[e = _MEMCON -> -> 160 `i `uc ]
-[; ;main.c: 26: ANCON0=0x00;
-"26
-[e = _ANCON0 -> -> 0 `i `uc ]
-[; ;main.c: 27: ANCON1=0x00;
+[e =& _CCP1CON -> -> 207 `i `uc ]
+[; ;main.c: 24: CCP1CON |= 0x0C;
+"24
+[e =| _CCP1CON -> -> 12 `i `uc ]
+[; ;main.c: 27: PR2 = period;
 "27
-[e = _ANCON1 -> -> 0 `i `uc ]
-[; ;main.c: 28: ANCON2=0x00;
+[e = _PR2 _period ]
+[; ;main.c: 28: T2CON = 0x02;
 "28
-[e = _ANCON2 -> -> 0 `i `uc ]
-[; ;main.c: 29: ANCON0bits.ANSEL0=1;
+[e = _T2CON -> -> 2 `i `uc ]
+[; ;main.c: 29: TMR2ON = 1;
 "29
-[e = . . _ANCON0bits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 30: ANCON0bits.ANSEL1=1;
-"30
-[e = . . _ANCON0bits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 31: ANCON0bits.ANSEL2=1;
+[e = _TMR2ON -> -> 1 `i `b ]
+[; ;main.c: 31: }
 "31
-[e = . . _ANCON0bits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 32: ANCON0bits.ANSEL3=1;
-"32
-[e = . . _ANCON0bits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 33: ANCON1bits.ANSEL10=1;
-"33
-[e = . . _ANCON1bits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 34: ANCON1bits.ANSEL11=1;
-"34
-[e = . . _ANCON1bits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 38: LATCbits.LATC2=1;
-"38
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 39: LATCbits.LATC1=1;
-"39
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 40: LATGbits.LATG0=1;
-"40
-[e = . . _LATGbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 43: TRISCbits.TRISC2=0;
-"43
-[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 44: TRISCbits.TRISC1=0;
-"44
-[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 45: TRISGbits.TRISG0=0;
-"45
-[e = . . _TRISGbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 46: TRISGbits.TRISG3=0;
-"46
-[e = . . _TRISGbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 47: TRISGbits.TRISG4=0;
-"47
-[e = . . _TRISGbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 48: TRISDbits.TRISD2=0;
-"48
-[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 49: TRISDbits.TRISD3=0;
-"49
-[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 52: INTCON2bits.RBPU=0;
-"52
-[e = . . _INTCON2bits 2 4 -> -> 0 `i `uc ]
-[; ;main.c: 53: PADCFG1bits.REPU=1;
-"53
-[e = . . _PADCFG1bits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 55: }
-"55
 [e :UE 1242 ]
 }
+"33
+[v _PWM1_setDC `(v ~T0 @X0 1 ef1`ui ]
+{
+[; ;main.c: 33: void PWM1_setDC(unsigned int dutycycle){
+[e :U _PWM1_setDC ]
+[v _dutycycle `ui ~T0 @X0 1 r1 ]
+[f ]
+[; ;main.c: 35: CCPR1L = dutycycle>>2;
+"35
+[e = _CCPR1L -> >> _dutycycle -> 2 `i `uc ]
+[; ;main.c: 36: CCP1CON &= 0xCF;
+"36
+[e =& _CCP1CON -> -> 207 `i `uc ]
+[; ;main.c: 37: CCP1CON |= ((dutycycle<<4)&0x30);
+"37
+[e =| _CCP1CON -> & << _dutycycle -> 4 `i -> -> 48 `i `ui `uc ]
+[; ;main.c: 38: }
+"38
+[e :UE 1243 ]
+}
+"41
+[v _initialisation_des_ports `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 40: void initialisation_des_ports()
+[; ;main.c: 41: {
+[e :U _initialisation_des_ports ]
+[f ]
+[; ;main.c: 43: MEMCON=0xA0;
+"43
+[e = _MEMCON -> -> 160 `i `uc ]
+[; ;main.c: 46: ANCON0=0x00;
+"46
+[e = _ANCON0 -> -> 0 `i `uc ]
+[; ;main.c: 47: ANCON1=0x00;
+"47
+[e = _ANCON1 -> -> 0 `i `uc ]
+[; ;main.c: 48: ANCON2=0x00;
+"48
+[e = _ANCON2 -> -> 0 `i `uc ]
+[; ;main.c: 49: ANCON0bits.ANSEL0=1;
+"49
+[e = . . _ANCON0bits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 50: ANCON0bits.ANSEL1=1;
+"50
+[e = . . _ANCON0bits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 51: ANCON0bits.ANSEL2=1;
+"51
+[e = . . _ANCON0bits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 52: ANCON0bits.ANSEL3=1;
+"52
+[e = . . _ANCON0bits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 53: ANCON1bits.ANSEL10=1;
+"53
+[e = . . _ANCON1bits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 54: ANCON1bits.ANSEL11=1;
+"54
+[e = . . _ANCON1bits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 58: LATCbits.LATC2=1;
 "58
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 59: LATCbits.LATC1=1;
+"59
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 60: LATGbits.LATG0=1;
+"60
+[e = . . _LATGbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 63: TRISCbits.TRISC2=0;
+"63
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 64: TRISCbits.TRISC1=0;
+"64
+[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 65: TRISGbits.TRISG0=0;
+"65
+[e = . . _TRISGbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 66: TRISGbits.TRISG3=0;
+"66
+[e = . . _TRISGbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 67: TRISGbits.TRISG4=0;
+"67
+[e = . . _TRISGbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 68: TRISDbits.TRISD2=0;
+"68
+[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 69: TRISDbits.TRISD3=0;
+"69
+[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 72: TRISJbits.TRISJ7=0;
+"72
+[e = . . _TRISJbits 0 7 -> -> 0 `i `uc ]
+[; ;main.c: 75: INTCON2bits.RBPU=0;
+"75
+[e = . . _INTCON2bits 2 4 -> -> 0 `i `uc ]
+[; ;main.c: 76: PADCFG1bits.REPU=1;
+"76
+[e = . . _PADCFG1bits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 79: PWM1_Init(0x270);
+"79
+[e ( _PWM1_Init (1 -> -> 624 `i `uc ]
+[; ;main.c: 82: PWM1_setDC(512);
+"82
+[e ( _PWM1_setDC (1 -> -> 512 `i `ui ]
+[; ;main.c: 84: }
+"84
+[e :UE 1244 ]
+}
+"87
 [v _lecture_8bit_analogique `(uc ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 57: unsigned char lecture_8bit_analogique(unsigned char channel)
-[; ;main.c: 58: {
+[; ;main.c: 86: unsigned char lecture_8bit_analogique(unsigned char channel)
+[; ;main.c: 87: {
 [e :U _lecture_8bit_analogique ]
 [v _channel `uc ~T0 @X0 1 r1 ]
 [f ]
-"59
+"88
 [v _ret `uc ~T0 @X0 1 a ]
-[; ;main.c: 59: unsigned char ret;
-[; ;main.c: 62: ADCON1=0;
-"62
+[; ;main.c: 88: unsigned char ret;
+[; ;main.c: 91: ADCON1=0;
+"91
 [e = _ADCON1 -> -> 0 `i `uc ]
-[; ;main.c: 63: ADCON2=0x16;
-"63
+[; ;main.c: 92: ADCON2=0x16;
+"92
 [e = _ADCON2 -> -> 22 `i `uc ]
-[; ;main.c: 64: channel=channel&0x1F;
-"64
+[; ;main.c: 93: channel=channel&0x1F;
+"93
 [e = _channel -> & -> _channel `i -> 31 `i `uc ]
-[; ;main.c: 65: channel=channel<<2;
-"65
+[; ;main.c: 94: channel=channel<<2;
+"94
 [e = _channel -> << -> _channel `i -> 2 `i `uc ]
-[; ;main.c: 66: ADCON0=channel|0x01;
-"66
+[; ;main.c: 95: ADCON0=channel|0x01;
+"95
 [e = _ADCON0 -> | -> _channel `i -> 1 `i `uc ]
-[; ;main.c: 68: ADCON0bits.GO=1;
-"68
+[; ;main.c: 97: ADCON0bits.GO=1;
+"97
 [e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
-[; ;main.c: 69: while(ADCON0bits.DONE==1)
-"69
-[e $U 1244  ]
-[e :U 1245 ]
-[; ;main.c: 70: ;
-"70
-[e :U 1244 ]
-"69
-[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 1245  ]
-[e :U 1246 ]
-[; ;main.c: 72: if ((ADRESL&0x01)==0x01)
-"72
-[e $ ! == & -> _ADRESL `i -> 1 `i -> 1 `i 1247  ]
-[; ;main.c: 73: ret=0;
-"73
-[e = _ret -> -> 0 `i `uc ]
-[e $U 1248  ]
-"74
+[; ;main.c: 98: while(ADCON0bits.DONE==1)
+"98
+[e $U 1246  ]
 [e :U 1247 ]
-[; ;main.c: 74: else
-[; ;main.c: 75: ret=ADRESH;
-"75
-[e = _ret _ADRESH ]
+[; ;main.c: 99: ;
+"99
+[e :U 1246 ]
+"98
+[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 1247  ]
 [e :U 1248 ]
-[; ;main.c: 78: return ret;
-"78
+[; ;main.c: 101: if ((ADRESL&0x01)==0x01)
+"101
+[e $ ! == & -> _ADRESL `i -> 1 `i -> 1 `i 1249  ]
+[; ;main.c: 102: ret=0;
+"102
+[e = _ret -> -> 0 `i `uc ]
+[e $U 1250  ]
+"103
+[e :U 1249 ]
+[; ;main.c: 103: else
+[; ;main.c: 104: ret=ADRESH;
+"104
+[e = _ret _ADRESH ]
+[e :U 1250 ]
+[; ;main.c: 107: return ret;
+"107
 [e ) _ret ]
-[e $UE 1243  ]
-[; ;main.c: 79: }
-"79
-[e :UE 1243 ]
+[e $UE 1245  ]
+[; ;main.c: 108: }
+"108
+[e :UE 1245 ]
 }

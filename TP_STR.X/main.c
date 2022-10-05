@@ -16,6 +16,26 @@ void main()
         Nop();
 }
 
+void PWM1_Init(unsigned char period){
+    //TRISJ &=0x7F;           //  Set RC2 as output
+    
+    /* CCP PWM mode */
+    CCP1CON &= 0xCF;        //  5,4 bits zeroed (DC1B1:DC1B0 = 00)
+    CCP1CON |= 0x0C;        //  PWM mode ( CCP1M3:CCP1M0 = 1100)
+    
+    /* Timer2 configuration */
+    PR2 = period;           //  configure timer2 period
+    T2CON = 0x02;           //  Set prescalar 16   
+    TMR2ON = 1;             //  timer2 on
+    
+}
+
+void PWM1_setDC(unsigned int dutycycle){
+    
+    CCPR1L = dutycycle>>2;  //  PWM duty cycle - first 8-bits (MSb)
+    CCP1CON &= 0xCF;        //  5,4 bits zeroed (DC1B1:DC1B0 = 00)
+    CCP1CON |= ((dutycycle<<4)&0x30);  //  PWM duty cycle - last 2-bits (LSb) in CCP1CON 5,4 bits    
+}
 
 void initialisation_des_ports()
 {
@@ -47,11 +67,20 @@ void initialisation_des_ports()
     TRISGbits.TRISG4=0; //DRIVEB en sortie
     TRISDbits.TRISD2=0; //STID_CLOCK en sortie
     TRISDbits.TRISD3=0; //STID_READ en sortie
+    
+// Buzzer en sortie
+    TRISJbits.TRISJ7=0;
 
 // Mise en place des pull up
     INTCON2bits.RBPU=0; // Pull up PORTB activé
     PADCFG1bits.REPU=1; // Pull up PORTE activé
 
+    /*open PWM at 2KHz*/ 
+    PWM1_Init(0x270);
+    
+    /*set duty cycle 0 - 1023 range */
+    PWM1_setDC(512);
+    
 }
 
 unsigned char lecture_8bit_analogique(unsigned char channel)

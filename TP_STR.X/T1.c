@@ -117,5 +117,17 @@ void tache1()
         {
             Nop();
         }
+        
+        //Alarme
+        if (alarme_active==1)
+        {
+            goto_lico(11,0);
+            draw_string("alarme=1");
+        }
+        else
+        {
+            goto_lico(11,0);
+            draw_string("alarme=0");
+        }
     }
 }

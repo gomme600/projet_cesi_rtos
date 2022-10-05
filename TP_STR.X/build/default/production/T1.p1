@@ -9389,6 +9389,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "79
 [v _STKPTR_T6 `uc ~T0 @X0 1 e@1539 ]
 [; ;variables_globales.h: 79: unsigned char STKPTR_T6 @0x603;
+"85
+[v _alarme_active `uc ~T0 @X0 1 e@1795 ]
+[; ;variables_globales.h: 85: unsigned char alarme_active @0x703;
+"88
+[v _error_active `uc ~T0 @X0 1 e@1796 ]
+[; ;variables_globales.h: 88: unsigned char error_active @0x704;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9843,16 +9849,48 @@ Version 3.2 HI-TECH Software Intermediate Code
 "119
 }
 [e :U 1263 ]
-"120
+[; ;T1.c: 119: }
+[; ;T1.c: 122: if (alarme_active==1)
+"122
+[e $ ! == -> _alarme_active `i -> 1 `i 1264  ]
+[; ;T1.c: 123: {
+"123
+{
+[; ;T1.c: 124: goto_lico(11,0);
+"124
+[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 0 `i `uc ]
+[; ;T1.c: 125: draw_string("alarme=1");
+"125
+[e ( _draw_string (1 -> :s 19C `*uc ]
+"126
+}
+[; ;T1.c: 126: }
+[e $U 1265  ]
+"127
+[e :U 1264 ]
+[; ;T1.c: 127: else
+[; ;T1.c: 128: {
+"128
+{
+[; ;T1.c: 129: goto_lico(11,0);
+"129
+[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 0 `i `uc ]
+[; ;T1.c: 130: draw_string("alarme=0");
+"130
+[e ( _draw_string (1 -> :s 20C `*uc ]
+"131
+}
+[e :U 1265 ]
+"132
 }
 [e :U 1239 ]
 "30
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;T1.c: 119: }
-[; ;T1.c: 120: }
-[; ;T1.c: 121: }
-"121
+[; ;T1.c: 131: }
+[; ;T1.c: 132: }
+[; ;T1.c: 133: }
+"133
 [e :UE 1238 ]
 }
 [a 2C 65 86 0 ]
@@ -9869,6 +9907,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 5C 83 105 101 103 101 58 0 ]
 [a 13C 66 97 100 103 101 58 0 ]
 [a 8C 67 104 111 99 58 0 ]
+[a 19C 97 108 97 114 109 101 61 49 0 ]
+[a 20C 97 108 97 114 109 101 61 48 0 ]
 [a 11C 40 40 33 41 41 0 ]
 [a 4C 78 32 0 ]
 [a 14C 32 65 85 67 85 78 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
