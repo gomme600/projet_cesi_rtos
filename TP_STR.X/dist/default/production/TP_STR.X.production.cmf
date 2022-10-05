@@ -1,0 +1,1501 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+idloc IDLOC 0 200000 200000 8 1
+stack STACK 2 642 642 8D4 1
+init CODE 0 342 342 4 1
+reset_vec CODE 0 0 0 4 1
+end_init CODE 0 346 346 4 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/production\TP_STR.X.production.obj
+cinit CODE 0 2178 2178 10 1
+text0 CODE 0 2130 2130 18 1
+text1 CODE 0 13AA 13AA 266 1
+text2 CODE 0 1E28 1E28 4C 1
+text3 CODE 0 20BC 20BC 20 1
+text5 CODE 0 202E 202E 28 1
+text6 CODE 0 1A40 1A40 AE 1
+text7 CODE 0 2148 2148 18 1
+text8 CODE 0 1708 1708 E8 1
+text9 CODE 0 17F0 17F0 CE 1
+nvCOMRAM COMRAM 1 29 29 8 1
+text10 CODE 0 198A 198A B6 1
+text11 CODE 0 1610 1610 F8 1
+text12 CODE 0 2160 2160 18 1
+text13 CODE 0 1CE4 1CE4 52 1
+text14 CODE 0 109A 109A 310 1
+text15 CODE 0 1E74 1E74 4C 1
+text16 CODE 0 20DC 20DC 20 1
+text17 CODE 0 1AEE 1AEE A6 1
+text18 CODE 0 1C18 1C18 70 1
+text19 CODE 0 1B94 1B94 84 1
+text20 CODE 0 1F3A 1F3A 36 1
+text21 CODE 0 18BE 18BE CC 1
+text22 CODE 0 2056 2056 22 1
+text23 CODE 0 2002 2002 2C 1
+text24 CODE 0 2078 2078 22 1
+text25 CODE 0 1D88 1D88 50 1
+text26 CODE 0 1EC0 1EC0 40 1
+text27 CODE 0 1C88 1C88 5C 1
+text28 CODE 0 1F70 1F70 32 1
+text29 CODE 0 1FA2 1FA2 30 1
+text30 CODE 0 1FD2 1FD2 30 1
+text31 CODE 0 1DD8 1DD8 50 1
+text32 CODE 0 1F00 1F00 3A 1
+text33 CODE 0 20FC 20FC 1A 1
+text34 CODE 0 2116 2116 1A 1
+text35 CODE 0 1D36 1D36 52 1
+text36 CODE 0 209A 209A 22 1
+cstackCOMRAM COMRAM 1 1 1 1C 1
+temp COMRAM 1 1D 1D C 1
+intcode CODE 0 8 8 33A 1
+smallconst SMALLCONST 0 1000 1000 9A 1
+bssCOMRAM COMRAM 1 31 31 5 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 81-FF 1
+RAM 142-1FF 1
+RAM 242-2FF 1
+RAM 342-3FF 1
+RAM 442-4FF 1
+RAM 542-5FF 1
+RAM 642-F15 1
+SFR F16-FFF 1
+BANK0 81-FF 1
+BANK1 142-1FF 1
+BANK2 242-2FF 1
+BANK3 342-3FF 1
+BANK4 442-4FF 1
+BANK5 542-5FF 1
+BANK6 642-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST 34A-FFF 1
+CONST 2188-1FFFF 1
+SMALLCONST 2188-1FFFF 1
+CODE 4-7 1
+CODE 34A-FFF 1
+CODE 2188-1FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-F15 1
+BIGRAM 36-5F 1
+BIGRAM 81-FF 1
+BIGRAM 142-1FF 1
+BIGRAM 242-2FF 1
+BIGRAM 342-3FF 1
+BIGRAM 442-4FF 1
+BIGRAM 542-5FF 1
+BIGRAM 642-F15 1
+COMRAM 36-5F 1
+EEDATA F00000-F003FF 1
+MEDIUMCONST 2188-FFFF 1
+MEDIUMCONST 11000-1FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\TP_STR.X.production.obj
+8 intcode CODE >18:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+8 intcode CODE >17:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+34 intcode CODE >20:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+40 intcode CODE >21:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+48 intcode CODE >24:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+4E intcode CODE >26:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+56 intcode CODE >28:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+5A intcode CODE >29:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+60 intcode CODE >34:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+64 intcode CODE >35:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+68 intcode CODE >36:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+78 intcode CODE >37:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+88 intcode CODE >38:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+98 intcode CODE >39:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+A8 intcode CODE >40:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+B0 intcode CODE >44:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+B4 intcode CODE >45:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+B8 intcode CODE >46:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+C8 intcode CODE >47:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+D8 intcode CODE >48:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+E8 intcode CODE >49:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+F8 intcode CODE >51:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+108 intcode CODE >52:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+118 intcode CODE >53:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+128 intcode CODE >54:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+138 intcode CODE >56:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+148 intcode CODE >57:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+158 intcode CODE >58:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+168 intcode CODE >59:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+178 intcode CODE >62:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+180 intcode CODE >63:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+182 intcode CODE >65:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+188 intcode CODE >67:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+18C intcode CODE >68:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+196 intcode CODE >69:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+19C intcode CODE >70:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1B4 intcode CODE >75:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1B8 intcode CODE >76:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1BC intcode CODE >77:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1C0 intcode CODE >78:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1C4 intcode CODE >79:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1D4 intcode CODE >80:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1E4 intcode CODE >81:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1F4 intcode CODE >82:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+204 intcode CODE >84:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+214 intcode CODE >85:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+224 intcode CODE >86:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+234 intcode CODE >87:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+244 intcode CODE >89:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+254 intcode CODE >90:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+264 intcode CODE >91:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+274 intcode CODE >92:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+284 intcode CODE >96:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+288 intcode CODE >97:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+28C intcode CODE >99:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+29C intcode CODE >100:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+2AC intcode CODE >101:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+2BC intcode CODE >102:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+2CC intcode CODE >103:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+2D4 intcode CODE >106:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+2E0 intcode CODE >107:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+2E8 intcode CODE >109:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+2EA intcode CODE >116:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+2F6 intcode CODE >117:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+2FE intcode CODE >119:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+300 intcode CODE >123:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+304 intcode CODE >124:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+308 intcode CODE >125:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+30C intcode CODE >126:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+310 intcode CODE >127:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+314 intcode CODE >128:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+318 intcode CODE >129:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+209A text36 CODE >154:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+209C text36 CODE >157:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+209E text36 CODE >159:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+20B2 text36 CODE >160:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+20B4 text36 CODE >157:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D36 text35 CODE >53:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D36 text35 CODE >57:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D3A text35 CODE >58:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D3E text35 CODE >59:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D3E text35 CODE >61:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D40 text35 CODE >62:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D42 text35 CODE >63:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D44 text35 CODE >64:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D46 text35 CODE >65:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D48 text35 CODE >66:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D4C text35 CODE >67:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D4E text35 CODE >68:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D50 text35 CODE >70:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D56 text35 CODE >71:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D5E text35 CODE >73:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D60 text35 CODE >74:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D66 text35 CODE >75:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D6C text35 CODE >77:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D6E text35 CODE >78:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D74 text35 CODE >79:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D78 text35 CODE >84:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D7C text35 CODE >59:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D84 text35 CODE >87:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2116 text34 CODE >17:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2116 text34 CODE >18:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2118 text34 CODE >19:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+211C text34 CODE >20:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2120 text34 CODE >21:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2122 text34 CODE >22:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2124 text34 CODE >23:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2126 text34 CODE >24:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2128 text34 CODE >25:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+212A text34 CODE >26:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+212C text34 CODE >27:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+212E text34 CODE >28:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+20FC text33 CODE >4:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+20FE text33 CODE >6:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2102 text33 CODE >7:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2106 text33 CODE >8:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2108 text33 CODE >9:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+210A text33 CODE >10:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+210C text33 CODE >11:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+210E text33 CODE >12:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2110 text33 CODE >13:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2112 text33 CODE >14:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2114 text33 CODE >15:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F00 text32 CODE >106:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F02 text32 CODE >110:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F06 text32 CODE >112:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F10 text32 CODE >114:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F16 text32 CODE >115:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F1C text32 CODE >116:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F26 text32 CODE >118:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F2C text32 CODE >119:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F32 text32 CODE >121:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F36 text32 CODE >125:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DD8 text31 CODE >128:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DDA text31 CODE >132:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DDE text31 CODE >134:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DE8 text31 CODE >136:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DEE text31 CODE >137:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DF4 text31 CODE >138:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DFE text31 CODE >140:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1E04 text31 CODE >141:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1E0A text31 CODE >142:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1E14 text31 CODE >144:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1E1A text31 CODE >145:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1E20 text31 CODE >147:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1E24 text31 CODE >151:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1FD2 text30 CODE >298:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1FD2 text30 CODE >302:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1FE0 text30 CODE >303:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1FF2 text30 CODE >305:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1FFC text30 CODE >303:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1FA2 text29 CODE >287:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1FA2 text29 CODE >291:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1FB0 text29 CODE >292:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1FC2 text29 CODE >294:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1FCC text29 CODE >292:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F70 text28 CODE >228:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F72 text28 CODE >230:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F78 text28 CODE >232:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F7C text28 CODE >234:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F82 text28 CODE >236:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F86 text28 CODE >238:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F8C text28 CODE >239:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1C88 text27 CODE >253:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1C8A text27 CODE >257:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1C90 text27 CODE >258:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1C96 text27 CODE >259:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1C9C text27 CODE >261:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1CA2 text27 CODE >262:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1CA4 text27 CODE >263:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1CA6 text27 CODE >262:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1CB6 text27 CODE >265:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1CBC text27 CODE >266:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1CC2 text27 CODE >267:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1CC8 text27 CODE >269:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1CCE text27 CODE >270:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1CD0 text27 CODE >271:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1CD2 text27 CODE >270:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1EC0 text26 CODE >243:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1EC0 text26 CODE >245:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1EC2 text26 CODE >247:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1EC2 text26 CODE >248:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1EC4 text26 CODE >247:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1EE4 text26 CODE >249:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1EE8 text26 CODE >245:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D88 text25 CODE >275:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D8A text25 CODE >279:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D92 text25 CODE >280:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1D9C text25 CODE >281:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DA6 text25 CODE >282:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DBE text25 CODE >283:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DC0 text25 CODE >284:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1DC2 text25 CODE >283:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2078 text24 CODE >4:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+2078 text24 CODE >6:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+207A text24 CODE >7:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+207C text24 CODE >8:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+2080 text24 CODE >9:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+2084 text24 CODE >10:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+2088 text24 CODE >11:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+208C text24 CODE >12:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+2090 text24 CODE >13:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+2094 text24 CODE >14:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+2098 text24 CODE >15:C:\Users\Franck\MPLABXProjects\TP_STR.X\rxtx.c
+2002 text23 CODE >30:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2002 text23 CODE >35:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2004 text23 CODE >36:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2006 text23 CODE >37:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2008 text23 CODE >38:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+200A text23 CODE >39:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+200C text23 CODE >40:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+200E text23 CODE >41:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2010 text23 CODE >42:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2014 text23 CODE >43:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2016 text23 CODE >44:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2018 text23 CODE >46:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2022 text23 CODE >47:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2026 text23 CODE >49:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+202A text23 CODE >50:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2056 text22 CODE >90:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2058 text22 CODE >94:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+205C text22 CODE >96:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2066 text22 CODE >98:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+206C text22 CODE >99:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2072 text22 CODE >100:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+2076 text22 CODE >101:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18BE text21 CODE >164:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18BE text21 CODE >169:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18C2 text21 CODE >172:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18C6 text21 CODE >173:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18CA text21 CODE >176:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18CE text21 CODE >177:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18D2 text21 CODE >180:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18D4 text21 CODE >181:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18D6 text21 CODE >184:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18D8 text21 CODE >185:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18DE text21 CODE >186:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18E0 text21 CODE >190:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18E6 text21 CODE >191:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18E8 text21 CODE >193:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18EA text21 CODE >194:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18F0 text21 CODE >195:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18F6 text21 CODE >197:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18FC text21 CODE >198:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+18FE text21 CODE >199:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1900 text21 CODE >191:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+190A text21 CODE >205:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1918 text21 CODE >206:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1926 text21 CODE >207:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1934 text21 CODE >210:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1942 text21 CODE >211:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1950 text21 CODE >212:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+195E text21 CODE >213:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+196C text21 CODE >216:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1972 text21 CODE >219:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1978 text21 CODE >222:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+197E text21 CODE >225:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1988 text21 CODE >226:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1F3A text20 CODE >57:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F3C text20 CODE >62:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F40 text20 CODE >63:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F44 text20 CODE >64:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F4A text20 CODE >65:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F52 text20 CODE >66:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F58 text20 CODE >68:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F5A text20 CODE >69:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F5A text20 CODE >70:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F5E text20 CODE >72:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F62 text20 CODE >73:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F68 text20 CODE >74:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F68 text20 CODE >75:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1F6C text20 CODE >78:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1B94 text19 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1B94 text19 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1B98 text19 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1B9C text19 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BA4 text19 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BA8 text19 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BAC text19 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BB4 text19 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BB8 text19 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BC0 text19 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BC8 text19 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BCC text19 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BCE text19 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BD4 text19 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BD6 text19 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BDA text19 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BE0 text19 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BEC text19 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BF4 text19 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BF6 text19 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1BFC text19 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1C00 text19 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1C06 text19 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1C0E text19 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+1C18 text18 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C18 text18 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C1C text18 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C20 text18 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C28 text18 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C2C text18 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C30 text18 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C38 text18 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C40 text18 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C44 text18 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C46 text18 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C4C text18 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C4E text18 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C52 text18 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C5E text18 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C66 text18 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C6C text18 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C70 text18 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C76 text18 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1C7E text18 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+1AEE text17 CODE >320:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1AF0 text17 CODE >324:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1B12 text17 CODE >325:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1B20 text17 CODE >327:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1B22 text17 CODE >330:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1B2A text17 CODE >331:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1B32 text17 CODE >332:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1B3A text17 CODE >333:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1B42 text17 CODE >334:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1B4A text17 CODE >335:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1B50 text17 CODE >337:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+1B52 text17 CODE >327:C:\Users\Franck\MPLABXProjects\TP_STR.X\afficheur.c
+20DC text16 CODE >4:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20DE text16 CODE >6:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20E0 text16 CODE >9:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20E4 text16 CODE >10:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20E6 text16 CODE >12:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20EA text16 CODE >17:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20EC text16 CODE >6:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+1E74 text15 CODE >20:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E74 text15 CODE >23:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E7A text15 CODE >26:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E80 text15 CODE >27:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E86 text15 CODE >28:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E8C text15 CODE >29:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E90 text15 CODE >30:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E94 text15 CODE >31:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E98 text15 CODE >32:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E9C text15 CODE >33:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EA0 text15 CODE >34:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EA4 text15 CODE >38:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EA6 text15 CODE >39:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EA8 text15 CODE >40:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EAA text15 CODE >43:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EAC text15 CODE >44:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EAE text15 CODE >45:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EB0 text15 CODE >46:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EB2 text15 CODE >47:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EB4 text15 CODE >48:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EB6 text15 CODE >49:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EB8 text15 CODE >52:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EBA text15 CODE >53:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1EBE text15 CODE >55:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+109A text14 CODE >3:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+109A text14 CODE >7:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+109C text14 CODE >8:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10A0 text14 CODE >9:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10A4 text14 CODE >10:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10A8 text14 CODE >11:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10AC text14 CODE >12:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10B0 text14 CODE >13:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10B6 text14 CODE >14:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10BC text14 CODE >15:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10C0 text14 CODE >16:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10C2 text14 CODE >18:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10C8 text14 CODE >20:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10CE text14 CODE >21:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10D4 text14 CODE >22:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+10DA text14 CODE >24:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1102 text14 CODE >25:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+112A text14 CODE >26:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1152 text14 CODE >28:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1158 text14 CODE >30:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1158 text14 CODE >33:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1162 text14 CODE >34:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+116E text14 CODE >35:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1172 text14 CODE >36:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1180 text14 CODE >37:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1180 text14 CODE >38:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1184 text14 CODE >39:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1192 text14 CODE >41:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+119E text14 CODE >43:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+11A8 text14 CODE >44:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+11B4 text14 CODE >45:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+11B8 text14 CODE >46:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+11CC text14 CODE >48:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+11DE text14 CODE >50:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+11E8 text14 CODE >51:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+11F4 text14 CODE >52:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+11FE text14 CODE >54:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1208 text14 CODE >55:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1214 text14 CODE >56:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+121E text14 CODE >58:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1228 text14 CODE >59:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1234 text14 CODE >60:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1238 text14 CODE >61:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1240 text14 CODE >63:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1246 text14 CODE >65:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1250 text14 CODE >66:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+125C text14 CODE >67:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1260 text14 CODE >68:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1264 text14 CODE >69:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1268 text14 CODE >70:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+126C text14 CODE >71:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1274 text14 CODE >73:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+127E text14 CODE >74:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+128A text14 CODE >75:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+128E text14 CODE >76:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1292 text14 CODE >77:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1296 text14 CODE >78:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+129A text14 CODE >79:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+12A2 text14 CODE >81:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+12AC text14 CODE >82:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+12B0 text14 CODE >83:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+12BE text14 CODE >85:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+12CA text14 CODE >87:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+12D4 text14 CODE >88:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+12E0 text14 CODE >89:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+12E8 text14 CODE >90:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+12F6 text14 CODE >93:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+12FC text14 CODE >95:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1312 text14 CODE >93:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+131E text14 CODE >99:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1328 text14 CODE >100:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1334 text14 CODE >101:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+133E text14 CODE >103:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1348 text14 CODE >104:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1354 text14 CODE >105:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+135E text14 CODE >107:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1366 text14 CODE >109:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1370 text14 CODE >110:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+137C text14 CODE >111:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1384 text14 CODE >112:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1390 text14 CODE >113:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1398 text14 CODE >114:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+13A4 text14 CODE >115:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+13A6 text14 CODE >116:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+13A6 text14 CODE >118:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+13A8 text14 CODE >30:C:\Users\Franck\MPLABXProjects\TP_STR.X\T1.c
+1CE4 text13 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1CE4 text13 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1CEC text13 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1CF4 text13 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1CF8 text13 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1CFA text13 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D00 text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D02 text13 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D06 text13 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D0C text13 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D18 text13 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D20 text13 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D22 text13 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D28 text13 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D2C text13 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D2C text13 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+1D34 text13 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+2160 text12 CODE >82:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+2160 text12 CODE >84:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+2162 text12 CODE >86:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+2168 text12 CODE >87:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+216E text12 CODE >84:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1610 text11 CODE >3:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1610 text11 CODE >8:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1614 text11 CODE >12:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1616 text11 CODE >13:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1618 text11 CODE >14:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1624 text11 CODE >18:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1628 text11 CODE >19:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+162C text11 CODE >20:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1630 text11 CODE >21:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1630 text11 CODE >22:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1634 text11 CODE >23:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1638 text11 CODE >24:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+163C text11 CODE >28:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1650 text11 CODE >31:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1656 text11 CODE >33:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1658 text11 CODE >34:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+165A text11 CODE >35:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1666 text11 CODE >39:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+166A text11 CODE >40:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+166E text11 CODE >41:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1672 text11 CODE >42:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1672 text11 CODE >43:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1676 text11 CODE >44:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+167A text11 CODE >45:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+167E text11 CODE >49:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1692 text11 CODE >51:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1698 text11 CODE >53:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+16A4 text11 CODE >54:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+16B0 text11 CODE >55:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+16BC text11 CODE >56:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+16C8 text11 CODE >58:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+16E2 text11 CODE >59:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1700 text11 CODE >68:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1702 text11 CODE >72:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+1706 text11 CODE >74:C:\Users\Franck\MPLABXProjects\TP_STR.X\T2.c
+198A text10 CODE >3:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+198A text10 CODE >7:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+1992 text10 CODE >9:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+19A2 text10 CODE >11:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+19B2 text10 CODE >13:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+19B4 text10 CODE >15:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+19C4 text10 CODE >17:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+19C6 text10 CODE >21:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+19CE text10 CODE >23:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+19DE text10 CODE >25:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+19EE text10 CODE >27:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+19F0 text10 CODE >29:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+1A00 text10 CODE >31:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+1A02 text10 CODE >35:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+1A0A text10 CODE >37:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+1A1A text10 CODE >39:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+1A2A text10 CODE >41:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+1A2C text10 CODE >43:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+1A3C text10 CODE >45:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+1A3E text10 CODE >5:C:\Users\Franck\MPLABXProjects\TP_STR.X\T3.c
+17F0 text9 CODE >3:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+17F0 text9 CODE >11:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+17FC text9 CODE >12:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1808 text9 CODE >13:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1814 text9 CODE >14:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1820 text9 CODE >15:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+182C text9 CODE >16:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1838 text9 CODE >17:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1844 text9 CODE >18:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1850 text9 CODE >19:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+185C text9 CODE >20:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1868 text9 CODE >21:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1874 text9 CODE >22:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1880 text9 CODE >23:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+188C text9 CODE >24:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1898 text9 CODE >25:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+18A4 text9 CODE >28:C:\Users\Franck\MPLABXProjects\TP_STR.X\T4.c
+1708 text8 CODE >3:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+1708 text8 CODE >11:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+1714 text8 CODE >12:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+1720 text8 CODE >13:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+172C text8 CODE >14:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+1738 text8 CODE >15:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+1744 text8 CODE >16:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+1750 text8 CODE >17:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+175C text8 CODE >18:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+1768 text8 CODE >19:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+1774 text8 CODE >20:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+1780 text8 CODE >21:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+178C text8 CODE >22:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+1798 text8 CODE >23:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+17A4 text8 CODE >24:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+17B0 text8 CODE >25:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+17BC text8 CODE >28:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+17D6 text8 CODE >30:C:\Users\Franck\MPLABXProjects\TP_STR.X\T5.c
+2148 text7 CODE >56:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+2148 text7 CODE >58:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+214A text7 CODE >60:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+2150 text7 CODE >61:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+2156 text7 CODE >58:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A40 text6 CODE >5:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A40 text6 CODE >9:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A42 text6 CODE >10:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A44 text6 CODE >11:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A46 text6 CODE >12:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A52 text6 CODE >13:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A54 text6 CODE >14:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A58 text6 CODE >17:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A64 text6 CODE >18:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A66 text6 CODE >19:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A6A text6 CODE >20:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A6E text6 CODE >22:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A74 text6 CODE >24:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A78 text6 CODE >26:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A7C text6 CODE >27:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A80 text6 CODE >28:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A80 text6 CODE >30:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A84 text6 CODE >31:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A90 text6 CODE >32:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A90 text6 CODE >33:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A94 text6 CODE >34:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1A9A text6 CODE >35:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1AA0 text6 CODE >36:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1AAC text6 CODE >37:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1AAE text6 CODE >38:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1ABA text6 CODE >39:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1ABC text6 CODE >40:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1AC8 text6 CODE >31:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1ACC text6 CODE >42:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1AE0 text6 CODE >43:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1AE2 text6 CODE >45:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1AE6 text6 CODE >47:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1AE8 text6 CODE >48:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+1AEA text6 CODE >51:C:\Users\Franck\MPLABXProjects\TP_STR.X\stid.c
+202E text5 CODE >3:C:\Users\Franck\MPLABXProjects\TP_STR.X\T6.c
+202E text5 CODE >8:C:\Users\Franck\MPLABXProjects\TP_STR.X\T6.c
+203C text5 CODE >9:C:\Users\Franck\MPLABXProjects\TP_STR.X\T6.c
+2042 text5 CODE >11:C:\Users\Franck\MPLABXProjects\TP_STR.X\T6.c
+2048 text5 CODE >13:C:\Users\Franck\MPLABXProjects\TP_STR.X\T6.c
+204C text5 CODE >14:C:\Users\Franck\MPLABXProjects\TP_STR.X\T6.c
+204E text5 CODE >22:C:\Users\Franck\MPLABXProjects\TP_STR.X\T6.c
+2054 text5 CODE >6:C:\Users\Franck\MPLABXProjects\TP_STR.X\T6.c
+20BC text3 CODE >4:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20BE text3 CODE >6:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20C0 text3 CODE >9:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20C4 text3 CODE >10:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20C6 text3 CODE >12:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20CA text3 CODE >17:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+20CC text3 CODE >6:C:\Users\Franck\MPLABXProjects\TP_STR.X\semaphore.c
+1E28 text2 CODE >20:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E28 text2 CODE >23:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E2E text2 CODE >26:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E34 text2 CODE >27:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E3A text2 CODE >28:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E40 text2 CODE >29:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E44 text2 CODE >30:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E48 text2 CODE >31:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E4C text2 CODE >32:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E50 text2 CODE >33:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E54 text2 CODE >34:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E58 text2 CODE >38:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E5A text2 CODE >39:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E5C text2 CODE >40:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E5E text2 CODE >43:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E60 text2 CODE >44:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E62 text2 CODE >45:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E64 text2 CODE >46:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E66 text2 CODE >47:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E68 text2 CODE >48:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E6A text2 CODE >49:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E6C text2 CODE >52:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E6E text2 CODE >53:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+1E72 text2 CODE >55:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+13AA text1 CODE >131:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13AA text1 CODE >135:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13B0 text1 CODE >138:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13B6 text1 CODE >139:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13BC text1 CODE >140:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13C2 text1 CODE >141:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13C8 text1 CODE >142:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13CE text1 CODE >143:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13D4 text1 CODE >145:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13DA text1 CODE >146:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13F2 text1 CODE >151:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+13F6 text1 CODE >155:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1446 text1 CODE >156:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1496 text1 CODE >157:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+14E6 text1 CODE >158:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1536 text1 CODE >159:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1586 text1 CODE >160:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+15D6 text1 CODE >162:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+15DA text1 CODE >165:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+15E0 text1 CODE >166:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+15E6 text1 CODE >167:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+15EC text1 CODE >168:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+15F2 text1 CODE >169:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+15F8 text1 CODE >170:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+15FE text1 CODE >173:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+1608 text1 CODE >175:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+160C text1 CODE >176:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+160E text1 CODE >177:C:\Users\Franck\MPLABXProjects\TP_STR.X\systeme.c
+2178 cinit CODE >7526:C:\Users\Franck\AppData\Local\Temp\sdbc.
+2178 cinit CODE >7528:C:\Users\Franck\AppData\Local\Temp\sdbc.
+2178 cinit CODE >7531:C:\Users\Franck\AppData\Local\Temp\sdbc.
+2178 cinit CODE >7550:C:\Users\Franck\AppData\Local\Temp\sdbc.
+217A cinit CODE >7551:C:\Users\Franck\AppData\Local\Temp\sdbc.
+217C cinit CODE >7552:C:\Users\Franck\AppData\Local\Temp\sdbc.
+217E cinit CODE >7553:C:\Users\Franck\AppData\Local\Temp\sdbc.
+2180 cinit CODE >7554:C:\Users\Franck\AppData\Local\Temp\sdbc.
+2182 cinit CODE >7560:C:\Users\Franck\AppData\Local\Temp\sdbc.
+2182 cinit CODE >7562:C:\Users\Franck\AppData\Local\Temp\sdbc.
+2184 cinit CODE >7563:C:\Users\Franck\AppData\Local\Temp\sdbc.
+2130 text0 CODE >18721:C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f87k22.h
+2130 text0 CODE >3:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+2130 text0 CODE >5:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+2134 text0 CODE >6:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+2138 text0 CODE >7:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+213E text0 CODE >10:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+2140 text0 CODE >11:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+2142 text0 CODE >12:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+2144 text0 CODE >16:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+2146 text0 CODE >15:C:\Users\Franck\MPLABXProjects\TP_STR.X\main.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___awdiv@counter 5 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__size_of_clear_text 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_wait_status_ok 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\TP_STR.X.production.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hspace_1 36 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hspace_2 F16 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_draw_string 1EC0 0 CODE 0 text26 dist/default/production\TP_STR.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\TP_STR.X.production.obj
+plot1@add A 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+lecture_normale@stid_id 3 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\TP_STR.X.production.obj
+_TBLPTRH FF7 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TBLPTRL FF6 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TBLPTRU FF8 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_tc 31 0 COMRAM 1 bssCOMRAM dist/default/production\TP_STR.X.production.obj
+_stid_delai_us 2148 0 CODE 0 text7 dist/default/production\TP_STR.X.production.obj
+__size_of_initialisation_du_systeme 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_delai_us_char 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+i2Init@sem 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__Lsmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production\TP_STR.X.production.obj
+_Init 20BC 0 CODE 0 text3 dist/default/production\TP_STR.X.production.obj
+_LATH F90 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_LATJ F91 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_T0IE 7F95 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_T0IF 7F92 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TMR0 FD6 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TOSH FFE 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TOSL FFD 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TOSU FFF 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TP_x 67 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_TP_y 68 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_WREG FE8 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+___sp 642 0 STACK 2 stack C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+_fptr 29 0 COMRAM 1 nvCOMRAM dist/default/production\TP_STR.X.production.obj
+_main 2130 0 CODE 0 text0 dist/default/production\TP_STR.X.production.obj
+btemp 1D 0 COMRAM 1 temp dist/default/production\TP_STR.X.production.obj
+_fonction_d_interruption 8 0 CODE 0 intcode dist/default/production\TP_STR.X.production.obj
+start 342 0 CODE 0 init C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+__size_of___awdiv 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of___awmod 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_write_c_aff 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_write_d_aff 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_Init 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+i2_Init 20DC 0 CODE 0 text16 dist/default/production\TP_STR.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__end_ofi2_initialisation_des_ports 1EC0 0 CODE 0 text15 dist/default/production\TP_STR.X.production.obj
+__CFG_WDTEN$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\TP_STR.X.production.obj
+__end_of_fonction_d_interruption 342 0 CODE 0 intcode dist/default/production\TP_STR.X.production.obj
+__CFG_DEBUG$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__end_of_initialisation_des_ports 1E74 0 CODE 0 text2 dist/default/production\TP_STR.X.production.obj
+__size_of_lecture_normale 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_DEMARRAGE 65 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+__CFG_CCP2MX$PORTBE 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hpowerup 342 0 CODE 0 powerup dist/default/production\TP_STR.X.production.obj
+__end_of_d2command 1E28 0 CODE 0 text31 dist/default/production\TP_STR.X.production.obj
+___awmod@sign 6 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+_T0CONbits FD5 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_d2command 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\TP_STR.X.production.obj
+__end_of_delai_us_char 20BC 0 CODE 0 text36 dist/default/production\TP_STR.X.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+intlevel0 0 0 CODE 0 text C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+intlevel1 0 0 CODE 0 text C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+intlevel2 0 0 CODE 0 text C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+intlevel3 0 0 CODE 0 text C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\TP_STR.X.production.obj
+write_d_aff@data 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\TP_STR.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\TP_STR.X.production.obj
+_tache_active 6F 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_d2command 1DD8 0 CODE 0 text31 dist/default/production\TP_STR.X.production.obj
+___awdiv@sign 6 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\TP_STR.X.production.obj
+goto_lico@adr B 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__size_ofi2_Init 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__end_of_d1command 1F3A 0 CODE 0 text32 dist/default/production\TP_STR.X.production.obj
+_Val_sem_cna 34 0 COMRAM 1 bssCOMRAM dist/default/production\TP_STR.X.production.obj
+_ADCON0 FC2 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_ADCON1 FC1 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_ADCON2 FC0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_ADRESH FC4 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_ADRESL FC3 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_ANCON0 F25 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_ANCON1 F24 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_ANCON2 F23 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_d1command 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+___awdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+___inthi_sp 934 0 STACK 2 stack C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+___intlo_sp C25 0 STACK 2 stack C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\TP_STR.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\TP_STR.X.production.obj
+_ANCON0bits F25 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_ANCON1bits F24 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TXSTA1bits FAC 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\TP_STR.X.production.obj
+_d1command 1F00 0 CODE 0 text32 dist/default/production\TP_STR.X.production.obj
+__size_of_stid_delai_us 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hintcodelo 342 0 CODE 0 intcodelo dist/default/production\TP_STR.X.production.obj
+__CFG_FOSC$HS1 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+lecture_normale@temps_attente 5 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+___awdiv@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__end_of___awdiv 1C18 0 CODE 0 text19 dist/default/production\TP_STR.X.production.obj
+__end_of___awmod 1C88 0 CODE 0 text18 dist/default/production\TP_STR.X.production.obj
+__end_of___lwdiv 1D36 0 CODE 0 text13 dist/default/production\TP_STR.X.production.obj
+_lecture_8bit_analogique 1F3A 0 CODE 0 text20 dist/default/production\TP_STR.X.production.obj
+__size_of_clear_graphics 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_initialisation_du_systeme 13AA 0 CODE 0 text1 dist/default/production\TP_STR.X.production.obj
+__end_of_lecture_8bit_analogique 1F70 0 CODE 0 text20 dist/default/production\TP_STR.X.production.obj
+goto_lico@colonne 9 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__CFG_RTCOSC$INTOSCREF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+___lwdiv@quotient 5 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__size_of_plot1 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_SOSCSEL$DIG 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_MEMCON F26 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__HnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\TP_STR.X.production.obj
+_STKPTR_T1 103 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_STKPTR_T2 203 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_STKPTR_T3 303 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_STKPTR_T4 403 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_STKPTR_T5 503 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_STKPTR_T6 603 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_INTCON2bits FF1 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Lintcodelo 342 0 CODE 0 intcodelo dist/default/production\TP_STR.X.production.obj
+_Val_sem_rxtx 35 0 COMRAM 1 bssCOMRAM dist/default/production\TP_STR.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+draw_hex8@c 9 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+start_initialization 2178 0 CODE 0 cinit dist/default/production\TP_STR.X.production.obj
+__end_of_stid_delai_us 2160 0 CODE 0 text7 dist/default/production\TP_STR.X.production.obj
+__CFG_BORPWR$ZPBORMV 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_RETEN$ON 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\TP_STR.X.production.obj
+_PCLATH FFA 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_PCLATU FFB 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_MSSPMSK$MSK5 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TRISCbits F94 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TRISDbits F95 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TRISGbits F98 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+lecture_normale@n_octet 6 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__size_ofi2_initialisation_des_ports 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+___rparam_used 1 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_RCSTA1 FAB 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+d1command@d1 6 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+_contexte1 100 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_contexte2 200 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_contexte3 300 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_contexte4 400 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_contexte5 500 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_contexte6 600 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_SPBRG1 FAF 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_STATUS FD8 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_STKPTR FFC 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TABLAT FF5 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TXREG1 FAD 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TXSTA1 FAC 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+lecture_8bit_analogique@channel 2 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__CFG_ECCPMX$PORTH 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+draw_char@dccar 8 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+check_status_ok@res 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+_write_c_aff 2116 0 CODE 0 text34 dist/default/production\TP_STR.X.production.obj
+_write_d_aff 20FC 0 CODE 0 text33 dist/default/production\TP_STR.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\TP_STR.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\TP_STR.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\TP_STR.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\TP_STR.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\TP_STR.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\TP_STR.X.production.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\TP_STR.X.production.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\TP_STR.X.production.obj
+__Hbank8 0 0 ABS 0 bank8 dist/default/production\TP_STR.X.production.obj
+__Hbank9 0 0 ABS 0 bank9 dist/default/production\TP_STR.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production\TP_STR.X.production.obj
+__Hconst 0 0 CONST 0 const dist/default/production\TP_STR.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production\TP_STR.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\TP_STR.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\TP_STR.X.production.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\TP_STR.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\TP_STR.X.production.obj
+__end_of_draw_string 1F00 0 CODE 0 text26 dist/default/production\TP_STR.X.production.obj
+__Hstack F16 0 STACK 2 stack dist/default/production\TP_STR.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production\TP_STR.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production\TP_STR.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production\TP_STR.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\TP_STR.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production\TP_STR.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production\TP_STR.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/default/production\TP_STR.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production\TP_STR.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production\TP_STR.X.production.obj
+__end_of_tache1 13AA 0 CODE 0 text14 dist/default/production\TP_STR.X.production.obj
+__end_of_tache2 1708 0 CODE 0 text11 dist/default/production\TP_STR.X.production.obj
+__end_of_tache3 1A40 0 CODE 0 text10 dist/default/production\TP_STR.X.production.obj
+__end_of_tache4 18BE 0 CODE 0 text9 dist/default/production\TP_STR.X.production.obj
+__end_of_tache5 17F0 0 CODE 0 text8 dist/default/production\TP_STR.X.production.obj
+__end_of_tache6 2056 0 CODE 0 text5 dist/default/production\TP_STR.X.production.obj
+___lwdiv@counter 7 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+_initialisation_afficheur 18BE 0 CODE 0 text21 dist/default/production\TP_STR.X.production.obj
+__Hbank10 0 0 ABS 0 bank10 dist/default/production\TP_STR.X.production.obj
+__Hbank11 0 0 ABS 0 bank11 dist/default/production\TP_STR.X.production.obj
+__Hbank12 0 0 ABS 0 bank12 dist/default/production\TP_STR.X.production.obj
+__Hbank13 0 0 ABS 0 bank13 dist/default/production\TP_STR.X.production.obj
+__Hbank14 0 0 ABS 0 bank14 dist/default/production\TP_STR.X.production.obj
+__Hbank15 0 0 ABS 0 bank15 dist/default/production\TP_STR.X.production.obj
+__size_of_command 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\TP_STR.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production\TP_STR.X.production.obj
+__smallconst 1000 0 SMALLCONST 0 smallconst C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+_BAUDCON1 F65 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production\TP_STR.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\TP_STR.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\TP_STR.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\TP_STR.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\TP_STR.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\TP_STR.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\TP_STR.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\TP_STR.X.production.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\TP_STR.X.production.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\TP_STR.X.production.obj
+__Lbank8 0 0 ABS 0 bank8 dist/default/production\TP_STR.X.production.obj
+__Lbank9 0 0 ABS 0 bank9 dist/default/production\TP_STR.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production\TP_STR.X.production.obj
+__Lconst 0 0 CONST 0 const dist/default/production\TP_STR.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production\TP_STR.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\TP_STR.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\TP_STR.X.production.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\TP_STR.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\TP_STR.X.production.obj
+__Lstack 642 0 STACK 2 stack dist/default/production\TP_STR.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production\TP_STR.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production\TP_STR.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production\TP_STR.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\TP_STR.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production\TP_STR.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production\TP_STR.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/production\TP_STR.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production\TP_STR.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production\TP_STR.X.production.obj
+stid_delai_us@isdu 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+i2_initialisation_des_ports 1E74 0 CODE 0 text15 dist/default/production\TP_STR.X.production.obj
+_wait_status_ok 1D36 0 CODE 0 text35 dist/default/production\TP_STR.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\TP_STR.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\TP_STR.X.production.obj
+_PORTBbits F81 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_PORTDbits F83 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_PORTEbits F84 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_n_octet_badge 7F 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_INTCONbits FF2 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production\TP_STR.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production\TP_STR.X.production.obj
+__Hinit 346 0 CODE 0 init dist/default/production\TP_STR.X.production.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\TP_STR.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\TP_STR.X.production.obj
+__Htemp 29 0 COMRAM 1 temp dist/default/production\TP_STR.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production\TP_STR.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production\TP_STR.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production\TP_STR.X.production.obj
+__Linit 342 0 CODE 0 init dist/default/production\TP_STR.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\TP_STR.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\TP_STR.X.production.obj
+__Ltemp 1D 0 COMRAM 1 temp dist/default/production\TP_STR.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production\TP_STR.X.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+initialisation_du_systeme@temp 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production\TP_STR.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production\TP_STR.X.production.obj
+_BSR FE0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__S0 30000E 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__S1 36 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__S2 F16 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_puc 2C 0 COMRAM 1 nvCOMRAM dist/default/production\TP_STR.X.production.obj
+__CFG_BW$8 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__end_of_check_status_ok 202E 0 CODE 0 text23 dist/default/production\TP_STR.X.production.obj
+goto_lico@ligne A 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__pnvCOMRAM 29 0 COMRAM 1 nvCOMRAM dist/default/production\TP_STR.X.production.obj
+_pointeur_de_tache 70 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+d1command@cmd 5 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+d1command@res 7 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\TP_STR.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\TP_STR.X.production.obj
+_STATUS_TEMPORAIRE 61 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_POSTINC0 FEE 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_POSTINC1 FE6 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+delai_us_char@ucdelai 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+_val_tos 2E 0 COMRAM 1 nvCOMRAM dist/default/production\TP_STR.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production\TP_STR.X.production.obj
+__size_of_fonction_d_interruption 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_clear_text 1FA2 0 CODE 0 text29 dist/default/production\TP_STR.X.production.obj
+__Hramtop 1000 0 RAM 0 ramtop dist/default/production\TP_STR.X.production.obj
+__CFG_EBRT0$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_EBRT1$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_EBRT2$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_EBRT3$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_EBRT4$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+wait_status_ok@status 3 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__CFG_EBRT5$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_EBRT6$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_EBRT7$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\TP_STR.X.production.obj
+__CFG_EBRTB$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__end_of_wait_status_ok 1D88 0 CODE 0 text35 dist/default/production\TP_STR.X.production.obj
+__CFG_PWRTEN$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__activetblptr 3 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+lecture_normale@n_bit 7 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+lecture_normale@octet 8 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\TP_STR.X.production.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production\TP_STR.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/default/production\TP_STR.X.production.obj
+__Htext12 0 0 ABS 0 text12 dist/default/production\TP_STR.X.production.obj
+__Htext13 0 0 ABS 0 text13 dist/default/production\TP_STR.X.production.obj
+__Htext14 0 0 ABS 0 text14 dist/default/production\TP_STR.X.production.obj
+__Htext15 0 0 ABS 0 text15 dist/default/production\TP_STR.X.production.obj
+__Htext16 0 0 ABS 0 text16 dist/default/production\TP_STR.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/default/production\TP_STR.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/default/production\TP_STR.X.production.obj
+__Htext19 0 0 ABS 0 text19 dist/default/production\TP_STR.X.production.obj
+__Htext20 0 0 ABS 0 text20 dist/default/production\TP_STR.X.production.obj
+__Htext21 0 0 ABS 0 text21 dist/default/production\TP_STR.X.production.obj
+__Htext22 0 0 ABS 0 text22 dist/default/production\TP_STR.X.production.obj
+__Htext23 0 0 ABS 0 text23 dist/default/production\TP_STR.X.production.obj
+__Htext24 0 0 ABS 0 text24 dist/default/production\TP_STR.X.production.obj
+__Htext25 0 0 ABS 0 text25 dist/default/production\TP_STR.X.production.obj
+__Htext26 0 0 ABS 0 text26 dist/default/production\TP_STR.X.production.obj
+__Htext27 0 0 ABS 0 text27 dist/default/production\TP_STR.X.production.obj
+__Htext28 0 0 ABS 0 text28 dist/default/production\TP_STR.X.production.obj
+__Htext29 0 0 ABS 0 text29 dist/default/production\TP_STR.X.production.obj
+__Htext30 0 0 ABS 0 text30 dist/default/production\TP_STR.X.production.obj
+__Htext31 0 0 ABS 0 text31 dist/default/production\TP_STR.X.production.obj
+__Htext32 0 0 ABS 0 text32 dist/default/production\TP_STR.X.production.obj
+__Htext33 0 0 ABS 0 text33 dist/default/production\TP_STR.X.production.obj
+__Htext34 0 0 ABS 0 text34 dist/default/production\TP_STR.X.production.obj
+__Htext35 0 0 ABS 0 text35 dist/default/production\TP_STR.X.production.obj
+__Htext36 0 0 ABS 0 text36 dist/default/production\TP_STR.X.production.obj
+__Htext37 0 0 ABS 0 text37 dist/default/production\TP_STR.X.production.obj
+_W_TEMPORAIRE 60 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+__CFG_BBSIZ$BB1K 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+___awmod@counter 5 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__end_of_init_rxtx 209A 0 CODE 0 text24 dist/default/production\TP_STR.X.production.obj
+__end_of_command 2078 0 CODE 0 text22 dist/default/production\TP_STR.X.production.obj
+_check_status_ok 2002 0 CODE 0 text23 dist/default/production\TP_STR.X.production.obj
+__ptext10 198A 0 CODE 0 text10 dist/default/production\TP_STR.X.production.obj
+__ptext11 1610 0 CODE 0 text11 dist/default/production\TP_STR.X.production.obj
+__ptext12 2160 0 CODE 0 text12 dist/default/production\TP_STR.X.production.obj
+__ptext13 1CE4 0 CODE 0 text13 dist/default/production\TP_STR.X.production.obj
+__ptext14 109A 0 CODE 0 text14 dist/default/production\TP_STR.X.production.obj
+__ptext15 1E74 0 CODE 0 text15 dist/default/production\TP_STR.X.production.obj
+__ptext16 20DC 0 CODE 0 text16 dist/default/production\TP_STR.X.production.obj
+__ptext17 1AEE 0 CODE 0 text17 dist/default/production\TP_STR.X.production.obj
+__ptext18 1C18 0 CODE 0 text18 dist/default/production\TP_STR.X.production.obj
+__ptext19 1B94 0 CODE 0 text19 dist/default/production\TP_STR.X.production.obj
+__ptext20 1F3A 0 CODE 0 text20 dist/default/production\TP_STR.X.production.obj
+__ptext21 18BE 0 CODE 0 text21 dist/default/production\TP_STR.X.production.obj
+__ptext22 2056 0 CODE 0 text22 dist/default/production\TP_STR.X.production.obj
+__ptext23 2002 0 CODE 0 text23 dist/default/production\TP_STR.X.production.obj
+__ptext24 2078 0 CODE 0 text24 dist/default/production\TP_STR.X.production.obj
+__ptext25 1D88 0 CODE 0 text25 dist/default/production\TP_STR.X.production.obj
+__ptext26 1EC0 0 CODE 0 text26 dist/default/production\TP_STR.X.production.obj
+__ptext27 1C88 0 CODE 0 text27 dist/default/production\TP_STR.X.production.obj
+__ptext28 1F70 0 CODE 0 text28 dist/default/production\TP_STR.X.production.obj
+__ptext29 1FA2 0 CODE 0 text29 dist/default/production\TP_STR.X.production.obj
+__ptext30 1FD2 0 CODE 0 text30 dist/default/production\TP_STR.X.production.obj
+__ptext31 1DD8 0 CODE 0 text31 dist/default/production\TP_STR.X.production.obj
+__ptext32 1F00 0 CODE 0 text32 dist/default/production\TP_STR.X.production.obj
+__ptext33 20FC 0 CODE 0 text33 dist/default/production\TP_STR.X.production.obj
+__ptext34 2116 0 CODE 0 text34 dist/default/production\TP_STR.X.production.obj
+__ptext35 1D36 0 CODE 0 text35 dist/default/production\TP_STR.X.production.obj
+__ptext36 209A 0 CODE 0 text36 dist/default/production\TP_STR.X.production.obj
+__ptext37 0 0 CODE 0 text37 dist/default/production\TP_STR.X.production.obj
+__CFG_ABW$MM 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_init_rxtx 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+___awdiv 1B94 0 CODE 0 text19 dist/default/production\TP_STR.X.production.obj
+___awmod 1C18 0 CODE 0 text18 dist/default/production\TP_STR.X.production.obj
+___lwdiv 1CE4 0 CODE 0 text13 dist/default/production\TP_STR.X.production.obj
+__Lbank10 0 0 ABS 0 bank10 dist/default/production\TP_STR.X.production.obj
+__Lbank11 0 0 ABS 0 bank11 dist/default/production\TP_STR.X.production.obj
+__Lbank12 0 0 ABS 0 bank12 dist/default/production\TP_STR.X.production.obj
+__Lbank13 0 0 ABS 0 bank13 dist/default/production\TP_STR.X.production.obj
+__Lbank14 0 0 ABS 0 bank14 dist/default/production\TP_STR.X.production.obj
+__Lbank15 0 0 ABS 0 bank15 dist/default/production\TP_STR.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\TP_STR.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production\TP_STR.X.production.obj
+__CFG_INTOSCSEL$HIGH 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_BORV$0 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_RXTX_libre 80 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_vitesse 73 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production\TP_STR.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\TP_STR.X.production.obj
+command@cmd 6 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+command@res 5 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+tache1@i D 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+tache4@a 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+tache5@a 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+tache6@n 9 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+_LATCbits F8B 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_LATDbits F8C 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__end_of_draw_char 1FA2 0 CODE 0 text28 dist/default/production\TP_STR.X.production.obj
+__end_of_draw_hex8 1CE4 0 CODE 0 text27 dist/default/production\TP_STR.X.production.obj
+_LATGbits F8F 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_LATJbits F91 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TP_appui 66 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+initialisation_afficheur@error_count 9 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+tp_delai@itpd 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__size_of_initialisation_afficheur 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_draw_char 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_draw_hex8 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\TP_STR.X.production.obj
+___lwdiv@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+_init_rxtx 2078 0 CODE 0 text24 dist/default/production\TP_STR.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\TP_STR.X.production.obj
+_tache1 109A 0 CODE 0 text14 dist/default/production\TP_STR.X.production.obj
+_tache2 1610 0 CODE 0 text11 dist/default/production\TP_STR.X.production.obj
+_tache3 198A 0 CODE 0 text10 dist/default/production\TP_STR.X.production.obj
+_tache4 17F0 0 CODE 0 text9 dist/default/production\TP_STR.X.production.obj
+_tache5 1708 0 CODE 0 text8 dist/default/production\TP_STR.X.production.obj
+_tache6 202E 0 CODE 0 text5 dist/default/production\TP_STR.X.production.obj
+__size_of_tp_delai 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_initialisation_des_ports 1E28 0 CODE 0 text2 dist/default/production\TP_STR.X.production.obj
+stackhi F15 0 ABS 0 - C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+stacklo 642 0 ABS 0 - C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+__size_of_draw_string 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Lintcode 8 0 CODE 0 intcode dist/default/production\TP_STR.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production\TP_STR.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production\TP_STR.X.production.obj
+_ADCON0bits FC2 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__end_of_clear_text 1FD2 0 CODE 0 text29 dist/default/production\TP_STR.X.production.obj
+_PADCFG1bits F53 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_draw_char 1F70 0 CODE 0 text28 dist/default/production\TP_STR.X.production.obj
+_draw_hex8 1C88 0 CODE 0 text27 dist/default/production\TP_STR.X.production.obj
+_FSR0L_TEMPORAIRE 64 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+__Lspace_0 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Lspace_1 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Lspace_2 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__pbssCOMRAM 31 0 COMRAM 1 bssCOMRAM dist/default/production\TP_STR.X.production.obj
+d2command@cmd 6 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+d2command@res 8 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+plot1@x C 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+plot1@y 9 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+_clear_graphics 1FD2 0 CODE 0 text30 dist/default/production\TP_STR.X.production.obj
+_PIR1bits F9E 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_EASHFT$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Lend_init 346 0 CODE 0 end_init dist/default/production\TP_STR.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+end_of_initialization 2182 0 CODE 0 cinit dist/default/production\TP_STR.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\TP_STR.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production\TP_STR.X.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+___awdiv@quotient 7 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+?___awdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+?___awmod 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+___lwdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+?___lwdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__size_of_lecture_8bit_analogique 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\TP_STR.X.production.obj
+draw_string@tableau 8 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+___awmod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__Lramtop 1000 0 RAM 0 ramtop dist/default/production\TP_STR.X.production.obj
+__size_of_tache1 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_tache2 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_tache3 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_tache4 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_tache5 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__size_of_tache6 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\TP_STR.X.production.obj
+__pcinit 2178 0 CODE 0 cinit dist/default/production\TP_STR.X.production.obj
+__ptext0 2130 0 CODE 0 text0 dist/default/production\TP_STR.X.production.obj
+__ptext1 13AA 0 CODE 0 text1 dist/default/production\TP_STR.X.production.obj
+__ptext2 1E28 0 CODE 0 text2 dist/default/production\TP_STR.X.production.obj
+__ptext3 20BC 0 CODE 0 text3 dist/default/production\TP_STR.X.production.obj
+__ptext5 202E 0 CODE 0 text5 dist/default/production\TP_STR.X.production.obj
+__ptext6 1A40 0 CODE 0 text6 dist/default/production\TP_STR.X.production.obj
+__ptext7 2148 0 CODE 0 text7 dist/default/production\TP_STR.X.production.obj
+__ptext8 1708 0 CODE 0 text8 dist/default/production\TP_STR.X.production.obj
+__ptext9 17F0 0 CODE 0 text9 dist/default/production\TP_STR.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\TP_STR.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production\TP_STR.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/production\TP_STR.X.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/production\TP_STR.X.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/production\TP_STR.X.production.obj
+__Ltext14 0 0 ABS 0 text14 dist/default/production\TP_STR.X.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/production\TP_STR.X.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/production\TP_STR.X.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/production\TP_STR.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/production\TP_STR.X.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/production\TP_STR.X.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/default/production\TP_STR.X.production.obj
+__Ltext21 0 0 ABS 0 text21 dist/default/production\TP_STR.X.production.obj
+__Ltext22 0 0 ABS 0 text22 dist/default/production\TP_STR.X.production.obj
+__Ltext23 0 0 ABS 0 text23 dist/default/production\TP_STR.X.production.obj
+__Ltext24 0 0 ABS 0 text24 dist/default/production\TP_STR.X.production.obj
+__Ltext25 0 0 ABS 0 text25 dist/default/production\TP_STR.X.production.obj
+__Ltext26 0 0 ABS 0 text26 dist/default/production\TP_STR.X.production.obj
+__Ltext27 0 0 ABS 0 text27 dist/default/production\TP_STR.X.production.obj
+__Ltext28 0 0 ABS 0 text28 dist/default/production\TP_STR.X.production.obj
+__Ltext29 0 0 ABS 0 text29 dist/default/production\TP_STR.X.production.obj
+__Ltext30 0 0 ABS 0 text30 dist/default/production\TP_STR.X.production.obj
+__Ltext31 0 0 ABS 0 text31 dist/default/production\TP_STR.X.production.obj
+__Ltext32 0 0 ABS 0 text32 dist/default/production\TP_STR.X.production.obj
+__Ltext33 0 0 ABS 0 text33 dist/default/production\TP_STR.X.production.obj
+__Ltext34 0 0 ABS 0 text34 dist/default/production\TP_STR.X.production.obj
+__Ltext35 0 0 ABS 0 text35 dist/default/production\TP_STR.X.production.obj
+__Ltext36 0 0 ABS 0 text36 dist/default/production\TP_STR.X.production.obj
+__Ltext37 0 0 ABS 0 text37 dist/default/production\TP_STR.X.production.obj
+__ramtop 1000 0 RAM 0 ramtop C:\Users\Franck\AppData\Local\Temp\sdbc.obj
+__end_of_lecture_normale 1AEE 0 CODE 0 text6 dist/default/production\TP_STR.X.production.obj
+__end_of_write_c_aff 2130 0 CODE 0 text34 dist/default/production\TP_STR.X.production.obj
+__size_of_check_status_ok 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__end_of_write_d_aff 2116 0 CODE 0 text33 dist/default/production\TP_STR.X.production.obj
+__Lpowerup 342 0 CODE 0 powerup dist/default/production\TP_STR.X.production.obj
+_tp_delai 2160 0 CODE 0 text12 dist/default/production\TP_STR.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\TP_STR.X.production.obj
+__CFG_WAIT$ON 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__psmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production\TP_STR.X.production.obj
+__end_ofi2_Init 20FC 0 CODE 0 text16 dist/default/production\TP_STR.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\TP_STR.X.production.obj
+__end_of_initialisation_afficheur 198A 0 CODE 0 text21 dist/default/production\TP_STR.X.production.obj
+__end_of_tp_delai 2178 0 CODE 0 text12 dist/default/production\TP_STR.X.production.obj
+__end_of_clear_graphics 2002 0 CODE 0 text30 dist/default/production\TP_STR.X.production.obj
+___param_bank 10 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_WDTPS$1 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\TP_STR.X.production.obj
+__end_of__initialization 2182 0 CODE 0 cinit dist/default/production\TP_STR.X.production.obj
+wait_status_ok@err 2 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+wait_status_ok@res 4 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+___awmod@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_WRT4$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_WRT5$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_WRT6$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_WRT7$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_PLLCFG$ON 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\TP_STR.X.production.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_delai_us_char 209A 0 CODE 0 text36 dist/default/production\TP_STR.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\TP_STR.X.production.obj
+_SPBRGH1 FD4 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+clear_text@add 9 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+d2command@d1 7 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+d2command@d2 5 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+_batterie 74 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+__end_of_goto_lico 1DD8 0 CODE 0 text25 dist/default/production\TP_STR.X.production.obj
+draw_hex8@octet 8 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__end_of_initialisation_du_systeme 1610 0 CODE 0 text1 dist/default/production\TP_STR.X.production.obj
+__size_of_goto_lico 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+write_c_aff@command 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__Hend_init 34A 0 CODE 0 end_init dist/default/production\TP_STR.X.production.obj
+__end_of_Init 20DC 0 CODE 0 text3 dist/default/production\TP_STR.X.production.obj
+__end_of_main 2148 0 CODE 0 text0 dist/default/production\TP_STR.X.production.obj
+__pintcode 8 0 CODE 0 intcode dist/default/production\TP_STR.X.production.obj
+_lecture_normale 1A40 0 CODE 0 text6 dist/default/production\TP_STR.X.production.obj
+__size_of_initialisation_des_ports 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_FSR0H FEA 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_FSR0L FE9 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_FSR1H FE2 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_FSR1L FE1 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_FSR2H FDA 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_FSR2L FD9 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+lecture_8bit_analogique@ret 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+Init@sem 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+_PORTH F87 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_PRODH FF4 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_PRODL FF3 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_T0CON FD5 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TRISH F99 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_TRISJ F9A 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__end_of_plot1 1B94 0 CODE 0 text17 dist/default/production\TP_STR.X.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production\TP_STR.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production\TP_STR.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production\TP_STR.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production\TP_STR.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production\TP_STR.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production\TP_STR.X.production.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_CP4$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_CP5$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_badge 75 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+__CFG_CP6$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_CP7$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_plot1 1AEE 0 CODE 0 text17 dist/default/production\TP_STR.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\TP_STR.X.production.obj
+_queue 69 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_goto_lico 1D88 0 CODE 0 text25 dist/default/production\TP_STR.X.production.obj
+_Tick_Count 71 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_FSR0H_TEMPORAIRE 63 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+_BSR_TEMPORAIRE 62 0 ABS 1 - dist/default/production\TP_STR.X.production.obj
+__initialization 2178 0 CODE 0 cinit dist/default/production\TP_STR.X.production.obj
+_command 2056 0 CODE 0 text22 dist/default/production\TP_STR.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\TP_STR.X.production.obj
+__Hsmallconst 109A 0 SMALLCONST 0 smallconst dist/default/production\TP_STR.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\TP_STR.X.production.obj
+clear_graphics@add 9 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\TP_STR.X.production.obj
+__Hintcode 342 0 CODE 0 intcode dist/default/production\TP_STR.X.production.obj
+tache2@hx E 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+tache2@hy 10 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+tache2@ix A 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+tache2@iy C 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+tache2@lx F 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+tache2@ly 11 0 COMRAM 1 cstackCOMRAM dist/default/production\TP_STR.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+_TP_x 1 67 1
+_TP_y 1 68 1
+_DEMARRAGE 1 65 1
+_tache_active 1 6F 1
+_STKPTR_T1 1 103 1
+_STKPTR_T2 1 203 1
+_STKPTR_T3 1 303 1
+_STKPTR_T4 1 403 1
+_STKPTR_T5 1 503 1
+_STKPTR_T6 1 603 1
+_contexte1 1 100 42
+_contexte2 1 200 42
+_contexte3 1 300 42
+_contexte4 1 400 42
+_contexte5 1 500 42
+_contexte6 1 600 42
+_n_octet_badge 1 7F 1
+_pointeur_de_tache 1 70 1
+_STATUS_TEMPORAIRE 1 61 1
+_W_TEMPORAIRE 1 60 1
+_RXTX_libre 1 80 1
+_vitesse 1 73 1
+_TP_appui 1 66 1
+_FSR0L_TEMPORAIRE 1 64 1
+_batterie 1 74 1
+_badge 1 75 A
+_queue 1 69 6
+_Tick_Count 1 71 2
+_FSR0H_TEMPORAIRE 1 63 1
+_BSR_TEMPORAIRE 1 62 1
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+idloc 0 200000 200000 8 1
+stack 2 642 642 8D4 1
+text14 0 109A 109A 10EE 1
+cstackCOMRAM 1 1 1 35 1
+reset_vec 0 0 0 4 1
+intcode 0 8 8 342 1
+smallconst 0 1000 1000 9A 1
+config 0 300000 300000 E 1
