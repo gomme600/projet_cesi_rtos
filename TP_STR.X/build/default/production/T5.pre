@@ -12056,7 +12056,26 @@ unsigned char lecture_8bit_analogique(unsigned char channel);
 # 16 "T5.h"
 void tache5();
 
-# 5 "T5.c"
+# 4 "T5.c"
+char setBit(char n, int k)
+{
+return (n | (1 << k));
+}
+
+
+char clearBit(char n, int k)
+{
+return (n & (~(1 << k)));
+}
+
+
+char toggleBit(char n, int k)
+{
+return (n ^ (1 << k));
+}
+
+
+
 int buz=1;
 
 void tache5()
@@ -12067,24 +12086,53 @@ while(1)
 
 
 if (PORTBbits.RB2==1 && vitesse>0)
-alarme_active |= (1 << 6);
+alarme_active = setBit(alarme_active, 6);
+
 else
-alarme_active &= (0 << 6);
+alarme_active = clearBit(alarme_active, 6);
+
 
 if (n_octet_badge==0)
-alarme_active |= (1 << 4);
+alarme_active = setBit(alarme_active, 4);
+
 else
-alarme_active &= (0 << 4);
+alarme_active = clearBit(alarme_active, 4);
+
 
 if (PORTBbits.RB3==0)
-alarme_active |= (1 << 2);
-else
-alarme_active &= (0 << 2);
+alarme_active = setBit(alarme_active, 2);
 
-if (PORTEbits.RE4==0)
-alarme_active |= (1 << 5);
 else
-alarme_active &= (0 << 5);
+alarme_active = clearBit(alarme_active, 2);
+
+
+if (PORTEbits.RE4==0 && vitesse>0)
+alarme_active = setBit(alarme_active, 5);
+
+else
+alarme_active = clearBit(alarme_active, 5);
+
+
+if (lecture_8bit_analogique(2)>200)
+alarme_active = setBit(alarme_active, 0);
+
+else
+alarme_active = clearBit(alarme_active, 0);
+
+
+if (lecture_8bit_analogique(3)>200)
+alarme_active = setBit(alarme_active, 1);
+
+else
+alarme_active = clearBit(alarme_active, 1);
+
+
+if (batterie<25)
+alarme_active = setBit(alarme_active, 3);
+
+else
+alarme_active = clearBit(alarme_active, 3);
+
 
 
 buz=!buz;

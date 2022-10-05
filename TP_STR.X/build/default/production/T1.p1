@@ -9853,7 +9853,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T1.c: 122: goto_lico(11,0);
 "122
 [e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 123: draw_string("alarme0=");
+[; ;T1.c: 123: draw_string("alarme_eau=");
 "123
 [e ( _draw_string (1 -> :s 19C `*uc ]
 [; ;T1.c: 124: draw_hex8((alarme_active >> 0) & 0x01);
@@ -9862,7 +9862,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T1.c: 125: goto_lico(12,0);
 "125
 [e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 126: draw_string("alarme1=");
+[; ;T1.c: 126: draw_string("alarme_huile=");
 "126
 [e ( _draw_string (1 -> :s 20C `*uc ]
 [; ;T1.c: 127: draw_hex8((alarme_active >> 1) & 0x01);
@@ -9871,7 +9871,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T1.c: 128: goto_lico(13,0);
 "128
 [e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 129: draw_string("alarme2=");
+[; ;T1.c: 129: draw_string("alarme_choc=");
 "129
 [e ( _draw_string (1 -> :s 21C `*uc ]
 [; ;T1.c: 130: draw_hex8((alarme_active >> 2) & 0x01);
@@ -9880,7 +9880,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T1.c: 131: goto_lico(14,0);
 "131
 [e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 132: draw_string("alarme3=");
+[; ;T1.c: 132: draw_string("alarme_batterie=");
 "132
 [e ( _draw_string (1 -> :s 22C `*uc ]
 [; ;T1.c: 133: draw_hex8((alarme_active >> 3) & 0x01);
@@ -9889,7 +9889,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T1.c: 134: goto_lico(11,20);
 "134
 [e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 135: draw_string("alarme4=");
+[; ;T1.c: 135: draw_string("alarme_cle=");
 "135
 [e ( _draw_string (1 -> :s 23C `*uc ]
 [; ;T1.c: 136: draw_hex8((alarme_active >> 4) & 0x01);
@@ -9898,7 +9898,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T1.c: 137: goto_lico(12,20);
 "137
 [e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 138: draw_string("alarme5=");
+[; ;T1.c: 138: draw_string("alarme_frein=");
 "138
 [e ( _draw_string (1 -> :s 24C `*uc ]
 [; ;T1.c: 139: draw_hex8((alarme_active >> 5) & 0x01);
@@ -9907,7 +9907,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T1.c: 140: goto_lico(13,20);
 "140
 [e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 141: draw_string("alarme6=");
+[; ;T1.c: 141: draw_string("alarme_siege=");
 "141
 [e ( _draw_string (1 -> :s 25C `*uc ]
 [; ;T1.c: 142: draw_hex8((alarme_active >> 6) & 0x01);
@@ -9937,14 +9937,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 3C 65 82 0 ]
 [a 18C 32 121 61 0 ]
 [a 17C 120 61 0 ]
+[a 19C 97 108 97 114 109 101 95 101 97 117 61 0 ]
+[a 24C 97 108 97 114 109 101 95 102 114 101 105 110 61 0 ]
+[a 20C 97 108 97 114 109 101 95 104 117 105 108 101 61 0 ]
+[a 23C 97 108 97 114 109 101 95 99 108 101 61 0 ]
+[a 22C 97 108 97 114 109 101 95 98 97 116 116 101 114 105 101 61 0 ]
+[a 25C 97 108 97 114 109 101 95 115 105 101 103 101 61 0 ]
+[a 21C 97 108 97 114 109 101 95 99 104 111 99 61 0 ]
 [a 26C 97 108 97 114 109 101 55 61 0 ]
-[a 25C 97 108 97 114 109 101 54 61 0 ]
-[a 24C 97 108 97 114 109 101 53 61 0 ]
-[a 23C 97 108 97 114 109 101 52 61 0 ]
-[a 22C 97 108 97 114 109 101 51 61 0 ]
-[a 21C 97 108 97 114 109 101 50 61 0 ]
-[a 20C 97 108 97 114 109 101 49 61 0 ]
-[a 19C 97 108 97 114 109 101 48 61 0 ]
 [a 6C 84 101 109 112 46 32 69 97 117 58 0 ]
 [a 16C 89 45 74 111 121 115 116 105 99 107 58 0 ]
 [a 15C 88 45 74 111 121 115 116 105 99 107 58 0 ]
