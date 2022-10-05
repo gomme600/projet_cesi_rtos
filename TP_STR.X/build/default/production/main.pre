@@ -12073,25 +12073,17 @@ while(1)
 asm(" nop");
 }
 
-void PWM1_Init(unsigned char period){
+void PWM1_Init(){
 
 
-
-CCP1CON &= 0xCF;
-CCP1CON |= 0x0C;
-
-
-PR2 = period;
-T2CON = 0x02;
+TRISJ7 = 0;
+PR2 = 255;
+CCPR1L = 255;
+T2CON = 0;
+CCP1CON = 0x0C;
+TMR2 = 0;
 TMR2ON = 1;
 
-}
-
-void PWM1_setDC(unsigned int dutycycle){
-
-CCPR1L = dutycycle>>2;
-CCP1CON &= 0xCF;
-CCP1CON |= ((dutycycle<<4)&0x30);
 }
 
 void initialisation_des_ports()
@@ -12132,11 +12124,7 @@ TRISJbits.TRISJ7=0;
 INTCON2bits.RBPU=0;
 PADCFG1bits.REPU=1;
 
-
-PWM1_Init(0x270);
-
-
-PWM1_setDC(512);
+PWM1_Init();
 
 }
 

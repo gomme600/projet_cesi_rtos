@@ -119,15 +119,29 @@ void tache1()
         }
         
         //Alarme
-        if (alarme_active==1)
-        {
-            goto_lico(11,0);
-            draw_string("alarme=1");
-        }
-        else
-        {
-            goto_lico(11,0);
-            draw_string("alarme=0");
-        }
+        goto_lico(11,0);
+        draw_string("alarme0=");
+        draw_hex8((alarme_active >> 0) & 0x01);
+        goto_lico(12,0);
+        draw_string("alarme1=");
+        draw_hex8((alarme_active >> 1) & 0x01);
+        goto_lico(13,0);
+        draw_string("alarme2=");
+        draw_hex8((alarme_active >> 2) & 0x01);
+        goto_lico(14,0);
+        draw_string("alarme3=");
+        draw_hex8((alarme_active >> 3) & 0x01);
+        goto_lico(11,20);
+        draw_string("alarme4=");
+        draw_hex8((alarme_active >> 4) & 0x01);
+        goto_lico(12,20);
+        draw_string("alarme5=");
+        draw_hex8((alarme_active >> 5) & 0x01);
+        goto_lico(13,20);
+        draw_string("alarme6=");
+        draw_hex8((alarme_active >> 6) & 0x01);
+        goto_lico(14,20);
+        draw_string("alarme7=");
+        draw_hex8((alarme_active >> 7) & 0x01);
     }
 }

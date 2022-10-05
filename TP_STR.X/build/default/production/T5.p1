@@ -17,6 +17,58 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S554 . . . . . . . ]
 "8296 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [v _PORTBbits `VS554 ~T0 @X0 0 e@3969 ]
+[s S577 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S577 . RE0 RE1 RE2 RE3 RE4 RE5 RE6 RE7 ]
+[s S578 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S578 . AD8 AD9 AD10 AD11 AD12 AD13 AD14 AD15 ]
+[s S579 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S579 . P2D P2C P2B P3C P3B P1C P1B P2A ]
+[s S580 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S580 . . CCP10 CCP9 CCP8 CCP7 CCP6 CCP2 ]
+[s S581 :1 `uc 1 ]
+[n S581 . NOT_RD ]
+[s S582 :1 `uc 1 :1 `uc 1 ]
+[n S582 . . NOT_WR ]
+[s S583 :2 `uc 1 :1 `uc 1 ]
+[n S583 . . NOT_CS ]
+[s S584 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S584 . nRD nWR nCS REFO ]
+[s S585 :7 `uc 1 :1 `uc 1 ]
+[n S585 . . CCP2E ]
+[s S586 :6 `uc 1 :1 `uc 1 ]
+[n S586 . . CCP6E ]
+[s S587 :5 `uc 1 :1 `uc 1 ]
+[n S587 . . CCP7E ]
+[s S588 :4 `uc 1 :1 `uc 1 ]
+[n S588 . . CCP8E ]
+[s S589 :3 `uc 1 :1 `uc 1 ]
+[n S589 . . CCP9E ]
+[s S590 :2 `uc 1 :1 `uc 1 ]
+[n S590 . . CS ]
+[s S591 :7 `uc 1 :1 `uc 1 ]
+[n S591 . . PA2E ]
+[s S592 :6 `uc 1 :1 `uc 1 ]
+[n S592 . . PB1E ]
+[s S593 :2 `uc 1 :1 `uc 1 ]
+[n S593 . . PB2 ]
+[s S594 :4 `uc 1 :1 `uc 1 ]
+[n S594 . . PB3E ]
+[s S595 :5 `uc 1 :1 `uc 1 ]
+[n S595 . . PC1E ]
+[s S596 :1 `uc 1 :1 `uc 1 ]
+[n S596 . . PC2 ]
+[s S597 :3 `uc 1 :1 `uc 1 ]
+[n S597 . . PC3E ]
+[s S598 :1 `uc 1 ]
+[n S598 . PD2 ]
+[s S599 :1 `uc 1 ]
+[n S599 . RDE ]
+[s S600 :1 `uc 1 :1 `uc 1 ]
+[n S600 . . WRE ]
+[u S576 `S577 1 `S578 1 `S579 1 `S580 1 `S581 1 `S582 1 `S583 1 `S584 1 `S585 1 `S586 1 `S587 1 `S588 1 `S589 1 `S590 1 `S591 1 `S592 1 `S593 1 `S594 1 `S595 1 `S596 1 `S597 1 `S598 1 `S599 1 `S600 1 ]
+[n S576 . . . . . . . . . . . . . . . . . . . . . . . . . ]
+"8979
+[v _PORTEbits `VS576 ~T0 @X0 0 e@3972 ]
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -9395,31 +9447,73 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T5.c: 11: {
 "11
 {
-[; ;T5.c: 13: if (PORTBbits.RB2==1 && vitesse>0)
-"13
-[e $ ! && == -> . . _PORTBbits 0 2 `i -> 1 `i > -> _vitesse `i -> 0 `i 1242  ]
-[; ;T5.c: 14: alarme_active=1;
+[; ;T5.c: 14: if (PORTBbits.RB2==1 && vitesse>0)
 "14
-[e = _alarme_active -> -> 1 `i `uc ]
-[e $U 1243  ]
+[e $ ! && == -> . . _PORTBbits 0 2 `i -> 1 `i > -> _vitesse `i -> 0 `i 1242  ]
+[; ;T5.c: 15: alarme_active |= (1 << 6);
 "15
-[e :U 1242 ]
-[; ;T5.c: 15: else
-[; ;T5.c: 16: alarme_active=0;
+[e =| _alarme_active -> << -> 1 `i -> 6 `i `uc ]
+[e $U 1243  ]
 "16
-[e = _alarme_active -> -> 0 `i `uc ]
+[e :U 1242 ]
+[; ;T5.c: 16: else
+[; ;T5.c: 17: alarme_active &= (0 << 6);
+"17
+[e =& _alarme_active -> << -> 0 `i -> 6 `i `uc ]
 [e :U 1243 ]
-[; ;T5.c: 19: buz=!buz;
+[; ;T5.c: 19: if (n_octet_badge==0)
 "19
-[e = _buz -> ! != _buz -> 0 `i `i ]
+[e $ ! == -> _n_octet_badge `i -> 0 `i 1244  ]
+[; ;T5.c: 20: alarme_active |= (1 << 4);
+"20
+[e =| _alarme_active -> << -> 1 `i -> 4 `i `uc ]
+[e $U 1245  ]
+"21
+[e :U 1244 ]
+[; ;T5.c: 21: else
+[; ;T5.c: 22: alarme_active &= (0 << 4);
 "22
+[e =& _alarme_active -> << -> 0 `i -> 4 `i `uc ]
+[e :U 1245 ]
+[; ;T5.c: 24: if (PORTBbits.RB3==0)
+"24
+[e $ ! == -> . . _PORTBbits 0 3 `i -> 0 `i 1246  ]
+[; ;T5.c: 25: alarme_active |= (1 << 2);
+"25
+[e =| _alarme_active -> << -> 1 `i -> 2 `i `uc ]
+[e $U 1247  ]
+"26
+[e :U 1246 ]
+[; ;T5.c: 26: else
+[; ;T5.c: 27: alarme_active &= (0 << 2);
+"27
+[e =& _alarme_active -> << -> 0 `i -> 2 `i `uc ]
+[e :U 1247 ]
+[; ;T5.c: 29: if (PORTEbits.RE4==0)
+"29
+[e $ ! == -> . . _PORTEbits 0 4 `i -> 0 `i 1248  ]
+[; ;T5.c: 30: alarme_active |= (1 << 5);
+"30
+[e =| _alarme_active -> << -> 1 `i -> 5 `i `uc ]
+[e $U 1249  ]
+"31
+[e :U 1248 ]
+[; ;T5.c: 31: else
+[; ;T5.c: 32: alarme_active &= (0 << 5);
+"32
+[e =& _alarme_active -> << -> 0 `i -> 5 `i `uc ]
+[e :U 1249 ]
+[; ;T5.c: 35: buz=!buz;
+"35
+[e = _buz -> ! != _buz -> 0 `i `i ]
+"38
 }
 [e :U 1239 ]
 "10
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;T5.c: 22: }
-[; ;T5.c: 23: }
-"23
+[; ;T5.c: 38: }
+[; ;T5.c: 39: }
+"39
 [e :UE 1238 ]
 }

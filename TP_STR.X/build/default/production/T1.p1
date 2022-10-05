@@ -9850,53 +9850,101 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 1263 ]
 [; ;T1.c: 119: }
-[; ;T1.c: 122: if (alarme_active==1)
+[; ;T1.c: 122: goto_lico(11,0);
 "122
-[e $ ! == -> _alarme_active `i -> 1 `i 1264  ]
-[; ;T1.c: 123: {
+[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 0 `i `uc ]
+[; ;T1.c: 123: draw_string("alarme0=");
 "123
-{
-[; ;T1.c: 124: goto_lico(11,0);
-"124
-[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 125: draw_string("alarme=1");
-"125
 [e ( _draw_string (1 -> :s 19C `*uc ]
+[; ;T1.c: 124: draw_hex8((alarme_active >> 0) & 0x01);
+"124
+[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 0 `i -> 1 `i `uc ]
+[; ;T1.c: 125: goto_lico(12,0);
+"125
+[e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 0 `i `uc ]
+[; ;T1.c: 126: draw_string("alarme1=");
 "126
-}
-[; ;T1.c: 126: }
-[e $U 1265  ]
-"127
-[e :U 1264 ]
-[; ;T1.c: 127: else
-[; ;T1.c: 128: {
-"128
-{
-[; ;T1.c: 129: goto_lico(11,0);
-"129
-[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 130: draw_string("alarme=0");
-"130
 [e ( _draw_string (1 -> :s 20C `*uc ]
+[; ;T1.c: 127: draw_hex8((alarme_active >> 1) & 0x01);
+"127
+[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 1 `i -> 1 `i `uc ]
+[; ;T1.c: 128: goto_lico(13,0);
+"128
+[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 0 `i `uc ]
+[; ;T1.c: 129: draw_string("alarme2=");
+"129
+[e ( _draw_string (1 -> :s 21C `*uc ]
+[; ;T1.c: 130: draw_hex8((alarme_active >> 2) & 0x01);
+"130
+[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 2 `i -> 1 `i `uc ]
+[; ;T1.c: 131: goto_lico(14,0);
 "131
-}
-[e :U 1265 ]
+[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 0 `i `uc ]
+[; ;T1.c: 132: draw_string("alarme3=");
 "132
+[e ( _draw_string (1 -> :s 22C `*uc ]
+[; ;T1.c: 133: draw_hex8((alarme_active >> 3) & 0x01);
+"133
+[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 3 `i -> 1 `i `uc ]
+[; ;T1.c: 134: goto_lico(11,20);
+"134
+[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 20 `i `uc ]
+[; ;T1.c: 135: draw_string("alarme4=");
+"135
+[e ( _draw_string (1 -> :s 23C `*uc ]
+[; ;T1.c: 136: draw_hex8((alarme_active >> 4) & 0x01);
+"136
+[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 4 `i -> 1 `i `uc ]
+[; ;T1.c: 137: goto_lico(12,20);
+"137
+[e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 20 `i `uc ]
+[; ;T1.c: 138: draw_string("alarme5=");
+"138
+[e ( _draw_string (1 -> :s 24C `*uc ]
+[; ;T1.c: 139: draw_hex8((alarme_active >> 5) & 0x01);
+"139
+[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 5 `i -> 1 `i `uc ]
+[; ;T1.c: 140: goto_lico(13,20);
+"140
+[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 20 `i `uc ]
+[; ;T1.c: 141: draw_string("alarme6=");
+"141
+[e ( _draw_string (1 -> :s 25C `*uc ]
+[; ;T1.c: 142: draw_hex8((alarme_active >> 6) & 0x01);
+"142
+[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 6 `i -> 1 `i `uc ]
+[; ;T1.c: 143: goto_lico(14,20);
+"143
+[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 20 `i `uc ]
+[; ;T1.c: 144: draw_string("alarme7=");
+"144
+[e ( _draw_string (1 -> :s 26C `*uc ]
+[; ;T1.c: 145: draw_hex8((alarme_active >> 7) & 0x01);
+"145
+[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 7 `i -> 1 `i `uc ]
+"146
 }
 [e :U 1239 ]
 "30
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;T1.c: 131: }
-[; ;T1.c: 132: }
-[; ;T1.c: 133: }
-"133
+[; ;T1.c: 146: }
+[; ;T1.c: 147: }
+"147
 [e :UE 1238 ]
 }
 [a 2C 65 86 0 ]
 [a 3C 65 82 0 ]
 [a 18C 32 121 61 0 ]
 [a 17C 120 61 0 ]
+[a 26C 97 108 97 114 109 101 55 61 0 ]
+[a 25C 97 108 97 114 109 101 54 61 0 ]
+[a 24C 97 108 97 114 109 101 53 61 0 ]
+[a 23C 97 108 97 114 109 101 52 61 0 ]
+[a 22C 97 108 97 114 109 101 51 61 0 ]
+[a 21C 97 108 97 114 109 101 50 61 0 ]
+[a 20C 97 108 97 114 109 101 49 61 0 ]
+[a 19C 97 108 97 114 109 101 48 61 0 ]
 [a 6C 84 101 109 112 46 32 69 97 117 58 0 ]
 [a 16C 89 45 74 111 121 115 116 105 99 107 58 0 ]
 [a 15C 88 45 74 111 121 115 116 105 99 107 58 0 ]
@@ -9907,8 +9955,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 5C 83 105 101 103 101 58 0 ]
 [a 13C 66 97 100 103 101 58 0 ]
 [a 8C 67 104 111 99 58 0 ]
-[a 19C 97 108 97 114 109 101 61 49 0 ]
-[a 20C 97 108 97 114 109 101 61 48 0 ]
 [a 11C 40 40 33 41 41 0 ]
 [a 4C 78 32 0 ]
 [a 14C 32 65 85 67 85 78 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]

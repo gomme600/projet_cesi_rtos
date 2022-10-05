@@ -12065,10 +12065,26 @@ unsigned int a;
 while(1)
 {
 
+
 if (PORTBbits.RB2==1 && vitesse>0)
-alarme_active=1;
+alarme_active |= (1 << 6);
 else
-alarme_active=0;
+alarme_active &= (0 << 6);
+
+if (n_octet_badge==0)
+alarme_active |= (1 << 4);
+else
+alarme_active &= (0 << 4);
+
+if (PORTBbits.RB3==0)
+alarme_active |= (1 << 2);
+else
+alarme_active &= (0 << 2);
+
+if (PORTEbits.RE4==0)
+alarme_active |= (1 << 5);
+else
+alarme_active &= (0 << 5);
 
 
 buz=!buz;

@@ -16,25 +16,17 @@ void main()
         Nop();
 }
 
-void PWM1_Init(unsigned char period){
-    //TRISJ &=0x7F;           //  Set RC2 as output
-    
-    /* CCP PWM mode */
-    CCP1CON &= 0xCF;        //  5,4 bits zeroed (DC1B1:DC1B0 = 00)
-    CCP1CON |= 0x0C;        //  PWM mode ( CCP1M3:CCP1M0 = 1100)
-    
-    /* Timer2 configuration */
-    PR2 = period;           //  configure timer2 period
-    T2CON = 0x02;           //  Set prescalar 16   
-    TMR2ON = 1;             //  timer2 on
-    
-}
+void PWM1_Init(){
 
-void PWM1_setDC(unsigned int dutycycle){
+    //PWM
+    TRISJ7 = 0;		/* Set CCP1 pin as output for PWM out */
+    PR2 = 255;		/* Load period value : about 10.8KHz */
+    CCPR1L = 255;	/* load duty cycle value */
+    T2CON = 0;		/* No pre-scalar, timer2 is off */
+    CCP1CON = 0x0C;	/* Set PWM mode and no decimal for PWM */
+    TMR2 = 0;		/* Clear Timer2 initially */
+    TMR2ON = 1;		/* Timer ON for start counting*/
     
-    CCPR1L = dutycycle>>2;  //  PWM duty cycle - first 8-bits (MSb)
-    CCP1CON &= 0xCF;        //  5,4 bits zeroed (DC1B1:DC1B0 = 00)
-    CCP1CON |= ((dutycycle<<4)&0x30);  //  PWM duty cycle - last 2-bits (LSb) in CCP1CON 5,4 bits    
 }
 
 void initialisation_des_ports()
@@ -75,11 +67,7 @@ void initialisation_des_ports()
     INTCON2bits.RBPU=0; // Pull up PORTB activé
     PADCFG1bits.REPU=1; // Pull up PORTE activé
 
-    /*open PWM at 2KHz*/ 
-    PWM1_Init(0x270);
-    
-    /*set duty cycle 0 - 1023 range */
-    PWM1_setDC(512);
+    PWM1_Init();
     
 }
 
