@@ -4,8 +4,8 @@ ___awdiv: CODE, 70570 0 188
 _setBit: CODE, 72806 0 28
 i2_PWM1_Init: CODE, 72904 0 22
 __stringdata: MEDIUMCONST, 65276 0 258
-_write_d_aff: CODE, 72834 0 24
-_tache2: CODE, 69436 0 336
+_write_d_aff: CODE, 72858 0 24
+_tache2: CODE, 69772 0 336
 _init_rxtx: CODE, 72678 0 34
 _tache5: CODE, 67896 0 634
 _clear_text: CODE, 71852 0 96
@@ -16,10 +16,10 @@ _stid_delai_us: CODE, 72744 0 32
 _initialisation_afficheur: CODE, 69062 0 374
 _main: CODE, 72642 0 36
 _PWM1_Init: CODE, 72882 0 22
-_write_c_aff: CODE, 72858 0 24
+_write_c_aff: CODE, 72834 0 24
 __initialization: CODE, 72606 0 30
 ___lwdiv: CODE, 71438 0 108
-_tache3: CODE, 69772 0 336
+_tache3: CODE, 69436 0 336
 _tache6: CODE, 72214 0 80
 _clear_graphics: CODE, 71948 0 96
 _draw_hex8: CODE, 71062 0 134

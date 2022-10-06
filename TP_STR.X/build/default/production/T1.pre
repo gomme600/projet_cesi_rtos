@@ -12064,6 +12064,48 @@ unsigned char lecture_8bit_analogique(unsigned char channel);
 void tache1();
 
 # 3 "T1.c"
+void draw_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
+{
+int i=0;
+int j=0;
+
+for (i = start_point_x; i < end_point_x; i++ )
+{
+for (j = start_point_y; j < end_point_y; j++ )
+{
+plot1(i, j);
+}
+}
+}
+
+void draw_line_x(int start_point_x, int start_point_y, int end_point_x)
+{
+int i=0;
+
+for (i = start_point_x; i < end_point_x; i++ )
+{
+plot1(i, start_point_y);
+}
+}
+
+void draw_line_y(int start_point_y, int start_point_x, int end_point_y)
+{
+int i=0;
+
+for (i = start_point_y; i < end_point_y; i++ )
+{
+plot1(start_point_x, i);
+}
+}
+
+void draw_fork(int start_x, int start_y)
+{
+draw_line_x(start_x, start_y, start_x+40);
+draw_line_x(start_x, start_y+40, start_x+40);
+draw_line_y(start_y, start_x, start_y+40);
+draw_line_y(start_y, start_x+40, start_y+40);
+}
+
 void tache1()
 {
 unsigned char i;
@@ -12213,5 +12255,9 @@ draw_hex8(choc_time_1);
 draw_hex8(choc_time_2);
 draw_hex8(choc_time_3);
 draw_hex8(choc_time_4);
+
+
+
+
 }
 }

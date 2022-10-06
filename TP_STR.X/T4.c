@@ -1,5 +1,10 @@
 #include "T4.h"
 
+void write_to_serial()
+{
+    
+}
+
 void tache4()
 {
     unsigned int a;
