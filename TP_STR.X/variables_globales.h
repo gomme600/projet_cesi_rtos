@@ -83,16 +83,17 @@ unsigned char STKPTR_T6             @0x603;
 //A mettre dans externe?
 //Alarm
 unsigned char alarme_active             @0x703;
+unsigned char alarme_pannel             @0x704;
 
 //Error
-unsigned char error_active             @0x704;
+unsigned char error_active             @0x705;
 
 //4 bytes long
-unsigned int choc_time                 @0x705;
-unsigned char choc_time_1              @0x708;
-unsigned char choc_time_2              @0x707;
-unsigned char choc_time_3              @0x706;
-unsigned char choc_time_4              @0x705;
+unsigned int choc_time                 @0x706;
+unsigned char choc_time_1              @0x709;
+unsigned char choc_time_2              @0x708;
+unsigned char choc_time_3              @0x707;
+unsigned char choc_time_4              @0x706;
 
 
 #ifdef	__cplusplus

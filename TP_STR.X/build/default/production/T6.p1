@@ -9254,24 +9254,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 "85
 [v _alarme_active `uc ~T0 @X0 1 e@1795 ]
 [; ;variables_globales.h: 85: unsigned char alarme_active @0x703;
-"88
-[v _error_active `uc ~T0 @X0 1 e@1796 ]
-[; ;variables_globales.h: 88: unsigned char error_active @0x704;
-"91
-[v _choc_time `ui ~T0 @X0 1 e@1797 ]
-[; ;variables_globales.h: 91: unsigned int choc_time @0x705;
+"86
+[v _alarme_pannel `uc ~T0 @X0 1 e@1796 ]
+[; ;variables_globales.h: 86: unsigned char alarme_pannel @0x704;
+"89
+[v _error_active `uc ~T0 @X0 1 e@1797 ]
+[; ;variables_globales.h: 89: unsigned char error_active @0x705;
 "92
-[v _choc_time_1 `uc ~T0 @X0 1 e@1800 ]
-[; ;variables_globales.h: 92: unsigned char choc_time_1 @0x708;
+[v _choc_time `ui ~T0 @X0 1 e@1798 ]
+[; ;variables_globales.h: 92: unsigned int choc_time @0x706;
 "93
-[v _choc_time_2 `uc ~T0 @X0 1 e@1799 ]
-[; ;variables_globales.h: 93: unsigned char choc_time_2 @0x707;
+[v _choc_time_1 `uc ~T0 @X0 1 e@1801 ]
+[; ;variables_globales.h: 93: unsigned char choc_time_1 @0x709;
 "94
-[v _choc_time_3 `uc ~T0 @X0 1 e@1798 ]
-[; ;variables_globales.h: 94: unsigned char choc_time_3 @0x706;
+[v _choc_time_2 `uc ~T0 @X0 1 e@1800 ]
+[; ;variables_globales.h: 94: unsigned char choc_time_2 @0x708;
 "95
-[v _choc_time_4 `uc ~T0 @X0 1 e@1797 ]
-[; ;variables_globales.h: 95: unsigned char choc_time_4 @0x705;
+[v _choc_time_3 `uc ~T0 @X0 1 e@1799 ]
+[; ;variables_globales.h: 95: unsigned char choc_time_3 @0x707;
+"96
+[v _choc_time_4 `uc ~T0 @X0 1 e@1798 ]
+[; ;variables_globales.h: 96: unsigned char choc_time_4 @0x706;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();

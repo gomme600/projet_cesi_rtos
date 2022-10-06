@@ -11980,16 +11980,17 @@ unsigned char STKPTR_T6 @0x603;
 
 # 85
 unsigned char alarme_active @0x703;
+unsigned char alarme_pannel @0x704;
 
 
-unsigned char error_active @0x704;
+unsigned char error_active @0x705;
 
 
-unsigned int choc_time @0x705;
-unsigned char choc_time_1 @0x708;
-unsigned char choc_time_2 @0x707;
-unsigned char choc_time_3 @0x706;
-unsigned char choc_time_4 @0x705;
+unsigned int choc_time @0x706;
+unsigned char choc_time_1 @0x709;
+unsigned char choc_time_2 @0x708;
+unsigned char choc_time_3 @0x707;
+unsigned char choc_time_4 @0x706;
 
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
@@ -12066,11 +12067,31 @@ unsigned char lecture_8bit_analogique(unsigned char channel);
 # 16 "T1.h"
 void tache1();
 
+<<<<<<< HEAD
 # 4 "T1.c"
+=======
+# 3 "T1.c"
+>>>>>>> 2cf85eb8f8e2e6843a94cd0d397133259c502a45
 int fork_start_x_pos=120;
 int fork_start_y_pos=40;
 int current_fork_x=0;
 int current_fork_y=0;
+<<<<<<< HEAD
+=======
+int fork_size=5;
+int fork_stop=20;
+
+void alarm_icon(int start_point_x, int start_point_y)
+{
+plot1(start_point_x, start_point_y-4);
+plot1(start_point_x, start_point_y-3);
+plot1(start_point_x, start_point_y-2);
+plot1(start_point_x, start_point_y-1);
+plot1(start_point_x, start_point_y);
+plot1(start_point_x, start_point_y+2);
+plot1(start_point_x, start_point_y+3);
+}
+>>>>>>> 2cf85eb8f8e2e6843a94cd0d397133259c502a45
 
 void draw_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
 {
@@ -12082,6 +12103,46 @@ for (i = start_point_x; i < end_point_x; i++ )
 for (j = start_point_y; j < end_point_y; j++ )
 {
 plot1(i, j);
+}
+}
+}
+
+<<<<<<< HEAD
+void clear_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
+{
+int i=0;
+int j=0;
+
+for (i = start_point_x; i < end_point_x; i++ )
+{
+for (j = start_point_y; j < end_point_y; j++ )
+{
+plot0(i, j);
+}
+}
+}
+
+void draw_line_x(int start_point_x, int start_point_y, int end_point_x)
+=======
+void draw_empty_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
+>>>>>>> 2cf85eb8f8e2e6843a94cd0d397133259c502a45
+{
+int i=0;
+int j=0;
+
+for (i = start_point_x; i < end_point_x; i++ )
+{
+if(i==start_point_x || i==end_point_x-1)
+{
+for (j = start_point_y; j < end_point_y; j++ )
+{
+plot1(i, j);
+}
+}
+else
+{
+plot1(i, start_point_y);
+plot1(i, end_point_y);
 }
 }
 }
@@ -12100,32 +12161,20 @@ plot0(i, j);
 }
 }
 
-void draw_line_x(int start_point_x, int start_point_y, int end_point_x)
+void initial_draw()
 {
-int i=0;
+goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
+goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
+goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
 
-for (i = start_point_x; i < end_point_x; i++ )
-{
-plot1(i, start_point_y);
-}
-}
 
-void draw_line_y(int start_point_y, int start_point_x, int end_point_y)
-{
-int i=0;
+draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
+current_fork_x=fork_start_x_pos;
+current_fork_y=fork_start_y_pos;
+draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
 
-for (i = start_point_y; i < end_point_y; i++ )
-{
-plot1(start_point_x, i);
-}
-}
 
-void draw_fork(int start_x, int start_y)
-{
-draw_line_x(start_x, start_y, start_x+40);
-draw_line_x(start_x, start_y+40, start_x+40);
-draw_line_y(start_y, start_x, start_y+40);
-draw_line_y(start_y, start_x+40, start_y+40);
+alarm_icon(200, 20);
 }
 
 void blockVitesse(unsigned char vitesseCourante)
@@ -12186,7 +12235,17 @@ goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');dra
 goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
 goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
 
+
+draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
+current_fork_x=fork_start_x_pos;
+current_fork_y=fork_start_y_pos;
+draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
+
+
+alarm_icon(200, 20);
+
 TP_appui=0;
+alarme_pannel=0;
 
 
 draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+10, fork_start_y_pos+10);
@@ -12284,7 +12343,43 @@ else
 asm(" nop");
 }
 
+# 222
+if (lecture_8bit_analogique(10) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
+{
+clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
+draw_box(current_fork_x+1, current_fork_y, current_fork_x+fork_size+1, current_fork_y+fork_size);
+current_fork_x=current_fork_x+1;
+}
+if (lecture_8bit_analogique(10) == 0x00 && (current_fork_x-1)>(fork_start_x_pos-fork_stop))
+{
+clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
+draw_box(current_fork_x-1, current_fork_y, current_fork_x+fork_size-1, current_fork_y+fork_size);
+current_fork_x=current_fork_x-1;
+}
+if (lecture_8bit_analogique(11) == 0x00 && (current_fork_y+1)<(fork_start_y_pos+fork_stop))
+{
+clear_box(current_fork_x, current_fork_y, current_fork_x+10, current_fork_y+fork_size);
+draw_box(current_fork_x, current_fork_y+1, current_fork_x+fork_size, current_fork_y+fork_size+1);
+current_fork_y=current_fork_y+1;
+}
+if (lecture_8bit_analogique(11) == 0xFF && (current_fork_y-1)>(fork_start_y_pos-fork_stop))
+{
+clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
+draw_box(current_fork_x, current_fork_y-1, current_fork_x+fork_size, current_fork_y+fork_size-1);
+current_fork_y=current_fork_y-1;
+}
 
+goto_lico(11,0);
+draw_string("pannel=");
+draw_hex8(alarme_pannel);
+if(alarme_pannel==0xFF)
+{
+clear_text();
+clear_graphics();
+while (alarme_pannel==0xFF)
+{
+
+alarm_icon(200, 20);
 goto_lico(11,0);
 draw_string("alarme_eau=");
 draw_hex8((alarme_active >> 0) & 0x01);
@@ -12315,15 +12410,31 @@ draw_hex8(choc_time_1);
 draw_hex8(choc_time_2);
 draw_hex8(choc_time_3);
 draw_hex8(choc_time_4);
+}
+clear_text();
+clear_graphics();
+goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
+goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
+goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
 
 
+draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
+current_fork_x=fork_start_x_pos;
+current_fork_y=fork_start_y_pos;
+draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
 
 
+<<<<<<< HEAD
 if (lecture_8bit_analogique(10) == 0xFF)
 {
 clear_box(current_fork_x, current_fork_y, current_fork_x+10, current_fork_y+10);
 draw_box(current_fork_x+1, current_fork_y, current_fork_x+11, current_fork_y);
 current_fork_x=current_fork_x+1;
 }
+=======
+alarm_icon(200, 20);
+}
+
+>>>>>>> 2cf85eb8f8e2e6843a94cd0d397133259c502a45
 }
 }

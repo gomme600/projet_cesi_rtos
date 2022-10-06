@@ -46,5 +46,19 @@ void tache3()
                 }
             }
         }
+        
+        //Alarms
+        if (TP_appui==1)
+        {
+            if ((TP_x>=200)&&(TP_x<210))
+            {
+                if ((TP_y>=20)&&(TP_y<30))
+                {
+                    alarme_pannel=~alarme_pannel;
+                }
+            }
+        }
+        
     }
+    
 }
