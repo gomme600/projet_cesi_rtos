@@ -9764,71 +9764,71 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 73: RCONbits.IPEN = 1;
 "73
 [e = . . _RCONbits 6 7 -> -> 1 `i `uc ]
-[; ;main.c: 76: INTCON3 = 0x18;
-"76
+[; ;main.c: 85: INTCON3 = 0x18;
+"85
 [e = _INTCON3 -> -> 24 `i `uc ]
-[; ;main.c: 78: }
-"78
+[; ;main.c: 87: }
+"87
 [e :UE 1243 ]
 }
-"81
+"90
 [v _lecture_8bit_analogique `(uc ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 80: unsigned char lecture_8bit_analogique(unsigned char channel)
-[; ;main.c: 81: {
+[; ;main.c: 89: unsigned char lecture_8bit_analogique(unsigned char channel)
+[; ;main.c: 90: {
 [e :U _lecture_8bit_analogique ]
 [v _channel `uc ~T0 @X0 1 r1 ]
 [f ]
-"82
-[v _ret `uc ~T0 @X0 1 a ]
-[; ;main.c: 82: unsigned char ret;
-[; ;main.c: 85: ADCON1=0;
-"85
-[e = _ADCON1 -> -> 0 `i `uc ]
-[; ;main.c: 86: ADCON2=0x16;
-"86
-[e = _ADCON2 -> -> 22 `i `uc ]
-[; ;main.c: 87: channel=channel&0x1F;
-"87
-[e = _channel -> & -> _channel `i -> 31 `i `uc ]
-[; ;main.c: 88: channel=channel<<2;
-"88
-[e = _channel -> << -> _channel `i -> 2 `i `uc ]
-[; ;main.c: 89: ADCON0=channel|0x01;
-"89
-[e = _ADCON0 -> | -> _channel `i -> 1 `i `uc ]
-[; ;main.c: 91: ADCON0bits.GO=1;
 "91
+[v _ret `uc ~T0 @X0 1 a ]
+[; ;main.c: 91: unsigned char ret;
+[; ;main.c: 94: ADCON1=0;
+"94
+[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;main.c: 95: ADCON2=0x16;
+"95
+[e = _ADCON2 -> -> 22 `i `uc ]
+[; ;main.c: 96: channel=channel&0x1F;
+"96
+[e = _channel -> & -> _channel `i -> 31 `i `uc ]
+[; ;main.c: 97: channel=channel<<2;
+"97
+[e = _channel -> << -> _channel `i -> 2 `i `uc ]
+[; ;main.c: 98: ADCON0=channel|0x01;
+"98
+[e = _ADCON0 -> | -> _channel `i -> 1 `i `uc ]
+[; ;main.c: 100: ADCON0bits.GO=1;
+"100
 [e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
-[; ;main.c: 92: while(ADCON0bits.DONE==1)
-"92
+[; ;main.c: 101: while(ADCON0bits.DONE==1)
+"101
 [e $U 1245  ]
 [e :U 1246 ]
-[; ;main.c: 93: ;
-"93
+[; ;main.c: 102: ;
+"102
 [e :U 1245 ]
-"92
+"101
 [e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 1246  ]
 [e :U 1247 ]
-[; ;main.c: 95: if ((ADRESL&0x01)==0x01)
-"95
+[; ;main.c: 104: if ((ADRESL&0x01)==0x01)
+"104
 [e $ ! == & -> _ADRESL `i -> 1 `i -> 1 `i 1248  ]
-[; ;main.c: 96: ret=0;
-"96
+[; ;main.c: 105: ret=0;
+"105
 [e = _ret -> -> 0 `i `uc ]
 [e $U 1249  ]
-"97
+"106
 [e :U 1248 ]
-[; ;main.c: 97: else
-[; ;main.c: 98: ret=ADRESH;
-"98
+[; ;main.c: 106: else
+[; ;main.c: 107: ret=ADRESH;
+"107
 [e = _ret _ADRESH ]
 [e :U 1249 ]
-[; ;main.c: 101: return ret;
-"101
+[; ;main.c: 110: return ret;
+"110
 [e ) _ret ]
 [e $UE 1244  ]
-[; ;main.c: 102: }
-"102
+[; ;main.c: 111: }
+"111
 [e :UE 1244 ]
 }

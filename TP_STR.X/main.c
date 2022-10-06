@@ -71,6 +71,15 @@ void initialisation_des_ports()
     
     //Initialise Interrupts
     RCONbits.IPEN = 1; //Enable interrupt priority levels
+        
+  /*  INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    INTCONbits.INT0IE = 1;
+    
+    INTCON2bits.INTEDG0 = 1;
+    INTCON2bits.INTEDG1 = 1;
+    INTCON2bits.INTEDG2 = 1;*/
+    
     //INTCON = 0xD0; //Enable INT0
     //INTCON2 = 0x70; //External interrupts on rising edge
     INTCON3 = 0x18; //INT1 low priority INT 2 low priority
