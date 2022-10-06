@@ -7,6 +7,17 @@ int current_fork_y=0;
 int fork_size=5;
 int fork_stop=20;
 
+void alarm_icon(int start_point_x, int start_point_y)
+{    
+    plot1(start_point_x, start_point_y-4);
+    plot1(start_point_x, start_point_y-3);
+    plot1(start_point_x, start_point_y-2);
+    plot1(start_point_x, start_point_y-1);
+    plot1(start_point_x, start_point_y);
+    plot1(start_point_x, start_point_y+2);
+    plot1(start_point_x, start_point_y+3);
+}
+
 void draw_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
 {
     int i=0;
@@ -57,6 +68,22 @@ void clear_box(int start_point_x, int start_point_y, int end_point_x, int end_po
     }
 }
 
+void initial_draw()
+{
+    goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
+    goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
+    goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
+    
+    //Fork
+    draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
+    current_fork_x=fork_start_x_pos;
+    current_fork_y=fork_start_y_pos;
+    draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
+
+    //Icons
+    alarm_icon(200, 20);
+}
+
 void tache1()
 {
     unsigned char i;
@@ -81,8 +108,6 @@ void tache1()
     goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
     goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
     goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
-
-    TP_appui=0;
     
     //Fork
     draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
@@ -90,9 +115,15 @@ void tache1()
     current_fork_y=fork_start_y_pos;
     draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
 
+    //Icons
+    alarm_icon(200, 20);
+            
+    TP_appui=0;
+    alarme_pannel=0;
+            
     while(1)
     {
-
+        
         goto_lico(0,0);
         draw_string("Marche:");
         if (MARCHE_AVANT==0)
@@ -181,37 +212,7 @@ void tache1()
             Nop();
         }
         
-        //Alarme
-        goto_lico(11,0);
-        draw_string("alarme_eau=");
-        draw_hex8((alarme_active >> 0) & 0x01);
-        goto_lico(12,0);
-        draw_string("alarme_huile=");
-        draw_hex8((alarme_active >> 1) & 0x01);
-        goto_lico(13,0);
-        draw_string("alarme_choc=");
-        draw_hex8((alarme_active >> 2) & 0x01);
-        goto_lico(14,0);
-        draw_string("alarme_batterie=");
-        draw_hex8((alarme_active >> 3) & 0x01);
-        goto_lico(11,20);
-        draw_string("alarme_cle=");
-        draw_hex8((alarme_active >> 4) & 0x01);
-        goto_lico(12,20);
-        draw_string("alarme_frein=");
-        draw_hex8((alarme_active >> 5) & 0x01);
-        goto_lico(13,20);
-        draw_string("alarme_siege=");
-        draw_hex8((alarme_active >> 6) & 0x01);
-        goto_lico(14,20);
-        draw_string("erreur_choc=");
-        draw_hex8((error_active >> 2) & 0x01);
-        goto_lico(15,20);
-        draw_string("choc_time=");
-        draw_hex8(choc_time_1);
-        draw_hex8(choc_time_2);
-        draw_hex8(choc_time_3);
-        draw_hex8(choc_time_4);
+        
         //draw_box(100, 100, 110, 110);
         //draw_line_x(120, 120, 140);
         //draw_line_y(140, 140, 160);
@@ -242,5 +243,64 @@ void tache1()
             draw_box(current_fork_x, current_fork_y-1, current_fork_x+fork_size, current_fork_y+fork_size-1);
             current_fork_y=current_fork_y-1;
         }
+        
+        goto_lico(11,0);
+        draw_string("pannel=");
+        draw_hex8(alarme_pannel);
+        if(alarme_pannel==0xFF)
+        {
+            clear_text();
+            clear_graphics();
+            while (alarme_pannel==0xFF)
+            {
+                //Alarme
+                alarm_icon(200, 20);
+                goto_lico(11,0);
+                draw_string("alarme_eau=");
+                draw_hex8((alarme_active >> 0) & 0x01);
+                goto_lico(12,0);
+                draw_string("alarme_huile=");
+                draw_hex8((alarme_active >> 1) & 0x01);
+                goto_lico(13,0);
+                draw_string("alarme_choc=");
+                draw_hex8((alarme_active >> 2) & 0x01);
+                goto_lico(14,0);
+                draw_string("alarme_batterie=");
+                draw_hex8((alarme_active >> 3) & 0x01);
+                goto_lico(11,20);
+                draw_string("alarme_cle=");
+                draw_hex8((alarme_active >> 4) & 0x01);
+                goto_lico(12,20);
+                draw_string("alarme_frein=");
+                draw_hex8((alarme_active >> 5) & 0x01);
+                goto_lico(13,20);
+                draw_string("alarme_siege=");
+                draw_hex8((alarme_active >> 6) & 0x01);
+                goto_lico(14,20);
+                draw_string("erreur_choc=");
+                draw_hex8((error_active >> 2) & 0x01);
+                goto_lico(15,20);
+                draw_string("choc_time=");
+                draw_hex8(choc_time_1);
+                draw_hex8(choc_time_2);
+                draw_hex8(choc_time_3);
+                draw_hex8(choc_time_4);
+            }
+            clear_text();
+            clear_graphics();
+            goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
+            goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
+            goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
+    
+            //Fork
+            draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
+            current_fork_x=fork_start_x_pos;
+            current_fork_y=fork_start_y_pos;
+            draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
+
+            //Icons
+            alarm_icon(200, 20);
+        }
+                
     }
 }
