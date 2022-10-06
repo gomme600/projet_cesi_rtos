@@ -14,8 +14,23 @@
                         TOSU=*puc
 
 
+int tache_prioritaire=0;
+
 void interrupt fonction_d_interruption()
 {
+    
+//Interruptions boutons
+//CHOC
+if (INTCON3bits.INT3IF==1)
+{
+    INTCON3bits.INT3IF=0;
+    tache_prioritaire=1;
+    if (VITESSE_PLUS > 0x26)
+    {
+        flagVitesse = 1;
+    }
+}
+    
 // Sauvegarde de registres sensibles (ils sont modifiés au cours du changement de tache)
     STATUS_TEMPORAIRE=STATUS; W_TEMPORAIRE=WREG; BSR_TEMPORAIRE=BSR;
     FSR0H_TEMPORAIRE=FSR0H; FSR0L_TEMPORAIRE=FSR0L;
@@ -64,7 +79,17 @@ void interrupt fonction_d_interruption()
 
         Tick_Count++;// Incrémentation du compteur de tick
 
-        pointeur_de_tache++;                        //
+        //Incrementation des taches
+        if (tache_prioritaire==0)
+        {
+            pointeur_de_tache++;
+        }
+        else
+        {
+           pointeur_de_tache=tache_prioritaire;
+           tache_prioritaire=0;
+        }
+                                //
         if (pointeur_de_tache==NOMBRE_DE_TACHES)    // Evolution du cycle des taches
             pointeur_de_tache=0;                    // 1-2-3-4-5-6-1-2-3...
         tache_active=queue[pointeur_de_tache];      //

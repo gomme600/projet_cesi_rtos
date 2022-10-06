@@ -12070,17 +12070,3 @@ void tache6();
 void initialisation_des_ports();
 unsigned char lecture_8bit_analogique(unsigned char channel);
 
-# 6 "interrupt.c"
-void interrupt low_priority LOWISR()
-{
-
-}
-
-
-void interrupt high_priority HIGHISR ()
-{
-if (PORTEbits.RE0 > 0x26)
-{
-flagVitesse = 1;
-}
-}

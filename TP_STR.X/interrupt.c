@@ -3,16 +3,18 @@
 
 
 
-void interrupt low_priority LOWISR()
+/*void interrupt low_priority LOWISR()
 {
 
-}
+}*/
 
 
-void interrupt high_priority HIGHISR ()
+/*void interrupt high_priority HIGHISR ()
 {
-    if (VITESSE_PLUS > 0x26)
-    {
-       flagVitesse = 1;
-    }
-}
+
+}*/
+
+/*void interrupt high_priority FJGYJGISR ()
+{
+
+}*/

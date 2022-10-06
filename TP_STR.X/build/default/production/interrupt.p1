@@ -1,58 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
 [v F10207 `(v ~T0 @X0 0 tf ]
-[s S577 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S577 . RE0 RE1 RE2 RE3 RE4 RE5 RE6 RE7 ]
-[s S578 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S578 . AD8 AD9 AD10 AD11 AD12 AD13 AD14 AD15 ]
-[s S579 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S579 . P2D P2C P2B P3C P3B P1C P1B P2A ]
-[s S580 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S580 . . CCP10 CCP9 CCP8 CCP7 CCP6 CCP2 ]
-[s S581 :1 `uc 1 ]
-[n S581 . NOT_RD ]
-[s S582 :1 `uc 1 :1 `uc 1 ]
-[n S582 . . NOT_WR ]
-[s S583 :2 `uc 1 :1 `uc 1 ]
-[n S583 . . NOT_CS ]
-[s S584 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S584 . nRD nWR nCS REFO ]
-[s S585 :7 `uc 1 :1 `uc 1 ]
-[n S585 . . CCP2E ]
-[s S586 :6 `uc 1 :1 `uc 1 ]
-[n S586 . . CCP6E ]
-[s S587 :5 `uc 1 :1 `uc 1 ]
-[n S587 . . CCP7E ]
-[s S588 :4 `uc 1 :1 `uc 1 ]
-[n S588 . . CCP8E ]
-[s S589 :3 `uc 1 :1 `uc 1 ]
-[n S589 . . CCP9E ]
-[s S590 :2 `uc 1 :1 `uc 1 ]
-[n S590 . . CS ]
-[s S591 :7 `uc 1 :1 `uc 1 ]
-[n S591 . . PA2E ]
-[s S592 :6 `uc 1 :1 `uc 1 ]
-[n S592 . . PB1E ]
-[s S593 :2 `uc 1 :1 `uc 1 ]
-[n S593 . . PB2 ]
-[s S594 :4 `uc 1 :1 `uc 1 ]
-[n S594 . . PB3E ]
-[s S595 :5 `uc 1 :1 `uc 1 ]
-[n S595 . . PC1E ]
-[s S596 :1 `uc 1 :1 `uc 1 ]
-[n S596 . . PC2 ]
-[s S597 :3 `uc 1 :1 `uc 1 ]
-[n S597 . . PC3E ]
-[s S598 :1 `uc 1 ]
-[n S598 . PD2 ]
-[s S599 :1 `uc 1 ]
-[n S599 . RDE ]
-[s S600 :1 `uc 1 :1 `uc 1 ]
-[n S600 . . WRE ]
-[u S576 `S577 1 `S578 1 `S579 1 `S580 1 `S581 1 `S582 1 `S583 1 `S584 1 `S585 1 `S586 1 `S587 1 `S588 1 `S589 1 `S590 1 `S591 1 `S592 1 `S593 1 `S594 1 `S595 1 `S596 1 `S597 1 `S598 1 `S599 1 `S600 1 ]
-[n S576 . . . . . . . . . . . . . . . . . . . . . . . . . ]
-"8979 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
-[v _PORTEbits `VS576 ~T0 @X0 0 e@3972 ]
 [; ;interrupt.h: 16: void interrupt low_priority LOWISR();
 [; ;interrupt.h: 17: void interrupt high_priority HIGHISR ();
 "19 interrupt.h
@@ -9435,42 +9383,3 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBRTB=OFF ]
 [; ;main.h: 143: void initialisation_des_ports();
 [; ;main.h: 144: unsigned char lecture_8bit_analogique(unsigned char channel);
-"16 interrupt.h
-[v F2 `(v ~T0 @X0 1 tf ]
-"7 interrupt.c
-[v _LOWISR `ILF2 ~T0 @X0 1 e ]
-{
-[; ;interrupt.c: 6: void interrupt low_priority LOWISR()
-[; ;interrupt.c: 7: {
-[e :U _LOWISR ]
-[f ]
-[; ;interrupt.c: 9: }
-"9
-[e :UE 1238 ]
-}
-"17 interrupt.h
-[v F4 `(v ~T0 @X0 1 tf ]
-"13 interrupt.c
-[v _HIGHISR `IHF4 ~T0 @X0 1 e ]
-{
-[; ;interrupt.c: 12: void interrupt high_priority HIGHISR ()
-[; ;interrupt.c: 13: {
-[e :U _HIGHISR ]
-[f ]
-[; ;interrupt.c: 14: if (PORTEbits.RE0 > 0x26)
-"14
-[e $ ! > -> . . _PORTEbits 0 0 `i -> 38 `i 1240  ]
-[; ;interrupt.c: 15: {
-"15
-{
-[; ;interrupt.c: 16: flagVitesse = 1;
-"16
-[e = _flagVitesse -> -> 1 `i `uc ]
-"17
-}
-[e :U 1240 ]
-[; ;interrupt.c: 17: }
-[; ;interrupt.c: 18: }
-"18
-[e :UE 1239 ]
-}

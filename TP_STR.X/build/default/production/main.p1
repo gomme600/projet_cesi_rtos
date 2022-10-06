@@ -198,6 +198,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1083 . . . . . . . . . ]
 "17190
 [v _RCONbits `VS1083 ~T0 @X0 0 e@4048 ]
+"18138
+[v _INTCON3 `Vuc ~T0 @X0 0 e@4080 ]
 "14836
 [v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
 "14766
@@ -9762,6 +9764,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 73: RCONbits.IPEN = 1;
 "73
 [e = . . _RCONbits 6 7 -> -> 1 `i `uc ]
+[; ;main.c: 85: INTCON3 = 0x18;
+"85
+[e = _INTCON3 -> -> 24 `i `uc ]
 [; ;main.c: 87: }
 "87
 [e :UE 1243 ]

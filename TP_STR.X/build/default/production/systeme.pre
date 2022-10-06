@@ -12071,8 +12071,23 @@ void interrupt fonction_d_interruption();
 void initialisation_du_systeme();
 
 # 17 "systeme.c"
+int tache_prioritaire=0;
+
 void interrupt fonction_d_interruption()
 {
+
+
+
+if (INTCON3bits.INT3IF==1)
+{
+INTCON3bits.INT3IF=0;
+tache_prioritaire=1;
+if (PORTEbits.RE0 > 0x26)
+{
+flagVitesse = 1;
+}
+}
+
 
 STATUS_TEMPORAIRE=STATUS; W_TEMPORAIRE=WREG; BSR_TEMPORAIRE=BSR;
 FSR0H_TEMPORAIRE=FSR0H; FSR0L_TEMPORAIRE=FSR0L;
@@ -12121,7 +12136,17 @@ T0IF=0;
 
 Tick_Count++;
 
+
+if (tache_prioritaire==0)
+{
 pointeur_de_tache++;
+}
+else
+{
+pointeur_de_tache=tache_prioritaire;
+tache_prioritaire=0;
+}
+
 if (pointeur_de_tache==6)
 pointeur_de_tache=0;
 tache_active=queue[pointeur_de_tache];

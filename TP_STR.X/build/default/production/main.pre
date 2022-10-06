@@ -12143,7 +12143,9 @@ PWM1_Init();
 
 RCONbits.IPEN = 1;
 
-# 87
+# 85
+INTCON3 = 0x18;
+
 }
 
 unsigned char lecture_8bit_analogique(unsigned char channel)
