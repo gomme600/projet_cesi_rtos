@@ -17,6 +17,7 @@ extern "C" {
     
 // Include du projet
 #include "systeme.h"
+#include "interrupt.h"
 #include "variables_globales.h"
 #include "afficheur.h"
 #include "semaphore.h"

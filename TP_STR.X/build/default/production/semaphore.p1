@@ -1,6 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
-[v F10202 `(v ~T0 @X0 0 tf ]
+[v F10203 `(v ~T0 @X0 0 tf ]
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -9141,6 +9141,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 148: extern void _delay3(unsigned char);
 [; ;systeme.h: 20: void interrupt fonction_d_interruption();
 [; ;systeme.h: 21: void initialisation_du_systeme();
+"26 interrupt.h
+[v _flagVitesse `uc ~T0 @X0 1 e ]
+[i _flagVitesse
+-> -> 0 `i `uc
+]
+[; ;interrupt.h: 26: unsigned char flagVitesse=0;
 "29 variables_globales.h
 [v _W_TEMPORAIRE `uc ~T0 @X0 1 e@96 ]
 [; ;variables_globales.h: 29: unsigned char W_TEMPORAIRE @ 0x60;
@@ -9196,7 +9202,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RXTX_libre `uc ~T0 @X0 1 e@128 ]
 [; ;variables_globales.h: 51: unsigned char RXTX_libre @ 0x80;
 "55
-[v _fptr `*F10202 ~T0 @X0 1 e ]
+[v _fptr `*F10203 ~T0 @X0 1 e ]
 [; ;variables_globales.h: 55: void (*fptr)(void);
 "56
 [v _val_tos `um ~T0 @X0 1 e ]
@@ -9292,40 +9298,40 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T4.h: 16: void tache4();
 [; ;T5.h: 16: void tache5();
 [; ;T6.h: 16: void tache6();
-"36 main.h
+"37 main.h
 [p x INTOSCSEL=HIGH ]
 [p x SOSCSEL=DIG ]
 [p x XINST=OFF ]
 [p x RETEN=ON ]
-"37
+"38
 [p x IESO=OFF ]
 [p x FOSC=HS1 ]
 [p x FCMEN=OFF ]
 [p x PLLCFG=ON ]
-"38
+"39
 [p x BOREN=OFF ]
 [p x BORPWR=ZPBORMV ]
 [p x BORV=0 ]
 [p x PWRTEN=OFF ]
-"39
+"40
 [p x WDTPS=1 ]
 [p x WDTEN=OFF ]
-"40
+"41
 [p x RTCOSC=INTOSCREF ]
 [p x BW=8 ]
 [p x EASHFT=OFF ]
 [p x WAIT=ON ]
 [p x ABW=MM ]
-"41
+"42
 [p x CCP2MX=PORTBE ]
 [p x ECCPMX=PORTH ]
 [p x MSSPMSK=MSK5 ]
 [p x MCLRE=ON ]
-"42
+"43
 [p x DEBUG=OFF ]
 [p x STVREN=ON ]
 [p x BBSIZ=BB1K ]
-"43
+"44
 [p x CP5=OFF ]
 [p x CP6=OFF ]
 [p x CP7=OFF ]
@@ -9334,10 +9340,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x CP2=OFF ]
 [p x CP3=OFF ]
 [p x CP4=OFF ]
-"44
+"45
 [p x CPD=OFF ]
 [p x CPB=OFF ]
-"45
+"46
 [p x WRT0=OFF ]
 [p x WRT1=OFF ]
 [p x WRT2=OFF ]
@@ -9346,11 +9352,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x WRT5=OFF ]
 [p x WRT6=OFF ]
 [p x WRT7=OFF ]
-"46
+"47
 [p x WRTB=OFF ]
 [p x WRTC=OFF ]
 [p x WRTD=OFF ]
-"47
+"48
 [p x EBRT0=OFF ]
 [p x EBRT1=OFF ]
 [p x EBRT2=OFF ]
@@ -9359,10 +9365,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBRT5=OFF ]
 [p x EBRT6=OFF ]
 [p x EBRT7=OFF ]
-"48
+"49
 [p x EBRTB=OFF ]
-[; ;main.h: 142: void initialisation_des_ports();
-[; ;main.h: 143: unsigned char lecture_8bit_analogique(unsigned char channel);
+[; ;main.h: 143: void initialisation_des_ports();
+[; ;main.h: 144: unsigned char lecture_8bit_analogique(unsigned char channel);
 "22 semaphore.h
 [v _Val_sem_cna `uc ~T0 @X0 1 e ]
 [; ;semaphore.h: 22: unsigned char Val_sem_cna;

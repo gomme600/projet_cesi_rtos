@@ -11927,6 +11927,9 @@ extern void _delay3(unsigned char);
 void interrupt fonction_d_interruption();
 void initialisation_du_systeme();
 
+# 26 "interrupt.h"
+unsigned char flagVitesse=0;
+
 # 29 "variables_globales.h"
 unsigned char W_TEMPORAIRE @ 0x60;
 unsigned char STATUS_TEMPORAIRE @ 0x61;
@@ -12044,7 +12047,7 @@ void tache5();
 void tache6();
 
 
-# 36 "main.h"
+# 37 "main.h"
 #pragma config CONFIG1L = 0x15
 #pragma config CONFIG1H = 0x13
 #pragma config CONFIG2L = 0x61
@@ -12059,7 +12062,7 @@ void tache6();
 #pragma config CONFIG7L = 0xFF
 #pragma config CONFIG7H = 0x40
 
-# 142
+# 143
 void initialisation_des_ports();
 unsigned char lecture_8bit_analogique(unsigned char channel);
 

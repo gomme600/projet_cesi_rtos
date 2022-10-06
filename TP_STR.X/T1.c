@@ -1,5 +1,6 @@
 #include "T1.h"
 
+
 int fork_start_x_pos=120;
 int fork_start_y_pos=40;
 int current_fork_x=0;
@@ -61,10 +62,43 @@ void draw_fork(int start_x, int start_y)
     draw_line_y(start_y, start_x+40, start_y+40);
 }
 
+void blockVitesse(unsigned char vitesseCourante)
+{
+    VITESSE_PLUS = vitesseCourante;
+}
+
+void stopVitess(unsigned char  vitesseCourante)
+{
+    int cpt; 
+    char newVitesse;
+    
+    while (vitesseCourante != 0)
+    {
+        cpt ++;
+        if ((cpt %20)==1)
+        {
+            vitesseCourante --;
+            //newVitesse = setBit(newVitesse,vitesseCourante);
+            
+        }
+    }
+}
+
 void tache1()
 {
     unsigned char i;
-
+    
+    unsigned int alarmeEnCours = 0;
+    
+    if(flagVitesse == 1)
+    {
+       //blockVitesse(32); 
+       goto_lico(11,0);
+       draw_string("alarme_vitesse="); 
+       draw_hex8((alarme_active >> 7) & 0x01);
+       flagVitesse = 0;
+    }
+    
     di();
     initialisation_des_ports();
     initialisation_afficheur();

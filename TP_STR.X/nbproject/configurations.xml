@@ -17,6 +17,8 @@
       <itemPath>semaphore.h</itemPath>
       <itemPath>stid.h</itemPath>
       <itemPath>rxtx.h</itemPath>
+      <itemPath>alarmes.h</itemPath>
+      <itemPath>interrupt.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -37,6 +39,8 @@
       <itemPath>semaphore.c</itemPath>
       <itemPath>stid.c</itemPath>
       <itemPath>rxtx.c</itemPath>
+      <itemPath>alarmes.c</itemPath>
+      <itemPath>interrupt.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
