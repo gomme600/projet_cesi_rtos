@@ -281,6 +281,9 @@ void tache1()
         goto_lico(11,0);
         draw_string("pannel=");
         draw_hex8(alarme_pannel);
+        goto_lico(12,0);
+        draw_string("interupt=");
+        draw_hex8(INTCON3bits.INT1IF);
         if(alarme_pannel==0xFF)
         {
             clear_text();
