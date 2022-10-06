@@ -4,6 +4,8 @@ int fork_start_x_pos=120;
 int fork_start_y_pos=40;
 int current_fork_x=0;
 int current_fork_y=0;
+int fork_size=5;
+int fork_stop=20;
 
 void draw_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
 {
@@ -15,6 +17,28 @@ void draw_box(int start_point_x, int start_point_y, int end_point_x, int end_poi
         for (j = start_point_y; j < end_point_y; j++ )
         {
             plot1(i, j);
+        }
+    }
+}
+
+void draw_empty_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
+{
+    int i=0;
+    int j=0;
+    
+    for (i = start_point_x; i < end_point_x; i++ )
+    {
+        if(i==start_point_x || i==end_point_x-1)
+        {
+            for (j = start_point_y; j < end_point_y; j++ )
+            {
+                plot1(i, j);
+            }
+        }
+        else
+        {
+            plot1(i, start_point_y);
+            plot1(i, end_point_y);
         }
     }
 }
@@ -31,34 +55,6 @@ void clear_box(int start_point_x, int start_point_y, int end_point_x, int end_po
             plot0(i, j);
         }
     }
-}
-
-void draw_line_x(int start_point_x, int start_point_y, int end_point_x)
-{
-    int i=0;
-    
-    for (i = start_point_x; i < end_point_x; i++ )
-    {
-        plot1(i, start_point_y);
-    }
-}
-
-void draw_line_y(int start_point_y, int start_point_x, int end_point_y)
-{
-    int i=0;
-    
-    for (i = start_point_y; i < end_point_y; i++ )
-    {
-        plot1(start_point_x, i);
-    }
-}
-
-void draw_fork(int start_x, int start_y)
-{
-    draw_line_x(start_x, start_y, start_x+40);
-    draw_line_x(start_x, start_y+40, start_x+40);
-    draw_line_y(start_y, start_x, start_y+40);
-    draw_line_y(start_y, start_x+40, start_y+40);
 }
 
 void tache1()
@@ -89,9 +85,10 @@ void tache1()
     TP_appui=0;
     
     //Fork
-    draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+10, fork_start_y_pos+10);
+    draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
     current_fork_x=fork_start_x_pos;
     current_fork_y=fork_start_y_pos;
+    draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
 
     while(1)
     {
@@ -219,11 +216,31 @@ void tache1()
         //draw_line_x(120, 120, 140);
         //draw_line_y(140, 140, 160);
         //draw_fork(120, 40);
-        if (lecture_8bit_analogique(JOYSTICK_X) == 0xFF)
+        
+        //Fork
+        if (lecture_8bit_analogique(JOYSTICK_X) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
         {
-            clear_box(current_fork_x, current_fork_y, current_fork_x+10, current_fork_y+10);
-            draw_box(current_fork_x+1, current_fork_y, current_fork_x+11, current_fork_y);
+            clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
+            draw_box(current_fork_x+1, current_fork_y, current_fork_x+fork_size+1, current_fork_y+fork_size);
             current_fork_x=current_fork_x+1;
+        }
+        if (lecture_8bit_analogique(JOYSTICK_X) == 0x00 && (current_fork_x-1)>(fork_start_x_pos-fork_stop))
+        {
+            clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
+            draw_box(current_fork_x-1, current_fork_y, current_fork_x+fork_size-1, current_fork_y+fork_size);
+            current_fork_x=current_fork_x-1;
+        }
+        if (lecture_8bit_analogique(JOYSTICK_Y) == 0x00 && (current_fork_y+1)<(fork_start_y_pos+fork_stop))
+        {
+            clear_box(current_fork_x, current_fork_y, current_fork_x+10, current_fork_y+fork_size);
+            draw_box(current_fork_x, current_fork_y+1, current_fork_x+fork_size, current_fork_y+fork_size+1);
+            current_fork_y=current_fork_y+1;
+        }
+       if (lecture_8bit_analogique(JOYSTICK_Y) == 0xFF && (current_fork_y-1)>(fork_start_y_pos-fork_stop))
+        {
+            clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
+            draw_box(current_fork_x, current_fork_y-1, current_fork_x+fork_size, current_fork_y+fork_size-1);
+            current_fork_y=current_fork_y-1;
         }
     }
 }
