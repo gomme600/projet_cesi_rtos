@@ -11923,7 +11923,10 @@ extern void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern void _delay3(unsigned char);
 
-# 26 "interrupt.h"
+# 16 "interrupt.h"
+void interrupt low_priority LOWISR();
+void interrupt high_priority HIGHISR ();
+
 unsigned char flagVitesse=0;
 
 # 29 "variables_globales.h"

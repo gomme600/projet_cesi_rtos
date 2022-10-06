@@ -11927,7 +11927,10 @@ extern void _delay3(unsigned char);
 void interrupt fonction_d_interruption();
 void initialisation_du_systeme();
 
-# 26 "interrupt.h"
+# 16 "interrupt.h"
+void interrupt low_priority LOWISR();
+void interrupt high_priority HIGHISR ();
+
 unsigned char flagVitesse=0;
 
 # 29 "variables_globales.h"
@@ -12067,17 +12070,11 @@ unsigned char lecture_8bit_analogique(unsigned char channel);
 # 16 "T1.h"
 void tache1();
 
-<<<<<<< HEAD
 # 4 "T1.c"
-=======
-# 3 "T1.c"
->>>>>>> 2cf85eb8f8e2e6843a94cd0d397133259c502a45
 int fork_start_x_pos=120;
 int fork_start_y_pos=40;
 int current_fork_x=0;
 int current_fork_y=0;
-<<<<<<< HEAD
-=======
 int fork_size=5;
 int fork_stop=20;
 
@@ -12091,7 +12088,6 @@ plot1(start_point_x, start_point_y);
 plot1(start_point_x, start_point_y+2);
 plot1(start_point_x, start_point_y+3);
 }
->>>>>>> 2cf85eb8f8e2e6843a94cd0d397133259c502a45
 
 void draw_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
 {
@@ -12107,25 +12103,7 @@ plot1(i, j);
 }
 }
 
-<<<<<<< HEAD
-void clear_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
-{
-int i=0;
-int j=0;
-
-for (i = start_point_x; i < end_point_x; i++ )
-{
-for (j = start_point_y; j < end_point_y; j++ )
-{
-plot0(i, j);
-}
-}
-}
-
-void draw_line_x(int start_point_x, int start_point_y, int end_point_x)
-=======
 void draw_empty_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
->>>>>>> 2cf85eb8f8e2e6843a94cd0d397133259c502a45
 {
 int i=0;
 int j=0;
@@ -12205,15 +12183,6 @@ unsigned char i;
 
 unsigned int alarmeEnCours = 0;
 
-if(flagVitesse == 1)
-{
-
-goto_lico(11,0);
-draw_string("alarme_vitesse=");
-draw_hex8((alarme_active >> 7) & 0x01);
-flagVitesse = 0;
-}
-
 (INTCONbits.GIE = 0);
 initialisation_des_ports();
 initialisation_afficheur();
@@ -12247,13 +12216,17 @@ alarm_icon(200, 20);
 TP_appui=0;
 alarme_pannel=0;
 
-
-draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+10, fork_start_y_pos+10);
-current_fork_x=fork_start_x_pos;
-current_fork_y=fork_start_y_pos;
-
 while(1)
 {
+
+if(flagVitesse == 1)
+{
+
+goto_lico(11,0);
+draw_string("alarme_vitesse=");
+draw_hex8((alarme_active >> 7) & 0x01);
+flagVitesse = 0;
+}
 
 goto_lico(0,0);
 draw_string("Marche:");
@@ -12343,7 +12316,7 @@ else
 asm(" nop");
 }
 
-# 222
+# 256
 if (lecture_8bit_analogique(10) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
 {
 clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
@@ -12424,17 +12397,8 @@ current_fork_y=fork_start_y_pos;
 draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
 
 
-<<<<<<< HEAD
-if (lecture_8bit_analogique(10) == 0xFF)
-{
-clear_box(current_fork_x, current_fork_y, current_fork_x+10, current_fork_y+10);
-draw_box(current_fork_x+1, current_fork_y, current_fork_x+11, current_fork_y);
-current_fork_x=current_fork_x+1;
-}
-=======
 alarm_icon(200, 20);
 }
 
->>>>>>> 2cf85eb8f8e2e6843a94cd0d397133259c502a45
 }
 }

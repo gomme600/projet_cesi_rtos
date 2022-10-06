@@ -113,15 +113,6 @@ void tache1()
     
     unsigned int alarmeEnCours = 0;
     
-    if(flagVitesse == 1)
-    {
-       //blockVitesse(32); 
-       goto_lico(11,0);
-       draw_string("alarme_vitesse="); 
-       draw_hex8((alarme_active >> 7) & 0x01);
-       flagVitesse = 0;
-    }
-    
     di();
     initialisation_des_ports();
     initialisation_afficheur();
@@ -157,6 +148,15 @@ void tache1()
             
     while(1)
     {
+        
+        if(flagVitesse == 1)
+        {
+            //blockVitesse(32); 
+            goto_lico(11,0);
+            draw_string("alarme_vitesse="); 
+            draw_hex8((alarme_active >> 7) & 0x01);
+            flagVitesse = 0;
+        }
         
         goto_lico(0,0);
         draw_string("Marche:");

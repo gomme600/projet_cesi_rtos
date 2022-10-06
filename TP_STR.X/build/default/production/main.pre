@@ -11927,7 +11927,10 @@ extern void _delay3(unsigned char);
 void interrupt fonction_d_interruption();
 void initialisation_du_systeme();
 
-# 26 "interrupt.h"
+# 16 "interrupt.h"
+void interrupt low_priority LOWISR();
+void interrupt high_priority HIGHISR ();
+
 unsigned char flagVitesse=0;
 
 # 29 "variables_globales.h"
@@ -12136,6 +12139,12 @@ INTCON2bits.RBPU=0;
 PADCFG1bits.REPU=1;
 
 PWM1_Init();
+
+
+RCONbits.IPEN = 1;
+
+
+INTCON3 = 0x18;
 
 }
 

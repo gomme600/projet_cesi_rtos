@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c systeme.c T1.c T2.c T3.c T4.c T5.c T6.c afficheur.c semaphore.c stid.c rxtx.c alarmes.c interrupt.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c systeme.c T1.c T2.c T3.c T4.c T5.c T6.c afficheur.c semaphore.c stid.c rxtx.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/systeme.p1 ${OBJECTDIR}/T1.p1 ${OBJECTDIR}/T2.p1 ${OBJECTDIR}/T3.p1 ${OBJECTDIR}/T4.p1 ${OBJECTDIR}/T5.p1 ${OBJECTDIR}/T6.p1 ${OBJECTDIR}/afficheur.p1 ${OBJECTDIR}/semaphore.p1 ${OBJECTDIR}/stid.p1 ${OBJECTDIR}/rxtx.p1 ${OBJECTDIR}/alarmes.p1 ${OBJECTDIR}/interrupt.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/systeme.p1.d ${OBJECTDIR}/T1.p1.d ${OBJECTDIR}/T2.p1.d ${OBJECTDIR}/T3.p1.d ${OBJECTDIR}/T4.p1.d ${OBJECTDIR}/T5.p1.d ${OBJECTDIR}/T6.p1.d ${OBJECTDIR}/afficheur.p1.d ${OBJECTDIR}/semaphore.p1.d ${OBJECTDIR}/stid.p1.d ${OBJECTDIR}/rxtx.p1.d ${OBJECTDIR}/alarmes.p1.d ${OBJECTDIR}/interrupt.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/systeme.p1 ${OBJECTDIR}/T1.p1 ${OBJECTDIR}/T2.p1 ${OBJECTDIR}/T3.p1 ${OBJECTDIR}/T4.p1 ${OBJECTDIR}/T5.p1 ${OBJECTDIR}/T6.p1 ${OBJECTDIR}/afficheur.p1 ${OBJECTDIR}/semaphore.p1 ${OBJECTDIR}/stid.p1 ${OBJECTDIR}/rxtx.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/systeme.p1.d ${OBJECTDIR}/T1.p1.d ${OBJECTDIR}/T2.p1.d ${OBJECTDIR}/T3.p1.d ${OBJECTDIR}/T4.p1.d ${OBJECTDIR}/T5.p1.d ${OBJECTDIR}/T6.p1.d ${OBJECTDIR}/afficheur.p1.d ${OBJECTDIR}/semaphore.p1.d ${OBJECTDIR}/stid.p1.d ${OBJECTDIR}/rxtx.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/systeme.p1 ${OBJECTDIR}/T1.p1 ${OBJECTDIR}/T2.p1 ${OBJECTDIR}/T3.p1 ${OBJECTDIR}/T4.p1 ${OBJECTDIR}/T5.p1 ${OBJECTDIR}/T6.p1 ${OBJECTDIR}/afficheur.p1 ${OBJECTDIR}/semaphore.p1 ${OBJECTDIR}/stid.p1 ${OBJECTDIR}/rxtx.p1 ${OBJECTDIR}/alarmes.p1 ${OBJECTDIR}/interrupt.p1
+OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/systeme.p1 ${OBJECTDIR}/T1.p1 ${OBJECTDIR}/T2.p1 ${OBJECTDIR}/T3.p1 ${OBJECTDIR}/T4.p1 ${OBJECTDIR}/T5.p1 ${OBJECTDIR}/T6.p1 ${OBJECTDIR}/afficheur.p1 ${OBJECTDIR}/semaphore.p1 ${OBJECTDIR}/stid.p1 ${OBJECTDIR}/rxtx.p1
 
 # Source Files
-SOURCEFILES=main.c systeme.c T1.c T2.c T3.c T4.c T5.c T6.c afficheur.c semaphore.c stid.c rxtx.c alarmes.c interrupt.c
+SOURCEFILES=main.c systeme.c T1.c T2.c T3.c T4.c T5.c T6.c afficheur.c semaphore.c stid.c rxtx.c
 
 
 
@@ -190,22 +190,6 @@ ${OBJECTDIR}/rxtx.p1: rxtx.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/rxtx.d ${OBJECTDIR}/rxtx.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/rxtx.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/alarmes.p1: alarmes.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/alarmes.p1.d 
-	@${RM} ${OBJECTDIR}/alarmes.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=pickit3    --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/alarmes.p1 alarmes.c 
-	@-${MV} ${OBJECTDIR}/alarmes.d ${OBJECTDIR}/alarmes.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/alarmes.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/interrupt.p1: interrupt.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/interrupt.p1.d 
-	@${RM} ${OBJECTDIR}/interrupt.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=pickit3    --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/interrupt.p1 interrupt.c 
-	@-${MV} ${OBJECTDIR}/interrupt.d ${OBJECTDIR}/interrupt.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/interrupt.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 else
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -302,22 +286,6 @@ ${OBJECTDIR}/rxtx.p1: rxtx.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G    --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/rxtx.p1 rxtx.c 
 	@-${MV} ${OBJECTDIR}/rxtx.d ${OBJECTDIR}/rxtx.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/rxtx.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/alarmes.p1: alarmes.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/alarmes.p1.d 
-	@${RM} ${OBJECTDIR}/alarmes.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G    --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/alarmes.p1 alarmes.c 
-	@-${MV} ${OBJECTDIR}/alarmes.d ${OBJECTDIR}/alarmes.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/alarmes.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/interrupt.p1: interrupt.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/interrupt.p1.d 
-	@${RM} ${OBJECTDIR}/interrupt.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G    --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/interrupt.p1 interrupt.c 
-	@-${MV} ${OBJECTDIR}/interrupt.d ${OBJECTDIR}/interrupt.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/interrupt.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
