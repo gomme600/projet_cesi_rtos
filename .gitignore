@@ -1,0 +1,9 @@
+*.cof
+*.hex
+*.hxl
+*.lst
+*.map
+*.obj
+*.rlf
+*.sdb
+*.sym
