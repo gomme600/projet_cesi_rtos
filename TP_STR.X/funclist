@@ -17,7 +17,7 @@ _stid_delai_us: CODE, 75528 0 32
 _initialisation_afficheur: CODE, 71406 0 374
 _main: CODE, 75336 0 46
 _draw_empty_box: CODE, 72792 0 190
-_draw_box: CODE, 73852 0 114
+_draw_box: CODE, 73738 0 114
 _PWM1_Init: CODE, 75666 0 22
 _write_c_aff: CODE, 75618 0 24
 __initialization: CODE, 75286 0 44
@@ -25,7 +25,7 @@ ___lwdiv: CODE, 74298 0 108
 _tache3: CODE, 70988 0 418
 _tache6: CODE, 74962 0 80
 _clear_graphics: CODE, 74696 0 96
-_plot0: CODE, 72364 0 214
+_plot0: CODE, 72578 0 214
 _draw_hex8: CODE, 73474 0 134
 _tp_delai: CODE, 75496 0 32
 _delai_us_char: CODE, 75424 0 38
@@ -35,10 +35,10 @@ i2_initialisation_des_ports: CODE, 74188 0 110
 _Init: CODE, 75232 0 54
 _lecture_8bit_analogique: CODE, 75042 0 70
 _draw_string: CODE, 74792 0 88
-_plot1: CODE, 72578 0 214
+_plot1: CODE, 72364 0 214
 _tache1: CODE, 65536 0 3340
 _goto_lico: CODE, 73966 0 112
-_clear_box: CODE, 73738 0 114
+_clear_box: CODE, 73852 0 114
 _tache4: CODE, 70456 0 532
 _fonction_d_interruption: CODE, 8 0 912
 _command: CODE, 75174 0 58
