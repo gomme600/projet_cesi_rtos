@@ -95,6 +95,14 @@ unsigned char choc_time_2              @0x708;
 unsigned char choc_time_3              @0x707;
 unsigned char choc_time_4              @0x706;
 
+int tache_prioritaire              @0x710;
+int previous_tache                 @0x714;
+
+unsigned char flagVitesse          @0x718;
+unsigned char flagChoc             @0x719;
+unsigned char flagMarcheAvant      @0x720;
+unsigned char flagMarcheArriere    @0x721;
+unsigned char flagSiege            @0x722;
 
 #ifdef	__cplusplus
 }

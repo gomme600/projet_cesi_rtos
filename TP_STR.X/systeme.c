@@ -14,8 +14,6 @@
                         TOSU=*puc
 
 
-int tache_prioritaire=0;
-
 // Function to set the kth bit of n
 char setBit(char n, int k)
 {
@@ -39,18 +37,40 @@ void interrupt fonction_d_interruption()
 {
     
 //Interruptions boutons
-//CHOC
+//Choc
 if (INTCON3bits.INT3IF==1)
 {
     INTCON3bits.INT3IF=0;
-    tache_prioritaire=1;
+    tache_prioritaire=5;
     flagChoc = 1;
     
+}
+
+//Marche avant
+if (INTCONbits.INT0IF==1)
+{
+    INTCONbits.INT0IF=0;
+    tache_prioritaire=5;
+    flagMarcheAvant = 1;
     
-   /* if (VITESSE_PLUS > 0x26)
-    {
-       flagVitesse = 1;
-    }*/
+}
+
+//Marche arriere
+if (INTCON3bits.INT1IF==1)
+{
+    INTCON3bits.INT1IF=0;
+    tache_prioritaire=5;
+    flagMarcheArriere = 1;
+    
+}
+
+//Siege
+if (INTCON3bits.INT2IF==1)
+{
+    INTCON3bits.INT2IF=0;
+    tache_prioritaire=5;
+    flagSiege = 1;
+    
 }
     
 // Sauvegarde de registres sensibles (ils sont modifiés au cours du changement de tache)
@@ -102,15 +122,20 @@ if (INTCON3bits.INT3IF==1)
         Tick_Count++;// Incrémentation du compteur de tick
 
         //Incrementation des taches
-        if (flagChoc==1)
+        if (tache_prioritaire!=0)
         {
-            
+           previous_tache=pointeur_de_tache;
+           pointeur_de_tache=tache_prioritaire;
+           tache_prioritaire=0;
         }
         else
         {
+           if (previous_tache!=0)
+           {
+               pointeur_de_tache=previous_tache;
+               previous_tache=0;
+           }
            pointeur_de_tache++;
-           pointeur_de_tache=tache_prioritaire;
-           tache_prioritaire=0;
         }
                                 //
         if (pointeur_de_tache==NOMBRE_DE_TACHES)    // Evolution du cycle des taches

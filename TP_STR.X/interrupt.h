@@ -15,9 +15,6 @@ extern "C" {
     
     void interrupt low_priority LOWISR();
     void interrupt high_priority HIGHISR ();
-
-    unsigned char flagVitesse=0;
-    unsigned char flagChoc = 0;
     
 #ifdef	__cplusplus
 }

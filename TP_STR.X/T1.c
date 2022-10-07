@@ -150,6 +150,7 @@ void tache1()
     draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
 
     //Icons
+    draw_empty_box(190, 10, 210, 30);
     alarm_icon(200, 20);
             
     TP_appui=0;
@@ -157,6 +158,10 @@ void tache1()
             
     while(1)
     {
+        if (flagChoc==1)    
+        {
+            goto_lico(11,0);
+        }
         
         if(flagVitesse == 1)
         {
@@ -288,12 +293,18 @@ void tache1()
         }
         
         goto_lico(11,0);
-        draw_string("pannel=");
-        draw_hex8(alarme_pannel);
+        draw_string("chocint=");
+        draw_hex8(flagChoc);
         goto_lico(12,0);
-        draw_string("interupt=");
-        //Interrupt RB3 (choc)
-        draw_hex8(INTCON3bits.INT3IF);
+        draw_string("siegeint=");
+        draw_hex8(flagSiege);
+        goto_lico(13,0);
+        draw_string("avantint=");
+        draw_hex8(flagMarcheAvant);
+        goto_lico(14,0);
+        draw_string("arriereint=");
+        draw_hex8(flagMarcheArriere);
+        
         if(alarme_pannel==0xFF)
         {
             clear_text();
@@ -301,6 +312,7 @@ void tache1()
             while (alarme_pannel==0xFF)
             {
                 //Alarme
+                draw_empty_box(190, 10, 210, 30);
                 alarm_icon(200, 20);
                 goto_lico(11,0);
                 draw_string("alarme_eau=");
@@ -346,6 +358,7 @@ void tache1()
             draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
 
             //Icons
+            draw_empty_box(190, 10, 210, 30);
             alarm_icon(200, 20);
         }
                 

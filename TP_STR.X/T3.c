@@ -50,11 +50,15 @@ void tache3()
         //Alarms
         if (TP_appui==1)
         {
-            if ((TP_x>=200)&&(TP_x<210))
+            if ((TP_x>=190)&&(TP_x<210))
             {
-                if ((TP_y>=20)&&(TP_y<30))
+                if ((TP_y>=10)&&(TP_y<30))
                 {
                     alarme_pannel=~alarme_pannel;
+                    int a=0;
+                    //Slow down the reading for double touches
+                    for (a=0;a<100;a++)
+                    ;
                 }
             }
         }
