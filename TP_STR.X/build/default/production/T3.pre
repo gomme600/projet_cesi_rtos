@@ -12142,6 +12142,9 @@ if ((TP_x>=190)&&(TP_x<210))
 if ((TP_y>=10)&&(TP_y<30))
 {
 alarme_pannel=~alarme_pannel;
+int a=0;
+
+for (a=0;a<100;a++)
 ;
 }
 }

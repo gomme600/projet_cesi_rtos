@@ -55,6 +55,9 @@ void tache3()
                 if ((TP_y>=10)&&(TP_y<30))
                 {
                     alarme_pannel=~alarme_pannel;
+                    int a=0;
+                    //Slow down the reading for double touches
+                    for (a=0;a<100;a++)
                     ;
                 }
             }
