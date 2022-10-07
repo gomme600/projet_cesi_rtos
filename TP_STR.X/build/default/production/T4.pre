@@ -11940,9 +11940,6 @@ char toggleBit(char n, int k);
 void interrupt low_priority LOWISR();
 void interrupt high_priority HIGHISR ();
 
-unsigned char flagVitesse=0;
-unsigned char flagChoc = 0;
-
 # 29 "variables_globales.h"
 unsigned char W_TEMPORAIRE @ 0x60;
 unsigned char STATUS_TEMPORAIRE @ 0x61;
@@ -12007,6 +12004,12 @@ unsigned char choc_time_4 @0x706;
 
 int tache_prioritaire @0x710;
 int previous_tache @0x714;
+
+unsigned char flagVitesse @0x718;
+unsigned char flagChoc @0x719;
+unsigned char flagMarcheAvant @0x720;
+unsigned char flagMarcheArriere @0x721;
+unsigned char flagSiege @0x722;
 
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
@@ -12095,30 +12098,10 @@ unsigned int a;
 while(1)
 {
 
-
-
-while (PIR1bits.TX1IF==0); TXREG1='T';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='A';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='C';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='H';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='E';while (TXSTA1bits.TRMT==0);
+# 21
 while (PIR1bits.TX1IF==0); TXREG1='4';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='_';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='E';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='N';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='_';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='C';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='O';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='U';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='R';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='S';while (TXSTA1bits.TRMT==0);
 
-while (PIR1bits.TX1IF==0); TXREG1=0x0A;while (TXSTA1bits.TRMT==0);
-
-while (PIR1bits.TX1IF==0); TXREG1=0x0d;while (TXSTA1bits.TRMT==0);
-
-
-
+# 38
 for (a=0;a<65000;a++)
 ;
 }

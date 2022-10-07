@@ -1,6 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
-[v F10217 `(v ~T0 @X0 0 tf ]
+[v F10215 `(v ~T0 @X0 0 tf ]
 [p mainexit ]
 "143 main.h
 [v _initialisation_des_ports `(v ~T0 @X0 0 ef ]
@@ -9375,18 +9375,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;systeme.h: 30: char toggleBit(char n, int k);
 [; ;interrupt.h: 16: void interrupt low_priority LOWISR();
 [; ;interrupt.h: 17: void interrupt high_priority HIGHISR ();
-"19 interrupt.h
-[v _flagVitesse `uc ~T0 @X0 1 e ]
-[i _flagVitesse
--> -> 0 `i `uc
-]
-[; ;interrupt.h: 19: unsigned char flagVitesse=0;
-"20
-[v _flagChoc `uc ~T0 @X0 1 e ]
-[i _flagChoc
--> -> 0 `i `uc
-]
-[; ;interrupt.h: 20: unsigned char flagChoc = 0;
 "29 variables_globales.h
 [v _W_TEMPORAIRE `uc ~T0 @X0 1 e@96 ]
 [; ;variables_globales.h: 29: unsigned char W_TEMPORAIRE @ 0x60;
@@ -9442,7 +9430,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RXTX_libre `uc ~T0 @X0 1 e@128 ]
 [; ;variables_globales.h: 51: unsigned char RXTX_libre @ 0x80;
 "55
-[v _fptr `*F10217 ~T0 @X0 1 e ]
+[v _fptr `*F10215 ~T0 @X0 1 e ]
 [; ;variables_globales.h: 55: void (*fptr)(void);
 "56
 [v _val_tos `um ~T0 @X0 1 e ]
@@ -9519,6 +9507,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 "99
 [v _previous_tache `i ~T0 @X0 1 e@1812 ]
 [; ;variables_globales.h: 99: int previous_tache @0x714;
+"101
+[v _flagVitesse `uc ~T0 @X0 1 e@1816 ]
+[; ;variables_globales.h: 101: unsigned char flagVitesse @0x718;
+"102
+[v _flagChoc `uc ~T0 @X0 1 e@1817 ]
+[; ;variables_globales.h: 102: unsigned char flagChoc @0x719;
+"103
+[v _flagMarcheAvant `uc ~T0 @X0 1 e@1824 ]
+[; ;variables_globales.h: 103: unsigned char flagMarcheAvant @0x720;
+"104
+[v _flagMarcheArriere `uc ~T0 @X0 1 e@1825 ]
+[; ;variables_globales.h: 104: unsigned char flagMarcheArriere @0x721;
+"105
+[v _flagSiege `uc ~T0 @X0 1 e@1826 ]
+[; ;variables_globales.h: 105: unsigned char flagSiege @0x722;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9788,68 +9791,74 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 89: tache_prioritaire=0;
 "89
 [e = _tache_prioritaire -> 0 `i ]
-[; ;main.c: 91: }
+[; ;main.c: 91: flagVitesse=0;
 "91
+[e = _flagVitesse -> -> 0 `i `uc ]
+[; ;main.c: 92: flagChoc=0;
+"92
+[e = _flagChoc -> -> 0 `i `uc ]
+[; ;main.c: 94: }
+"94
 [e :UE 1243 ]
 }
-"94
+"97
 [v _lecture_8bit_analogique `(uc ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 93: unsigned char lecture_8bit_analogique(unsigned char channel)
-[; ;main.c: 94: {
+[; ;main.c: 96: unsigned char lecture_8bit_analogique(unsigned char channel)
+[; ;main.c: 97: {
 [e :U _lecture_8bit_analogique ]
 [v _channel `uc ~T0 @X0 1 r1 ]
 [f ]
-"95
-[v _ret `uc ~T0 @X0 1 a ]
-[; ;main.c: 95: unsigned char ret;
-[; ;main.c: 98: ADCON1=0;
 "98
-[e = _ADCON1 -> -> 0 `i `uc ]
-[; ;main.c: 99: ADCON2=0x16;
-"99
-[e = _ADCON2 -> -> 22 `i `uc ]
-[; ;main.c: 100: channel=channel&0x1F;
-"100
-[e = _channel -> & -> _channel `i -> 31 `i `uc ]
-[; ;main.c: 101: channel=channel<<2;
+[v _ret `uc ~T0 @X0 1 a ]
+[; ;main.c: 98: unsigned char ret;
+[; ;main.c: 101: ADCON1=0;
 "101
-[e = _channel -> << -> _channel `i -> 2 `i `uc ]
-[; ;main.c: 102: ADCON0=channel|0x01;
+[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;main.c: 102: ADCON2=0x16;
 "102
-[e = _ADCON0 -> | -> _channel `i -> 1 `i `uc ]
-[; ;main.c: 104: ADCON0bits.GO=1;
+[e = _ADCON2 -> -> 22 `i `uc ]
+[; ;main.c: 103: channel=channel&0x1F;
+"103
+[e = _channel -> & -> _channel `i -> 31 `i `uc ]
+[; ;main.c: 104: channel=channel<<2;
 "104
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
-[; ;main.c: 105: while(ADCON0bits.DONE==1)
+[e = _channel -> << -> _channel `i -> 2 `i `uc ]
+[; ;main.c: 105: ADCON0=channel|0x01;
 "105
+[e = _ADCON0 -> | -> _channel `i -> 1 `i `uc ]
+[; ;main.c: 107: ADCON0bits.GO=1;
+"107
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+[; ;main.c: 108: while(ADCON0bits.DONE==1)
+"108
 [e $U 1245  ]
 [e :U 1246 ]
-[; ;main.c: 106: ;
-"106
+[; ;main.c: 109: ;
+"109
 [e :U 1245 ]
-"105
+"108
 [e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 1246  ]
 [e :U 1247 ]
-[; ;main.c: 108: if ((ADRESL&0x01)==0x01)
-"108
+[; ;main.c: 111: if ((ADRESL&0x01)==0x01)
+"111
 [e $ ! == & -> _ADRESL `i -> 1 `i -> 1 `i 1248  ]
-[; ;main.c: 109: ret=0;
-"109
+[; ;main.c: 112: ret=0;
+"112
 [e = _ret -> -> 0 `i `uc ]
 [e $U 1249  ]
-"110
+"113
 [e :U 1248 ]
-[; ;main.c: 110: else
-[; ;main.c: 111: ret=ADRESH;
-"111
+[; ;main.c: 113: else
+[; ;main.c: 114: ret=ADRESH;
+"114
 [e = _ret _ADRESH ]
 [e :U 1249 ]
-[; ;main.c: 114: return ret;
-"114
+[; ;main.c: 117: return ret;
+"117
 [e ) _ret ]
 [e $UE 1244  ]
-[; ;main.c: 115: }
-"115
+[; ;main.c: 118: }
+"118
 [e :UE 1244 ]
 }

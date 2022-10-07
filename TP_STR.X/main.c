@@ -88,6 +88,9 @@ void initialisation_des_ports()
     previous_tache=0;
     tache_prioritaire=0;
     
+    flagVitesse=0;
+    flagChoc=0;
+    
 }
 
 unsigned char lecture_8bit_analogique(unsigned char channel)

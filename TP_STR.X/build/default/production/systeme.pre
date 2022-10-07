@@ -11927,9 +11927,6 @@ extern void _delay3(unsigned char);
 void interrupt low_priority LOWISR();
 void interrupt high_priority HIGHISR ();
 
-unsigned char flagVitesse=0;
-unsigned char flagChoc = 0;
-
 # 29 "variables_globales.h"
 unsigned char W_TEMPORAIRE @ 0x60;
 unsigned char STATUS_TEMPORAIRE @ 0x61;
@@ -11994,6 +11991,12 @@ unsigned char choc_time_4 @0x706;
 
 int tache_prioritaire @0x710;
 int previous_tache @0x714;
+
+unsigned char flagVitesse @0x718;
+unsigned char flagChoc @0x719;
+unsigned char flagMarcheAvant @0x720;
+unsigned char flagMarcheArriere @0x721;
+unsigned char flagSiege @0x722;
 
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
@@ -12110,10 +12113,36 @@ void interrupt fonction_d_interruption()
 if (INTCON3bits.INT3IF==1)
 {
 INTCON3bits.INT3IF=0;
-tache_prioritaire=1;
+tache_prioritaire=5;
 flagChoc = 1;
 
-# 52
+}
+
+
+if (INTCONbits.INT0IF==1)
+{
+INTCONbits.INT0IF=0;
+tache_prioritaire=5;
+flagMarcheAvant = 1;
+
+}
+
+
+if (INTCON3bits.INT1IF==1)
+{
+INTCON3bits.INT1IF=0;
+tache_prioritaire=5;
+flagMarcheArriere = 1;
+
+}
+
+
+if (INTCON3bits.INT2IF==1)
+{
+INTCON3bits.INT2IF=0;
+tache_prioritaire=5;
+flagSiege = 1;
+
 }
 
 
@@ -12179,7 +12208,6 @@ pointeur_de_tache=previous_tache;
 previous_tache=0;
 }
 pointeur_de_tache++;
-
 }
 
 if (pointeur_de_tache==6)

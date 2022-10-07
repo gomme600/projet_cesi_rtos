@@ -1,6 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
-[v F10217 `(v ~T0 @X0 0 tf ]
+[v F10215 `(v ~T0 @X0 0 tf ]
 [s S692 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S692 . LATG0 LATG1 LATG2 LATG3 LATG4 ]
 [s S693 :1 `uc 1 ]
@@ -9192,18 +9192,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;systeme.h: 30: char toggleBit(char n, int k);
 [; ;interrupt.h: 16: void interrupt low_priority LOWISR();
 [; ;interrupt.h: 17: void interrupt high_priority HIGHISR ();
-"19 interrupt.h
-[v _flagVitesse `uc ~T0 @X0 1 e ]
-[i _flagVitesse
--> -> 0 `i `uc
-]
-[; ;interrupt.h: 19: unsigned char flagVitesse=0;
-"20
-[v _flagChoc `uc ~T0 @X0 1 e ]
-[i _flagChoc
--> -> 0 `i `uc
-]
-[; ;interrupt.h: 20: unsigned char flagChoc = 0;
 "29 variables_globales.h
 [v _W_TEMPORAIRE `uc ~T0 @X0 1 e@96 ]
 [; ;variables_globales.h: 29: unsigned char W_TEMPORAIRE @ 0x60;
@@ -9259,7 +9247,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RXTX_libre `uc ~T0 @X0 1 e@128 ]
 [; ;variables_globales.h: 51: unsigned char RXTX_libre @ 0x80;
 "55
-[v _fptr `*F10217 ~T0 @X0 1 e ]
+[v _fptr `*F10215 ~T0 @X0 1 e ]
 [; ;variables_globales.h: 55: void (*fptr)(void);
 "56
 [v _val_tos `um ~T0 @X0 1 e ]
@@ -9336,6 +9324,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 "99
 [v _previous_tache `i ~T0 @X0 1 e@1812 ]
 [; ;variables_globales.h: 99: int previous_tache @0x714;
+"101
+[v _flagVitesse `uc ~T0 @X0 1 e@1816 ]
+[; ;variables_globales.h: 101: unsigned char flagVitesse @0x718;
+"102
+[v _flagChoc `uc ~T0 @X0 1 e@1817 ]
+[; ;variables_globales.h: 102: unsigned char flagChoc @0x719;
+"103
+[v _flagMarcheAvant `uc ~T0 @X0 1 e@1824 ]
+[; ;variables_globales.h: 103: unsigned char flagMarcheAvant @0x720;
+"104
+[v _flagMarcheArriere `uc ~T0 @X0 1 e@1825 ]
+[; ;variables_globales.h: 104: unsigned char flagMarcheArriere @0x721;
+"105
+[v _flagSiege `uc ~T0 @X0 1 e@1826 ]
+[; ;variables_globales.h: 105: unsigned char flagSiege @0x722;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();

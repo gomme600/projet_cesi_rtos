@@ -37,18 +37,40 @@ void interrupt fonction_d_interruption()
 {
     
 //Interruptions boutons
-//CHOC
+//Choc
 if (INTCON3bits.INT3IF==1)
 {
     INTCON3bits.INT3IF=0;
-    tache_prioritaire=1;
+    tache_prioritaire=5;
     flagChoc = 1;
     
+}
+
+//Marche avant
+if (INTCONbits.INT0IF==1)
+{
+    INTCONbits.INT0IF=0;
+    tache_prioritaire=5;
+    flagMarcheAvant = 1;
     
-   /* if (VITESSE_PLUS > 0x26)
-    {
-       flagVitesse = 1;
-    }*/
+}
+
+//Marche arriere
+if (INTCON3bits.INT1IF==1)
+{
+    INTCON3bits.INT1IF=0;
+    tache_prioritaire=5;
+    flagMarcheArriere = 1;
+    
+}
+
+//Siege
+if (INTCON3bits.INT2IF==1)
+{
+    INTCON3bits.INT2IF=0;
+    tache_prioritaire=5;
+    flagSiege = 1;
+    
 }
     
 // Sauvegarde de registres sensibles (ils sont modifiés au cours du changement de tache)

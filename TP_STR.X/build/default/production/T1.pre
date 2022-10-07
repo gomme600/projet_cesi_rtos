@@ -11940,9 +11940,6 @@ char toggleBit(char n, int k);
 void interrupt low_priority LOWISR();
 void interrupt high_priority HIGHISR ();
 
-unsigned char flagVitesse=0;
-unsigned char flagChoc = 0;
-
 # 29 "variables_globales.h"
 unsigned char W_TEMPORAIRE @ 0x60;
 unsigned char STATUS_TEMPORAIRE @ 0x61;
@@ -12007,6 +12004,12 @@ unsigned char choc_time_4 @0x706;
 
 int tache_prioritaire @0x710;
 int previous_tache @0x714;
+
+unsigned char flagVitesse @0x718;
+unsigned char flagChoc @0x719;
+unsigned char flagMarcheAvant @0x720;
+unsigned char flagMarcheArriere @0x721;
+unsigned char flagSiege @0x722;
 
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
@@ -12232,6 +12235,7 @@ current_fork_y=fork_start_y_pos;
 draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
 
 
+draw_empty_box(190, 10, 210, 30);
 alarm_icon(200, 20);
 
 TP_appui=0;
@@ -12341,7 +12345,7 @@ else
 asm(" nop");
 }
 
-# 268
+# 269
 if (lecture_8bit_analogique(10) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
 {
 clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
@@ -12368,12 +12372,18 @@ current_fork_y=current_fork_y-1;
 }
 
 goto_lico(11,0);
-draw_string("pannel=");
-draw_hex8(alarme_pannel);
+draw_string("chocint=");
+draw_hex8(flagChoc);
 goto_lico(12,0);
-draw_string("interupt=");
+draw_string("siegeint=");
+draw_hex8(flagSiege);
+goto_lico(13,0);
+draw_string("avantint=");
+draw_hex8(flagMarcheAvant);
+goto_lico(14,0);
+draw_string("arriereint=");
+draw_hex8(flagMarcheArriere);
 
-draw_hex8(INTCON3bits.INT3IF);
 if(alarme_pannel==0xFF)
 {
 clear_text();
@@ -12381,6 +12391,7 @@ clear_graphics();
 while (alarme_pannel==0xFF)
 {
 
+draw_empty_box(190, 10, 210, 30);
 alarm_icon(200, 20);
 goto_lico(11,0);
 draw_string("alarme_eau=");
@@ -12426,6 +12437,7 @@ current_fork_y=fork_start_y_pos;
 draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
 
 
+draw_empty_box(190, 10, 210, 30);
 alarm_icon(200, 20);
 }
 

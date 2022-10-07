@@ -1,6 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
-[v F10217 `(v ~T0 @X0 0 tf ]
+[v F10215 `(v ~T0 @X0 0 tf ]
 [s S652 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S652 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
 [s S653 :1 `uc 1 ]
@@ -9184,18 +9184,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;systeme.h: 30: char toggleBit(char n, int k);
 [; ;interrupt.h: 16: void interrupt low_priority LOWISR();
 [; ;interrupt.h: 17: void interrupt high_priority HIGHISR ();
-"19 interrupt.h
-[v _flagVitesse `uc ~T0 @X0 1 e ]
-[i _flagVitesse
--> -> 0 `i `uc
-]
-[; ;interrupt.h: 19: unsigned char flagVitesse=0;
-"20
-[v _flagChoc `uc ~T0 @X0 1 e ]
-[i _flagChoc
--> -> 0 `i `uc
-]
-[; ;interrupt.h: 20: unsigned char flagChoc = 0;
 "29 variables_globales.h
 [v _W_TEMPORAIRE `uc ~T0 @X0 1 e@96 ]
 [; ;variables_globales.h: 29: unsigned char W_TEMPORAIRE @ 0x60;
@@ -9251,7 +9239,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RXTX_libre `uc ~T0 @X0 1 e@128 ]
 [; ;variables_globales.h: 51: unsigned char RXTX_libre @ 0x80;
 "55
-[v _fptr `*F10217 ~T0 @X0 1 e ]
+[v _fptr `*F10215 ~T0 @X0 1 e ]
 [; ;variables_globales.h: 55: void (*fptr)(void);
 "56
 [v _val_tos `um ~T0 @X0 1 e ]
@@ -9328,6 +9316,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 "99
 [v _previous_tache `i ~T0 @X0 1 e@1812 ]
 [; ;variables_globales.h: 99: int previous_tache @0x714;
+"101
+[v _flagVitesse `uc ~T0 @X0 1 e@1816 ]
+[; ;variables_globales.h: 101: unsigned char flagVitesse @0x718;
+"102
+[v _flagChoc `uc ~T0 @X0 1 e@1817 ]
+[; ;variables_globales.h: 102: unsigned char flagChoc @0x719;
+"103
+[v _flagMarcheAvant `uc ~T0 @X0 1 e@1824 ]
+[; ;variables_globales.h: 103: unsigned char flagMarcheAvant @0x720;
+"104
+[v _flagMarcheArriere `uc ~T0 @X0 1 e@1825 ]
+[; ;variables_globales.h: 104: unsigned char flagMarcheArriere @0x721;
+"105
+[v _flagSiege `uc ~T0 @X0 1 e@1826 ]
+[; ;variables_globales.h: 105: unsigned char flagSiege @0x722;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9593,41 +9596,42 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T3.c: 52: {
 "52
 {
-[; ;T3.c: 53: if ((TP_x>=200)&&(TP_x<210))
+[; ;T3.c: 53: if ((TP_x>=190)&&(TP_x<210))
 "53
-[e $ ! && >= -> _TP_x `i -> 200 `i < -> _TP_x `i -> 210 `i 1255  ]
+[e $ ! && >= -> _TP_x `i -> 190 `i < -> _TP_x `i -> 210 `i 1255  ]
 [; ;T3.c: 54: {
 "54
 {
-[; ;T3.c: 55: if ((TP_y>=20)&&(TP_y<30))
+[; ;T3.c: 55: if ((TP_y>=10)&&(TP_y<30))
 "55
-[e $ ! && >= -> _TP_y `i -> 20 `i < -> _TP_y `i -> 30 `i 1256  ]
+[e $ ! && >= -> _TP_y `i -> 10 `i < -> _TP_y `i -> 30 `i 1256  ]
 [; ;T3.c: 56: {
 "56
 {
 [; ;T3.c: 57: alarme_pannel=~alarme_pannel;
 "57
 [e = _alarme_pannel -> ~ -> _alarme_pannel `i `uc ]
-"58
-}
-[e :U 1256 ]
+[; ;T3.c: 58: ;
 "59
 }
-[e :U 1255 ]
+[e :U 1256 ]
 "60
 }
+[e :U 1255 ]
+"61
+}
 [e :U 1254 ]
-"62
+"63
 }
 [e :U 1239 ]
 "5
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;T3.c: 58: }
 [; ;T3.c: 59: }
 [; ;T3.c: 60: }
-[; ;T3.c: 62: }
-[; ;T3.c: 64: }
-"64
+[; ;T3.c: 61: }
+[; ;T3.c: 63: }
+[; ;T3.c: 65: }
+"65
 [e :UE 1238 ]
 }
