@@ -9250,51 +9250,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 "79
 [v _STKPTR_T6 `uc ~T0 @X0 1 e@1539 ]
 [; ;variables_globales.h: 79: unsigned char STKPTR_T6 @0x603;
+"84
+[v _alarme_active `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 84: unsigned char alarme_active;
 "85
-[v _alarme_active `uc ~T0 @X0 1 e@1795 ]
-[; ;variables_globales.h: 85: unsigned char alarme_active @0x703;
-"86
-[v _alarme_pannel `uc ~T0 @X0 1 e@1796 ]
-[; ;variables_globales.h: 86: unsigned char alarme_pannel @0x704;
-"89
-[v _error_active `uc ~T0 @X0 1 e@1797 ]
-[; ;variables_globales.h: 89: unsigned char error_active @0x705;
+[v _alarme_pannel `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 85: unsigned char alarme_pannel;
+"88
+[v _error_active `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 88: unsigned char error_active;
+"91
+[v _choc_time `ui ~T0 @X0 1 e ]
+[; ;variables_globales.h: 91: unsigned int choc_time;
 "92
-[v _choc_time `ui ~T0 @X0 1 e@1798 ]
-[; ;variables_globales.h: 92: unsigned int choc_time @0x706;
+[v _choc_time_1 `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 92: unsigned char choc_time_1;
 "93
-[v _choc_time_1 `uc ~T0 @X0 1 e@1801 ]
-[; ;variables_globales.h: 93: unsigned char choc_time_1 @0x709;
+[v _choc_time_2 `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 93: unsigned char choc_time_2;
 "94
-[v _choc_time_2 `uc ~T0 @X0 1 e@1800 ]
-[; ;variables_globales.h: 94: unsigned char choc_time_2 @0x708;
+[v _choc_time_3 `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 94: unsigned char choc_time_3;
 "95
-[v _choc_time_3 `uc ~T0 @X0 1 e@1799 ]
-[; ;variables_globales.h: 95: unsigned char choc_time_3 @0x707;
-"96
-[v _choc_time_4 `uc ~T0 @X0 1 e@1798 ]
-[; ;variables_globales.h: 96: unsigned char choc_time_4 @0x706;
+[v _choc_time_4 `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 95: unsigned char choc_time_4;
+"97
+[v _tache_prioritaire `i ~T0 @X0 1 e ]
+[; ;variables_globales.h: 97: int tache_prioritaire;
 "98
-[v _tache_prioritaire `i ~T0 @X0 1 e@1808 ]
-[; ;variables_globales.h: 98: int tache_prioritaire @0x710;
-"99
-[v _previous_tache `i ~T0 @X0 1 e@1812 ]
-[; ;variables_globales.h: 99: int previous_tache @0x714;
+[v _previous_tache `i ~T0 @X0 1 e ]
+[; ;variables_globales.h: 98: int previous_tache;
+"100
+[v _flagVitesse `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 100: unsigned char flagVitesse;
 "101
-[v _flagVitesse `uc ~T0 @X0 1 e@1816 ]
-[; ;variables_globales.h: 101: unsigned char flagVitesse @0x718;
+[v _flagChoc `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 101: unsigned char flagChoc;
 "102
-[v _flagChoc `uc ~T0 @X0 1 e@1817 ]
-[; ;variables_globales.h: 102: unsigned char flagChoc @0x719;
+[v _flagMarcheAvant `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 102: unsigned char flagMarcheAvant;
 "103
-[v _flagMarcheAvant `uc ~T0 @X0 1 e@1824 ]
-[; ;variables_globales.h: 103: unsigned char flagMarcheAvant @0x720;
+[v _flagMarcheArriere `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 103: unsigned char flagMarcheArriere;
 "104
-[v _flagMarcheArriere `uc ~T0 @X0 1 e@1825 ]
-[; ;variables_globales.h: 104: unsigned char flagMarcheArriere @0x721;
-"105
-[v _flagSiege `uc ~T0 @X0 1 e@1826 ]
-[; ;variables_globales.h: 105: unsigned char flagSiege @0x722;
+[v _flagSiege `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 104: unsigned char flagSiege;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();

@@ -9398,51 +9398,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 "79
 [v _STKPTR_T6 `uc ~T0 @X0 1 e@1539 ]
 [; ;variables_globales.h: 79: unsigned char STKPTR_T6 @0x603;
+"84
+[v _alarme_active `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 84: unsigned char alarme_active;
 "85
-[v _alarme_active `uc ~T0 @X0 1 e@1795 ]
-[; ;variables_globales.h: 85: unsigned char alarme_active @0x703;
-"86
-[v _alarme_pannel `uc ~T0 @X0 1 e@1796 ]
-[; ;variables_globales.h: 86: unsigned char alarme_pannel @0x704;
-"89
-[v _error_active `uc ~T0 @X0 1 e@1797 ]
-[; ;variables_globales.h: 89: unsigned char error_active @0x705;
+[v _alarme_pannel `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 85: unsigned char alarme_pannel;
+"88
+[v _error_active `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 88: unsigned char error_active;
+"91
+[v _choc_time `ui ~T0 @X0 1 e ]
+[; ;variables_globales.h: 91: unsigned int choc_time;
 "92
-[v _choc_time `ui ~T0 @X0 1 e@1798 ]
-[; ;variables_globales.h: 92: unsigned int choc_time @0x706;
+[v _choc_time_1 `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 92: unsigned char choc_time_1;
 "93
-[v _choc_time_1 `uc ~T0 @X0 1 e@1801 ]
-[; ;variables_globales.h: 93: unsigned char choc_time_1 @0x709;
+[v _choc_time_2 `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 93: unsigned char choc_time_2;
 "94
-[v _choc_time_2 `uc ~T0 @X0 1 e@1800 ]
-[; ;variables_globales.h: 94: unsigned char choc_time_2 @0x708;
+[v _choc_time_3 `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 94: unsigned char choc_time_3;
 "95
-[v _choc_time_3 `uc ~T0 @X0 1 e@1799 ]
-[; ;variables_globales.h: 95: unsigned char choc_time_3 @0x707;
-"96
-[v _choc_time_4 `uc ~T0 @X0 1 e@1798 ]
-[; ;variables_globales.h: 96: unsigned char choc_time_4 @0x706;
+[v _choc_time_4 `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 95: unsigned char choc_time_4;
+"97
+[v _tache_prioritaire `i ~T0 @X0 1 e ]
+[; ;variables_globales.h: 97: int tache_prioritaire;
 "98
-[v _tache_prioritaire `i ~T0 @X0 1 e@1808 ]
-[; ;variables_globales.h: 98: int tache_prioritaire @0x710;
-"99
-[v _previous_tache `i ~T0 @X0 1 e@1812 ]
-[; ;variables_globales.h: 99: int previous_tache @0x714;
+[v _previous_tache `i ~T0 @X0 1 e ]
+[; ;variables_globales.h: 98: int previous_tache;
+"100
+[v _flagVitesse `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 100: unsigned char flagVitesse;
 "101
-[v _flagVitesse `uc ~T0 @X0 1 e@1816 ]
-[; ;variables_globales.h: 101: unsigned char flagVitesse @0x718;
+[v _flagChoc `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 101: unsigned char flagChoc;
 "102
-[v _flagChoc `uc ~T0 @X0 1 e@1817 ]
-[; ;variables_globales.h: 102: unsigned char flagChoc @0x719;
+[v _flagMarcheAvant `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 102: unsigned char flagMarcheAvant;
 "103
-[v _flagMarcheAvant `uc ~T0 @X0 1 e@1824 ]
-[; ;variables_globales.h: 103: unsigned char flagMarcheAvant @0x720;
+[v _flagMarcheArriere `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 103: unsigned char flagMarcheArriere;
 "104
-[v _flagMarcheArriere `uc ~T0 @X0 1 e@1825 ]
-[; ;variables_globales.h: 104: unsigned char flagMarcheArriere @0x721;
-"105
-[v _flagSiege `uc ~T0 @X0 1 e@1826 ]
-[; ;variables_globales.h: 105: unsigned char flagSiege @0x722;
+[v _flagSiege `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 104: unsigned char flagSiege;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -10522,170 +10522,207 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T1.c: 315: alarm_icon(200, 20);
 "315
 [e ( _alarm_icon (2 , -> 200 `i -> 20 `i ]
-[; ;T1.c: 316: goto_lico(11,0);
+[; ;T1.c: 316: goto_lico(0,0);
 "316
-[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 0 `i `uc ]
+[e ( _goto_lico (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 [; ;T1.c: 317: draw_string("alarme_eau=");
 "317
 [e ( _draw_string (1 -> :s 25C `*uc ]
 [; ;T1.c: 318: draw_hex8((alarme_active >> 0) & 0x01);
 "318
 [e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 0 `i -> 1 `i `uc ]
-[; ;T1.c: 319: goto_lico(12,0);
+[; ;T1.c: 319: goto_lico(1,0);
 "319
-[e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 0 `i `uc ]
+[e ( _goto_lico (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
 [; ;T1.c: 320: draw_string("alarme_huile=");
 "320
 [e ( _draw_string (1 -> :s 26C `*uc ]
 [; ;T1.c: 321: draw_hex8((alarme_active >> 1) & 0x01);
 "321
 [e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 1 `i -> 1 `i `uc ]
-[; ;T1.c: 322: goto_lico(13,0);
+[; ;T1.c: 322: goto_lico(2,0);
 "322
-[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 0 `i `uc ]
+[e ( _goto_lico (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
 [; ;T1.c: 323: draw_string("alarme_choc=");
 "323
 [e ( _draw_string (1 -> :s 27C `*uc ]
 [; ;T1.c: 324: draw_hex8((alarme_active >> 2) & 0x01);
 "324
 [e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 2 `i -> 1 `i `uc ]
-[; ;T1.c: 325: goto_lico(14,0);
+[; ;T1.c: 325: goto_lico(3,0);
 "325
-[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 0 `i `uc ]
+[e ( _goto_lico (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
 [; ;T1.c: 326: draw_string("alarme_batterie=");
 "326
 [e ( _draw_string (1 -> :s 28C `*uc ]
 [; ;T1.c: 327: draw_hex8((alarme_active >> 3) & 0x01);
 "327
 [e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 3 `i -> 1 `i `uc ]
-[; ;T1.c: 328: goto_lico(11,20);
+[; ;T1.c: 328: goto_lico(0,20);
 "328
-[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 20 `i `uc ]
+[e ( _goto_lico (2 , -> -> 0 `i `uc -> -> 20 `i `uc ]
 [; ;T1.c: 329: draw_string("alarme_cle=");
 "329
 [e ( _draw_string (1 -> :s 29C `*uc ]
 [; ;T1.c: 330: draw_hex8((alarme_active >> 4) & 0x01);
 "330
 [e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 4 `i -> 1 `i `uc ]
-[; ;T1.c: 331: goto_lico(12,20);
+[; ;T1.c: 331: goto_lico(1,20);
 "331
-[e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 20 `i `uc ]
+[e ( _goto_lico (2 , -> -> 1 `i `uc -> -> 20 `i `uc ]
 [; ;T1.c: 332: draw_string("alarme_frein=");
 "332
 [e ( _draw_string (1 -> :s 30C `*uc ]
 [; ;T1.c: 333: draw_hex8((alarme_active >> 5) & 0x01);
 "333
 [e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 5 `i -> 1 `i `uc ]
-[; ;T1.c: 334: goto_lico(13,20);
+[; ;T1.c: 334: goto_lico(2,20);
 "334
-[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 20 `i `uc ]
+[e ( _goto_lico (2 , -> -> 2 `i `uc -> -> 20 `i `uc ]
 [; ;T1.c: 335: draw_string("alarme_siege=");
 "335
 [e ( _draw_string (1 -> :s 31C `*uc ]
 [; ;T1.c: 336: draw_hex8((alarme_active >> 6) & 0x01);
 "336
 [e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 6 `i -> 1 `i `uc ]
-[; ;T1.c: 337: goto_lico(14,20);
+[; ;T1.c: 337: goto_lico(4,20);
 "337
-[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 338: draw_string("erreur_choc=");
+[e ( _goto_lico (2 , -> -> 4 `i `uc -> -> 20 `i `uc ]
+[; ;T1.c: 338: draw_string("choc_time=");
 "338
 [e ( _draw_string (1 -> :s 32C `*uc ]
-[; ;T1.c: 339: draw_hex8((error_active >> 2) & 0x01);
+[; ;T1.c: 339: draw_hex8(choc_time_1);
 "339
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 2 `i -> 1 `i `uc ]
-[; ;T1.c: 340: goto_lico(15,20);
-"340
-[e ( _goto_lico (2 , -> -> 15 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 341: draw_string("choc_time=");
-"341
-[e ( _draw_string (1 -> :s 33C `*uc ]
-[; ;T1.c: 342: draw_hex8(choc_time_1);
-"342
 [e ( _draw_hex8 (1 _choc_time_1 ]
-[; ;T1.c: 343: draw_hex8(choc_time_2);
-"343
+[; ;T1.c: 340: draw_hex8(choc_time_2);
+"340
 [e ( _draw_hex8 (1 _choc_time_2 ]
-[; ;T1.c: 344: draw_hex8(choc_time_3);
-"344
+[; ;T1.c: 341: draw_hex8(choc_time_3);
+"341
 [e ( _draw_hex8 (1 _choc_time_3 ]
-[; ;T1.c: 345: draw_hex8(choc_time_4);
-"345
+[; ;T1.c: 342: draw_hex8(choc_time_4);
+"342
 [e ( _draw_hex8 (1 _choc_time_4 ]
+[; ;T1.c: 344: goto_lico(6,0);
+"344
+[e ( _goto_lico (2 , -> -> 6 `i `uc -> -> 0 `i `uc ]
+[; ;T1.c: 345: draw_string("erreur_choc=");
+"345
+[e ( _draw_string (1 -> :s 33C `*uc ]
+[; ;T1.c: 346: draw_hex8((error_active >> 2) & 0x01);
 "346
+[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 2 `i -> 1 `i `uc ]
+[; ;T1.c: 347: goto_lico(7,0);
+"347
+[e ( _goto_lico (2 , -> -> 7 `i `uc -> -> 0 `i `uc ]
+[; ;T1.c: 348: draw_string("erreur_batterie=");
+"348
+[e ( _draw_string (1 -> :s 34C `*uc ]
+[; ;T1.c: 349: draw_hex8((error_active >> 2) & 0x01);
+"349
+[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 2 `i -> 1 `i `uc ]
+[; ;T1.c: 350: goto_lico(8,0);
+"350
+[e ( _goto_lico (2 , -> -> 8 `i `uc -> -> 0 `i `uc ]
+[; ;T1.c: 351: draw_string("erreur_siege=");
+"351
+[e ( _draw_string (1 -> :s 35C `*uc ]
+[; ;T1.c: 352: draw_hex8((error_active >> 2) & 0x01);
+"352
+[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 2 `i -> 1 `i `uc ]
+[; ;T1.c: 353: goto_lico(6,20);
+"353
+[e ( _goto_lico (2 , -> -> 6 `i `uc -> -> 20 `i `uc ]
+[; ;T1.c: 354: draw_string("erreur_eau=");
+"354
+[e ( _draw_string (1 -> :s 36C `*uc ]
+[; ;T1.c: 355: draw_hex8((error_active >> 2) & 0x01);
+"355
+[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 2 `i -> 1 `i `uc ]
+[; ;T1.c: 356: goto_lico(7,20);
+"356
+[e ( _goto_lico (2 , -> -> 7 `i `uc -> -> 20 `i `uc ]
+[; ;T1.c: 357: draw_string("erreur_huile=");
+"357
+[e ( _draw_string (1 -> :s 37C `*uc ]
+[; ;T1.c: 358: draw_hex8((error_active >> 2) & 0x01);
+"358
+[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 2 `i -> 1 `i `uc ]
+"359
 }
 [e :U 1310 ]
 "311
 [e $ == -> _alarme_pannel `i -> 255 `i 1311  ]
 [e :U 1312 ]
-[; ;T1.c: 346: }
-[; ;T1.c: 347: clear_text();
-"347
+[; ;T1.c: 359: }
+[; ;T1.c: 360: clear_text();
+"360
 [e ( _clear_text ..  ]
-[; ;T1.c: 348: clear_graphics();
-"348
+[; ;T1.c: 361: clear_graphics();
+"361
 [e ( _clear_graphics ..  ]
-[; ;T1.c: 349: goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
-"349
+[; ;T1.c: 362: goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
+"362
 [e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 34 `i `uc ]
 [e ( _draw_char (1 -> -> 82 `ui `uc ]
 [e ( _draw_char (1 -> -> 32 `ui `uc ]
 [e ( _draw_char (1 -> -> 86 `ui `uc ]
 [e ( _draw_char (1 -> -> 32 `ui `uc ]
 [e ( _draw_char (1 -> -> 66 `ui `uc ]
-[; ;T1.c: 350: goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
-"350
+[; ;T1.c: 363: goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
+"363
 [e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 34 `i `uc ]
 [e ( _draw_char (1 -> -> 48 `ui `uc ]
 [e ( _draw_char (1 -> -> 32 `ui `uc ]
 [e ( _draw_char (1 -> -> 48 `ui `uc ]
 [e ( _draw_char (1 -> -> 32 `ui `uc ]
 [e ( _draw_char (1 -> -> 48 `ui `uc ]
-[; ;T1.c: 351: goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
-"351
+[; ;T1.c: 364: goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
+"364
 [e ( _goto_lico (2 , -> -> 15 `i `uc -> -> 34 `i `uc ]
 [e ( _draw_char (1 -> -> 49 `ui `uc ]
 [e ( _draw_char (1 -> -> 32 `ui `uc ]
 [e ( _draw_char (1 -> -> 49 `ui `uc ]
 [e ( _draw_char (1 -> -> 32 `ui `uc ]
 [e ( _draw_char (1 -> -> 49 `ui `uc ]
-[; ;T1.c: 354: draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
-"354
+[; ;T1.c: 367: draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
+"367
 [e ( _draw_box (4 , , , _fork_start_x_pos _fork_start_y_pos + _fork_start_x_pos _fork_size + _fork_start_y_pos _fork_size ]
-[; ;T1.c: 355: current_fork_x=fork_start_x_pos;
-"355
+[; ;T1.c: 368: current_fork_x=fork_start_x_pos;
+"368
 [e = _current_fork_x _fork_start_x_pos ]
-[; ;T1.c: 356: current_fork_y=fork_start_y_pos;
-"356
+[; ;T1.c: 369: current_fork_y=fork_start_y_pos;
+"369
 [e = _current_fork_y _fork_start_y_pos ]
-[; ;T1.c: 357: draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
-"357
+[; ;T1.c: 370: draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
+"370
 [e ( _draw_empty_box (4 , , , - - _fork_start_x_pos _fork_stop -> 1 `i - - _fork_start_y_pos _fork_stop -> 1 `i + + + _fork_start_x_pos _fork_size _fork_stop -> 1 `i + + + _fork_start_y_pos _fork_size _fork_stop -> 1 `i ]
-[; ;T1.c: 360: draw_empty_box(190, 10, 210, 30);
-"360
+[; ;T1.c: 373: draw_empty_box(190, 10, 210, 30);
+"373
 [e ( _draw_empty_box (4 , , , -> 190 `i -> 10 `i -> 210 `i -> 30 `i ]
-[; ;T1.c: 361: alarm_icon(200, 20);
-"361
+[; ;T1.c: 374: alarm_icon(200, 20);
+"374
 [e ( _alarm_icon (2 , -> 200 `i -> 20 `i ]
-"362
+"375
 }
 [e :U 1309 ]
-"364
+"377
 }
 [e :U 1278 ]
 "158
 [e $U 1279  ]
 [e :U 1280 ]
-[; ;T1.c: 362: }
-[; ;T1.c: 364: }
-[; ;T1.c: 365: }
-"365
+[; ;T1.c: 375: }
+[; ;T1.c: 377: }
+[; ;T1.c: 378: }
+"378
 [e :UE 1277 ]
 }
 [a 4C 65 86 0 ]
 [a 5C 65 82 0 ]
 [a 20C 32 121 61 0 ]
 [a 19C 120 61 0 ]
+[a 36C 101 114 114 101 117 114 95 101 97 117 61 0 ]
 [a 25C 97 108 97 114 109 101 95 101 97 117 61 0 ]
 [a 23C 97 118 97 110 116 105 110 116 61 0 ]
 [a 24C 97 114 114 105 101 114 101 105 110 116 61 0 ]
@@ -10693,12 +10730,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 21C 99 104 111 99 105 110 116 61 0 ]
 [a 30C 97 108 97 114 109 101 95 102 114 101 105 110 61 0 ]
 [a 2C 97 108 97 114 109 101 95 118 105 116 101 115 115 101 61 0 ]
-[a 33C 99 104 111 99 95 116 105 109 101 61 0 ]
+[a 32C 99 104 111 99 95 116 105 109 101 61 0 ]
+[a 37C 101 114 114 101 117 114 95 104 117 105 108 101 61 0 ]
 [a 26C 97 108 97 114 109 101 95 104 117 105 108 101 61 0 ]
 [a 29C 97 108 97 114 109 101 95 99 108 101 61 0 ]
+[a 34C 101 114 114 101 117 114 95 98 97 116 116 101 114 105 101 61 0 ]
 [a 28C 97 108 97 114 109 101 95 98 97 116 116 101 114 105 101 61 0 ]
+[a 35C 101 114 114 101 117 114 95 115 105 101 103 101 61 0 ]
 [a 31C 97 108 97 114 109 101 95 115 105 101 103 101 61 0 ]
-[a 32C 101 114 114 101 117 114 95 99 104 111 99 61 0 ]
+[a 33C 101 114 114 101 117 114 95 99 104 111 99 61 0 ]
 [a 27C 97 108 97 114 109 101 95 99 104 111 99 61 0 ]
 [a 8C 84 101 109 112 46 32 69 97 117 58 0 ]
 [a 18C 89 45 74 111 121 115 116 105 99 107 58 0 ]

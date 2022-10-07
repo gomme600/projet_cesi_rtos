@@ -310,39 +310,52 @@ void tache1()
             clear_graphics();
             while (alarme_pannel==0xFF)
             {
-                //Alarme
+                //Alarme et erreurs
                 draw_empty_box(190, 10, 210, 30);
                 alarm_icon(200, 20);
-                goto_lico(11,0);
+                goto_lico(0,0);
                 draw_string("alarme_eau=");
                 draw_hex8((alarme_active >> 0) & 0x01);
-                goto_lico(12,0);
+                goto_lico(1,0);
                 draw_string("alarme_huile=");
                 draw_hex8((alarme_active >> 1) & 0x01);
-                goto_lico(13,0);
+                goto_lico(2,0);
                 draw_string("alarme_choc=");
                 draw_hex8((alarme_active >> 2) & 0x01);
-                goto_lico(14,0);
+                goto_lico(3,0);
                 draw_string("alarme_batterie=");
                 draw_hex8((alarme_active >> 3) & 0x01);
-                goto_lico(11,20);
+                goto_lico(0,20);
                 draw_string("alarme_cle=");
                 draw_hex8((alarme_active >> 4) & 0x01);
-                goto_lico(12,20);
+                goto_lico(1,20);
                 draw_string("alarme_frein=");
                 draw_hex8((alarme_active >> 5) & 0x01);
-                goto_lico(13,20);
+                goto_lico(2,20);
                 draw_string("alarme_siege=");
                 draw_hex8((alarme_active >> 6) & 0x01);
-                goto_lico(14,20);
-                draw_string("erreur_choc=");
-                draw_hex8((error_active >> 2) & 0x01);
-                goto_lico(15,20);
+                goto_lico(4,20);
                 draw_string("choc_time=");
                 draw_hex8(choc_time_1);
                 draw_hex8(choc_time_2);
                 draw_hex8(choc_time_3);
                 draw_hex8(choc_time_4);
+                
+                goto_lico(6,0);
+                draw_string("erreur_choc=");
+                draw_hex8((error_active >> 2) & 0x01);
+                goto_lico(7,0);
+                draw_string("erreur_batterie=");
+                draw_hex8((error_active >> 2) & 0x01);
+                goto_lico(8,0);
+                draw_string("erreur_siege=");
+                draw_hex8((error_active >> 2) & 0x01);
+                goto_lico(6,20);
+                draw_string("erreur_eau=");
+                draw_hex8((error_active >> 2) & 0x01);
+                goto_lico(7,20);
+                draw_string("erreur_huile=");
+                draw_hex8((error_active >> 2) & 0x01);
             }
             clear_text();
             clear_graphics();

@@ -11988,28 +11988,30 @@ unsigned char STKPTR_T4 @0x403;
 unsigned char STKPTR_T5 @0x503;
 unsigned char STKPTR_T6 @0x603;
 
-# 85
-unsigned char alarme_active @0x703;
-unsigned char alarme_pannel @0x704;
 
 
-unsigned char error_active @0x705;
+
+unsigned char alarme_active;
+unsigned char alarme_pannel;
 
 
-unsigned int choc_time @0x706;
-unsigned char choc_time_1 @0x709;
-unsigned char choc_time_2 @0x708;
-unsigned char choc_time_3 @0x707;
-unsigned char choc_time_4 @0x706;
+unsigned char error_active;
 
-int tache_prioritaire @0x710;
-int previous_tache @0x714;
 
-unsigned char flagVitesse @0x718;
-unsigned char flagChoc @0x719;
-unsigned char flagMarcheAvant @0x720;
-unsigned char flagMarcheArriere @0x721;
-unsigned char flagSiege @0x722;
+unsigned int choc_time;
+unsigned char choc_time_1;
+unsigned char choc_time_2;
+unsigned char choc_time_3;
+unsigned char choc_time_4;
+
+int tache_prioritaire;
+int previous_tache;
+
+unsigned char flagVitesse;
+unsigned char flagChoc;
+unsigned char flagMarcheAvant;
+unsigned char flagMarcheArriere;
+unsigned char flagSiege;
 
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
@@ -12393,36 +12395,49 @@ while (alarme_pannel==0xFF)
 
 draw_empty_box(190, 10, 210, 30);
 alarm_icon(200, 20);
-goto_lico(11,0);
+goto_lico(0,0);
 draw_string("alarme_eau=");
 draw_hex8((alarme_active >> 0) & 0x01);
-goto_lico(12,0);
+goto_lico(1,0);
 draw_string("alarme_huile=");
 draw_hex8((alarme_active >> 1) & 0x01);
-goto_lico(13,0);
+goto_lico(2,0);
 draw_string("alarme_choc=");
 draw_hex8((alarme_active >> 2) & 0x01);
-goto_lico(14,0);
+goto_lico(3,0);
 draw_string("alarme_batterie=");
 draw_hex8((alarme_active >> 3) & 0x01);
-goto_lico(11,20);
+goto_lico(0,20);
 draw_string("alarme_cle=");
 draw_hex8((alarme_active >> 4) & 0x01);
-goto_lico(12,20);
+goto_lico(1,20);
 draw_string("alarme_frein=");
 draw_hex8((alarme_active >> 5) & 0x01);
-goto_lico(13,20);
+goto_lico(2,20);
 draw_string("alarme_siege=");
 draw_hex8((alarme_active >> 6) & 0x01);
-goto_lico(14,20);
-draw_string("erreur_choc=");
-draw_hex8((error_active >> 2) & 0x01);
-goto_lico(15,20);
+goto_lico(4,20);
 draw_string("choc_time=");
 draw_hex8(choc_time_1);
 draw_hex8(choc_time_2);
 draw_hex8(choc_time_3);
 draw_hex8(choc_time_4);
+
+goto_lico(6,0);
+draw_string("erreur_choc=");
+draw_hex8((error_active >> 2) & 0x01);
+goto_lico(7,0);
+draw_string("erreur_batterie=");
+draw_hex8((error_active >> 2) & 0x01);
+goto_lico(8,0);
+draw_string("erreur_siege=");
+draw_hex8((error_active >> 2) & 0x01);
+goto_lico(6,20);
+draw_string("erreur_eau=");
+draw_hex8((error_active >> 2) & 0x01);
+goto_lico(7,20);
+draw_string("erreur_huile=");
+draw_hex8((error_active >> 2) & 0x01);
 }
 clear_text();
 clear_graphics();
