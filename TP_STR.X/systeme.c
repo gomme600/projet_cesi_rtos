@@ -104,16 +104,16 @@ if (INTCON3bits.INT3IF==1)
         {
            previous_tache=pointeur_de_tache;
            pointeur_de_tache=tache_prioritaire;
+           tache_prioritaire=0;
         }
         else
         {
-           /*if (previous_tache!=0)
+           if (previous_tache!=0)
            {
                pointeur_de_tache=previous_tache;
                previous_tache=0;
-           }*/
+           }
            pointeur_de_tache++;
-           tache_prioritaire=0;
         }
                                 //
         if (pointeur_de_tache==NOMBRE_DE_TACHES)    // Evolution du cycle des taches

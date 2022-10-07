@@ -12169,13 +12169,17 @@ if (tache_prioritaire!=0)
 {
 previous_tache=pointeur_de_tache;
 pointeur_de_tache=tache_prioritaire;
+tache_prioritaire=0;
 }
 else
 {
-
-# 115
+if (previous_tache!=0)
+{
+pointeur_de_tache=previous_tache;
+previous_tache=0;
+}
 pointeur_de_tache++;
-tache_prioritaire=0;
+
 }
 
 if (pointeur_de_tache==6)
