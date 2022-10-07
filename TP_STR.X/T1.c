@@ -103,7 +103,8 @@ void stopVitess(unsigned char  vitesseCourante)
             vitesseCourante --;
             newVitesse = setBit(newVitesse,vitesseCourante);
             goto_lico(5,0);
-        draw_string("Vitesse:");
+            draw_string("Vitesse:");
+            
         if (VITESSE_PLUS==0)
             vitesse++;
         if (VITESSE_MOINS==0)

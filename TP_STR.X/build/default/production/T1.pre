@@ -12184,6 +12184,7 @@ vitesseCourante --;
 newVitesse = setBit(newVitesse,vitesseCourante);
 goto_lico(5,0);
 draw_string("Vitesse:");
+
 if (PORTEbits.RE0==0)
 vitesse++;
 if (PORTEbits.RE1==0)
@@ -12334,7 +12335,7 @@ else
 asm(" nop");
 }
 
-# 264
+# 265
 if (lecture_8bit_analogique(10) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
 {
 clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);

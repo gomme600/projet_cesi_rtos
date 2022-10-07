@@ -9,7 +9,7 @@ _write_d_aff: CODE, 75686 0 24
 _tache2: CODE, 71824 0 336
 _init_rxtx: CODE, 75506 0 34
 _tache5: CODE, 69866 0 634
-_clear_text: CODE, 74644 0 96
+_clear_text: CODE, 74740 0 96
 _initialisation_des_ports: CODE, 74122 0 110
 i2_Init: CODE, 75426 0 42
 ___awmod: CODE, 73214 0 168
@@ -24,8 +24,8 @@ __initialization: CODE, 75330 0 44
 ___lwdiv: CODE, 74342 0 108
 _tache3: CODE, 71032 0 418
 _tache6: CODE, 75006 0 80
-_clear_graphics: CODE, 74740 0 96
-_plot0: CODE, 72408 0 214
+_clear_graphics: CODE, 74644 0 96
+_plot0: CODE, 72622 0 214
 _draw_hex8: CODE, 73518 0 134
 _tp_delai: CODE, 75540 0 32
 _delai_us_char: CODE, 75468 0 38
@@ -35,7 +35,7 @@ i2_initialisation_des_ports: CODE, 74232 0 110
 _Init: CODE, 75276 0 54
 _lecture_8bit_analogique: CODE, 75086 0 70
 _draw_string: CODE, 74836 0 88
-_plot1: CODE, 72622 0 214
+_plot1: CODE, 72408 0 214
 _tache1: CODE, 65536 0 3384
 _goto_lico: CODE, 74010 0 112
 _clear_box: CODE, 73782 0 114
