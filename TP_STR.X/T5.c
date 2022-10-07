@@ -13,9 +13,9 @@ void tache5()
         
         //Si personne dans siege et vitesse > 0
         if (SIEGE==1 && vitesse>0)
-            alarme_active = setBit(alarme_active, 6);
-        else
-            alarme_active = clearBit(alarme_active, 6);
+            error_active = setBit(error_active, 6);
+        //else
+            //error_active = clearBit(error_active, 6);
         
         if (n_octet_badge==0)
             alarme_active = setBit(alarme_active, 4);
@@ -25,22 +25,20 @@ void tache5()
         if (CHOC==0)
         {
             choc_time++;
-            if (choc_time>3000)
+            if (choc_time>2000)
                 alarme_active = setBit(alarme_active, 2);
-            if (choc_time>6000)
-                error_active = setBit(alarme_active, 2);
+            if (choc_time>4000)
+                error_active = setBit(error_active, 2);
         }
         else
         {
-            if (choc_time==0)
-            {
-                //alarme_active = clearBit(alarme_active, 2);
-                //error_active = clearBit(alarme_active, 2);
-                //Add 1 because we dont want to wrap around
-                choc_time++;
-            }
+                if (choc_time==0)
+                {
+                    //Add 1 because we dont want to wrap around
+                    choc_time++;
+                }
                 
-            choc_time--;
+                choc_time--;
         }
         
         if (FREIN_A_MAIN==0 && vitesse>0)
@@ -48,20 +46,30 @@ void tache5()
         else
             alarme_active = clearBit(alarme_active, 5);
         
-        if (lecture_8bit_analogique(TEMPERATURE_EAU)>200)
+        
+        if (tempeau>200)
             alarme_active = setBit(alarme_active, 0);
+        else if (tempeau>230)
+            error_active = setBit(error_active, 0);
         else
             alarme_active = clearBit(alarme_active, 0);
         
-        if (lecture_8bit_analogique(TEMPERATURE_HUILE)>200)
+        
+        if (temphuile>200)
             alarme_active = setBit(alarme_active, 1);
+        else if (temphuile>230)
+            error_active = setBit(error_active, 1);
         else
             alarme_active = clearBit(alarme_active, 1);
         
+        
         if (batterie<25)
             alarme_active = setBit(alarme_active, 3);
+        else if (batterie<12)
+            error_active = setBit(error_active, 3);
         else
             alarme_active = clearBit(alarme_active, 3);
+        
         
         // Buzzer alume
         buz=!buz;

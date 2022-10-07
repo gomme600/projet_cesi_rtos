@@ -103,6 +103,15 @@ unsigned char flagMarcheAvant;
 unsigned char flagMarcheArriere;
 unsigned char flagSiege;
 
+unsigned char vitesseReel;
+unsigned char batterieReel;
+unsigned char eauReel;
+unsigned char huileReel;
+
+unsigned char tempeau;
+unsigned char temphuile;
+
+
 #ifdef	__cplusplus
 }
 #endif

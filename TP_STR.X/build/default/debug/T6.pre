@@ -1,5 +1,5 @@
 
-# 1 "T2.c"
+# 1 "T6.c"
 
 # 44 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h"
 extern volatile unsigned char PMD3 @ 0xF16;
@@ -12013,12 +12013,6 @@ unsigned char flagMarcheArriere;
 unsigned char flagSiege;
 
 unsigned char vitesseReel;
-unsigned char batterieReel;
-unsigned char eauReel;
-unsigned char huileReel;
-
-unsigned char tempeau;
-unsigned char temphuile;
 
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
@@ -12059,6 +12053,10 @@ void init_rxtx();
 # 16 "T1.h"
 void tache1();
 
+# 17 "T2.h"
+void tache2();
+void tp_delai(unsigned int itpd);
+
 # 16 "T3.h"
 void tache3();
 
@@ -12067,9 +12065,6 @@ void tache4();
 
 # 16 "T5.h"
 void tache5();
-
-# 16 "T6.h"
-void tache6();
 
 
 # 37 "main.h"
@@ -12091,153 +12086,30 @@ void tache6();
 void initialisation_des_ports();
 unsigned char lecture_8bit_analogique(unsigned char channel);
 
-# 17 "T2.h"
-void tache2();
-void tp_delai(unsigned int itpd);
+# 16 "T6.h"
+void tache6();
 
-# 3 "T2.c"
-void tache2()
+# 3 "T6.c"
+void tache6()
 {
-unsigned char hx,lx,hy,ly;
-unsigned int ix,iy;
-
-TP_appui=0;
-
+unsigned char n;
 while(1)
 {
-LATGbits.LATG3=1;
-LATGbits.LATG4=0;
-tp_delai(3000);
-
-
-
-ADCON2=0x16;
-ADCON0=0x01;
-ADCON0=0x03;
-while(ADCON0bits.DONE==1)
-;
-hx=ADRESH;
-lx=ADRESL;
-
-
-
-if ((lx&0x0F)!=0){hx=0;lx=0;}
-
-
-if (hx>=10)
+n=lecture_normale(badge);
+if (n>0)
 {
-LATGbits.LATG3=0;
-LATGbits.LATG4=1;
-tp_delai(3000);
-
-
-
-ADCON2=0x16;
-ADCON0=0x05;
-ADCON0=0x07;
-while(ADCON0bits.DONE==1)
-;
-hy=ADRESH;
-ly=ADRESL;
-
-
-
-if ((ly&0x0F)!=0){hy=0;ly=0;}
-
-if (hy>=20)
+if(n<10)
 {
-ix=lx+(((unsigned int)(hx))<<8);
-iy=ly+(((unsigned int)(hy))<<8);
-ix=ix-3150;
-iy=iy-6500;
-
-TP_x=ix/246;
-TP_y=127-(iy/409);
-
-# 68
-TP_appui=1;
+n_octet_badge=n;
 }
 else
 {
-TP_appui=0;
+n_octet_badge=0;
 }
 }
 else
 {
-TP_appui=0;
+n_octet_badge=0;
 }
-
-
-if (TP_appui==1)
-{
-if ((TP_x>=203)&&(TP_x<209))
-{
-if ((TP_y>=113)&&(TP_y<121))
-{
-LATCbits.LATC2=1;
-}
-if ((TP_y>=121)&&(TP_y<127))
-{
-LATCbits.LATC2=0;
-}
-}
-}
-
-
-if (TP_appui==1)
-{
-if ((TP_x>=215)&&(TP_x<221))
-{
-if ((TP_y>=113)&&(TP_y<121))
-{
-LATCbits.LATC1=1;
-}
-if ((TP_y>=121)&&(TP_y<127))
-{
-LATCbits.LATC1=0;
-}
-}
-}
-if (TP_appui==1)
-{
-if ((TP_x>=227)&&(TP_x<233))
-{
-if ((TP_y>=113)&&(TP_y<121))
-{
-LATGbits.LATG0=1;
-}
-if ((TP_y>=121)&&(TP_y<127))
-{
-LATGbits.LATG0=0;
-}
-}
-}
-
-
-if (TP_appui==1)
-{
-if ((TP_x>=190)&&(TP_x<210))
-{
-if ((TP_y>=10)&&(TP_y<30))
-{
-alarme_pannel=~alarme_pannel;
-int a=0;
-
-for (a=0;a<100;a++)
-;
-}
-}
-}
-
-
-}
-}
-
-void tp_delai(unsigned int itpd)
-{
-while(itpd>0)
-{
-asm(" nop");asm(" nop");asm(" nop");
-itpd--;
 }
 }

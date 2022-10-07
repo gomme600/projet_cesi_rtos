@@ -11936,8 +11936,7 @@ char clearBit(char n, int k);
 
 char toggleBit(char n, int k);
 
-# 16 "interrupt.h"
-void interrupt low_priority LOWISR();
+# 17 "interrupt.h"
 void interrupt high_priority HIGHISR ();
 
 # 29 "variables_globales.h"
@@ -12012,6 +12011,14 @@ unsigned char flagChoc;
 unsigned char flagMarcheAvant;
 unsigned char flagMarcheArriere;
 unsigned char flagSiege;
+
+unsigned char vitesseReel;
+unsigned char batterieReel;
+unsigned char eauReel;
+unsigned char huileReel;
+
+unsigned char tempeau;
+unsigned char temphuile;
 
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
@@ -12093,64 +12100,32 @@ void tache3()
 {
 while(1)
 {
-if (TP_appui==1)
-{
-if ((TP_x>=203)&&(TP_x<209))
-{
-if ((TP_y>=113)&&(TP_y<121))
-{
-LATCbits.LATC2=1;
-}
-if ((TP_y>=121)&&(TP_y<127))
-{
-LATCbits.LATC2=0;
-}
-}
-}
-if (TP_appui==1)
-{
-if ((TP_x>=215)&&(TP_x<221))
-{
-if ((TP_y>=113)&&(TP_y<121))
-{
-LATCbits.LATC1=1;
-}
-if ((TP_y>=121)&&(TP_y<127))
-{
-LATCbits.LATC1=0;
-}
-}
-}
-if (TP_appui==1)
-{
-if ((TP_x>=227)&&(TP_x<233))
-{
-if ((TP_y>=113)&&(TP_y<121))
-{
-LATGbits.LATG0=1;
-}
-if ((TP_y>=121)&&(TP_y<127))
-{
-LATGbits.LATG0=0;
-}
-}
-}
+
+tempeau = lecture_8bit_analogique(2);
+temphuile = lecture_8bit_analogique(3);
+
+if (PORTEbits.RE0==0)
+if ( vitesse <= 0xFE)
+vitesse++;
+if (PORTEbits.RE1==0)
+if ( vitesse > 0)
+vitesse--;
+if (error_active != 0x00)
+vitesse=0;
+
+if (PORTEbits.RE2==0)
+if ( batterie <= 0xFE)
+batterie++;
+if (PORTEbits.RE3==0)
+if ( batterie > 0)
+batterie--;
+
+vitesseReel=vitesse/10;
+batterieReel=batterie/10;
+eauReel=tempeau/2.5;
+huileReel=temphuile/2.5;
 
 
-if (TP_appui==1)
-{
-if ((TP_x>=190)&&(TP_x<210))
-{
-if ((TP_y>=10)&&(TP_y<30))
-{
-alarme_pannel=~alarme_pannel;
-int a=0;
-
-for (a=0;a<100;a++)
-;
-}
-}
-}
 
 }
 

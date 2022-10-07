@@ -4,64 +4,32 @@ void tache3()
 {
     while(1)
     {
-        if (TP_appui==1)
-        {
-            if ((TP_x>=203)&&(TP_x<209))
-            {
-                if ((TP_y>=113)&&(TP_y<121))
-                {
-                    LED_R=1;
-                }
-                if ((TP_y>=121)&&(TP_y<127))
-                {
-                    LED_R=0;
-                }
-            }
-        }
-        if (TP_appui==1)
-        {
-            if ((TP_x>=215)&&(TP_x<221))
-            {
-                if ((TP_y>=113)&&(TP_y<121))
-                {
-                    LED_G=1;
-                }
-                if ((TP_y>=121)&&(TP_y<127))
-                {
-                    LED_G=0;
-                }
-            }
-        }
-        if (TP_appui==1)
-        {
-            if ((TP_x>=227)&&(TP_x<233))
-            {
-                if ((TP_y>=113)&&(TP_y<121))
-                {
-                    LED_B=1;
-                }
-                if ((TP_y>=121)&&(TP_y<127))
-                {
-                    LED_B=0;
-                }
-            }
-        }
+
+        tempeau = lecture_8bit_analogique(TEMPERATURE_EAU);
+        temphuile = lecture_8bit_analogique(TEMPERATURE_HUILE);
         
-        //Alarms
-        if (TP_appui==1)
-        {
-            if ((TP_x>=190)&&(TP_x<210))
-            {
-                if ((TP_y>=10)&&(TP_y<30))
-                {
-                    alarme_pannel=~alarme_pannel;
-                    int a=0;
-                    //Slow down the reading for double touches
-                    for (a=0;a<100;a++)
-                    ;
-                }
-            }
-        }
+        if (VITESSE_PLUS==0)
+            if ( vitesse <= 0xFE)
+                vitesse++;
+        if (VITESSE_MOINS==0)
+            if ( vitesse > 0)
+                vitesse--;
+        if (error_active != 0x00) //Dont allow mouvement if error is active
+            vitesse=0;
+        
+        if (BATTERIE_PLUS==0)
+            if ( batterie <= 0xFE)
+                batterie++;
+        if (BATTERIE_MOINS==0)
+            if ( batterie > 0)
+                batterie--;
+        
+        vitesseReel=vitesse/10;
+        batterieReel=batterie/10;
+        eauReel=tempeau/2.5;
+        huileReel=temphuile/2.5;
+        
+        
         
     }
     

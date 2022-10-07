@@ -11923,8 +11923,7 @@ extern void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern void _delay3(unsigned char);
 
-# 16 "interrupt.h"
-void interrupt low_priority LOWISR();
+# 17 "interrupt.h"
 void interrupt high_priority HIGHISR ();
 
 # 29 "variables_globales.h"
@@ -11999,6 +11998,14 @@ unsigned char flagChoc;
 unsigned char flagMarcheAvant;
 unsigned char flagMarcheArriere;
 unsigned char flagSiege;
+
+unsigned char vitesseReel;
+unsigned char batterieReel;
+unsigned char eauReel;
+unsigned char huileReel;
+
+unsigned char tempeau;
+unsigned char temphuile;
 
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
@@ -12112,21 +12119,20 @@ void interrupt fonction_d_interruption()
 
 
 
-if (INTCON3bits.INT3IF==1)
-{
-INTCON3bits.INT3IF=0;
-tache_prioritaire=5;
-flagChoc = 1;
-
-}
-
-
 if (INTCONbits.INT0IF==1)
 {
 INTCONbits.INT0IF=0;
 tache_prioritaire=5;
 flagMarcheAvant = 1;
+}
 
+
+
+if (INTCON3bits.INT3IF==1)
+{
+INTCON3bits.INT3IF=0;
+tache_prioritaire=5;
+flagChoc = 1;
 }
 
 
@@ -12135,7 +12141,6 @@ if (INTCON3bits.INT1IF==1)
 INTCON3bits.INT1IF=0;
 tache_prioritaire=5;
 flagMarcheArriere = 1;
-
 }
 
 
@@ -12144,7 +12149,6 @@ if (INTCON3bits.INT2IF==1)
 INTCON3bits.INT2IF=0;
 tache_prioritaire=5;
 flagSiege = 1;
-
 }
 
 

@@ -1,233 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
 [v F10213 `(v ~T0 @X0 0 tf ]
-[p mainexit ]
-"143 main.h
-[v _initialisation_des_ports `(v ~T0 @X0 0 ef ]
-"21 systeme.h
-[v _initialisation_du_systeme `(v ~T0 @X0 0 ef ]
-"26 semaphore.h
-[v _Init `(v ~T0 @X0 0 ef1`uc ]
-[s S1107 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1107 . T0PS PSA T0SE T0CS T08BIT TMR0ON ]
-[s S1108 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1108 . T0PS0 T0PS1 T0PS2 ]
-[u S1106 `S1107 1 `S1108 1 ]
-[n S1106 . . . ]
-"17564 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
-[v _T0CONbits `VS1106 ~T0 @X0 0 e@4053 ]
-"21189
-[v _T0IF `Vb ~T0 @X0 0 e@32658 ]
-[s S1165 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1165 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-[s S1166 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1166 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-[s S1167 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1167 . . GIEL GIEH ]
-[s S1168 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1168 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-[s S1169 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1169 . . GIEL GIEH ]
-[u S1164 `S1165 1 `S1166 1 `S1167 1 `S1168 1 `S1169 1 ]
-[n S1164 . . . . . . ]
-"18388
-[v _INTCONbits `VS1164 ~T0 @X0 0 e@4082 ]
-"21681
-[v _TRISJ7 `Vb ~T0 @X0 0 e@31959 ]
-"16957
-[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
-"14510
-[v _CCPR1L `Vuc ~T0 @X0 0 e@4028 ]
-"16887
-[v _T2CON `Vuc ~T0 @X0 0 e@4042 ]
-"14313
-[v _CCP1CON `Vuc ~T0 @X0 0 e@4027 ]
-"16976
-[v _TMR2 `Vuc ~T0 @X0 0 e@4044 ]
-"21443
-[v _TMR2ON `Vb ~T0 @X0 0 e@32338 ]
-"1548
-[v _MEMCON `Vuc ~T0 @X0 0 e@3878 ]
-"1416
-[v _ANCON0 `Vuc ~T0 @X0 0 e@3877 ]
-"1284
-[v _ANCON1 `Vuc ~T0 @X0 0 e@3876 ]
-"1152
-[v _ANCON2 `Vuc ~T0 @X0 0 e@3875 ]
-[s S95 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S95 . ANSEL0 ANSEL1 ANSEL2 ANSEL3 ANSEL4 ANSEL5 ANSEL6 ANSEL7 ]
-[s S96 :1 `uc 1 ]
-[n S96 . PCFG0 ]
-[s S97 :1 `uc 1 :1 `uc 1 ]
-[n S97 . . PCFG1 ]
-[s S98 :2 `uc 1 :1 `uc 1 ]
-[n S98 . . PCFG2 ]
-[s S99 :3 `uc 1 :1 `uc 1 ]
-[n S99 . . PCFG3 ]
-[s S100 :4 `uc 1 :1 `uc 1 ]
-[n S100 . . PCFG4 ]
-[s S101 :5 `uc 1 :1 `uc 1 ]
-[n S101 . . PCFG5 ]
-[s S102 :6 `uc 1 :1 `uc 1 ]
-[n S102 . . PCFG6 ]
-[s S103 :7 `uc 1 :1 `uc 1 ]
-[n S103 . . PCFG7 ]
-[u S94 `S95 1 `S96 1 `S97 1 `S98 1 `S99 1 `S100 1 `S101 1 `S102 1 `S103 1 ]
-[n S94 . . . . . . . . . . ]
-"1464
-[v _ANCON0bits `VS94 ~T0 @X0 0 e@3877 ]
-[s S85 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S85 . ANSEL8 ANSEL9 ANSEL10 ANSEL11 ANSEL12 ANSEL13 ANSEL14 ANSEL15 ]
-[s S86 :2 `uc 1 :1 `uc 1 ]
-[n S86 . . PCFG10 ]
-[s S87 :3 `uc 1 :1 `uc 1 ]
-[n S87 . . PCFG11 ]
-[s S88 :4 `uc 1 :1 `uc 1 ]
-[n S88 . . PCFG12 ]
-[s S89 :5 `uc 1 :1 `uc 1 ]
-[n S89 . . PCFG13 ]
-[s S90 :6 `uc 1 :1 `uc 1 ]
-[n S90 . . PCFG14 ]
-[s S91 :7 `uc 1 :1 `uc 1 ]
-[n S91 . . PCFG15 ]
-[s S92 :1 `uc 1 ]
-[n S92 . PCFG8 ]
-[s S93 :1 `uc 1 :1 `uc 1 ]
-[n S93 . . PCFG9 ]
-[u S84 `S85 1 `S86 1 `S87 1 `S88 1 `S89 1 `S90 1 `S91 1 `S92 1 `S93 1 ]
-[n S84 . . . . . . . . . . ]
-"1332
-[v _ANCON1bits `VS84 ~T0 @X0 0 e@3876 ]
-[s S652 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S652 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-[s S653 :1 `uc 1 ]
-[n S653 . LC0 ]
-[s S654 :1 `uc 1 :1 `uc 1 ]
-[n S654 . . LC1 ]
-[s S655 :2 `uc 1 :1 `uc 1 ]
-[n S655 . . LC2 ]
-[s S656 :3 `uc 1 :1 `uc 1 ]
-[n S656 . . LC3 ]
-[s S657 :4 `uc 1 :1 `uc 1 ]
-[n S657 . . LC4 ]
-[s S658 :5 `uc 1 :1 `uc 1 ]
-[n S658 . . LC5 ]
-[s S659 :6 `uc 1 :1 `uc 1 ]
-[n S659 . . LC6 ]
-[s S660 :7 `uc 1 :1 `uc 1 ]
-[n S660 . . LC7 ]
-[u S651 `S652 1 `S653 1 `S654 1 `S655 1 `S656 1 `S657 1 `S658 1 `S659 1 `S660 1 ]
-[n S651 . . . . . . . . . . ]
-"10305
-[v _LATCbits `VS651 ~T0 @X0 0 e@3979 ]
-[s S692 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S692 . LATG0 LATG1 LATG2 LATG3 LATG4 ]
-[s S693 :1 `uc 1 ]
-[n S693 . LG0 ]
-[s S694 :1 `uc 1 :1 `uc 1 ]
-[n S694 . . LG1 ]
-[s S695 :2 `uc 1 :1 `uc 1 ]
-[n S695 . . LG2 ]
-[s S696 :3 `uc 1 :1 `uc 1 ]
-[n S696 . . LG3 ]
-[s S697 :4 `uc 1 :1 `uc 1 ]
-[n S697 . . LG4 ]
-[u S691 `S692 1 `S693 1 `S694 1 `S695 1 `S696 1 `S697 1 ]
-[n S691 . . . . . . . ]
-"10813
-[v _LATGbits `VS691 ~T0 @X0 0 e@3983 ]
-[s S723 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S723 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-[u S722 `S723 1 ]
-[n S722 . . ]
-"11270
-[v _TRISCbits `VS722 ~T0 @X0 0 e@3988 ]
-[s S731 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S731 . TRISG0 TRISG1 TRISG2 TRISG3 TRISG4 ]
-[u S730 `S731 1 ]
-[n S730 . . ]
-"11506
-[v _TRISGbits `VS730 ~T0 @X0 0 e@3992 ]
-[s S725 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S725 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
-[u S724 `S725 1 ]
-[n S724 . . ]
-"11331
-[v _TRISDbits `VS724 ~T0 @X0 0 e@3989 ]
-[s S735 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S735 . TRISJ0 TRISJ1 TRISJ2 TRISJ3 TRISJ4 TRISJ5 TRISJ6 TRISJ7 ]
-[u S734 `S735 1 ]
-[n S734 . . ]
-"11613
-[v _TRISJbits `VS734 ~T0 @X0 0 e@3994 ]
-[s S1161 :7 `uc 1 :1 `uc 1 ]
-[n S1161 . . NOT_RBPU ]
-[s S1162 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1162 . RBIP INT3IP TMR0IP INTEDG3 INTEDG2 INTEDG1 INTEDG0 nRBPU ]
-[s S1163 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
-[n S1163 . . INT3P T0IP . RBPU ]
-[u S1160 `S1161 1 `S1162 1 `S1163 1 ]
-[n S1160 . . . . ]
-"18277
-[v _INTCON2bits `VS1160 ~T0 @X0 0 e@4081 ]
-[s S280 :1 `uc 1 :2 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S280 . . RTSECSEL . RJPU REPU RDPU ]
-[s S281 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S281 . . RTSECSEL0 RTSECSEL1 ]
-[u S279 `S280 1 `S281 1 ]
-[n S279 . . . ]
-"4449
-[v _PADCFG1bits `VS279 ~T0 @X0 0 e@3923 ]
-[s S1084 :1 `uc 1 ]
-[n S1084 . NOT_BOR ]
-[s S1085 :1 `uc 1 :1 `uc 1 ]
-[n S1085 . . NOT_POR ]
-[s S1086 :2 `uc 1 :1 `uc 1 ]
-[n S1086 . . NOT_PD ]
-[s S1087 :3 `uc 1 :1 `uc 1 ]
-[n S1087 . . NOT_TO ]
-[s S1088 :4 `uc 1 :1 `uc 1 ]
-[n S1088 . . NOT_RI ]
-[s S1089 :5 `uc 1 :1 `uc 1 ]
-[n S1089 . . NOT_CM ]
-[s S1090 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1090 . nBOR nPOR nPD nTO nRI nCM SBOREN IPEN ]
-[s S1091 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1091 . BOR POR PD TO RI CM ]
-[u S1083 `S1084 1 `S1085 1 `S1086 1 `S1087 1 `S1088 1 `S1089 1 `S1090 1 `S1091 1 ]
-[n S1083 . . . . . . . . . ]
-"17190
-[v _RCONbits `VS1083 ~T0 @X0 0 e@4048 ]
-"14836
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"14766
-[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
-"14945
-[v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
-[s S906 :1 `uc 1 :1 `uc 1 ]
-[n S906 . . GO_NOT_DONE ]
-[s S907 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
-[n S907 . ADON GO_nDONE CHS ]
-[s S908 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S908 . . DONE CHS0 CHS1 CHS2 CHS3 CHS4 ]
-[s S909 :1 `uc 1 :1 `uc 1 ]
-[n S909 . . GO ]
-[s S910 :1 `uc 1 :1 `uc 1 ]
-[n S910 . . NOT_DONE ]
-[s S911 :1 `uc 1 :1 `uc 1 ]
-[n S911 . . nDONE ]
-[s S912 :1 `uc 1 :1 `uc 1 ]
-[n S912 . . GODONE ]
-[s S913 :1 `uc 1 :1 `uc 1 ]
-[n S913 . . GO_DONE ]
-[u S905 `S906 1 `S907 1 `S908 1 `S909 1 `S910 1 `S911 1 `S912 1 `S913 1 ]
-[n S905 . . . . . . . . . ]
-"14990
-[v _ADCON0bits `VS905 ~T0 @X0 0 e@4034 ]
-"15075
-[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
-"15094
-[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -9522,21 +9295,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "106
 [v _vitesseReel `uc ~T0 @X0 1 e ]
 [; ;variables_globales.h: 106: unsigned char vitesseReel;
-"107
-[v _batterieReel `uc ~T0 @X0 1 e ]
-[; ;variables_globales.h: 107: unsigned char batterieReel;
-"108
-[v _eauReel `uc ~T0 @X0 1 e ]
-[; ;variables_globales.h: 108: unsigned char eauReel;
-"109
-[v _huileReel `uc ~T0 @X0 1 e ]
-[; ;variables_globales.h: 109: unsigned char huileReel;
-"111
-[v _tempeau `uc ~T0 @X0 1 e ]
-[; ;variables_globales.h: 111: unsigned char tempeau;
-"112
-[v _temphuile `uc ~T0 @X0 1 e ]
-[; ;variables_globales.h: 112: unsigned char temphuile;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9570,7 +9328,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T1.h: 16: void tache1();
 [; ;T2.h: 17: void tache2();
 [; ;T2.h: 18: void tp_delai(unsigned int itpd);
-[; ;T3.h: 16: void tache3();
 [; ;T4.h: 16: void tache4();
 [; ;T5.h: 16: void tache5();
 [; ;T6.h: 16: void tache6();
@@ -9645,232 +9402,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBRTB=OFF ]
 [; ;main.h: 143: void initialisation_des_ports();
 [; ;main.h: 144: unsigned char lecture_8bit_analogique(unsigned char channel);
-"4 main.c
-[v _main `(v ~T0 @X0 1 ef ]
+[; ;T3.h: 16: void tache3();
+"4 T3.c
+[v _tache3 `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 3: void main()
-[; ;main.c: 4: {
-[e :U _main ]
+[; ;T3.c: 3: void tache3()
+[; ;T3.c: 4: {
+[e :U _tache3 ]
 [f ]
-[; ;main.c: 5: initialisation_des_ports();
+[; ;T3.c: 5: while(1)
 "5
-[e ( _initialisation_des_ports ..  ]
-[; ;main.c: 6: initialisation_du_systeme();
-"6
-[e ( _initialisation_du_systeme ..  ]
-[; ;main.c: 7: Init(1);
-"7
-[e ( _Init (1 -> -> 1 `i `uc ]
-[; ;main.c: 10: T0CONbits.TMR0ON=1;
-"10
-[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 11: T0IF=1;
-"11
-[e = _T0IF -> -> 1 `i `b ]
-[; ;main.c: 12: (INTCONbits.GIE = 1);
-"12
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;main.c: 15: while(1)
-"15
 [e :U 1240 ]
-[; ;main.c: 16: asm(" nop");
-"16
-[; <"  nop ;# ">
+[; ;T3.c: 6: {
+"6
+{
+[; ;T3.c: 8: vitesseReel=0;
+"8
+[e = _vitesseReel -> -> 0 `i `uc ]
+"10
+}
 [e :U 1239 ]
-"15
+"5
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;main.c: 17: }
-"17
+[; ;T3.c: 10: }
+[; ;T3.c: 12: }
+"12
 [e :UE 1238 ]
-}
-"19
-[v _PWM1_Init `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 19: void PWM1_Init(){
-[e :U _PWM1_Init ]
-[f ]
-[; ;main.c: 22: TRISJ7 = 0;
-"22
-[e = _TRISJ7 -> -> 0 `i `b ]
-[; ;main.c: 23: PR2 = 255;
-"23
-[e = _PR2 -> -> 255 `i `uc ]
-[; ;main.c: 24: CCPR1L = 255;
-"24
-[e = _CCPR1L -> -> 255 `i `uc ]
-[; ;main.c: 25: T2CON = 0;
-"25
-[e = _T2CON -> -> 0 `i `uc ]
-[; ;main.c: 26: CCP1CON = 0x0C;
-"26
-[e = _CCP1CON -> -> 12 `i `uc ]
-[; ;main.c: 27: TMR2 = 0;
-"27
-[e = _TMR2 -> -> 0 `i `uc ]
-[; ;main.c: 28: TMR2ON = 1;
-"28
-[e = _TMR2ON -> -> 1 `i `b ]
-[; ;main.c: 30: }
-"30
-[e :UE 1242 ]
-}
-"33
-[v _initialisation_des_ports `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 32: void initialisation_des_ports()
-[; ;main.c: 33: {
-[e :U _initialisation_des_ports ]
-[f ]
-[; ;main.c: 35: MEMCON=0xA0;
-"35
-[e = _MEMCON -> -> 160 `i `uc ]
-[; ;main.c: 38: ANCON0=0x00;
-"38
-[e = _ANCON0 -> -> 0 `i `uc ]
-[; ;main.c: 39: ANCON1=0x00;
-"39
-[e = _ANCON1 -> -> 0 `i `uc ]
-[; ;main.c: 40: ANCON2=0x00;
-"40
-[e = _ANCON2 -> -> 0 `i `uc ]
-[; ;main.c: 41: ANCON0bits.ANSEL0=1;
-"41
-[e = . . _ANCON0bits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 42: ANCON0bits.ANSEL1=1;
-"42
-[e = . . _ANCON0bits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 43: ANCON0bits.ANSEL2=1;
-"43
-[e = . . _ANCON0bits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 44: ANCON0bits.ANSEL3=1;
-"44
-[e = . . _ANCON0bits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 45: ANCON1bits.ANSEL10=1;
-"45
-[e = . . _ANCON1bits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 46: ANCON1bits.ANSEL11=1;
-"46
-[e = . . _ANCON1bits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 50: LATCbits.LATC2=1;
-"50
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 51: LATCbits.LATC1=1;
-"51
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 52: LATGbits.LATG0=1;
-"52
-[e = . . _LATGbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 55: TRISCbits.TRISC2=0;
-"55
-[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 56: TRISCbits.TRISC1=0;
-"56
-[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 57: TRISGbits.TRISG0=0;
-"57
-[e = . . _TRISGbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 58: TRISGbits.TRISG3=0;
-"58
-[e = . . _TRISGbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 59: TRISGbits.TRISG4=0;
-"59
-[e = . . _TRISGbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 60: TRISDbits.TRISD2=0;
-"60
-[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 61: TRISDbits.TRISD3=0;
-"61
-[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 64: TRISJbits.TRISJ7=0;
-"64
-[e = . . _TRISJbits 0 7 -> -> 0 `i `uc ]
-[; ;main.c: 67: INTCON2bits.RBPU=0;
-"67
-[e = . . _INTCON2bits 2 4 -> -> 0 `i `uc ]
-[; ;main.c: 68: PADCFG1bits.REPU=1;
-"68
-[e = . . _PADCFG1bits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 70: PWM1_Init();
-"70
-[e ( _PWM1_Init ..  ]
-[; ;main.c: 73: RCONbits.IPEN = 1;
-"73
-[e = . . _RCONbits 6 7 -> -> 1 `i `uc ]
-[; ;main.c: 97: previous_tache=0;
-"97
-[e = _previous_tache -> 0 `i ]
-[; ;main.c: 98: tache_prioritaire=0;
-"98
-[e = _tache_prioritaire -> 0 `i ]
-[; ;main.c: 100: flagVitesse=0;
-"100
-[e = _flagVitesse -> -> 0 `i `uc ]
-[; ;main.c: 101: flagChoc=0;
-"101
-[e = _flagChoc -> -> 0 `i `uc ]
-[; ;main.c: 103: }
-"103
-[e :UE 1243 ]
-}
-"106
-[v _lecture_8bit_analogique `(uc ~T0 @X0 1 ef1`uc ]
-{
-[; ;main.c: 105: unsigned char lecture_8bit_analogique(unsigned char channel)
-[; ;main.c: 106: {
-[e :U _lecture_8bit_analogique ]
-[v _channel `uc ~T0 @X0 1 r1 ]
-[f ]
-"107
-[v _ret `uc ~T0 @X0 1 a ]
-[; ;main.c: 107: unsigned char ret;
-[; ;main.c: 110: ADCON1=0;
-"110
-[e = _ADCON1 -> -> 0 `i `uc ]
-[; ;main.c: 111: ADCON2=0x16;
-"111
-[e = _ADCON2 -> -> 22 `i `uc ]
-[; ;main.c: 112: channel=channel&0x1F;
-"112
-[e = _channel -> & -> _channel `i -> 31 `i `uc ]
-[; ;main.c: 113: channel=channel<<2;
-"113
-[e = _channel -> << -> _channel `i -> 2 `i `uc ]
-[; ;main.c: 114: ADCON0=channel|0x01;
-"114
-[e = _ADCON0 -> | -> _channel `i -> 1 `i `uc ]
-[; ;main.c: 116: ADCON0bits.GO=1;
-"116
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
-[; ;main.c: 117: while(ADCON0bits.DONE==1)
-"117
-[e $U 1245  ]
-[e :U 1246 ]
-[; ;main.c: 118: ;
-"118
-[e :U 1245 ]
-"117
-[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 1246  ]
-[e :U 1247 ]
-[; ;main.c: 120: if ((ADRESL&0x01)==0x01)
-"120
-[e $ ! == & -> _ADRESL `i -> 1 `i -> 1 `i 1248  ]
-[; ;main.c: 121: ret=0;
-"121
-[e = _ret -> -> 0 `i `uc ]
-[e $U 1249  ]
-"122
-[e :U 1248 ]
-[; ;main.c: 122: else
-[; ;main.c: 123: ret=ADRESH;
-"123
-[e = _ret _ADRESH ]
-[e :U 1249 ]
-[; ;main.c: 126: return ret;
-"126
-[e ) _ret ]
-[e $UE 1244  ]
-[; ;main.c: 127: }
-"127
-[e :UE 1244 ]
 }

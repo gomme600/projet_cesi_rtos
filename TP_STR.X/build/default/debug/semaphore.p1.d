@@ -1,6 +1,6 @@
- build/default/production/afficheur.d  \
- build/default/production/afficheur.p1:  \
- afficheur.c  \
+ build/default/debug/semaphore.d  \
+ build/default/debug/semaphore.p1:  \
+ semaphore.c  \
 variables_globales.h  \
 stid.h  \
 semaphore.h  \

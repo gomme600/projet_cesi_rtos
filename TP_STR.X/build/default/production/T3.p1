@@ -1,44 +1,60 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
-[v F10215 `(v ~T0 @X0 0 tf ]
-[s S652 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S652 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-[s S653 :1 `uc 1 ]
-[n S653 . LC0 ]
-[s S654 :1 `uc 1 :1 `uc 1 ]
-[n S654 . . LC1 ]
-[s S655 :2 `uc 1 :1 `uc 1 ]
-[n S655 . . LC2 ]
-[s S656 :3 `uc 1 :1 `uc 1 ]
-[n S656 . . LC3 ]
-[s S657 :4 `uc 1 :1 `uc 1 ]
-[n S657 . . LC4 ]
-[s S658 :5 `uc 1 :1 `uc 1 ]
-[n S658 . . LC5 ]
-[s S659 :6 `uc 1 :1 `uc 1 ]
-[n S659 . . LC6 ]
-[s S660 :7 `uc 1 :1 `uc 1 ]
-[n S660 . . LC7 ]
-[u S651 `S652 1 `S653 1 `S654 1 `S655 1 `S656 1 `S657 1 `S658 1 `S659 1 `S660 1 ]
-[n S651 . . . . . . . . . . ]
-"10305 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
-[v _LATCbits `VS651 ~T0 @X0 0 e@3979 ]
-[s S692 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S692 . LATG0 LATG1 LATG2 LATG3 LATG4 ]
-[s S693 :1 `uc 1 ]
-[n S693 . LG0 ]
-[s S694 :1 `uc 1 :1 `uc 1 ]
-[n S694 . . LG1 ]
-[s S695 :2 `uc 1 :1 `uc 1 ]
-[n S695 . . LG2 ]
-[s S696 :3 `uc 1 :1 `uc 1 ]
-[n S696 . . LG3 ]
-[s S697 :4 `uc 1 :1 `uc 1 ]
-[n S697 . . LG4 ]
-[u S691 `S692 1 `S693 1 `S694 1 `S695 1 `S696 1 `S697 1 ]
-[n S691 . . . . . . . ]
-"10813
-[v _LATGbits `VS691 ~T0 @X0 0 e@3983 ]
+[v F10213 `(v ~T0 @X0 0 tf ]
+"144 main.h
+[v _lecture_8bit_analogique `(uc ~T0 @X0 0 ef1`uc ]
+[s S577 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S577 . RE0 RE1 RE2 RE3 RE4 RE5 RE6 RE7 ]
+[s S578 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S578 . AD8 AD9 AD10 AD11 AD12 AD13 AD14 AD15 ]
+[s S579 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S579 . P2D P2C P2B P3C P3B P1C P1B P2A ]
+[s S580 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S580 . . CCP10 CCP9 CCP8 CCP7 CCP6 CCP2 ]
+[s S581 :1 `uc 1 ]
+[n S581 . NOT_RD ]
+[s S582 :1 `uc 1 :1 `uc 1 ]
+[n S582 . . NOT_WR ]
+[s S583 :2 `uc 1 :1 `uc 1 ]
+[n S583 . . NOT_CS ]
+[s S584 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S584 . nRD nWR nCS REFO ]
+[s S585 :7 `uc 1 :1 `uc 1 ]
+[n S585 . . CCP2E ]
+[s S586 :6 `uc 1 :1 `uc 1 ]
+[n S586 . . CCP6E ]
+[s S587 :5 `uc 1 :1 `uc 1 ]
+[n S587 . . CCP7E ]
+[s S588 :4 `uc 1 :1 `uc 1 ]
+[n S588 . . CCP8E ]
+[s S589 :3 `uc 1 :1 `uc 1 ]
+[n S589 . . CCP9E ]
+[s S590 :2 `uc 1 :1 `uc 1 ]
+[n S590 . . CS ]
+[s S591 :7 `uc 1 :1 `uc 1 ]
+[n S591 . . PA2E ]
+[s S592 :6 `uc 1 :1 `uc 1 ]
+[n S592 . . PB1E ]
+[s S593 :2 `uc 1 :1 `uc 1 ]
+[n S593 . . PB2 ]
+[s S594 :4 `uc 1 :1 `uc 1 ]
+[n S594 . . PB3E ]
+[s S595 :5 `uc 1 :1 `uc 1 ]
+[n S595 . . PC1E ]
+[s S596 :1 `uc 1 :1 `uc 1 ]
+[n S596 . . PC2 ]
+[s S597 :3 `uc 1 :1 `uc 1 ]
+[n S597 . . PC3E ]
+[s S598 :1 `uc 1 ]
+[n S598 . PD2 ]
+[s S599 :1 `uc 1 ]
+[n S599 . RDE ]
+[s S600 :1 `uc 1 :1 `uc 1 ]
+[n S600 . . WRE ]
+[u S576 `S577 1 `S578 1 `S579 1 `S580 1 `S581 1 `S582 1 `S583 1 `S584 1 `S585 1 `S586 1 `S587 1 `S588 1 `S589 1 `S590 1 `S591 1 `S592 1 `S593 1 `S594 1 `S595 1 `S596 1 `S597 1 `S598 1 `S599 1 `S600 1 ]
+[n S576 . . . . . . . . . . . . . . . . . . . . . . . . . ]
+"8979 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
+[v _PORTEbits `VS576 ~T0 @X0 0 e@3972 ]
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -9182,7 +9198,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;systeme.h: 24: char setBit(char n, int k);
 [; ;systeme.h: 27: char clearBit(char n, int k);
 [; ;systeme.h: 30: char toggleBit(char n, int k);
-[; ;interrupt.h: 16: void interrupt low_priority LOWISR();
 [; ;interrupt.h: 17: void interrupt high_priority HIGHISR ();
 "29 variables_globales.h
 [v _W_TEMPORAIRE `uc ~T0 @X0 1 e@96 ]
@@ -9239,7 +9254,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RXTX_libre `uc ~T0 @X0 1 e@128 ]
 [; ;variables_globales.h: 51: unsigned char RXTX_libre @ 0x80;
 "55
-[v _fptr `*F10215 ~T0 @X0 1 e ]
+[v _fptr `*F10213 ~T0 @X0 1 e ]
 [; ;variables_globales.h: 55: void (*fptr)(void);
 "56
 [v _val_tos `um ~T0 @X0 1 e ]
@@ -9331,6 +9346,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 "104
 [v _flagSiege `uc ~T0 @X0 1 e ]
 [; ;variables_globales.h: 104: unsigned char flagSiege;
+"106
+[v _vitesseReel `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 106: unsigned char vitesseReel;
+"107
+[v _batterieReel `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 107: unsigned char batterieReel;
+"108
+[v _eauReel `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 108: unsigned char eauReel;
+"109
+[v _huileReel `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 109: unsigned char huileReel;
+"111
+[v _tempeau `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 111: unsigned char tempeau;
+"112
+[v _temphuile `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 112: unsigned char temphuile;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9452,204 +9485,83 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T3.c: 6: {
 "6
 {
-[; ;T3.c: 7: if (TP_appui==1)
-"7
-[e $ ! == -> _TP_appui `i -> 1 `i 1242  ]
-[; ;T3.c: 8: {
+[; ;T3.c: 8: tempeau = lecture_8bit_analogique(2);
 "8
-{
-[; ;T3.c: 9: if ((TP_x>=203)&&(TP_x<209))
+[e = _tempeau ( _lecture_8bit_analogique (1 -> -> 2 `i `uc ]
+[; ;T3.c: 9: temphuile = lecture_8bit_analogique(3);
 "9
-[e $ ! && >= -> _TP_x `i -> 203 `i < -> _TP_x `i -> 209 `i 1243  ]
-[; ;T3.c: 10: {
-"10
-{
-[; ;T3.c: 11: if ((TP_y>=113)&&(TP_y<121))
+[e = _temphuile ( _lecture_8bit_analogique (1 -> -> 3 `i `uc ]
+[; ;T3.c: 11: if (PORTEbits.RE0==0)
 "11
-[e $ ! && >= -> _TP_y `i -> 113 `i < -> _TP_y `i -> 121 `i 1244  ]
-[; ;T3.c: 12: {
+[e $ ! == -> . . _PORTEbits 0 0 `i -> 0 `i 1242  ]
+[; ;T3.c: 12: if ( vitesse <= 0xFE)
 "12
-{
-[; ;T3.c: 13: LATCbits.LATC2=1;
+[e $ ! <= -> _vitesse `i -> 254 `i 1243  ]
+[; ;T3.c: 13: vitesse++;
 "13
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
-"14
-}
-[e :U 1244 ]
-[; ;T3.c: 14: }
-[; ;T3.c: 15: if ((TP_y>=121)&&(TP_y<127))
-"15
-[e $ ! && >= -> _TP_y `i -> 121 `i < -> _TP_y `i -> 127 `i 1245  ]
-[; ;T3.c: 16: {
-"16
-{
-[; ;T3.c: 17: LATCbits.LATC2=0;
-"17
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-"18
-}
-[e :U 1245 ]
-"19
-}
+[e ++ _vitesse -> -> 1 `i `uc ]
 [e :U 1243 ]
-"20
-}
+"14
 [e :U 1242 ]
-[; ;T3.c: 18: }
-[; ;T3.c: 19: }
-[; ;T3.c: 20: }
-[; ;T3.c: 21: if (TP_appui==1)
-"21
-[e $ ! == -> _TP_appui `i -> 1 `i 1246  ]
-[; ;T3.c: 22: {
-"22
-{
-[; ;T3.c: 23: if ((TP_x>=215)&&(TP_x<221))
-"23
-[e $ ! && >= -> _TP_x `i -> 215 `i < -> _TP_x `i -> 221 `i 1247  ]
-[; ;T3.c: 24: {
-"24
-{
-[; ;T3.c: 25: if ((TP_y>=113)&&(TP_y<121))
-"25
-[e $ ! && >= -> _TP_y `i -> 113 `i < -> _TP_y `i -> 121 `i 1248  ]
-[; ;T3.c: 26: {
-"26
-{
-[; ;T3.c: 27: LATCbits.LATC1=1;
-"27
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"28
-}
-[e :U 1248 ]
-[; ;T3.c: 28: }
-[; ;T3.c: 29: if ((TP_y>=121)&&(TP_y<127))
-"29
-[e $ ! && >= -> _TP_y `i -> 121 `i < -> _TP_y `i -> 127 `i 1249  ]
-[; ;T3.c: 30: {
-"30
-{
-[; ;T3.c: 31: LATCbits.LATC1=0;
-"31
-[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
-"32
-}
-[e :U 1249 ]
-"33
-}
-[e :U 1247 ]
-"34
-}
+[; ;T3.c: 14: if (PORTEbits.RE1==0)
+[e $ ! == -> . . _PORTEbits 0 1 `i -> 0 `i 1244  ]
+[; ;T3.c: 15: if ( vitesse > 0)
+"15
+[e $ ! > -> _vitesse `i -> 0 `i 1245  ]
+[; ;T3.c: 16: vitesse--;
+"16
+[e -- _vitesse -> -> 1 `i `uc ]
+[e :U 1245 ]
+"17
+[e :U 1244 ]
+[; ;T3.c: 17: if (error_active != 0x00)
+[e $ ! != -> _error_active `i -> 0 `i 1246  ]
+[; ;T3.c: 18: vitesse=0;
+"18
+[e = _vitesse -> -> 0 `i `uc ]
 [e :U 1246 ]
-[; ;T3.c: 32: }
-[; ;T3.c: 33: }
-[; ;T3.c: 34: }
-[; ;T3.c: 35: if (TP_appui==1)
-"35
-[e $ ! == -> _TP_appui `i -> 1 `i 1250  ]
-[; ;T3.c: 36: {
-"36
-{
-[; ;T3.c: 37: if ((TP_x>=227)&&(TP_x<233))
-"37
-[e $ ! && >= -> _TP_x `i -> 227 `i < -> _TP_x `i -> 233 `i 1251  ]
-[; ;T3.c: 38: {
-"38
-{
-[; ;T3.c: 39: if ((TP_y>=113)&&(TP_y<121))
-"39
-[e $ ! && >= -> _TP_y `i -> 113 `i < -> _TP_y `i -> 121 `i 1252  ]
-[; ;T3.c: 40: {
-"40
-{
-[; ;T3.c: 41: LATGbits.LATG0=1;
-"41
-[e = . . _LATGbits 0 0 -> -> 1 `i `uc ]
-"42
-}
-[e :U 1252 ]
-[; ;T3.c: 42: }
-[; ;T3.c: 43: if ((TP_y>=121)&&(TP_y<127))
-"43
-[e $ ! && >= -> _TP_y `i -> 121 `i < -> _TP_y `i -> 127 `i 1253  ]
-[; ;T3.c: 44: {
-"44
-{
-[; ;T3.c: 45: LATGbits.LATG0=0;
-"45
-[e = . . _LATGbits 0 0 -> -> 0 `i `uc ]
-"46
-}
-[e :U 1253 ]
-"47
-}
-[e :U 1251 ]
-"48
-}
+[; ;T3.c: 20: if (PORTEbits.RE2==0)
+"20
+[e $ ! == -> . . _PORTEbits 0 2 `i -> 0 `i 1247  ]
+[; ;T3.c: 21: if ( batterie <= 0xFE)
+"21
+[e $ ! <= -> _batterie `i -> 254 `i 1248  ]
+[; ;T3.c: 22: batterie++;
+"22
+[e ++ _batterie -> -> 1 `i `uc ]
+[e :U 1248 ]
+"23
+[e :U 1247 ]
+[; ;T3.c: 23: if (PORTEbits.RE3==0)
+[e $ ! == -> . . _PORTEbits 0 3 `i -> 0 `i 1249  ]
+[; ;T3.c: 24: if ( batterie > 0)
+"24
+[e $ ! > -> _batterie `i -> 0 `i 1250  ]
+[; ;T3.c: 25: batterie--;
+"25
+[e -- _batterie -> -> 1 `i `uc ]
 [e :U 1250 ]
-[; ;T3.c: 46: }
-[; ;T3.c: 47: }
-[; ;T3.c: 48: }
-[; ;T3.c: 51: if (TP_appui==1)
-"51
-[e $ ! == -> _TP_appui `i -> 1 `i 1254  ]
-[; ;T3.c: 52: {
-"52
-{
-[; ;T3.c: 53: if ((TP_x>=190)&&(TP_x<210))
-"53
-[e $ ! && >= -> _TP_x `i -> 190 `i < -> _TP_x `i -> 210 `i 1255  ]
-[; ;T3.c: 54: {
-"54
-{
-[; ;T3.c: 55: if ((TP_y>=10)&&(TP_y<30))
-"55
-[e $ ! && >= -> _TP_y `i -> 10 `i < -> _TP_y `i -> 30 `i 1256  ]
-[; ;T3.c: 56: {
-"56
-{
-[; ;T3.c: 57: alarme_pannel=~alarme_pannel;
-"57
-[e = _alarme_pannel -> ~ -> _alarme_pannel `i `uc ]
-"58
-[v _a `i ~T0 @X0 1 a ]
-[; ;T3.c: 58: int a=0;
-[e = _a -> 0 `i ]
-[; ;T3.c: 60: for (a=0;a<100;a++)
-"60
-{
-[e = _a -> 0 `i ]
-[e $ < _a -> 100 `i 1257  ]
-[e $U 1258  ]
-"61
-[e :U 1257 ]
-[; ;T3.c: 61: ;
-"60
-[e ++ _a -> 1 `i ]
-[e $ < _a -> 100 `i 1257  ]
-[e :U 1258 ]
-"61
-}
-"62
-}
-[e :U 1256 ]
-"63
-}
-[e :U 1255 ]
-"64
-}
-[e :U 1254 ]
-"66
+"27
+[e :U 1249 ]
+[; ;T3.c: 27: vitesseReel=vitesse/10;
+[e = _vitesseReel -> / -> _vitesse `i -> 10 `i `uc ]
+[; ;T3.c: 28: batterieReel=batterie/10;
+"28
+[e = _batterieReel -> / -> _batterie `i -> 10 `i `uc ]
+[; ;T3.c: 29: eauReel=tempeau/2.5;
+"29
+[e = _eauReel -> / -> _tempeau `d .2.5 `uc ]
+[; ;T3.c: 30: huileReel=temphuile/2.5;
+"30
+[e = _huileReel -> / -> _temphuile `d .2.5 `uc ]
+"34
 }
 [e :U 1239 ]
 "5
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;T3.c: 62: }
-[; ;T3.c: 63: }
-[; ;T3.c: 64: }
-[; ;T3.c: 66: }
-[; ;T3.c: 68: }
-"68
+[; ;T3.c: 34: }
+[; ;T3.c: 36: }
+"36
 [e :UE 1238 ]
 }

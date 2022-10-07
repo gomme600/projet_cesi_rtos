@@ -13,7 +13,7 @@ extern "C" {
 #endif
     
     
-    void interrupt low_priority LOWISR();
+    //void interrupt low_priority LOWISR();
     void interrupt high_priority HIGHISR ();
     
 #ifdef	__cplusplus

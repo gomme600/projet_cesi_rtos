@@ -1,5 +1,5 @@
 
-# 1 "T2.c"
+# 1 "afficheur.c"
 
 # 44 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h"
 extern volatile unsigned char PMD3 @ 0xF16;
@@ -12013,32 +12013,6 @@ unsigned char flagMarcheArriere;
 unsigned char flagSiege;
 
 unsigned char vitesseReel;
-unsigned char batterieReel;
-unsigned char eauReel;
-unsigned char huileReel;
-
-unsigned char tempeau;
-unsigned char temphuile;
-
-# 32 "afficheur.h"
-void write_d_aff(unsigned char data);
-void write_c_aff(unsigned char command);
-unsigned char check_status_ok();
-unsigned char wait_status_ok();
-unsigned char command(unsigned char cmd);
-unsigned char d1command(unsigned char d1, unsigned char cmd);
-unsigned char d2command(unsigned char d1, unsigned char d2, unsigned char cmd);
-void delai_us_char(unsigned char ucdelai);
-void initialisation_afficheur();
-void draw_char(unsigned char dccar);
-void draw_string(unsigned char * tableau);
-void draw_hex8(unsigned char octet);
-void goto_lico(unsigned char ligne, unsigned char colonne);
-void clear_text();
-void clear_graphics();
-void clear_cgram();
-void plot1(unsigned char x, unsigned char y);
-void plot0(unsigned char x, unsigned char y);
 
 # 22 "semaphore.h"
 unsigned char Val_sem_cna;
@@ -12058,6 +12032,10 @@ void init_rxtx();
 
 # 16 "T1.h"
 void tache1();
+
+# 17 "T2.h"
+void tache2();
+void tp_delai(unsigned int itpd);
 
 # 16 "T3.h"
 void tache3();
@@ -12091,153 +12069,381 @@ void tache6();
 void initialisation_des_ports();
 unsigned char lecture_8bit_analogique(unsigned char channel);
 
-# 17 "T2.h"
-void tache2();
-void tp_delai(unsigned int itpd);
+# 32 "afficheur.h"
+void write_d_aff(unsigned char data);
+void write_c_aff(unsigned char command);
+unsigned char check_status_ok();
+unsigned char wait_status_ok();
+unsigned char command(unsigned char cmd);
+unsigned char d1command(unsigned char d1, unsigned char cmd);
+unsigned char d2command(unsigned char d1, unsigned char d2, unsigned char cmd);
+void delai_us_char(unsigned char ucdelai);
+void initialisation_afficheur();
+void draw_char(unsigned char dccar);
+void draw_string(unsigned char * tableau);
+void draw_hex8(unsigned char octet);
+void goto_lico(unsigned char ligne, unsigned char colonne);
+void clear_text();
+void clear_graphics();
+void clear_cgram();
+void plot1(unsigned char x, unsigned char y);
+void plot0(unsigned char x, unsigned char y);
 
-# 3 "T2.c"
-void tache2()
+# 4 "afficheur.c"
+void write_d_aff(unsigned char data)
 {
-unsigned char hx,lx,hy,ly;
-unsigned int ix,iy;
+LATH=data;
+TRISH=0x00;
+LATJbits.LATJ0=0;
+LATJbits.LATJ3=0;
+LATJbits.LATJ2=0;
+asm(" nop");
+asm(" nop");
+LATJbits.LATJ2=1;
+LATJbits.LATJ3=1;
+}
 
-TP_appui=0;
-
-while(1)
+void write_c_aff(unsigned char command)
 {
-LATGbits.LATG3=1;
-LATGbits.LATG4=0;
-tp_delai(3000);
+LATH=command;
+TRISH=0x00;
+LATJbits.LATJ0=1;
+LATJbits.LATJ3=0;
+LATJbits.LATJ2=0;
+asm(" nop");
+asm(" nop");
+LATJbits.LATJ2=1;
+LATJbits.LATJ3=1;
+}
 
-
-
-ADCON2=0x16;
-ADCON0=0x01;
-ADCON0=0x03;
-while(ADCON0bits.DONE==1)
-;
-hx=ADRESH;
-lx=ADRESL;
-
-
-
-if ((lx&0x0F)!=0){hx=0;lx=0;}
-
-
-if (hx>=10)
+unsigned char check_status_ok()
 {
-LATGbits.LATG3=0;
-LATGbits.LATG4=1;
-tp_delai(3000);
+unsigned char res;
 
 
+TRISH=0xFF;
+LATJbits.LATJ0=1;
+LATJbits.LATJ3=0;
+LATJbits.LATJ1=0;
+asm(" nop");
+asm(" nop");
+asm(" nop");
+res=PORTH;
+LATJbits.LATJ1=1;
+LATJbits.LATJ3=1;
 
-ADCON2=0x16;
-ADCON0=0x05;
-ADCON0=0x07;
-while(ADCON0bits.DONE==1)
-;
-hy=ADRESH;
-ly=ADRESL;
+if ((res&0x03)==0x03)
+res=1;
+else
+res=0;
+return res;
+}
 
-
-
-if ((ly&0x0F)!=0){hy=0;ly=0;}
-
-if (hy>=20)
+unsigned char wait_status_ok()
 {
-ix=lx+(((unsigned int)(hx))<<8);
-iy=ly+(((unsigned int)(hy))<<8);
-ix=ix-3150;
-iy=iy-6500;
+unsigned char err,res,status;
 
-TP_x=ix/246;
-TP_y=127-(iy/409);
+err=0;
+res=2;
+while (res==2)
+{
+TRISH=0xFF;
+LATJbits.LATJ0=1;
+LATJbits.LATJ3=0;
+LATJbits.LATJ1=0;
+asm(" nop");
+status=PORTH;
+LATJbits.LATJ1=1;
+LATJbits.LATJ3=1;
 
-# 68
-TP_appui=1;
+status=(status&0x03);
+if (status!=0x03)
+{
+err++;
+delai_us_char(12);
+if (err>=250)
+{
+(INTCONbits.GIE = 0);
+LATCbits.LATC2=0;LATCbits.LATC1=1;LATGbits.LATG0=1;
+res=0;
+}
 }
 else
 {
-TP_appui=0;
+res=1;
 }
 }
+return res;
+}
+
+unsigned char command(unsigned char cmd)
+{
+unsigned char res;
+
+res=0;
+
+if(wait_status_ok()==1)
+{
+delai_us_char(12);
+write_c_aff(cmd);
+res=1;
+}
+
+return res;
+}
+
+unsigned char d1command(unsigned char d1, unsigned char cmd)
+{
+unsigned char res;
+
+res=0;
+
+if (wait_status_ok()==1)
+{
+delai_us_char(12);
+write_d_aff(d1);
+if (wait_status_ok()==1)
+{
+delai_us_char(12);
+write_c_aff(cmd);
+
+res=1;
+}
+
+}
+return res;
+}
+
+unsigned char d2command(unsigned char d1, unsigned char d2, unsigned char cmd)
+{
+unsigned char res;
+
+res=0;
+
+if (wait_status_ok()==1)
+{
+delai_us_char(12);
+write_d_aff(d1);
+if (wait_status_ok()==1)
+{
+delai_us_char(12);
+write_d_aff(d2);
+if (wait_status_ok()==1)
+{
+delai_us_char(12);
+write_c_aff(cmd);
+
+res=1;
+}
+}
+}
+return res;
+}
+
+void delai_us_char(unsigned char ucdelai)
+{
+
+while (ucdelai>0)
+{
+asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");
+ucdelai--;
+}
+}
+
+void initialisation_afficheur()
+{
+
+unsigned char error_count;
+
+error_count=0;
+
+
+LATH=0;
+LATJ=0x1F;
+
+
+TRISH=0;
+TRISJ=0;
+
+
+LATJbits.LATJ5=0;
+LATJbits.LATJ6=1;
+
+
+LATJbits.LATJ4=0;
+delai_us_char(4);
+LATJbits.LATJ4=1;
+
+
+
+delai_us_char(12);
+while(check_status_ok()==00)
+{
+error_count++;
+delai_us_char(12);
+if (error_count>200)
+{
+LATCbits.LATC1=1;LATGbits.LATG0=1;LATCbits.LATC2=0;
+(INTCONbits.GIE = 0);
+while(1);
+error_count=0;
+}
+}
+
+
+d2command(39,15,0x21);
+d2command(0,0,0x22);
+d2command(0,0,0x24);
+
+
+d2command(0,0x7B,0x40);
+d2command(40,0,0x41);
+d2command(0x00,0x80,0x42);
+d2command(40,0,0x43);
+
+
+command(0x80);
+
+
+command(0x9C);
+
+
+command(0xA0);
+
+
+d1command(0x02,0x70);
+}
+
+void draw_char(unsigned char dccar)
+{
+if (dccar<32)
+{
+dccar=0x3F;
+}
+if (dccar>0x9F)
+{
+dccar=0x3F;
+}
+dccar=dccar-32;
+while(d1command(dccar,0xC0)==0) asm(" nop");
+}
+
+
+void draw_string(unsigned char * tableau)
+{
+while(tableau[0]!=0)
+{
+while(d1command(tableau[0]-32,0xC0)==0)
+asm(" nop");
+tableau++;
+}
+}
+
+void draw_hex8(unsigned char octet)
+{
+unsigned char c;
+
+c=(octet>>4);
+if (c>9)
+c=c+0x17;
 else
-{
-TP_appui=0;
+c=c+0x10;
+while(d1command(c,0xC0)==0)
+asm(" nop");
+
+c=(octet&0x0F);
+if (c>9)
+c=c+0x17;
+else
+c=c+0x10;
+while(d1command(c,0xC0)==0)
+asm(" nop");
+
 }
 
+void goto_lico(unsigned char ligne, unsigned char colonne)
+{
+unsigned int adr;
 
-if (TP_appui==1)
-{
-if ((TP_x>=203)&&(TP_x<209))
-{
-if ((TP_y>=113)&&(TP_y<121))
-{
-LATCbits.LATC2=1;
-}
-if ((TP_y>=121)&&(TP_y<127))
-{
-LATCbits.LATC2=0;
-}
-}
+adr=0x7B00;
+if (ligne>15) ligne=0;
+if (colonne>39) colonne=0;
+adr=adr+40*ligne+colonne;
+while(d2command((unsigned char)(adr&0x00FF),(unsigned char)(adr>>8),0x24)==0)
+asm(" nop");
 }
 
+void clear_text()
+{
+unsigned int add;
 
-if (TP_appui==1)
+d2command(0,0,0x24);
+for (add=0;add!=0x8000;add++)
 {
-if ((TP_x>=215)&&(TP_x<221))
-{
-if ((TP_y>=113)&&(TP_y<121))
-{
-LATCbits.LATC1=1;
-}
-if ((TP_y>=121)&&(TP_y<127))
-{
-LATCbits.LATC1=0;
-}
-}
-}
-if (TP_appui==1)
-{
-if ((TP_x>=227)&&(TP_x<233))
-{
-if ((TP_y>=113)&&(TP_y<121))
-{
-LATGbits.LATG0=1;
-}
-if ((TP_y>=121)&&(TP_y<127))
-{
-LATGbits.LATG0=0;
-}
+d1command(0x00,0xC0);
 }
 }
 
+void clear_graphics()
+{
+unsigned int add;
 
-if (TP_appui==1)
+d2command(0,0x80,0x24);
+for (add=0x8000;add!=0xF800;add++)
 {
-if ((TP_x>=190)&&(TP_x<210))
-{
-if ((TP_y>=10)&&(TP_y<30))
-{
-alarme_pannel=~alarme_pannel;
-int a=0;
-
-for (a=0;a<100;a++)
-;
-}
+d1command(0x00,0xC0);
 }
 }
 
+void clear_cgram()
+{
+unsigned int add;
+
+d2command(0,0xF8,0x24);
+for (add=0xF800;add!=0x0000;add++)
+{
+d1command(0x00,0xC0);
+}
+}
+
+void plot1(unsigned char x, unsigned char y)
+{
+unsigned int add;
+
+add=40*y+x/6;
+d2command((char)(add&0xff),(char)(add>>8),0x24);
+
+switch(x%6)
+{
+
+case 0: command(0xFD); break;
+case 1: command(0xFC); break;
+case 2: command(0xFB); break;
+case 3: command(0xFA); break;
+case 4: command(0xF9); break;
+case 5: command(0xF8); break;
+default:break;
+}
 
 }
+
+void plot0(unsigned char x, unsigned char y)
+{
+unsigned int add;
+
+add=40*y+x/6;
+d2command((char)(add&0xff),(char)(add>>8),0x24);
+
+switch(x%6)
+{
+
+case 0: command(0xF5); break;
+case 1: command(0xF4); break;
+case 2: command(0xF3); break;
+case 3: command(0xF2); break;
+case 4: command(0xF1); break;
+case 5: command(0xF0); break;
+default:break;
 }
 
-void tp_delai(unsigned int itpd)
-{
-while(itpd>0)
-{
-asm(" nop");asm(" nop");asm(" nop");
-itpd--;
-}
 }

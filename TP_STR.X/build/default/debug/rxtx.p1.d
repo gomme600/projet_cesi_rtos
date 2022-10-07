@@ -1,6 +1,6 @@
- build/default/production/T6.d  \
- build/default/production/T6.p1:  \
- T6.c  \
+ build/default/debug/rxtx.d  \
+ build/default/debug/rxtx.p1:  \
+ rxtx.c  \
 variables_globales.h  \
 stid.h  \
 semaphore.h  \

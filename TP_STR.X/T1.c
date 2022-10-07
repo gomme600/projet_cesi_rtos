@@ -19,6 +19,58 @@ void alarm_icon(int start_point_x, int start_point_y)
     plot1(start_point_x, start_point_y+3);
 }
 
+void error_icon(int start_point_x, int start_point_y)
+{    
+    plot1(start_point_x, start_point_y-4);
+    plot1(start_point_x-1, start_point_y-3);
+    plot1(start_point_x+1, start_point_y-3);    
+    plot1(start_point_x-2, start_point_y-2);
+    plot1(start_point_x+2, start_point_y-2);
+    plot1(start_point_x-3, start_point_y-1);
+    plot1(start_point_x+3, start_point_y-1);
+    plot1(start_point_x-2, start_point_y);
+    plot1(start_point_x+2, start_point_y);
+    plot1(start_point_x-1, start_point_y+2);
+    plot1(start_point_x+1, start_point_y+2);
+    plot1(start_point_x, start_point_y+3);
+}
+
+void back_arrow_icon(int start_point_x, int start_point_y)
+{   
+    plot1(start_point_x, start_point_y);
+    plot1(start_point_x+1, start_point_y);
+    plot1(start_point_x+2, start_point_y);
+    plot1(start_point_x+3, start_point_y);
+    plot1(start_point_x+4, start_point_y);
+    plot1(start_point_x+5, start_point_y);
+    
+    plot1(start_point_x+1, start_point_y+1);
+    plot1(start_point_x+2, start_point_y+1);
+    plot1(start_point_x+3, start_point_y+1);
+    plot1(start_point_x+4, start_point_y+1);
+    
+    plot1(start_point_x+2, start_point_y+2);
+    plot1(start_point_x+3, start_point_y+2);
+}
+
+void front_arrow_icon(int start_point_x, int start_point_y)
+{   
+    plot1(start_point_x, start_point_y);
+    plot1(start_point_x+1, start_point_y);
+    plot1(start_point_x+2, start_point_y);
+    plot1(start_point_x+3, start_point_y);
+    plot1(start_point_x+4, start_point_y);
+    plot1(start_point_x+5, start_point_y);
+    
+    plot1(start_point_x+1, start_point_y-1);
+    plot1(start_point_x+2, start_point_y-1);
+    plot1(start_point_x+3, start_point_y-1);
+    plot1(start_point_x+4, start_point_y-1);
+    
+    plot1(start_point_x+2, start_point_y-2);
+    plot1(start_point_x+3, start_point_y-2);
+}
+
 void draw_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
 {
     int i=0;
@@ -50,7 +102,7 @@ void draw_empty_box(int start_point_x, int start_point_y, int end_point_x, int e
         else
         {
             plot1(i, start_point_y);
-            plot1(i, end_point_y);
+            plot1(i, end_point_y-1);
         }
     }
 }
@@ -103,7 +155,8 @@ void stopVitess(unsigned char  vitesseCourante)
             vitesseCourante --;
             newVitesse = setBit(newVitesse,vitesseCourante);
             goto_lico(5,0);
-        draw_string("Vitesse:");
+            draw_string("Vitesse:");
+            
         if (VITESSE_PLUS==0)
             vitesse++;
         if (VITESSE_MOINS==0)
@@ -147,39 +200,84 @@ void tache1()
     current_fork_x=fork_start_x_pos;
     current_fork_y=fork_start_y_pos;
     draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
-
-    //Icons
-    draw_empty_box(190, 10, 210, 30);
-    alarm_icon(200, 20);
             
     TP_appui=0;
     alarme_pannel=0;
-            
+         
+    int flash_interval_alarm=0;
+    int flash_interval_error=0;
+    
     while(1)
     {
-        if (flagChoc==1)    
+        
+        //Alarm icon flash
+        if (alarme_active != 0x00)
         {
-            goto_lico(11,0);
+        flash_interval_alarm++;
+        if (flash_interval_alarm = 4000)
+        {
+            draw_empty_box(190, 10, 210, 30);
+            alarm_icon(200, 20);
+        }
+        if (flash_interval_alarm = 8000)
+        {
+            clear_box(190, 10, 210, 30);
+            flash_interval_alarm=0;
+        }
         }
         
-        if(flagVitesse == 1)
+        //Error icon flash
+        if (error_active != 0x00)
+        {
+        flash_interval_error++;
+        if (flash_interval_error = 4000)
+        {
+            draw_empty_box(190, 35, 210, 55);
+            error_icon(200, 45);
+        }
+        if (flash_interval_error = 8000)
+        {
+            clear_box(190, 35, 210, 55);
+            flash_interval_error=0;
+        }  
+        }
+                
+        /*if (flagChoc==1)    
+        {
+            goto_lico(11,0);
+        }*/
+        
+        /*if(flagVitesse == 1)
         {
             //blockVitesse(32); 
             goto_lico(11,0);
             draw_string("alarme_vitesse="); 
             draw_hex8((alarme_active >> 7) & 0x01);
             flagVitesse = 0;
-        }
+        }*/
         
         goto_lico(0,0);
         draw_string("Marche:");
-        if (MARCHE_AVANT==0)
+        if (MARCHE_AVANT==0 && error_active==0)
+        {
             draw_string("AV");
+            clear_box(120, 67, 130, 73);
+            front_arrow_icon(120, 70);
+        }
         else
-            if (MARCHE_ARRIERE==0)
+        {
+            if (MARCHE_ARRIERE==0 && error_active==0)
+            {
                 draw_string("AR");
+                clear_box(120, 67, 130, 73);
+                back_arrow_icon(120, 70);
+            }
             else
+            {
                 draw_string("N ");
+                clear_box(120, 67, 130, 73);
+            }
+        }
 
         goto_lico(1,0);
         draw_string("Siege:");
@@ -190,11 +288,11 @@ void tache1()
 
         goto_lico(2,0);
         draw_string("Temp. Eau:");
-        draw_hex8(lecture_8bit_analogique(TEMPERATURE_EAU));
+        draw_hex8(tempeau);
 
         goto_lico(3,0);
         draw_string("Temp. Huile:");
-        draw_hex8(lecture_8bit_analogique(TEMPERATURE_HUILE));
+        draw_hex8(temphuile);
 
         goto_lico(4,0);
         draw_string("Choc:");
@@ -205,19 +303,23 @@ void tache1()
 
         goto_lico(5,0);
         draw_string("Vitesse:");
-        if (VITESSE_PLUS==0)
-            vitesse++;
-        if (VITESSE_MOINS==0)
-            vitesse--;
         draw_hex8(vitesse);
+        goto_lico(10,15);
+        draw_string("Vitesse reel:");
+        draw_hex8(vitesseReel);
 
         goto_lico(6,0);
         draw_string("Batterie:");
-        if (BATTERIE_PLUS==0)
-            batterie++;
-        if (BATTERIE_MOINS==0)
-            batterie--;
         draw_hex8(batterie);
+        goto_lico(11,15);
+        draw_string("Batterie reel:");
+        draw_hex8(batterieReel);
+        goto_lico(12,15);
+        draw_string("E(c):");
+        draw_hex8(eauReel);
+        goto_lico(12,25);
+        draw_string("H(c):");
+        draw_hex8(huileReel);
 
         goto_lico(7,0);
         if (FREIN_A_MAIN==0)

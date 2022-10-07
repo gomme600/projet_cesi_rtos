@@ -72,6 +72,15 @@ void initialisation_des_ports()
     //Initialise Interrupts
     RCONbits.IPEN = 1; //Enable interrupt priority levels
         
+    /*INTCON2bits.INT3IP = 1; //RB3 priority
+    INTCON3bits.INT2IP = 1; //RB2 priority
+    INTCON3bits.INT1IP = 1; //RB1 priority
+    INTCON3bits.INT3IE = 1; //RB3 enable
+    INTCON3bits.INT2IE = 1; //RB2 enable
+    INTCON3bits.INT1IE = 1; //RB1 enable
+    INTCONbits.INT0IE = 1; //RB0 enable et RB0 est TOUJOURS priorite basse
+    */
+    
     //INTCONbits.GIE = 1;
     //INTCONbits.PEIE = 1;
     //INTCONbits.INT0IE = 1;
@@ -82,7 +91,7 @@ void initialisation_des_ports()
     
     //INTCON = 0xD0; //Enable INT0
     //INTCON2 = 0x70; //External interrupts on rising edge
-    INTCON3 = 0x18; //INT1 low priority INT 2 low priority
+    //INTCON3 = 0x18; //INT1 low priority INT 2 low priority
     
     //taches
     previous_tache=0;

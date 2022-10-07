@@ -1,6 +1,6 @@
- build/default/production/stid.d  \
- build/default/production/stid.p1:  \
- stid.c  \
+ build/default/debug/T1.d  \
+ build/default/debug/T1.p1:  \
+ T1.c  \
 variables_globales.h  \
 stid.h  \
 semaphore.h  \

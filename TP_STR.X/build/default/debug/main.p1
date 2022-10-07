@@ -9522,21 +9522,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "106
 [v _vitesseReel `uc ~T0 @X0 1 e ]
 [; ;variables_globales.h: 106: unsigned char vitesseReel;
-"107
-[v _batterieReel `uc ~T0 @X0 1 e ]
-[; ;variables_globales.h: 107: unsigned char batterieReel;
-"108
-[v _eauReel `uc ~T0 @X0 1 e ]
-[; ;variables_globales.h: 108: unsigned char eauReel;
-"109
-[v _huileReel `uc ~T0 @X0 1 e ]
-[; ;variables_globales.h: 109: unsigned char huileReel;
-"111
-[v _tempeau `uc ~T0 @X0 1 e ]
-[; ;variables_globales.h: 111: unsigned char tempeau;
-"112
-[v _temphuile `uc ~T0 @X0 1 e ]
-[; ;variables_globales.h: 112: unsigned char temphuile;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();

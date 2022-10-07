@@ -12013,12 +12013,6 @@ unsigned char flagMarcheArriere;
 unsigned char flagSiege;
 
 unsigned char vitesseReel;
-unsigned char batterieReel;
-unsigned char eauReel;
-unsigned char huileReel;
-
-unsigned char tempeau;
-unsigned char temphuile;
 
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
