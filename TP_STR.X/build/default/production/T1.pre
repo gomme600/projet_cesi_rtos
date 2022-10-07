@@ -12005,6 +12005,9 @@ unsigned char choc_time_2 @0x708;
 unsigned char choc_time_3 @0x707;
 unsigned char choc_time_4 @0x706;
 
+int tache_prioritaire @0x710;
+int previous_tache @0x714;
+
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
 void write_c_aff(unsigned char command);
@@ -12236,6 +12239,10 @@ alarme_pannel=0;
 
 while(1)
 {
+if (flagChoc==1)
+{
+goto_lico(11,0);
+}
 
 if(flagVitesse == 1)
 {
@@ -12334,7 +12341,7 @@ else
 asm(" nop");
 }
 
-# 264
+# 268
 if (lecture_8bit_analogique(10) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
 {
 clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);

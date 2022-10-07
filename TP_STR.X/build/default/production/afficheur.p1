@@ -9370,6 +9370,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "96
 [v _choc_time_4 `uc ~T0 @X0 1 e@1798 ]
 [; ;variables_globales.h: 96: unsigned char choc_time_4 @0x706;
+"98
+[v _tache_prioritaire `i ~T0 @X0 1 e@1808 ]
+[; ;variables_globales.h: 98: int tache_prioritaire @0x710;
+"99
+[v _previous_tache `i ~T0 @X0 1 e@1812 ]
+[; ;variables_globales.h: 99: int previous_tache @0x714;
 "22 semaphore.h
 [v _Val_sem_cna `uc ~T0 @X0 1 e ]
 [; ;semaphore.h: 22: unsigned char Val_sem_cna;

@@ -12005,6 +12005,9 @@ unsigned char choc_time_2 @0x708;
 unsigned char choc_time_3 @0x707;
 unsigned char choc_time_4 @0x706;
 
+int tache_prioritaire @0x710;
+int previous_tache @0x714;
+
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
 void write_c_aff(unsigned char command);
@@ -12155,6 +12158,10 @@ RCONbits.IPEN = 1;
 
 # 85
 INTCON3 = 0x18;
+
+
+previous_tache=0;
+tache_prioritaire=0;
 
 }
 

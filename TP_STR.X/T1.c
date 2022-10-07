@@ -156,6 +156,10 @@ void tache1()
             
     while(1)
     {
+        if (flagChoc==1)    
+        {
+            goto_lico(11,0);
+        }
         
         if(flagVitesse == 1)
         {

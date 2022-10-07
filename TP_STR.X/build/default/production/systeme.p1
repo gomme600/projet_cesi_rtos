@@ -9353,6 +9353,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "96
 [v _choc_time_4 `uc ~T0 @X0 1 e@1798 ]
 [; ;variables_globales.h: 96: unsigned char choc_time_4 @0x706;
+"98
+[v _tache_prioritaire `i ~T0 @X0 1 e@1808 ]
+[; ;variables_globales.h: 98: int tache_prioritaire @0x710;
+"99
+[v _previous_tache `i ~T0 @X0 1 e@1812 ]
+[; ;variables_globales.h: 99: int previous_tache @0x714;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9466,162 +9472,168 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;systeme.h: 24: char setBit(char n, int k);
 [; ;systeme.h: 27: char clearBit(char n, int k);
 [; ;systeme.h: 30: char toggleBit(char n, int k);
-"17 systeme.c
-[v _tache_prioritaire `i ~T0 @X0 1 e ]
-[i _tache_prioritaire
--> 0 `i
-]
-[; ;systeme.c: 17: int tache_prioritaire=0;
-"21
+"19 systeme.c
 [v _setBit `(uc ~T0 @X0 1 ef2`uc`i ]
 {
-[; ;systeme.c: 20: char setBit(char n, int k)
-[; ;systeme.c: 21: {
+[; ;systeme.c: 18: char setBit(char n, int k)
+[; ;systeme.c: 19: {
 [e :U _setBit ]
 [v _n `uc ~T0 @X0 1 r1 ]
 [v _k `i ~T0 @X0 1 r2 ]
 [f ]
-[; ;systeme.c: 22: return (n | (1 << k));
-"22
+[; ;systeme.c: 20: return (n | (1 << k));
+"20
 [e ) -> | -> _n `i << -> 1 `i _k `uc ]
 [e $UE 1238  ]
-[; ;systeme.c: 23: }
-"23
+[; ;systeme.c: 21: }
+"21
 [e :UE 1238 ]
 }
-"27
+"25
 [v _clearBit `(uc ~T0 @X0 1 ef2`uc`i ]
 {
-[; ;systeme.c: 26: char clearBit(char n, int k)
-[; ;systeme.c: 27: {
+[; ;systeme.c: 24: char clearBit(char n, int k)
+[; ;systeme.c: 25: {
 [e :U _clearBit ]
 [v _n `uc ~T0 @X0 1 r1 ]
 [v _k `i ~T0 @X0 1 r2 ]
 [f ]
-[; ;systeme.c: 28: return (n & (~(1 << k)));
-"28
+[; ;systeme.c: 26: return (n & (~(1 << k)));
+"26
 [e ) -> & -> _n `i ~ << -> 1 `i _k `uc ]
 [e $UE 1239  ]
-[; ;systeme.c: 29: }
-"29
+[; ;systeme.c: 27: }
+"27
 [e :UE 1239 ]
 }
-"33
+"31
 [v _toggleBit `(uc ~T0 @X0 1 ef2`uc`i ]
 {
-[; ;systeme.c: 32: char toggleBit(char n, int k)
-[; ;systeme.c: 33: {
+[; ;systeme.c: 30: char toggleBit(char n, int k)
+[; ;systeme.c: 31: {
 [e :U _toggleBit ]
 [v _n `uc ~T0 @X0 1 r1 ]
 [v _k `i ~T0 @X0 1 r2 ]
 [f ]
-[; ;systeme.c: 34: return (n ^ (1 << k));
-"34
+[; ;systeme.c: 32: return (n ^ (1 << k));
+"32
 [e ) -> ^ -> _n `i << -> 1 `i _k `uc ]
 [e $UE 1240  ]
-[; ;systeme.c: 35: }
-"35
+[; ;systeme.c: 33: }
+"33
 [e :UE 1240 ]
 }
 "20 systeme.h
-[v F10291 `(v ~T0 @X0 1 tf ]
-"39 systeme.c
-[v _fonction_d_interruption `IF10291 ~T0 @X0 1 e ]
+[v F10293 `(v ~T0 @X0 1 tf ]
+"37 systeme.c
+[v _fonction_d_interruption `IF10293 ~T0 @X0 1 e ]
 {
-[; ;systeme.c: 38: void interrupt fonction_d_interruption()
-[; ;systeme.c: 39: {
+[; ;systeme.c: 36: void interrupt fonction_d_interruption()
+[; ;systeme.c: 37: {
 [e :U _fonction_d_interruption ]
 [f ]
-[; ;systeme.c: 43: if (INTCON3bits.INT3IF==1)
-"43
+[; ;systeme.c: 41: if (INTCON3bits.INT3IF==1)
+"41
 [e $ ! == -> . . _INTCON3bits 0 2 `i -> 1 `i 1242  ]
-[; ;systeme.c: 44: {
-"44
+[; ;systeme.c: 42: {
+"42
 {
-[; ;systeme.c: 45: INTCON3bits.INT3IF=0;
-"45
+[; ;systeme.c: 43: INTCON3bits.INT3IF=0;
+"43
 [e = . . _INTCON3bits 0 2 -> -> 0 `i `uc ]
-[; ;systeme.c: 46: tache_prioritaire=1;
-"46
+[; ;systeme.c: 44: tache_prioritaire=1;
+"44
 [e = _tache_prioritaire -> 1 `i ]
-[; ;systeme.c: 47: flagChoc = 1;
-"47
+[; ;systeme.c: 45: flagChoc = 1;
+"45
 [e = _flagChoc -> -> 1 `i `uc ]
-"54
+"52
 }
 [e :U 1242 ]
-[; ;systeme.c: 54: }
-[; ;systeme.c: 57: STATUS_TEMPORAIRE=STATUS; W_TEMPORAIRE=WREG; BSR_TEMPORAIRE=BSR;
-"57
+[; ;systeme.c: 52: }
+[; ;systeme.c: 55: STATUS_TEMPORAIRE=STATUS; W_TEMPORAIRE=WREG; BSR_TEMPORAIRE=BSR;
+"55
 [e = _STATUS_TEMPORAIRE _STATUS ]
 [e = _W_TEMPORAIRE _WREG ]
 [e = _BSR_TEMPORAIRE _BSR ]
-[; ;systeme.c: 58: FSR0H_TEMPORAIRE=FSR0H; FSR0L_TEMPORAIRE=FSR0L;
-"58
+[; ;systeme.c: 56: FSR0H_TEMPORAIRE=FSR0H; FSR0L_TEMPORAIRE=FSR0L;
+"56
 [e = _FSR0H_TEMPORAIRE _FSR0H ]
 [e = _FSR0L_TEMPORAIRE _FSR0L ]
-[; ;systeme.c: 61: if(T0IE && T0IF)
-"61
+[; ;systeme.c: 59: if(T0IE && T0IF)
+"59
 [e $ ! && _T0IE _T0IF 1243  ]
+[; ;systeme.c: 60: {
+"60
+{
+[; ;systeme.c: 61: if (DEMARRAGE==1)
+"61
+[e $ ! == -> _DEMARRAGE `i -> 1 `i 1244  ]
 [; ;systeme.c: 62: {
 "62
 {
-[; ;systeme.c: 63: if (DEMARRAGE==1)
+[; ;systeme.c: 63: STKPTR=27;
 "63
-[e $ ! == -> _DEMARRAGE `i -> 1 `i 1244  ]
-[; ;systeme.c: 64: {
-"64
-{
-[; ;systeme.c: 65: STKPTR=27;
-"65
 [e = _STKPTR -> -> 27 `i `uc ]
-[; ;systeme.c: 66: DEMARRAGE=0;
-"66
+[; ;systeme.c: 64: DEMARRAGE=0;
+"64
 [e = _DEMARRAGE -> -> 0 `i `uc ]
-"67
+"65
 }
 [e :U 1244 ]
-[; ;systeme.c: 67: }
-[; ;systeme.c: 71: FSR0H=tache_active;
-"71
+[; ;systeme.c: 65: }
+[; ;systeme.c: 69: FSR0H=tache_active;
+"69
 [e = _FSR0H _tache_active ]
-[; ;systeme.c: 72: FSR0L=0;
-"72
+[; ;systeme.c: 70: FSR0L=0;
+"70
 [e = _FSR0L -> -> 0 `i `uc ]
-[; ;systeme.c: 73: POSTINC0=W_TEMPORAIRE; POSTINC0=STATUS_TEMPORAIRE; POSTINC0=BSR_TEMPORAIRE; POSTINC0=STKPTR;
-"73
+[; ;systeme.c: 71: POSTINC0=W_TEMPORAIRE; POSTINC0=STATUS_TEMPORAIRE; POSTINC0=BSR_TEMPORAIRE; POSTINC0=STKPTR;
+"71
 [e = _POSTINC0 _W_TEMPORAIRE ]
 [e = _POSTINC0 _STATUS_TEMPORAIRE ]
 [e = _POSTINC0 _BSR_TEMPORAIRE ]
 [e = _POSTINC0 _STKPTR ]
-[; ;systeme.c: 74: POSTINC0=FSR0H_TEMPORAIRE; POSTINC0=FSR0L_TEMPORAIRE; POSTINC0=FSR1H; POSTINC0=FSR1L;
-"74
+[; ;systeme.c: 72: POSTINC0=FSR0H_TEMPORAIRE; POSTINC0=FSR0L_TEMPORAIRE; POSTINC0=FSR1H; POSTINC0=FSR1L;
+"72
 [e = _POSTINC0 _FSR0H_TEMPORAIRE ]
 [e = _POSTINC0 _FSR0L_TEMPORAIRE ]
 [e = _POSTINC0 _FSR1H ]
 [e = _POSTINC0 _FSR1L ]
-[; ;systeme.c: 75: POSTINC0=FSR2H; POSTINC0=FSR2L; POSTINC0=PRODH; POSTINC0=PRODL;
-"75
+[; ;systeme.c: 73: POSTINC0=FSR2H; POSTINC0=FSR2L; POSTINC0=PRODH; POSTINC0=PRODL;
+"73
 [e = _POSTINC0 _FSR2H ]
 [e = _POSTINC0 _FSR2L ]
 [e = _POSTINC0 _PRODH ]
 [e = _POSTINC0 _PRODL ]
-[; ;systeme.c: 76: POSTINC0=TBLPTRU; POSTINC0=TBLPTRH; POSTINC0=TBLPTRL; POSTINC0=TABLAT;
-"76
+[; ;systeme.c: 74: POSTINC0=TBLPTRU; POSTINC0=TBLPTRH; POSTINC0=TBLPTRL; POSTINC0=TABLAT;
+"74
 [e = _POSTINC0 _TBLPTRU ]
 [e = _POSTINC0 _TBLPTRH ]
 [e = _POSTINC0 _TBLPTRL ]
 [e = _POSTINC0 _TABLAT ]
-[; ;systeme.c: 77: POSTINC0=PCLATU; POSTINC0=PCLATH;
-"77
+[; ;systeme.c: 75: POSTINC0=PCLATU; POSTINC0=PCLATH;
+"75
 [e = _POSTINC0 _PCLATU ]
 [e = _POSTINC0 _PCLATH ]
-[; ;systeme.c: 81: FSR1H=0;
-"81
+[; ;systeme.c: 79: FSR1H=0;
+"79
 [e = _FSR1H -> -> 0 `i `uc ]
-[; ;systeme.c: 82: FSR1L=0;
-"82
+[; ;systeme.c: 80: FSR1L=0;
+"80
 [e = _FSR1L -> -> 0 `i `uc ]
+[; ;systeme.c: 81: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"81
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 82: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"82
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
 [; ;systeme.c: 83: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
 "83
 [e = _POSTINC0 _POSTINC1 ]
@@ -9634,14 +9646,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _POSTINC0 _POSTINC1 ]
 [e = _POSTINC0 _POSTINC1 ]
 [e = _POSTINC0 _POSTINC1 ]
-[; ;systeme.c: 85: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-"85
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
 [; ;systeme.c: 86: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
 "86
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 87: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"87
 [e = _POSTINC0 _POSTINC1 ]
 [e = _POSTINC0 _POSTINC1 ]
 [e = _POSTINC0 _POSTINC1 ]
@@ -9658,14 +9670,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _POSTINC0 _POSTINC1 ]
 [e = _POSTINC0 _POSTINC1 ]
 [e = _POSTINC0 _POSTINC1 ]
-[; ;systeme.c: 90: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-"90
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
 [; ;systeme.c: 91: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
 "91
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 92: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"92
 [e = _POSTINC0 _POSTINC1 ]
 [e = _POSTINC0 _POSTINC1 ]
 [e = _POSTINC0 _POSTINC1 ]
@@ -9682,98 +9694,77 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _POSTINC0 _POSTINC1 ]
 [e = _POSTINC0 _POSTINC1 ]
 [e = _POSTINC0 _POSTINC1 ]
-[; ;systeme.c: 95: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-"95
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
-[; ;systeme.c: 96: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-"96
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
-[e = _POSTINC0 _POSTINC1 ]
-[; ;systeme.c: 99: TMR0=(0xFFFF-30000);
-"99
+[; ;systeme.c: 97: TMR0=(0xFFFF-30000);
+"97
 [e = _TMR0 -> - -> 65535 `ui -> -> 30000 `i `ui `us ]
-[; ;systeme.c: 100: T0IF=0;
-"100
+[; ;systeme.c: 98: T0IF=0;
+"98
 [e = _T0IF -> -> 0 `i `b ]
-[; ;systeme.c: 102: Tick_Count++;
-"102
+[; ;systeme.c: 100: Tick_Count++;
+"100
 [e ++ _Tick_Count -> -> 1 `i `ui ]
-[; ;systeme.c: 105: if (flagChoc==1)
+[; ;systeme.c: 103: if (tache_prioritaire!=0)
+"103
+[e $ ! != _tache_prioritaire -> 0 `i 1245  ]
+[; ;systeme.c: 104: {
+"104
+{
+[; ;systeme.c: 105: previous_tache=pointeur_de_tache;
 "105
-[e $ ! == -> _flagChoc `i -> 1 `i 1245  ]
-[; ;systeme.c: 106: {
+[e = _previous_tache -> _pointeur_de_tache `i ]
+[; ;systeme.c: 106: pointeur_de_tache=tache_prioritaire;
 "106
-{
-"108
-}
-[; ;systeme.c: 108: }
-[e $U 1246  ]
-"109
-[e :U 1245 ]
-[; ;systeme.c: 109: else
-[; ;systeme.c: 110: {
-"110
-{
-[; ;systeme.c: 111: pointeur_de_tache++;
-"111
-[e ++ _pointeur_de_tache -> -> 1 `i `uc ]
-[; ;systeme.c: 112: pointeur_de_tache=tache_prioritaire;
-"112
 [e = _pointeur_de_tache -> _tache_prioritaire `uc ]
-[; ;systeme.c: 113: tache_prioritaire=0;
-"113
+"107
+}
+[; ;systeme.c: 107: }
+[e $U 1246  ]
+"108
+[e :U 1245 ]
+[; ;systeme.c: 108: else
+[; ;systeme.c: 109: {
+"109
+{
+[; ;systeme.c: 115: pointeur_de_tache++;
+"115
+[e ++ _pointeur_de_tache -> -> 1 `i `uc ]
+[; ;systeme.c: 116: tache_prioritaire=0;
+"116
 [e = _tache_prioritaire -> 0 `i ]
-"114
+"117
 }
 [e :U 1246 ]
-[; ;systeme.c: 114: }
-[; ;systeme.c: 116: if (pointeur_de_tache==6)
-"116
+[; ;systeme.c: 117: }
+[; ;systeme.c: 119: if (pointeur_de_tache==6)
+"119
 [e $ ! == -> _pointeur_de_tache `i -> 6 `i 1247  ]
-[; ;systeme.c: 117: pointeur_de_tache=0;
-"117
+[; ;systeme.c: 120: pointeur_de_tache=0;
+"120
 [e = _pointeur_de_tache -> -> 0 `i `uc ]
 [e :U 1247 ]
-[; ;systeme.c: 118: tache_active=queue[pointeur_de_tache];
-"118
+[; ;systeme.c: 121: tache_active=queue[pointeur_de_tache];
+"121
 [e = _tache_active *U + &U _queue * -> _pointeur_de_tache `ux -> -> # *U &U _queue `ui `ux ]
-[; ;systeme.c: 123: FSR1H=0;
-"123
-[e = _FSR1H -> -> 0 `i `uc ]
-[; ;systeme.c: 124: FSR1L=0;
-"124
-[e = _FSR1L -> -> 0 `i `uc ]
-[; ;systeme.c: 125: FSR0H=tache_active;
-"125
-[e = _FSR0H _tache_active ]
-[; ;systeme.c: 126: FSR0L=18;
+[; ;systeme.c: 126: FSR1H=0;
 "126
-[e = _FSR0L -> -> 18 `i `uc ]
-[; ;systeme.c: 127: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+[e = _FSR1H -> -> 0 `i `uc ]
+[; ;systeme.c: 127: FSR1L=0;
 "127
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[; ;systeme.c: 128: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+[e = _FSR1L -> -> 0 `i `uc ]
+[; ;systeme.c: 128: FSR0H=tache_active;
 "128
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[; ;systeme.c: 129: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+[e = _FSR0H _tache_active ]
+[; ;systeme.c: 129: FSR0L=18;
 "129
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
+[e = _FSR0L -> -> 18 `i `uc ]
 [; ;systeme.c: 130: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
 "130
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 131: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"131
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
@@ -9790,14 +9781,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
-[; ;systeme.c: 134: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-"134
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
 [; ;systeme.c: 135: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
 "135
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 136: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"136
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
@@ -9814,144 +9805,156 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
-[; ;systeme.c: 139: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-"139
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
-[e = _POSTINC1 _POSTINC0 ]
 [; ;systeme.c: 140: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
 "140
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
 [e = _POSTINC1 _POSTINC0 ]
-[; ;systeme.c: 144: FSR0H=tache_active;
-"144
-[e = _FSR0H _tache_active ]
-[; ;systeme.c: 145: FSR0L=0;
-"145
-[e = _FSR0L -> -> 0 `i `uc ]
-[; ;systeme.c: 147: W_TEMPORAIRE=POSTINC0; STATUS_TEMPORAIRE=POSTINC0; BSR_TEMPORAIRE=POSTINC0; STKPTR=POSTINC0;
+[; ;systeme.c: 141: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"141
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 142: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"142
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 143: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"143
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 147: FSR0H=tache_active;
 "147
+[e = _FSR0H _tache_active ]
+[; ;systeme.c: 148: FSR0L=0;
+"148
+[e = _FSR0L -> -> 0 `i `uc ]
+[; ;systeme.c: 150: W_TEMPORAIRE=POSTINC0; STATUS_TEMPORAIRE=POSTINC0; BSR_TEMPORAIRE=POSTINC0; STKPTR=POSTINC0;
+"150
 [e = _W_TEMPORAIRE _POSTINC0 ]
 [e = _STATUS_TEMPORAIRE _POSTINC0 ]
 [e = _BSR_TEMPORAIRE _POSTINC0 ]
 [e = _STKPTR _POSTINC0 ]
-[; ;systeme.c: 148: FSR0H_TEMPORAIRE=POSTINC0; FSR0L_TEMPORAIRE=POSTINC0; FSR1H=POSTINC0; FSR1L=POSTINC0;
-"148
+[; ;systeme.c: 151: FSR0H_TEMPORAIRE=POSTINC0; FSR0L_TEMPORAIRE=POSTINC0; FSR1H=POSTINC0; FSR1L=POSTINC0;
+"151
 [e = _FSR0H_TEMPORAIRE _POSTINC0 ]
 [e = _FSR0L_TEMPORAIRE _POSTINC0 ]
 [e = _FSR1H _POSTINC0 ]
 [e = _FSR1L _POSTINC0 ]
-[; ;systeme.c: 149: FSR2H=POSTINC0; FSR2L=POSTINC0; PRODH=POSTINC0; PRODL=POSTINC0;
-"149
+[; ;systeme.c: 152: FSR2H=POSTINC0; FSR2L=POSTINC0; PRODH=POSTINC0; PRODL=POSTINC0;
+"152
 [e = _FSR2H _POSTINC0 ]
 [e = _FSR2L _POSTINC0 ]
 [e = _PRODH _POSTINC0 ]
 [e = _PRODL _POSTINC0 ]
-[; ;systeme.c: 150: TBLPTRU=POSTINC0; TBLPTRH=POSTINC0; TBLPTRL=POSTINC0; TABLAT=POSTINC0;
-"150
+[; ;systeme.c: 153: TBLPTRU=POSTINC0; TBLPTRH=POSTINC0; TBLPTRL=POSTINC0; TABLAT=POSTINC0;
+"153
 [e = _TBLPTRU _POSTINC0 ]
 [e = _TBLPTRH _POSTINC0 ]
 [e = _TBLPTRL _POSTINC0 ]
 [e = _TABLAT _POSTINC0 ]
-[; ;systeme.c: 151: PCLATU=POSTINC0; PCLATH=POSTINC0;
-"151
+[; ;systeme.c: 154: PCLATU=POSTINC0; PCLATH=POSTINC0;
+"154
 [e = _PCLATU _POSTINC0 ]
 [e = _PCLATH _POSTINC0 ]
-[; ;systeme.c: 154: FSR0L=FSR0L_TEMPORAIRE; FSR0H=FSR0H_TEMPORAIRE; BSR=BSR_TEMPORAIRE;
-"154
+[; ;systeme.c: 157: FSR0L=FSR0L_TEMPORAIRE; FSR0H=FSR0H_TEMPORAIRE; BSR=BSR_TEMPORAIRE;
+"157
 [e = _FSR0L _FSR0L_TEMPORAIRE ]
 [e = _FSR0H _FSR0H_TEMPORAIRE ]
 [e = _BSR _BSR_TEMPORAIRE ]
-[; ;systeme.c: 155: WREG=W_TEMPORAIRE; STATUS=STATUS_TEMPORAIRE;
-"155
+[; ;systeme.c: 158: WREG=W_TEMPORAIRE; STATUS=STATUS_TEMPORAIRE;
+"158
 [e = _WREG _W_TEMPORAIRE ]
 [e = _STATUS _STATUS_TEMPORAIRE ]
-[; ;systeme.c: 157: asm("RETFIE");
-"157
+[; ;systeme.c: 160: asm("RETFIE");
+"160
 [; <" RETFIE ;# ">
-"161
+"164
 }
 [e :U 1243 ]
-[; ;systeme.c: 161: }
-[; ;systeme.c: 164: FSR0L=FSR0L_TEMPORAIRE; FSR0H=FSR0H_TEMPORAIRE; BSR=BSR_TEMPORAIRE;
-"164
+[; ;systeme.c: 164: }
+[; ;systeme.c: 167: FSR0L=FSR0L_TEMPORAIRE; FSR0H=FSR0H_TEMPORAIRE; BSR=BSR_TEMPORAIRE;
+"167
 [e = _FSR0L _FSR0L_TEMPORAIRE ]
 [e = _FSR0H _FSR0H_TEMPORAIRE ]
 [e = _BSR _BSR_TEMPORAIRE ]
-[; ;systeme.c: 165: WREG=W_TEMPORAIRE; STATUS=STATUS_TEMPORAIRE;
-"165
+[; ;systeme.c: 168: WREG=W_TEMPORAIRE; STATUS=STATUS_TEMPORAIRE;
+"168
 [e = _WREG _W_TEMPORAIRE ]
 [e = _STATUS _STATUS_TEMPORAIRE ]
-[; ;systeme.c: 167: asm("RETFIE");
-"167
+[; ;systeme.c: 170: asm("RETFIE");
+"170
 [; <" RETFIE ;# ">
-[; ;systeme.c: 171: tache1();
-"171
-[e ( _tache1 ..  ]
-[; ;systeme.c: 172: tache2();
-"172
-[e ( _tache2 ..  ]
-[; ;systeme.c: 173: tache3();
-"173
-[e ( _tache3 ..  ]
-[; ;systeme.c: 174: tache4();
+[; ;systeme.c: 174: tache1();
 "174
-[e ( _tache4 ..  ]
-[; ;systeme.c: 175: tache5();
+[e ( _tache1 ..  ]
+[; ;systeme.c: 175: tache2();
 "175
-[e ( _tache5 ..  ]
-[; ;systeme.c: 176: tache6();
+[e ( _tache2 ..  ]
+[; ;systeme.c: 176: tache3();
 "176
-[e ( _tache6 ..  ]
-[; ;systeme.c: 177: }
+[e ( _tache3 ..  ]
+[; ;systeme.c: 177: tache4();
 "177
+[e ( _tache4 ..  ]
+[; ;systeme.c: 178: tache5();
+"178
+[e ( _tache5 ..  ]
+[; ;systeme.c: 179: tache6();
+"179
+[e ( _tache6 ..  ]
+[; ;systeme.c: 180: }
+"180
 [e :UE 1241 ]
 }
-"180
+"183
 [v _initialisation_du_systeme `(v ~T0 @X0 1 ef ]
 {
-[; ;systeme.c: 179: void initialisation_du_systeme()
-[; ;systeme.c: 180: {
+[; ;systeme.c: 182: void initialisation_du_systeme()
+[; ;systeme.c: 183: {
 [e :U _initialisation_du_systeme ]
 [f ]
-"181
+"184
 [v _temp `uc ~T0 @X0 1 a ]
-[; ;systeme.c: 181: unsigned char temp;
-[; ;systeme.c: 183: DEMARRAGE=1;
-"183
-[e = _DEMARRAGE -> -> 1 `i `uc ]
-[; ;systeme.c: 186: queue[0]=1;
+[; ;systeme.c: 184: unsigned char temp;
+[; ;systeme.c: 186: DEMARRAGE=1;
 "186
-[e = *U + &U _queue * -> -> -> 0 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 1 `i `uc ]
-[; ;systeme.c: 187: queue[1]=2;
-"187
-[e = *U + &U _queue * -> -> -> 1 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 2 `i `uc ]
-[; ;systeme.c: 188: queue[2]=3;
-"188
-[e = *U + &U _queue * -> -> -> 2 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 3 `i `uc ]
-[; ;systeme.c: 189: queue[3]=4;
+[e = _DEMARRAGE -> -> 1 `i `uc ]
+[; ;systeme.c: 189: queue[0]=1;
 "189
-[e = *U + &U _queue * -> -> -> 3 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 4 `i `uc ]
-[; ;systeme.c: 190: queue[4]=5;
+[e = *U + &U _queue * -> -> -> 0 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 1 `i `uc ]
+[; ;systeme.c: 190: queue[1]=2;
 "190
-[e = *U + &U _queue * -> -> -> 4 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 5 `i `uc ]
-[; ;systeme.c: 191: queue[5]=6;
+[e = *U + &U _queue * -> -> -> 1 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 2 `i `uc ]
+[; ;systeme.c: 191: queue[2]=3;
 "191
-[e = *U + &U _queue * -> -> -> 5 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 6 `i `uc ]
-[; ;systeme.c: 193: pointeur_de_tache=6-1;
+[e = *U + &U _queue * -> -> -> 2 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 3 `i `uc ]
+[; ;systeme.c: 192: queue[3]=4;
+"192
+[e = *U + &U _queue * -> -> -> 3 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 4 `i `uc ]
+[; ;systeme.c: 193: queue[4]=5;
 "193
-[e = _pointeur_de_tache -> - -> 6 `i -> 1 `i `uc ]
-[; ;systeme.c: 194: tache_active=queue[pointeur_de_tache];
+[e = *U + &U _queue * -> -> -> 4 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 5 `i `uc ]
+[; ;systeme.c: 194: queue[5]=6;
 "194
+[e = *U + &U _queue * -> -> -> 5 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 6 `i `uc ]
+[; ;systeme.c: 196: pointeur_de_tache=6-1;
+"196
+[e = _pointeur_de_tache -> - -> 6 `i -> 1 `i `uc ]
+[; ;systeme.c: 197: tache_active=queue[pointeur_de_tache];
+"197
 [e = _tache_active *U + &U _queue * -> _pointeur_de_tache `ux -> -> # *U &U _queue `ui `ux ]
-[; ;systeme.c: 199: temp=STKPTR;
-"199
+[; ;systeme.c: 202: temp=STKPTR;
+"202
 [e = _temp _STKPTR ]
-[; ;systeme.c: 203: STKPTR=2;fptr=&tache1; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-"203
+[; ;systeme.c: 206: STKPTR=2;fptr=&tache1; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
+"206
 [e = _STKPTR -> -> 2 `i `uc ]
 [e = _fptr -> &U _tache1 `*F10205 ]
 [e = _val_tos -> _fptr `um ]
@@ -9961,8 +9964,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _TOSH *U _puc ]
 [e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
 [e = _TOSU *U _puc ]
-[; ;systeme.c: 204: STKPTR=7;fptr=&tache2; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-"204
+[; ;systeme.c: 207: STKPTR=7;fptr=&tache2; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
+"207
 [e = _STKPTR -> -> 7 `i `uc ]
 [e = _fptr -> &U _tache2 `*F10205 ]
 [e = _val_tos -> _fptr `um ]
@@ -9972,8 +9975,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _TOSH *U _puc ]
 [e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
 [e = _TOSU *U _puc ]
-[; ;systeme.c: 205: STKPTR=12;fptr=&tache3; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-"205
+[; ;systeme.c: 208: STKPTR=12;fptr=&tache3; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
+"208
 [e = _STKPTR -> -> 12 `i `uc ]
 [e = _fptr -> &U _tache3 `*F10205 ]
 [e = _val_tos -> _fptr `um ]
@@ -9983,8 +9986,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _TOSH *U _puc ]
 [e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
 [e = _TOSU *U _puc ]
-[; ;systeme.c: 206: STKPTR=17;fptr=&tache4; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-"206
+[; ;systeme.c: 209: STKPTR=17;fptr=&tache4; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
+"209
 [e = _STKPTR -> -> 17 `i `uc ]
 [e = _fptr -> &U _tache4 `*F10205 ]
 [e = _val_tos -> _fptr `um ]
@@ -9994,8 +9997,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _TOSH *U _puc ]
 [e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
 [e = _TOSU *U _puc ]
-[; ;systeme.c: 207: STKPTR=22;fptr=&tache5; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-"207
+[; ;systeme.c: 210: STKPTR=22;fptr=&tache5; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
+"210
 [e = _STKPTR -> -> 22 `i `uc ]
 [e = _fptr -> &U _tache5 `*F10205 ]
 [e = _val_tos -> _fptr `um ]
@@ -10005,8 +10008,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _TOSH *U _puc ]
 [e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
 [e = _TOSU *U _puc ]
-[; ;systeme.c: 208: STKPTR=27;fptr=&tache6; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-"208
+[; ;systeme.c: 211: STKPTR=27;fptr=&tache6; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
+"211
 [e = _STKPTR -> -> 27 `i `uc ]
 [e = _fptr -> &U _tache6 `*F10205 ]
 [e = _val_tos -> _fptr `um ]
@@ -10016,37 +10019,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _TOSH *U _puc ]
 [e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
 [e = _TOSU *U _puc ]
-[; ;systeme.c: 210: STKPTR=temp;
-"210
-[e = _STKPTR _temp ]
-[; ;systeme.c: 213: STKPTR_T1=2;
+[; ;systeme.c: 213: STKPTR=temp;
 "213
-[e = _STKPTR_T1 -> -> 2 `i `uc ]
-[; ;systeme.c: 214: STKPTR_T2=7;
-"214
-[e = _STKPTR_T2 -> -> 7 `i `uc ]
-[; ;systeme.c: 215: STKPTR_T3=12;
-"215
-[e = _STKPTR_T3 -> -> 12 `i `uc ]
-[; ;systeme.c: 216: STKPTR_T4=17;
+[e = _STKPTR _temp ]
+[; ;systeme.c: 216: STKPTR_T1=2;
 "216
-[e = _STKPTR_T4 -> -> 17 `i `uc ]
-[; ;systeme.c: 217: STKPTR_T5=22;
+[e = _STKPTR_T1 -> -> 2 `i `uc ]
+[; ;systeme.c: 217: STKPTR_T2=7;
 "217
-[e = _STKPTR_T5 -> -> 22 `i `uc ]
-[; ;systeme.c: 218: STKPTR_T6=27;
+[e = _STKPTR_T2 -> -> 7 `i `uc ]
+[; ;systeme.c: 218: STKPTR_T3=12;
 "218
-[e = _STKPTR_T6 -> -> 27 `i `uc ]
-[; ;systeme.c: 221: Tick_Count=0;
+[e = _STKPTR_T3 -> -> 12 `i `uc ]
+[; ;systeme.c: 219: STKPTR_T4=17;
+"219
+[e = _STKPTR_T4 -> -> 17 `i `uc ]
+[; ;systeme.c: 220: STKPTR_T5=22;
+"220
+[e = _STKPTR_T5 -> -> 22 `i `uc ]
+[; ;systeme.c: 221: STKPTR_T6=27;
 "221
-[e = _Tick_Count -> -> 0 `i `ui ]
-[; ;systeme.c: 223: T0CON=0x01;
-"223
-[e = _T0CON -> -> 1 `i `uc ]
-[; ;systeme.c: 224: T0IE=1;
+[e = _STKPTR_T6 -> -> 27 `i `uc ]
+[; ;systeme.c: 224: Tick_Count=0;
 "224
+[e = _Tick_Count -> -> 0 `i `ui ]
+[; ;systeme.c: 226: T0CON=0x01;
+"226
+[e = _T0CON -> -> 1 `i `uc ]
+[; ;systeme.c: 227: T0IE=1;
+"227
 [e = _T0IE -> -> 1 `i `b ]
-[; ;systeme.c: 225: }
-"225
+[; ;systeme.c: 228: }
+"228
 [e :UE 1248 ]
 }

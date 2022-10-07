@@ -84,6 +84,10 @@ void initialisation_des_ports()
     //INTCON2 = 0x70; //External interrupts on rising edge
     INTCON3 = 0x18; //INT1 low priority INT 2 low priority
     
+    //taches
+    previous_tache=0;
+    tache_prioritaire=0;
+    
 }
 
 unsigned char lecture_8bit_analogique(unsigned char channel)

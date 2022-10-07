@@ -14,8 +14,6 @@
                         TOSU=*puc
 
 
-int tache_prioritaire=0;
-
 // Function to set the kth bit of n
 char setBit(char n, int k)
 {
@@ -102,14 +100,19 @@ if (INTCON3bits.INT3IF==1)
         Tick_Count++;// Incrémentation du compteur de tick
 
         //Incrementation des taches
-        if (flagChoc==1)
+        if (tache_prioritaire!=0)
         {
-            
+           previous_tache=pointeur_de_tache;
+           pointeur_de_tache=tache_prioritaire;
         }
         else
         {
+           /*if (previous_tache!=0)
+           {
+               pointeur_de_tache=previous_tache;
+               previous_tache=0;
+           }*/
            pointeur_de_tache++;
-           pointeur_de_tache=tache_prioritaire;
            tache_prioritaire=0;
         }
                                 //
