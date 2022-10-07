@@ -1,11 +1,11 @@
 _d2command: CODE, 73382 0 136
 _lecture_normale: CODE, 72160 0 248
 ___awdiv: CODE, 73026 0 188
-_alarm_icon: CODE, 74740 0 96
+_alarm_icon: CODE, 74548 0 96
 _setBit: CODE, 75634 0 28
 i2_PWM1_Init: CODE, 75732 0 22
 __stringdata: MEDIUMCONST, 65242 0 292
-_write_d_aff: CODE, 75662 0 24
+_write_d_aff: CODE, 75686 0 24
 _tache2: CODE, 71824 0 336
 _init_rxtx: CODE, 75506 0 34
 _tache5: CODE, 69866 0 634
@@ -19,12 +19,12 @@ _main: CODE, 75380 0 46
 _draw_empty_box: CODE, 72836 0 190
 _draw_box: CODE, 73896 0 114
 _PWM1_Init: CODE, 75710 0 22
-_write_c_aff: CODE, 75686 0 24
+_write_c_aff: CODE, 75662 0 24
 __initialization: CODE, 75330 0 44
 ___lwdiv: CODE, 74342 0 108
 _tache3: CODE, 71032 0 418
 _tache6: CODE, 75006 0 80
-_clear_graphics: CODE, 74548 0 96
+_clear_graphics: CODE, 74740 0 96
 _plot0: CODE, 72408 0 214
 _draw_hex8: CODE, 73518 0 134
 _tp_delai: CODE, 75540 0 32
@@ -40,10 +40,10 @@ _tache1: CODE, 65536 0 3384
 _goto_lico: CODE, 74010 0 112
 _clear_box: CODE, 73782 0 114
 _tache4: CODE, 70500 0 532
-_fonction_d_interruption: CODE, 8 0 988
+_fonction_d_interruption: CODE, 8 0 968
 _command: CODE, 75218 0 58
 _wait_status_ok: CODE, 73652 0 130
 _draw_char: CODE, 74924 0 82
 _d1command: CODE, 74450 0 98
 _check_status_ok: CODE, 75156 0 62
-Total: 11492
+Total: 11472

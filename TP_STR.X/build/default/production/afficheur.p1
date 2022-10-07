@@ -1,6 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
-[v F10207 `(v ~T0 @X0 0 tf ]
+[v F10217 `(v ~T0 @X0 0 tf ]
 "10867 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [v _LATH `Vuc ~T0 @X0 0 e@3984 ]
 "11535
@@ -9227,6 +9227,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 148: extern void _delay3(unsigned char);
 [; ;systeme.h: 20: void interrupt fonction_d_interruption();
 [; ;systeme.h: 21: void initialisation_du_systeme();
+[; ;systeme.h: 24: char setBit(char n, int k);
+[; ;systeme.h: 27: char clearBit(char n, int k);
+[; ;systeme.h: 30: char toggleBit(char n, int k);
 [; ;interrupt.h: 16: void interrupt low_priority LOWISR();
 [; ;interrupt.h: 17: void interrupt high_priority HIGHISR ();
 "19 interrupt.h
@@ -9235,6 +9238,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 [; ;interrupt.h: 19: unsigned char flagVitesse=0;
+"20
+[v _flagChoc `uc ~T0 @X0 1 e ]
+[i _flagChoc
+-> -> 0 `i `uc
+]
+[; ;interrupt.h: 20: unsigned char flagChoc = 0;
 "29 variables_globales.h
 [v _W_TEMPORAIRE `uc ~T0 @X0 1 e@96 ]
 [; ;variables_globales.h: 29: unsigned char W_TEMPORAIRE @ 0x60;
@@ -9290,7 +9299,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RXTX_libre `uc ~T0 @X0 1 e@128 ]
 [; ;variables_globales.h: 51: unsigned char RXTX_libre @ 0x80;
 "55
-[v _fptr `*F10207 ~T0 @X0 1 e ]
+[v _fptr `*F10217 ~T0 @X0 1 e ]
 [; ;variables_globales.h: 55: void (*fptr)(void);
 "56
 [v _val_tos `um ~T0 @X0 1 e ]

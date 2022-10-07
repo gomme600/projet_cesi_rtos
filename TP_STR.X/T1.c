@@ -101,7 +101,15 @@ void stopVitess(unsigned char  vitesseCourante)
         if ((cpt %20)==1)
         {
             vitesseCourante --;
-            //newVitesse = setBit(newVitesse,vitesseCourante);
+            newVitesse = setBit(newVitesse,vitesseCourante);
+            goto_lico(5,0);
+        draw_string("Vitesse:");
+        if (VITESSE_PLUS==0)
+            vitesse++;
+        if (VITESSE_MOINS==0)
+            vitesse--;
+        draw_hex8(vitesse);
+            
             
         }
     }

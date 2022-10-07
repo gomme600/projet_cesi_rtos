@@ -16,6 +16,25 @@
 
 int tache_prioritaire=0;
 
+// Function to set the kth bit of n
+char setBit(char n, int k)
+{
+    return (n | (1 << k));
+}
+  
+// Function to clear the kth bit of n
+char clearBit(char n, int k)
+{
+    return (n & (~(1 << k)));
+}
+  
+// Function to toggle the kth bit of n
+char toggleBit(char n, int k)
+{
+    return (n ^ (1 << k));
+}
+
+
 void interrupt fonction_d_interruption()
 {
     
@@ -25,10 +44,13 @@ if (INTCON3bits.INT3IF==1)
 {
     INTCON3bits.INT3IF=0;
     tache_prioritaire=1;
-    if (VITESSE_PLUS > 0x26)
+    flagChoc = 1;
+    
+    
+   /* if (VITESSE_PLUS > 0x26)
     {
-        flagVitesse = 1;
-    }
+       flagVitesse = 1;
+    }*/
 }
     
 // Sauvegarde de registres sensibles (ils sont modifiés au cours du changement de tache)
@@ -80,12 +102,13 @@ if (INTCON3bits.INT3IF==1)
         Tick_Count++;// Incrémentation du compteur de tick
 
         //Incrementation des taches
-        if (tache_prioritaire==0)
+        if (flagChoc==1)
         {
-            pointeur_de_tache++;
+            
         }
         else
         {
+           pointeur_de_tache++;
            pointeur_de_tache=tache_prioritaire;
            tache_prioritaire=0;
         }

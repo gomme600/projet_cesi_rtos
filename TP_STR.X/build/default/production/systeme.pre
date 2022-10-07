@@ -11928,6 +11928,7 @@ void interrupt low_priority LOWISR();
 void interrupt high_priority HIGHISR ();
 
 unsigned char flagVitesse=0;
+unsigned char flagChoc = 0;
 
 # 29 "variables_globales.h"
 unsigned char W_TEMPORAIRE @ 0x60;
@@ -12070,8 +12071,36 @@ unsigned char lecture_8bit_analogique(unsigned char channel);
 void interrupt fonction_d_interruption();
 void initialisation_du_systeme();
 
+
+char setBit(char n, int k);
+
+
+char clearBit(char n, int k);
+
+
+char toggleBit(char n, int k);
+
 # 17 "systeme.c"
 int tache_prioritaire=0;
+
+
+char setBit(char n, int k)
+{
+return (n | (1 << k));
+}
+
+
+char clearBit(char n, int k)
+{
+return (n & (~(1 << k)));
+}
+
+
+char toggleBit(char n, int k)
+{
+return (n ^ (1 << k));
+}
+
 
 void interrupt fonction_d_interruption()
 {
@@ -12082,10 +12111,9 @@ if (INTCON3bits.INT3IF==1)
 {
 INTCON3bits.INT3IF=0;
 tache_prioritaire=1;
-if (PORTEbits.RE0 > 0x26)
-{
-flagVitesse = 1;
-}
+flagChoc = 1;
+
+# 54
 }
 
 
@@ -12137,12 +12165,13 @@ T0IF=0;
 Tick_Count++;
 
 
-if (tache_prioritaire==0)
+if (flagChoc==1)
 {
-pointeur_de_tache++;
+
 }
 else
 {
+pointeur_de_tache++;
 pointeur_de_tache=tache_prioritaire;
 tache_prioritaire=0;
 }

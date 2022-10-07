@@ -11927,11 +11927,21 @@ extern void _delay3(unsigned char);
 void interrupt fonction_d_interruption();
 void initialisation_du_systeme();
 
+
+char setBit(char n, int k);
+
+
+char clearBit(char n, int k);
+
+
+char toggleBit(char n, int k);
+
 # 16 "interrupt.h"
 void interrupt low_priority LOWISR();
 void interrupt high_priority HIGHISR ();
 
 unsigned char flagVitesse=0;
+unsigned char flagChoc = 0;
 
 # 29 "variables_globales.h"
 unsigned char W_TEMPORAIRE @ 0x60;

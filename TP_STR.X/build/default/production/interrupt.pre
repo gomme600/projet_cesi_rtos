@@ -6,6 +6,7 @@ void interrupt low_priority LOWISR();
 void interrupt high_priority HIGHISR ();
 
 unsigned char flagVitesse=0;
+unsigned char flagChoc = 0;
 
 # 44 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h"
 extern volatile unsigned char PMD3 @ 0xF16;
@@ -11932,6 +11933,15 @@ extern void _delay3(unsigned char);
 # 20 "systeme.h"
 void interrupt fonction_d_interruption();
 void initialisation_du_systeme();
+
+
+char setBit(char n, int k);
+
+
+char clearBit(char n, int k);
+
+
+char toggleBit(char n, int k);
 
 # 29 "variables_globales.h"
 unsigned char W_TEMPORAIRE @ 0x60;

@@ -1,22 +1,5 @@
 #include "T5.h"
 
-// Function to set the kth bit of n
-char setBit(char n, int k)
-{
-    return (n | (1 << k));
-}
-  
-// Function to clear the kth bit of n
-char clearBit(char n, int k)
-{
-    return (n & (~(1 << k)));
-}
-  
-// Function to toggle the kth bit of n
-char toggleBit(char n, int k)
-{
-    return (n ^ (1 << k));
-}
 
 //Alarme et erreurs
 

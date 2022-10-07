@@ -11927,11 +11927,21 @@ extern void _delay3(unsigned char);
 void interrupt fonction_d_interruption();
 void initialisation_du_systeme();
 
+
+char setBit(char n, int k);
+
+
+char clearBit(char n, int k);
+
+
+char toggleBit(char n, int k);
+
 # 16 "interrupt.h"
 void interrupt low_priority LOWISR();
 void interrupt high_priority HIGHISR ();
 
 unsigned char flagVitesse=0;
+unsigned char flagChoc = 0;
 
 # 29 "variables_globales.h"
 unsigned char W_TEMPORAIRE @ 0x60;
@@ -12171,6 +12181,14 @@ cpt ++;
 if ((cpt %20)==1)
 {
 vitesseCourante --;
+newVitesse = setBit(newVitesse,vitesseCourante);
+goto_lico(5,0);
+draw_string("Vitesse:");
+if (PORTEbits.RE0==0)
+vitesse++;
+if (PORTEbits.RE1==0)
+vitesse--;
+draw_hex8(vitesse);
 
 
 }
@@ -12316,7 +12334,7 @@ else
 asm(" nop");
 }
 
-# 256
+# 264
 if (lecture_8bit_analogique(10) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
 {
 clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
