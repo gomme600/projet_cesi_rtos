@@ -36,6 +36,9 @@ char toggleBit(char n, int k)
 void interrupt fonction_d_interruption()
 {
     
+    //Update millis
+    millis=millis+10;
+    
     //RB0 est low priorite
     //Marche avant
     if (INTCONbits.INT0IF==1)

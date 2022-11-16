@@ -1,6 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
-[v F10215 `(v ~T0 @X0 0 tf ]
+[v F10213 `(v ~T0 @X0 0 tf ]
 "10867 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [v _LATH `Vuc ~T0 @X0 0 e@3984 ]
 "11535
@@ -9230,7 +9230,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;systeme.h: 24: char setBit(char n, int k);
 [; ;systeme.h: 27: char clearBit(char n, int k);
 [; ;systeme.h: 30: char toggleBit(char n, int k);
-[; ;interrupt.h: 16: void interrupt low_priority LOWISR();
 [; ;interrupt.h: 17: void interrupt high_priority HIGHISR ();
 "29 variables_globales.h
 [v _W_TEMPORAIRE `uc ~T0 @X0 1 e@96 ]
@@ -9287,7 +9286,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RXTX_libre `uc ~T0 @X0 1 e@128 ]
 [; ;variables_globales.h: 51: unsigned char RXTX_libre @ 0x80;
 "55
-[v _fptr `*F10215 ~T0 @X0 1 e ]
+[v _fptr `*F10213 ~T0 @X0 1 e ]
 [; ;variables_globales.h: 55: void (*fptr)(void);
 "56
 [v _val_tos `um ~T0 @X0 1 e ]
@@ -9379,6 +9378,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 "104
 [v _flagSiege `uc ~T0 @X0 1 e ]
 [; ;variables_globales.h: 104: unsigned char flagSiege;
+"106
+[v _vitesseReel `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 106: unsigned char vitesseReel;
+"107
+[v _batterieReel `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 107: unsigned char batterieReel;
+"108
+[v _eauReel `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 108: unsigned char eauReel;
+"109
+[v _huileReel `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 109: unsigned char huileReel;
+"111
+[v _tempeau `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 111: unsigned char tempeau;
+"112
+[v _temphuile `uc ~T0 @X0 1 e ]
+[; ;variables_globales.h: 112: unsigned char temphuile;
 "22 semaphore.h
 [v _Val_sem_cna `uc ~T0 @X0 1 e ]
 [; ;semaphore.h: 22: unsigned char Val_sem_cna;

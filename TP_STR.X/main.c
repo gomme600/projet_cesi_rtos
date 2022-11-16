@@ -100,6 +100,9 @@ void initialisation_des_ports()
     flagVitesse=0;
     flagChoc=0;
     
+    //Init millis
+    millis=0;
+    
 }
 
 unsigned char lecture_8bit_analogique(unsigned char channel)

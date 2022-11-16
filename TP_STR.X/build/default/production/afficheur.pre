@@ -11936,8 +11936,7 @@ char clearBit(char n, int k);
 
 char toggleBit(char n, int k);
 
-# 16 "interrupt.h"
-void interrupt low_priority LOWISR();
+# 17 "interrupt.h"
 void interrupt high_priority HIGHISR ();
 
 # 29 "variables_globales.h"
@@ -12012,6 +12011,14 @@ unsigned char flagChoc;
 unsigned char flagMarcheAvant;
 unsigned char flagMarcheArriere;
 unsigned char flagSiege;
+
+unsigned char vitesseReel;
+unsigned char batterieReel;
+unsigned char eauReel;
+unsigned char huileReel;
+
+unsigned char tempeau;
+unsigned char temphuile;
 
 # 22 "semaphore.h"
 unsigned char Val_sem_cna;

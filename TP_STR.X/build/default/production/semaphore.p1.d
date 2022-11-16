@@ -1,6 +1,6 @@
- build/default/debug/T3.d  \
- build/default/debug/T3.p1:  \
- T3.c  \
+ build/default/production/semaphore.d  \
+ build/default/production/semaphore.p1:  \
+ semaphore.c  \
 variables_globales.h  \
 stid.h  \
 semaphore.h  \

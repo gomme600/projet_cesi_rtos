@@ -1,6 +1,6 @@
- build/default/debug/systeme.d  \
- build/default/debug/systeme.p1:  \
- systeme.c  \
+ build/default/production/T4.d  \
+ build/default/production/T4.p1:  \
+ T4.c  \
 variables_globales.h  \
 stid.h  \
 semaphore.h  \

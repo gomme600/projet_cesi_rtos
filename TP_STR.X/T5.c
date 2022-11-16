@@ -36,6 +36,7 @@ void tache5()
                 {
                     //Add 1 because we dont want to wrap around
                     choc_time++;
+                    alarme_active = clearBit(alarme_active, 2);
                 }
                 
                 choc_time--;
@@ -72,8 +73,11 @@ void tache5()
         
         
         // Buzzer alume
-        buz=!buz;
-        //RJ7=buz;
+        if (alarme_active > 0 || error_active > 0)
+        {
+            RJ7=buz;
+            buz=!buz;
+        }
         
         //reset alarms and errors
         if (VITESSE_PLUS==0 & VITESSE_MOINS==0)

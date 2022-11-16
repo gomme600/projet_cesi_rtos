@@ -24,12 +24,18 @@ void tache3()
             if ( batterie > 0)
                 batterie--;
         
+        //Mise a l'echelle
         vitesseReel=vitesse/10;
         batterieReel=batterie/10;
         eauReel=tempeau/2.5;
         huileReel=temphuile/2.5;
         
-        
+        //Temps d'utilisation de la machine (uniquement lorsque le badge est inseree)
+        if (n_octet_badge != 0)
+        {
+            machine_use_time=machine_use_time+(millis-previous_use_time);
+        }
+        previous_use_time=millis;
         
     }
     

@@ -111,6 +111,12 @@ unsigned char huileReel;
 unsigned char tempeau;
 unsigned char temphuile;
 
+//Time turned on
+unsigned double millis = 0;
+
+//Use time
+unsigned double machine_use_time = 0;
+unsigned double previous_use_time = 0;
 
 #ifdef	__cplusplus
 }

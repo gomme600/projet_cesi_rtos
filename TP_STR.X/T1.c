@@ -367,7 +367,9 @@ void tache1()
         //draw_line_y(140, 140, 160);
         //draw_fork(120, 40);
         
-        //Fork
+        //Fork (no active erreurs)
+        if (error_active == 0)
+        {
         if (lecture_8bit_analogique(JOYSTICK_X) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
         {
             clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
@@ -386,12 +388,15 @@ void tache1()
             draw_box(current_fork_x, current_fork_y+1, current_fork_x+fork_size, current_fork_y+fork_size+1);
             current_fork_y=current_fork_y+1;
         }
+        }
+        //Fork (don't include fork down in stop on error condition, we need to lower the fork if there's a problem)
        if (lecture_8bit_analogique(JOYSTICK_Y) == 0xFF && (current_fork_y-1)>(fork_start_y_pos-fork_stop))
         {
             clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
             draw_box(current_fork_x, current_fork_y-1, current_fork_x+fork_size, current_fork_y+fork_size-1);
             current_fork_y=current_fork_y-1;
-        }
+        }     
+
         
         goto_lico(11,0);
         draw_string("chocint=");

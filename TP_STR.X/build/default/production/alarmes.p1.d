@@ -1,8 +1,9 @@
- build/default/debug/T6.d  \
- build/default/debug/T6.p1:  \
- T6.c  \
+ build/default/production/alarmes.d  \
+ build/default/production/alarmes.p1:  \
+ alarmes.c  \
 variables_globales.h  \
 stid.h  \
+alarmes.h  \
 semaphore.h  \
 main.h  \
 rxtx.h  \
