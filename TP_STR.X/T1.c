@@ -214,12 +214,12 @@ void tache1()
         if (alarme_active != 0x00)
         {
         flash_interval_alarm++;
-        if (flash_interval_alarm == 4000)
+        if (flash_interval_alarm == 10)
         {
             draw_empty_box(190, 10, 210, 30);
             alarm_icon(200, 20);
         }
-        if (flash_interval_alarm == 8000)
+        if (flash_interval_alarm == 20)
         {
             clear_box(190, 10, 210, 30);
             flash_interval_alarm=0;
@@ -230,12 +230,12 @@ void tache1()
         if (error_active != 0x00)
         {
         flash_interval_error++;
-        if (flash_interval_error == 4000)
+        if (flash_interval_error == 10)
         {
             draw_empty_box(190, 35, 210, 55);
             error_icon(200, 45);
         }
-        if (flash_interval_error == 8000)
+        if (flash_interval_error == 20)
         {
             clear_box(190, 35, 210, 55);
             flash_interval_error=0;
@@ -382,20 +382,20 @@ void tache1()
             draw_box(current_fork_x-1, current_fork_y, current_fork_x+fork_size-1, current_fork_y+fork_size);
             current_fork_x=current_fork_x-1;
         }
+        if (lecture_8bit_analogique(JOYSTICK_Y) == 0xFF && (current_fork_y-1)>(fork_start_y_pos-fork_stop))
+        {
+            clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
+            draw_box(current_fork_x, current_fork_y-1, current_fork_x+fork_size, current_fork_y+fork_size-1);
+            current_fork_y=current_fork_y-1;
+        }
+        }
+        //Fork (don't include fork down in stop on error condition, we need to lower the fork if there's a problem)
         if (lecture_8bit_analogique(JOYSTICK_Y) == 0x00 && (current_fork_y+1)<(fork_start_y_pos+fork_stop))
         {
             clear_box(current_fork_x, current_fork_y, current_fork_x+10, current_fork_y+fork_size);
             draw_box(current_fork_x, current_fork_y+1, current_fork_x+fork_size, current_fork_y+fork_size+1);
             current_fork_y=current_fork_y+1;
         }
-        }
-        //Fork (don't include fork down in stop on error condition, we need to lower the fork if there's a problem)
-       if (lecture_8bit_analogique(JOYSTICK_Y) == 0xFF && (current_fork_y-1)>(fork_start_y_pos-fork_stop))
-        {
-            clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
-            draw_box(current_fork_x, current_fork_y-1, current_fork_x+fork_size, current_fork_y+fork_size-1);
-            current_fork_y=current_fork_y-1;
-        }     
 
         
         goto_lico(11,0);
@@ -453,16 +453,16 @@ void tache1()
                 draw_hex8((error_active >> 2) & 0x01);
                 goto_lico(7,0);
                 draw_string("erreur_batterie=");
-                draw_hex8((error_active >> 2) & 0x01);
+                draw_hex8((error_active >> 3) & 0x01);
                 goto_lico(8,0);
                 draw_string("erreur_siege=");
-                draw_hex8((error_active >> 2) & 0x01);
+                draw_hex8((error_active >> 6) & 0x01);
                 goto_lico(6,20);
                 draw_string("erreur_eau=");
-                draw_hex8((error_active >> 2) & 0x01);
+                draw_hex8((error_active >> 0) & 0x01);
                 goto_lico(7,20);
                 draw_string("erreur_huile=");
-                draw_hex8((error_active >> 2) & 0x01);
+                draw_hex8((error_active >> 1) & 0x01);
             }
             clear_text();
             clear_graphics();

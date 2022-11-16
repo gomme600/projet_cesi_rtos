@@ -12124,7 +12124,11 @@ return (n ^ (1 << k));
 void interrupt fonction_d_interruption()
 {
 
-# 44
+
+millis=millis+10;
+
+
+
 if (INTCONbits.INT0IF==1)
 {
 INTCONbits.INT0IF=0;

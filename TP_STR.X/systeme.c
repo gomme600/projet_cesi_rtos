@@ -37,7 +37,7 @@ void interrupt fonction_d_interruption()
 {
     
     //Update millis
-    millis=millis+10;
+    //millis=millis+10;
     
     //RB0 est low priorite
     //Marche avant

@@ -9575,9 +9575,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;systeme.c: 37: {
 [e :U _fonction_d_interruption ]
 [f ]
-[; ;systeme.c: 40: millis=millis+10;
-"40
-[e = _millis + _millis -> -> 10 `i `d ]
 [; ;systeme.c: 44: if (INTCONbits.INT0IF==1)
 "44
 [e $ ! == -> . . _INTCONbits 0 1 `i -> 1 `i 1242  ]

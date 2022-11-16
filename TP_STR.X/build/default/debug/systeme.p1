@@ -1,72 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
-[v F10213 `(v ~T0 @X0 0 tf ]
-"48 afficheur.h
-[v _plot1 `(v ~T0 @X0 0 ef2`uc`uc ]
-"49
-[v _plot0 `(v ~T0 @X0 0 ef2`uc`uc ]
-"44
-[v _goto_lico `(v ~T0 @X0 0 ef2`uc`uc ]
-"41
-[v _draw_char `(v ~T0 @X0 0 ef1`uc ]
-[s S577 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S577 . RE0 RE1 RE2 RE3 RE4 RE5 RE6 RE7 ]
-[s S578 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S578 . AD8 AD9 AD10 AD11 AD12 AD13 AD14 AD15 ]
-[s S579 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S579 . P2D P2C P2B P3C P3B P1C P1B P2A ]
-[s S580 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S580 . . CCP10 CCP9 CCP8 CCP7 CCP6 CCP2 ]
-[s S581 :1 `uc 1 ]
-[n S581 . NOT_RD ]
-[s S582 :1 `uc 1 :1 `uc 1 ]
-[n S582 . . NOT_WR ]
-[s S583 :2 `uc 1 :1 `uc 1 ]
-[n S583 . . NOT_CS ]
-[s S584 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S584 . nRD nWR nCS REFO ]
-[s S585 :7 `uc 1 :1 `uc 1 ]
-[n S585 . . CCP2E ]
-[s S586 :6 `uc 1 :1 `uc 1 ]
-[n S586 . . CCP6E ]
-[s S587 :5 `uc 1 :1 `uc 1 ]
-[n S587 . . CCP7E ]
-[s S588 :4 `uc 1 :1 `uc 1 ]
-[n S588 . . CCP8E ]
-[s S589 :3 `uc 1 :1 `uc 1 ]
-[n S589 . . CCP9E ]
-[s S590 :2 `uc 1 :1 `uc 1 ]
-[n S590 . . CS ]
-[s S591 :7 `uc 1 :1 `uc 1 ]
-[n S591 . . PA2E ]
-[s S592 :6 `uc 1 :1 `uc 1 ]
-[n S592 . . PB1E ]
-[s S593 :2 `uc 1 :1 `uc 1 ]
-[n S593 . . PB2 ]
-[s S594 :4 `uc 1 :1 `uc 1 ]
-[n S594 . . PB3E ]
-[s S595 :5 `uc 1 :1 `uc 1 ]
-[n S595 . . PC1E ]
-[s S596 :1 `uc 1 :1 `uc 1 ]
-[n S596 . . PC2 ]
-[s S597 :3 `uc 1 :1 `uc 1 ]
-[n S597 . . PC3E ]
-[s S598 :1 `uc 1 ]
-[n S598 . PD2 ]
-[s S599 :1 `uc 1 ]
-[n S599 . RDE ]
-[s S600 :1 `uc 1 :1 `uc 1 ]
-[n S600 . . WRE ]
-[u S576 `S577 1 `S578 1 `S579 1 `S580 1 `S581 1 `S582 1 `S583 1 `S584 1 `S585 1 `S586 1 `S587 1 `S588 1 `S589 1 `S590 1 `S591 1 `S592 1 `S593 1 `S594 1 `S595 1 `S596 1 `S597 1 `S598 1 `S599 1 `S600 1 ]
-[n S576 . . . . . . . . . . . . . . . . . . . . . . . . . ]
-"8979 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
-[v _PORTEbits `VS576 ~T0 @X0 0 e@3972 ]
-"24 systeme.h
-[v _setBit `(uc ~T0 @X0 0 ef2`uc`i ]
-"42 afficheur.h
-[v _draw_string `(v ~T0 @X0 0 ef1`*uc ]
-"43
-[v _draw_hex8 `(v ~T0 @X0 0 ef1`uc ]
+[v F10201 `(v ~T0 @X0 0 tf ]
 [s S1165 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1165 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
 [s S1166 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -81,76 +15,80 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1164 . . . . . . ]
 "18388 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [v _INTCONbits `VS1164 ~T0 @X0 0 e@4082 ]
-"143 main.h
-[v _initialisation_des_ports `(v ~T0 @X0 0 ef ]
-"40 afficheur.h
-[v _initialisation_afficheur `(v ~T0 @X0 0 ef ]
-"45
-[v _clear_text `(v ~T0 @X0 0 ef ]
-"46
-[v _clear_graphics `(v ~T0 @X0 0 ef ]
-"17 rxtx.h
-[v _init_rxtx `(v ~T0 @X0 0 ef ]
-"26 semaphore.h
-[v _Init `(v ~T0 @X0 0 ef1`uc ]
-"13426 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
-[v _TXREG1 `Vuc ~T0 @X0 0 e@4013 ]
-[s S652 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S652 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-[s S653 :1 `uc 1 ]
-[n S653 . LC0 ]
-[s S654 :1 `uc 1 :1 `uc 1 ]
-[n S654 . . LC1 ]
-[s S655 :2 `uc 1 :1 `uc 1 ]
-[n S655 . . LC2 ]
-[s S656 :3 `uc 1 :1 `uc 1 ]
-[n S656 . . LC3 ]
-[s S657 :4 `uc 1 :1 `uc 1 ]
-[n S657 . . LC4 ]
-[s S658 :5 `uc 1 :1 `uc 1 ]
-[n S658 . . LC5 ]
-[s S659 :6 `uc 1 :1 `uc 1 ]
-[n S659 . . LC6 ]
-[s S660 :7 `uc 1 :1 `uc 1 ]
-[n S660 . . LC7 ]
-[u S651 `S652 1 `S653 1 `S654 1 `S655 1 `S656 1 `S657 1 `S658 1 `S659 1 `S660 1 ]
-[n S651 . . . . . . . . . . ]
-"10305
-[v _LATCbits `VS651 ~T0 @X0 0 e@3979 ]
-[s S692 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S692 . LATG0 LATG1 LATG2 LATG3 LATG4 ]
-[s S693 :1 `uc 1 ]
-[n S693 . LG0 ]
-[s S694 :1 `uc 1 :1 `uc 1 ]
-[n S694 . . LG1 ]
-[s S695 :2 `uc 1 :1 `uc 1 ]
-[n S695 . . LG2 ]
-[s S696 :3 `uc 1 :1 `uc 1 ]
-[n S696 . . LG3 ]
-[s S697 :4 `uc 1 :1 `uc 1 ]
-[n S697 . . LG4 ]
-[u S691 `S692 1 `S693 1 `S694 1 `S695 1 `S696 1 `S697 1 ]
-[n S691 . . . . . . . ]
-"10813
-[v _LATGbits `VS691 ~T0 @X0 0 e@3983 ]
-[s S555 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S555 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-[s S556 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S556 . INT0 INT1 INT2 INT3 KBI0 KBI1 KBI2 KBI3 ]
-[s S557 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S557 . FLT0 . CTED1 CTED2 . T3CKI ]
-[s S558 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S558 . . CCP2_P2A . T1G ]
-[s S559 :5 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S559 . . PGM PGC PGD ]
-[s S560 :3 `uc 1 :1 `uc 1 ]
-[n S560 . . CCP2_PA2 ]
-[u S554 `S555 1 `S556 1 `S557 1 `S558 1 `S559 1 `S560 1 ]
-[n S554 . . . . . . . ]
-"8296
-[v _PORTBbits `VS554 ~T0 @X0 0 e@3969 ]
-"144 main.h
-[v _lecture_8bit_analogique `(uc ~T0 @X0 0 ef1`uc ]
+[s S1158 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1158 . INT1IF INT2IF INT3IF INT1IE INT2IE INT3IE INT1IP INT2IP ]
+[s S1159 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1159 . INT1F INT2F INT3F INT1E INT2E INT3E INT1P INT2P ]
+[u S1157 `S1158 1 `S1159 1 ]
+[n S1157 . . . ]
+"18165
+[v _INTCON3bits `VS1157 ~T0 @X0 0 e@4080 ]
+"17657
+[v _STATUS `Vuc ~T0 @X0 0 e@4056 ]
+"17993
+[v _WREG `Vuc ~T0 @X0 0 e@4072 ]
+"17861
+[v _BSR `Vuc ~T0 @X0 0 e@4064 ]
+"18037
+[v _FSR0H `Vuc ~T0 @X0 0 e@4074 ]
+"18018
+[v _FSR0L `Vuc ~T0 @X0 0 e@4073 ]
+"21187
+[v _T0IE `Vb ~T0 @X0 0 e@32661 ]
+"21189
+[v _T0IF `Vb ~T0 @X0 0 e@32658 ]
+"18646
+[v _STKPTR `Vuc ~T0 @X0 0 e@4092 ]
+"18100
+[v _POSTINC0 `Vuc ~T0 @X0 0 e@4078 ]
+"17892
+[v _FSR1H `Vuc ~T0 @X0 0 e@4066 ]
+"17873
+[v _FSR1L `Vuc ~T0 @X0 0 e@4065 ]
+"17760
+[v _FSR2H `Vuc ~T0 @X0 0 e@4058 ]
+"17741
+[v _FSR2L `Vuc ~T0 @X0 0 e@4057 ]
+"18497
+[v _PRODH `Vuc ~T0 @X0 0 e@4084 ]
+"18478
+[v _PRODL `Vuc ~T0 @X0 0 e@4083 ]
+"18581
+[v _TBLPTRU `Vuc ~T0 @X0 0 e@4088 ]
+"18562
+[v _TBLPTRH `Vuc ~T0 @X0 0 e@4087 ]
+"18543
+[v _TBLPTRL `Vuc ~T0 @X0 0 e@4086 ]
+"18516
+[v _TABLAT `Vuc ~T0 @X0 0 e@4085 ]
+"18640
+[v _PCLATU `Vuc ~T0 @X0 0 e@4091 ]
+"18621
+[v _PCLATH `Vuc ~T0 @X0 0 e@4090 ]
+"17955
+[v _POSTINC1 `Vuc ~T0 @X0 0 e@4070 ]
+"17613
+[v _TMR0 `Vus ~T0 @X0 0 e@4054 ]
+"16 T1.h
+[v _tache1 `(v ~T0 @X0 0 ef ]
+"17 T2.h
+[v _tache2 `(v ~T0 @X0 0 ef ]
+"16 T3.h
+[v _tache3 `(v ~T0 @X0 0 ef ]
+"16 T4.h
+[v _tache4 `(v ~T0 @X0 0 ef ]
+"16 T5.h
+[v _tache5 `(v ~T0 @X0 0 ef ]
+"16 T6.h
+[v _tache6 `(v ~T0 @X0 0 ef ]
+"18725 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
+[v _TOSL `Vuc ~T0 @X0 0 e@4093 ]
+"18744
+[v _TOSH `Vuc ~T0 @X0 0 e@4094 ]
+"18763
+[v _TOSU `Vuc ~T0 @X0 0 e@4095 ]
+"17544
+[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -9289,11 +9227,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 144: extern void _delay(unsigned long);
 [; ;pic18.h: 146: extern void _delaywdt(unsigned long);
 [; ;pic18.h: 148: extern void _delay3(unsigned char);
-[; ;systeme.h: 20: void interrupt fonction_d_interruption();
-[; ;systeme.h: 21: void initialisation_du_systeme();
-[; ;systeme.h: 24: char setBit(char n, int k);
-[; ;systeme.h: 27: char clearBit(char n, int k);
-[; ;systeme.h: 30: char toggleBit(char n, int k);
 [; ;interrupt.h: 17: void interrupt high_priority HIGHISR ();
 "29 variables_globales.h
 [v _W_TEMPORAIRE `uc ~T0 @X0 1 e@96 ]
@@ -9350,7 +9283,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RXTX_libre `uc ~T0 @X0 1 e@128 ]
 [; ;variables_globales.h: 51: unsigned char RXTX_libre @ 0x80;
 "55
-[v _fptr `*F10213 ~T0 @X0 1 e ]
+[v _fptr `*F10201 ~T0 @X0 1 e ]
 [; ;variables_globales.h: 55: void (*fptr)(void);
 "56
 [v _val_tos `um ~T0 @X0 1 e ]
@@ -9499,6 +9432,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stid.h: 17: unsigned char lecture_normale(unsigned char * stid_id);
 [; ;stid.h: 18: void stid_delai_us(unsigned int isdu);
 [; ;rxtx.h: 17: void init_rxtx();
+[; ;T1.h: 16: void tache1();
 [; ;T2.h: 17: void tache2();
 [; ;T2.h: 18: void tp_delai(unsigned int itpd);
 [; ;T3.h: 16: void tache3();
@@ -9576,1472 +9510,665 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBRTB=OFF ]
 [; ;main.h: 143: void initialisation_des_ports();
 [; ;main.h: 144: unsigned char lecture_8bit_analogique(unsigned char channel);
-[; ;T1.h: 16: void tache1();
-"4 T1.c
-[v _fork_start_x_pos `i ~T0 @X0 1 e ]
-[i _fork_start_x_pos
--> 120 `i
-]
-[; ;T1.c: 4: int fork_start_x_pos=120;
-"5
-[v _fork_start_y_pos `i ~T0 @X0 1 e ]
-[i _fork_start_y_pos
--> 40 `i
-]
-[; ;T1.c: 5: int fork_start_y_pos=40;
-"6
-[v _current_fork_x `i ~T0 @X0 1 e ]
-[i _current_fork_x
--> 0 `i
-]
-[; ;T1.c: 6: int current_fork_x=0;
-"7
-[v _current_fork_y `i ~T0 @X0 1 e ]
-[i _current_fork_y
--> 0 `i
-]
-[; ;T1.c: 7: int current_fork_y=0;
-"8
-[v _fork_size `i ~T0 @X0 1 e ]
-[i _fork_size
--> 5 `i
-]
-[; ;T1.c: 8: int fork_size=5;
-"9
-[v _fork_stop `i ~T0 @X0 1 e ]
-[i _fork_stop
--> 20 `i
-]
-[; ;T1.c: 9: int fork_stop=20;
-"12
-[v _alarm_icon `(v ~T0 @X0 1 ef2`i`i ]
+[; ;systeme.h: 20: void interrupt fonction_d_interruption();
+[; ;systeme.h: 21: void initialisation_du_systeme();
+[; ;systeme.h: 24: char setBit(char n, int k);
+[; ;systeme.h: 27: char clearBit(char n, int k);
+[; ;systeme.h: 30: char toggleBit(char n, int k);
+"19 systeme.c
+[v _setBit `(uc ~T0 @X0 1 ef2`uc`i ]
 {
-[; ;T1.c: 11: void alarm_icon(int start_point_x, int start_point_y)
-[; ;T1.c: 12: {
-[e :U _alarm_icon ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
+[; ;systeme.c: 18: char setBit(char n, int k)
+[; ;systeme.c: 19: {
+[e :U _setBit ]
+[v _n `uc ~T0 @X0 1 r1 ]
+[v _k `i ~T0 @X0 1 r2 ]
 [f ]
-[; ;T1.c: 13: plot1(start_point_x, start_point_y-4);
-"13
-[e ( _plot1 (2 , -> _start_point_x `uc -> - _start_point_y -> 4 `i `uc ]
-[; ;T1.c: 14: plot1(start_point_x, start_point_y-3);
-"14
-[e ( _plot1 (2 , -> _start_point_x `uc -> - _start_point_y -> 3 `i `uc ]
-[; ;T1.c: 15: plot1(start_point_x, start_point_y-2);
-"15
-[e ( _plot1 (2 , -> _start_point_x `uc -> - _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 16: plot1(start_point_x, start_point_y-1);
-"16
-[e ( _plot1 (2 , -> _start_point_x `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 17: plot1(start_point_x, start_point_y);
-"17
-[e ( _plot1 (2 , -> _start_point_x `uc -> _start_point_y `uc ]
-[; ;T1.c: 18: plot1(start_point_x, start_point_y+2);
-"18
-[e ( _plot1 (2 , -> _start_point_x `uc -> + _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 19: plot1(start_point_x, start_point_y+3);
-"19
-[e ( _plot1 (2 , -> _start_point_x `uc -> + _start_point_y -> 3 `i `uc ]
-[; ;T1.c: 20: }
+[; ;systeme.c: 20: return (n | (1 << k));
 "20
+[e ) -> | -> _n `i << -> 1 `i _k `uc ]
+[e $UE 1238  ]
+[; ;systeme.c: 21: }
+"21
 [e :UE 1238 ]
 }
-"23
-[v _error_icon `(v ~T0 @X0 1 ef2`i`i ]
-{
-[; ;T1.c: 22: void error_icon(int start_point_x, int start_point_y)
-[; ;T1.c: 23: {
-[e :U _error_icon ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
-[f ]
-[; ;T1.c: 24: plot1(start_point_x, start_point_y-4);
-"24
-[e ( _plot1 (2 , -> _start_point_x `uc -> - _start_point_y -> 4 `i `uc ]
-[; ;T1.c: 25: plot1(start_point_x-1, start_point_y-3);
 "25
-[e ( _plot1 (2 , -> - _start_point_x -> 1 `i `uc -> - _start_point_y -> 3 `i `uc ]
-[; ;T1.c: 26: plot1(start_point_x+1, start_point_y-3);
+[v _clearBit `(uc ~T0 @X0 1 ef2`uc`i ]
+{
+[; ;systeme.c: 24: char clearBit(char n, int k)
+[; ;systeme.c: 25: {
+[e :U _clearBit ]
+[v _n `uc ~T0 @X0 1 r1 ]
+[v _k `i ~T0 @X0 1 r2 ]
+[f ]
+[; ;systeme.c: 26: return (n & (~(1 << k)));
 "26
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> - _start_point_y -> 3 `i `uc ]
-[; ;T1.c: 27: plot1(start_point_x-2, start_point_y-2);
+[e ) -> & -> _n `i ~ << -> 1 `i _k `uc ]
+[e $UE 1239  ]
+[; ;systeme.c: 27: }
 "27
-[e ( _plot1 (2 , -> - _start_point_x -> 2 `i `uc -> - _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 28: plot1(start_point_x+2, start_point_y-2);
-"28
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> - _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 29: plot1(start_point_x-3, start_point_y-1);
-"29
-[e ( _plot1 (2 , -> - _start_point_x -> 3 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 30: plot1(start_point_x+3, start_point_y-1);
-"30
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 31: plot1(start_point_x-2, start_point_y);
-"31
-[e ( _plot1 (2 , -> - _start_point_x -> 2 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 32: plot1(start_point_x+2, start_point_y);
-"32
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 33: plot1(start_point_x-1, start_point_y+2);
-"33
-[e ( _plot1 (2 , -> - _start_point_x -> 1 `i `uc -> + _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 34: plot1(start_point_x+1, start_point_y+2);
-"34
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> + _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 35: plot1(start_point_x, start_point_y+3);
-"35
-[e ( _plot1 (2 , -> _start_point_x `uc -> + _start_point_y -> 3 `i `uc ]
-[; ;T1.c: 36: }
-"36
 [e :UE 1239 ]
 }
-"39
-[v _back_arrow_icon `(v ~T0 @X0 1 ef2`i`i ]
+"31
+[v _toggleBit `(uc ~T0 @X0 1 ef2`uc`i ]
 {
-[; ;T1.c: 38: void back_arrow_icon(int start_point_x, int start_point_y)
-[; ;T1.c: 39: {
-[e :U _back_arrow_icon ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
+[; ;systeme.c: 30: char toggleBit(char n, int k)
+[; ;systeme.c: 31: {
+[e :U _toggleBit ]
+[v _n `uc ~T0 @X0 1 r1 ]
+[v _k `i ~T0 @X0 1 r2 ]
 [f ]
-[; ;T1.c: 40: plot1(start_point_x, start_point_y);
-"40
-[e ( _plot1 (2 , -> _start_point_x `uc -> _start_point_y `uc ]
-[; ;T1.c: 41: plot1(start_point_x+1, start_point_y);
-"41
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 42: plot1(start_point_x+2, start_point_y);
-"42
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 43: plot1(start_point_x+3, start_point_y);
-"43
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 44: plot1(start_point_x+4, start_point_y);
-"44
-[e ( _plot1 (2 , -> + _start_point_x -> 4 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 45: plot1(start_point_x+5, start_point_y);
-"45
-[e ( _plot1 (2 , -> + _start_point_x -> 5 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 47: plot1(start_point_x+1, start_point_y+1);
-"47
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> + _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 48: plot1(start_point_x+2, start_point_y+1);
-"48
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> + _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 49: plot1(start_point_x+3, start_point_y+1);
-"49
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> + _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 50: plot1(start_point_x+4, start_point_y+1);
-"50
-[e ( _plot1 (2 , -> + _start_point_x -> 4 `i `uc -> + _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 52: plot1(start_point_x+2, start_point_y+2);
-"52
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> + _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 53: plot1(start_point_x+3, start_point_y+2);
-"53
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> + _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 54: }
-"54
+[; ;systeme.c: 32: return (n ^ (1 << k));
+"32
+[e ) -> ^ -> _n `i << -> 1 `i _k `uc ]
+[e $UE 1240  ]
+[; ;systeme.c: 33: }
+"33
 [e :UE 1240 ]
 }
-"57
-[v _front_arrow_icon `(v ~T0 @X0 1 ef2`i`i ]
+"20 systeme.h
+[v F10303 `(v ~T0 @X0 1 tf ]
+"37 systeme.c
+[v _fonction_d_interruption `IF10303 ~T0 @X0 1 e ]
 {
-[; ;T1.c: 56: void front_arrow_icon(int start_point_x, int start_point_y)
-[; ;T1.c: 57: {
-[e :U _front_arrow_icon ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
+[; ;systeme.c: 36: void interrupt fonction_d_interruption()
+[; ;systeme.c: 37: {
+[e :U _fonction_d_interruption ]
 [f ]
-[; ;T1.c: 58: plot1(start_point_x, start_point_y);
+[; ;systeme.c: 40: millis=millis+10;
+"40
+[e = _millis + _millis -> -> 10 `i `d ]
+[; ;systeme.c: 44: if (INTCONbits.INT0IF==1)
+"44
+[e $ ! == -> . . _INTCONbits 0 1 `i -> 1 `i 1242  ]
+[; ;systeme.c: 45: {
+"45
+{
+[; ;systeme.c: 46: INTCONbits.INT0IF=0;
+"46
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+[; ;systeme.c: 47: tache_prioritaire=5;
+"47
+[e = _tache_prioritaire -> 5 `i ]
+[; ;systeme.c: 48: flagMarcheAvant = 1;
+"48
+[e = _flagMarcheAvant -> -> 1 `i `uc ]
+"49
+}
+[e :U 1242 ]
+[; ;systeme.c: 49: }
+[; ;systeme.c: 53: if (INTCON3bits.INT3IF==1)
+"53
+[e $ ! == -> . . _INTCON3bits 0 2 `i -> 1 `i 1243  ]
+[; ;systeme.c: 54: {
+"54
+{
+[; ;systeme.c: 55: INTCON3bits.INT3IF=0;
+"55
+[e = . . _INTCON3bits 0 2 -> -> 0 `i `uc ]
+[; ;systeme.c: 56: tache_prioritaire=5;
+"56
+[e = _tache_prioritaire -> 5 `i ]
+[; ;systeme.c: 57: flagChoc = 1;
+"57
+[e = _flagChoc -> -> 1 `i `uc ]
 "58
-[e ( _plot1 (2 , -> _start_point_x `uc -> _start_point_y `uc ]
-[; ;T1.c: 59: plot1(start_point_x+1, start_point_y);
-"59
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 60: plot1(start_point_x+2, start_point_y);
-"60
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 61: plot1(start_point_x+3, start_point_y);
+}
+[e :U 1243 ]
+[; ;systeme.c: 58: }
+[; ;systeme.c: 61: if (INTCON3bits.INT1IF==1)
 "61
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 62: plot1(start_point_x+4, start_point_y);
+[e $ ! == -> . . _INTCON3bits 0 0 `i -> 1 `i 1244  ]
+[; ;systeme.c: 62: {
 "62
-[e ( _plot1 (2 , -> + _start_point_x -> 4 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 63: plot1(start_point_x+5, start_point_y);
+{
+[; ;systeme.c: 63: INTCON3bits.INT1IF=0;
 "63
-[e ( _plot1 (2 , -> + _start_point_x -> 5 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 65: plot1(start_point_x+1, start_point_y-1);
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+[; ;systeme.c: 64: tache_prioritaire=5;
+"64
+[e = _tache_prioritaire -> 5 `i ]
+[; ;systeme.c: 65: flagMarcheArriere = 1;
 "65
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 66: plot1(start_point_x+2, start_point_y-1);
+[e = _flagMarcheArriere -> -> 1 `i `uc ]
 "66
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 67: plot1(start_point_x+3, start_point_y-1);
-"67
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 68: plot1(start_point_x+4, start_point_y-1);
-"68
-[e ( _plot1 (2 , -> + _start_point_x -> 4 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 70: plot1(start_point_x+2, start_point_y-2);
+}
+[e :U 1244 ]
+[; ;systeme.c: 66: }
+[; ;systeme.c: 69: if (INTCON3bits.INT2IF==1)
+"69
+[e $ ! == -> . . _INTCON3bits 0 1 `i -> 1 `i 1245  ]
+[; ;systeme.c: 70: {
 "70
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> - _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 71: plot1(start_point_x+3, start_point_y-2);
+{
+[; ;systeme.c: 71: INTCON3bits.INT2IF=0;
 "71
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> - _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 72: }
+[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
+[; ;systeme.c: 72: tache_prioritaire=5;
 "72
+[e = _tache_prioritaire -> 5 `i ]
+[; ;systeme.c: 73: flagSiege = 1;
+"73
+[e = _flagSiege -> -> 1 `i `uc ]
+"74
+}
+[e :U 1245 ]
+[; ;systeme.c: 74: }
+[; ;systeme.c: 77: STATUS_TEMPORAIRE=STATUS; W_TEMPORAIRE=WREG; BSR_TEMPORAIRE=BSR;
+"77
+[e = _STATUS_TEMPORAIRE _STATUS ]
+[e = _W_TEMPORAIRE _WREG ]
+[e = _BSR_TEMPORAIRE _BSR ]
+[; ;systeme.c: 78: FSR0H_TEMPORAIRE=FSR0H; FSR0L_TEMPORAIRE=FSR0L;
+"78
+[e = _FSR0H_TEMPORAIRE _FSR0H ]
+[e = _FSR0L_TEMPORAIRE _FSR0L ]
+[; ;systeme.c: 81: if(T0IE && T0IF)
+"81
+[e $ ! && _T0IE _T0IF 1246  ]
+[; ;systeme.c: 82: {
+"82
+{
+[; ;systeme.c: 83: if (DEMARRAGE==1)
+"83
+[e $ ! == -> _DEMARRAGE `i -> 1 `i 1247  ]
+[; ;systeme.c: 84: {
+"84
+{
+[; ;systeme.c: 85: STKPTR=27;
+"85
+[e = _STKPTR -> -> 27 `i `uc ]
+[; ;systeme.c: 86: DEMARRAGE=0;
+"86
+[e = _DEMARRAGE -> -> 0 `i `uc ]
+"87
+}
+[e :U 1247 ]
+[; ;systeme.c: 87: }
+[; ;systeme.c: 91: FSR0H=tache_active;
+"91
+[e = _FSR0H _tache_active ]
+[; ;systeme.c: 92: FSR0L=0;
+"92
+[e = _FSR0L -> -> 0 `i `uc ]
+[; ;systeme.c: 93: POSTINC0=W_TEMPORAIRE; POSTINC0=STATUS_TEMPORAIRE; POSTINC0=BSR_TEMPORAIRE; POSTINC0=STKPTR;
+"93
+[e = _POSTINC0 _W_TEMPORAIRE ]
+[e = _POSTINC0 _STATUS_TEMPORAIRE ]
+[e = _POSTINC0 _BSR_TEMPORAIRE ]
+[e = _POSTINC0 _STKPTR ]
+[; ;systeme.c: 94: POSTINC0=FSR0H_TEMPORAIRE; POSTINC0=FSR0L_TEMPORAIRE; POSTINC0=FSR1H; POSTINC0=FSR1L;
+"94
+[e = _POSTINC0 _FSR0H_TEMPORAIRE ]
+[e = _POSTINC0 _FSR0L_TEMPORAIRE ]
+[e = _POSTINC0 _FSR1H ]
+[e = _POSTINC0 _FSR1L ]
+[; ;systeme.c: 95: POSTINC0=FSR2H; POSTINC0=FSR2L; POSTINC0=PRODH; POSTINC0=PRODL;
+"95
+[e = _POSTINC0 _FSR2H ]
+[e = _POSTINC0 _FSR2L ]
+[e = _POSTINC0 _PRODH ]
+[e = _POSTINC0 _PRODL ]
+[; ;systeme.c: 96: POSTINC0=TBLPTRU; POSTINC0=TBLPTRH; POSTINC0=TBLPTRL; POSTINC0=TABLAT;
+"96
+[e = _POSTINC0 _TBLPTRU ]
+[e = _POSTINC0 _TBLPTRH ]
+[e = _POSTINC0 _TBLPTRL ]
+[e = _POSTINC0 _TABLAT ]
+[; ;systeme.c: 97: POSTINC0=PCLATU; POSTINC0=PCLATH;
+"97
+[e = _POSTINC0 _PCLATU ]
+[e = _POSTINC0 _PCLATH ]
+[; ;systeme.c: 101: FSR1H=0;
+"101
+[e = _FSR1H -> -> 0 `i `uc ]
+[; ;systeme.c: 102: FSR1L=0;
+"102
+[e = _FSR1L -> -> 0 `i `uc ]
+[; ;systeme.c: 103: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"103
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 104: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"104
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 105: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"105
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 106: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"106
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 108: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"108
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 109: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"109
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 110: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"110
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 111: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"111
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 113: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"113
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 114: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"114
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 115: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"115
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 116: POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
+"116
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[e = _POSTINC0 _POSTINC1 ]
+[; ;systeme.c: 119: TMR0=(0xFFFF-30000);
+"119
+[e = _TMR0 -> - -> 65535 `ui -> -> 30000 `i `ui `us ]
+[; ;systeme.c: 120: T0IF=0;
+"120
+[e = _T0IF -> -> 0 `i `b ]
+[; ;systeme.c: 122: Tick_Count++;
+"122
+[e ++ _Tick_Count -> -> 1 `i `ui ]
+[; ;systeme.c: 125: if (tache_prioritaire!=0)
+"125
+[e $ ! != _tache_prioritaire -> 0 `i 1248  ]
+[; ;systeme.c: 126: {
+"126
+{
+[; ;systeme.c: 127: previous_tache=pointeur_de_tache;
+"127
+[e = _previous_tache -> _pointeur_de_tache `i ]
+[; ;systeme.c: 128: pointeur_de_tache=tache_prioritaire;
+"128
+[e = _pointeur_de_tache -> _tache_prioritaire `uc ]
+[; ;systeme.c: 129: tache_prioritaire=0;
+"129
+[e = _tache_prioritaire -> 0 `i ]
+"130
+}
+[; ;systeme.c: 130: }
+[e $U 1249  ]
+"131
+[e :U 1248 ]
+[; ;systeme.c: 131: else
+[; ;systeme.c: 132: {
+"132
+{
+[; ;systeme.c: 133: if (previous_tache!=0)
+"133
+[e $ ! != _previous_tache -> 0 `i 1250  ]
+[; ;systeme.c: 134: {
+"134
+{
+[; ;systeme.c: 135: pointeur_de_tache=previous_tache;
+"135
+[e = _pointeur_de_tache -> _previous_tache `uc ]
+[; ;systeme.c: 136: previous_tache=0;
+"136
+[e = _previous_tache -> 0 `i ]
+"137
+}
+[e :U 1250 ]
+[; ;systeme.c: 137: }
+[; ;systeme.c: 138: pointeur_de_tache++;
+"138
+[e ++ _pointeur_de_tache -> -> 1 `i `uc ]
+"139
+}
+[e :U 1249 ]
+[; ;systeme.c: 139: }
+[; ;systeme.c: 141: if (pointeur_de_tache==6)
+"141
+[e $ ! == -> _pointeur_de_tache `i -> 6 `i 1251  ]
+[; ;systeme.c: 142: pointeur_de_tache=0;
+"142
+[e = _pointeur_de_tache -> -> 0 `i `uc ]
+[e :U 1251 ]
+[; ;systeme.c: 143: tache_active=queue[pointeur_de_tache];
+"143
+[e = _tache_active *U + &U _queue * -> _pointeur_de_tache `ux -> -> # *U &U _queue `ui `ux ]
+[; ;systeme.c: 148: FSR1H=0;
+"148
+[e = _FSR1H -> -> 0 `i `uc ]
+[; ;systeme.c: 149: FSR1L=0;
+"149
+[e = _FSR1L -> -> 0 `i `uc ]
+[; ;systeme.c: 150: FSR0H=tache_active;
+"150
+[e = _FSR0H _tache_active ]
+[; ;systeme.c: 151: FSR0L=18;
+"151
+[e = _FSR0L -> -> 18 `i `uc ]
+[; ;systeme.c: 152: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"152
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 153: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"153
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 154: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"154
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 155: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"155
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 157: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"157
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 158: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"158
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 159: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"159
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 160: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"160
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 162: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"162
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 163: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"163
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 164: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"164
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 165: POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
+"165
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[e = _POSTINC1 _POSTINC0 ]
+[; ;systeme.c: 169: FSR0H=tache_active;
+"169
+[e = _FSR0H _tache_active ]
+[; ;systeme.c: 170: FSR0L=0;
+"170
+[e = _FSR0L -> -> 0 `i `uc ]
+[; ;systeme.c: 172: W_TEMPORAIRE=POSTINC0; STATUS_TEMPORAIRE=POSTINC0; BSR_TEMPORAIRE=POSTINC0; STKPTR=POSTINC0;
+"172
+[e = _W_TEMPORAIRE _POSTINC0 ]
+[e = _STATUS_TEMPORAIRE _POSTINC0 ]
+[e = _BSR_TEMPORAIRE _POSTINC0 ]
+[e = _STKPTR _POSTINC0 ]
+[; ;systeme.c: 173: FSR0H_TEMPORAIRE=POSTINC0; FSR0L_TEMPORAIRE=POSTINC0; FSR1H=POSTINC0; FSR1L=POSTINC0;
+"173
+[e = _FSR0H_TEMPORAIRE _POSTINC0 ]
+[e = _FSR0L_TEMPORAIRE _POSTINC0 ]
+[e = _FSR1H _POSTINC0 ]
+[e = _FSR1L _POSTINC0 ]
+[; ;systeme.c: 174: FSR2H=POSTINC0; FSR2L=POSTINC0; PRODH=POSTINC0; PRODL=POSTINC0;
+"174
+[e = _FSR2H _POSTINC0 ]
+[e = _FSR2L _POSTINC0 ]
+[e = _PRODH _POSTINC0 ]
+[e = _PRODL _POSTINC0 ]
+[; ;systeme.c: 175: TBLPTRU=POSTINC0; TBLPTRH=POSTINC0; TBLPTRL=POSTINC0; TABLAT=POSTINC0;
+"175
+[e = _TBLPTRU _POSTINC0 ]
+[e = _TBLPTRH _POSTINC0 ]
+[e = _TBLPTRL _POSTINC0 ]
+[e = _TABLAT _POSTINC0 ]
+[; ;systeme.c: 176: PCLATU=POSTINC0; PCLATH=POSTINC0;
+"176
+[e = _PCLATU _POSTINC0 ]
+[e = _PCLATH _POSTINC0 ]
+[; ;systeme.c: 179: FSR0L=FSR0L_TEMPORAIRE; FSR0H=FSR0H_TEMPORAIRE; BSR=BSR_TEMPORAIRE;
+"179
+[e = _FSR0L _FSR0L_TEMPORAIRE ]
+[e = _FSR0H _FSR0H_TEMPORAIRE ]
+[e = _BSR _BSR_TEMPORAIRE ]
+[; ;systeme.c: 180: WREG=W_TEMPORAIRE; STATUS=STATUS_TEMPORAIRE;
+"180
+[e = _WREG _W_TEMPORAIRE ]
+[e = _STATUS _STATUS_TEMPORAIRE ]
+[; ;systeme.c: 182: asm("RETFIE");
+"182
+[; <" RETFIE ;# ">
+"186
+}
+[e :U 1246 ]
+[; ;systeme.c: 186: }
+[; ;systeme.c: 189: FSR0L=FSR0L_TEMPORAIRE; FSR0H=FSR0H_TEMPORAIRE; BSR=BSR_TEMPORAIRE;
+"189
+[e = _FSR0L _FSR0L_TEMPORAIRE ]
+[e = _FSR0H _FSR0H_TEMPORAIRE ]
+[e = _BSR _BSR_TEMPORAIRE ]
+[; ;systeme.c: 190: WREG=W_TEMPORAIRE; STATUS=STATUS_TEMPORAIRE;
+"190
+[e = _WREG _W_TEMPORAIRE ]
+[e = _STATUS _STATUS_TEMPORAIRE ]
+[; ;systeme.c: 192: asm("RETFIE");
+"192
+[; <" RETFIE ;# ">
+[; ;systeme.c: 196: tache1();
+"196
+[e ( _tache1 ..  ]
+[; ;systeme.c: 197: tache2();
+"197
+[e ( _tache2 ..  ]
+[; ;systeme.c: 198: tache3();
+"198
+[e ( _tache3 ..  ]
+[; ;systeme.c: 199: tache4();
+"199
+[e ( _tache4 ..  ]
+[; ;systeme.c: 200: tache5();
+"200
+[e ( _tache5 ..  ]
+[; ;systeme.c: 201: tache6();
+"201
+[e ( _tache6 ..  ]
+[; ;systeme.c: 202: }
+"202
 [e :UE 1241 ]
 }
-"75
-[v _draw_box `(v ~T0 @X0 1 ef4`i`i`i`i ]
-{
-[; ;T1.c: 74: void draw_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
-[; ;T1.c: 75: {
-[e :U _draw_box ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
-[v _end_point_x `i ~T0 @X0 1 r3 ]
-[v _end_point_y `i ~T0 @X0 1 r4 ]
-[f ]
-"76
-[v _i `i ~T0 @X0 1 a ]
-[; ;T1.c: 76: int i=0;
-[e = _i -> 0 `i ]
-"77
-[v _j `i ~T0 @X0 1 a ]
-[; ;T1.c: 77: int j=0;
-[e = _j -> 0 `i ]
-[; ;T1.c: 79: for (i = start_point_x; i < end_point_x; i++ )
-"79
-{
-[e = _i _start_point_x ]
-[e $U 1246  ]
-"80
-[e :U 1243 ]
-[; ;T1.c: 80: {
-{
-[; ;T1.c: 81: for (j = start_point_y; j < end_point_y; j++ )
-"81
-{
-[e = _j _start_point_y ]
-[e $U 1250  ]
-"82
-[e :U 1247 ]
-[; ;T1.c: 82: {
-{
-[; ;T1.c: 83: plot1(i, j);
-"83
-[e ( _plot1 (2 , -> _i `uc -> _j `uc ]
-"84
-}
-"81
-[e ++ _j -> 1 `i ]
-[e :U 1250 ]
-[e $ < _j _end_point_y 1247  ]
-[e :U 1248 ]
-"84
-}
-"85
-}
-"79
-[e ++ _i -> 1 `i ]
-[e :U 1246 ]
-[e $ < _i _end_point_x 1243  ]
-[e :U 1244 ]
-"85
-}
-[; ;T1.c: 84: }
-[; ;T1.c: 85: }
-[; ;T1.c: 86: }
-"86
-[e :UE 1242 ]
-}
-"89
-[v _draw_empty_box `(v ~T0 @X0 1 ef4`i`i`i`i ]
-{
-[; ;T1.c: 88: void draw_empty_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
-[; ;T1.c: 89: {
-[e :U _draw_empty_box ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
-[v _end_point_x `i ~T0 @X0 1 r3 ]
-[v _end_point_y `i ~T0 @X0 1 r4 ]
-[f ]
-"90
-[v _i `i ~T0 @X0 1 a ]
-[; ;T1.c: 90: int i=0;
-[e = _i -> 0 `i ]
-"91
-[v _j `i ~T0 @X0 1 a ]
-[; ;T1.c: 91: int j=0;
-[e = _j -> 0 `i ]
-[; ;T1.c: 93: for (i = start_point_x; i < end_point_x; i++ )
-"93
-{
-[e = _i _start_point_x ]
-[e $U 1255  ]
-"94
-[e :U 1252 ]
-[; ;T1.c: 94: {
-{
-[; ;T1.c: 95: if(i==start_point_x || i==end_point_x-1)
-"95
-[e $ ! || == _i _start_point_x == _i - _end_point_x -> 1 `i 1256  ]
-[; ;T1.c: 96: {
-"96
-{
-[; ;T1.c: 97: for (j = start_point_y; j < end_point_y; j++ )
-"97
-{
-[e = _j _start_point_y ]
-[e $U 1260  ]
-"98
-[e :U 1257 ]
-[; ;T1.c: 98: {
-{
-[; ;T1.c: 99: plot1(i, j);
-"99
-[e ( _plot1 (2 , -> _i `uc -> _j `uc ]
-"100
-}
-"97
-[e ++ _j -> 1 `i ]
-[e :U 1260 ]
-[e $ < _j _end_point_y 1257  ]
-[e :U 1258 ]
-"100
-}
-"101
-}
-[; ;T1.c: 100: }
-[; ;T1.c: 101: }
-[e $U 1261  ]
-"102
-[e :U 1256 ]
-[; ;T1.c: 102: else
-[; ;T1.c: 103: {
-"103
-{
-[; ;T1.c: 104: plot1(i, start_point_y);
-"104
-[e ( _plot1 (2 , -> _i `uc -> _start_point_y `uc ]
-[; ;T1.c: 105: plot1(i, end_point_y-1);
-"105
-[e ( _plot1 (2 , -> _i `uc -> - _end_point_y -> 1 `i `uc ]
-"106
-}
-[e :U 1261 ]
-"107
-}
-"93
-[e ++ _i -> 1 `i ]
-[e :U 1255 ]
-[e $ < _i _end_point_x 1252  ]
-[e :U 1253 ]
-"107
-}
-[; ;T1.c: 106: }
-[; ;T1.c: 107: }
-[; ;T1.c: 108: }
-"108
-[e :UE 1251 ]
-}
-"111
-[v _clear_box `(v ~T0 @X0 1 ef4`i`i`i`i ]
-{
-[; ;T1.c: 110: void clear_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
-[; ;T1.c: 111: {
-[e :U _clear_box ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
-[v _end_point_x `i ~T0 @X0 1 r3 ]
-[v _end_point_y `i ~T0 @X0 1 r4 ]
-[f ]
-"112
-[v _i `i ~T0 @X0 1 a ]
-[; ;T1.c: 112: int i=0;
-[e = _i -> 0 `i ]
-"113
-[v _j `i ~T0 @X0 1 a ]
-[; ;T1.c: 113: int j=0;
-[e = _j -> 0 `i ]
-[; ;T1.c: 115: for (i = start_point_x; i < end_point_x; i++ )
-"115
-{
-[e = _i _start_point_x ]
-[e $U 1266  ]
-"116
-[e :U 1263 ]
-[; ;T1.c: 116: {
-{
-[; ;T1.c: 117: for (j = start_point_y; j < end_point_y; j++ )
-"117
-{
-[e = _j _start_point_y ]
-[e $U 1270  ]
-"118
-[e :U 1267 ]
-[; ;T1.c: 118: {
-{
-[; ;T1.c: 119: plot0(i, j);
-"119
-[e ( _plot0 (2 , -> _i `uc -> _j `uc ]
-"120
-}
-"117
-[e ++ _j -> 1 `i ]
-[e :U 1270 ]
-[e $ < _j _end_point_y 1267  ]
-[e :U 1268 ]
-"120
-}
-"121
-}
-"115
-[e ++ _i -> 1 `i ]
-[e :U 1266 ]
-[e $ < _i _end_point_x 1263  ]
-[e :U 1264 ]
-"121
-}
-[; ;T1.c: 120: }
-[; ;T1.c: 121: }
-[; ;T1.c: 122: }
-"122
-[e :UE 1262 ]
-}
-"125
-[v _initial_draw `(v ~T0 @X0 1 ef ]
-{
-[; ;T1.c: 124: void initial_draw()
-[; ;T1.c: 125: {
-[e :U _initial_draw ]
-[f ]
-[; ;T1.c: 126: goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
-"126
-[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 82 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 86 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 66 `ui `uc ]
-[; ;T1.c: 127: goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
-"127
-[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[; ;T1.c: 128: goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
-"128
-[e ( _goto_lico (2 , -> -> 15 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[; ;T1.c: 131: draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
-"131
-[e ( _draw_box (4 , , , _fork_start_x_pos _fork_start_y_pos + _fork_start_x_pos _fork_size + _fork_start_y_pos _fork_size ]
-[; ;T1.c: 132: current_fork_x=fork_start_x_pos;
-"132
-[e = _current_fork_x _fork_start_x_pos ]
-[; ;T1.c: 133: current_fork_y=fork_start_y_pos;
-"133
-[e = _current_fork_y _fork_start_y_pos ]
-[; ;T1.c: 134: draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
-"134
-[e ( _draw_empty_box (4 , , , - - _fork_start_x_pos _fork_stop -> 1 `i - - _fork_start_y_pos _fork_stop -> 1 `i + + + _fork_start_x_pos _fork_size _fork_stop -> 1 `i + + + _fork_start_y_pos _fork_size _fork_stop -> 1 `i ]
-[; ;T1.c: 137: alarm_icon(200, 20);
-"137
-[e ( _alarm_icon (2 , -> 200 `i -> 20 `i ]
-[; ;T1.c: 138: }
-"138
-[e :UE 1271 ]
-}
-"141
-[v _blockVitesse `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;T1.c: 140: void blockVitesse(unsigned char vitesseCourante)
-[; ;T1.c: 141: {
-[e :U _blockVitesse ]
-[v _vitesseCourante `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;T1.c: 142: PORTEbits.RE0 = vitesseCourante;
-"142
-[e = . . _PORTEbits 0 0 _vitesseCourante ]
-[; ;T1.c: 143: }
-"143
-[e :UE 1272 ]
-}
-"146
-[v _stopVitess `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;T1.c: 145: void stopVitess(unsigned char vitesseCourante)
-[; ;T1.c: 146: {
-[e :U _stopVitess ]
-[v _vitesseCourante `uc ~T0 @X0 1 r1 ]
-[f ]
-"147
-[v _cpt `i ~T0 @X0 1 a ]
-"148
-[v _newVitesse `uc ~T0 @X0 1 a ]
-[; ;T1.c: 147: int cpt;
-[; ;T1.c: 148: char newVitesse;
-[; ;T1.c: 150: while (vitesseCourante != 0)
-"150
-[e $U 1274  ]
-[e :U 1275 ]
-[; ;T1.c: 151: {
-"151
-{
-[; ;T1.c: 152: cpt ++;
-"152
-[e ++ _cpt -> 1 `i ]
-[; ;T1.c: 153: if ((cpt %20)==1)
-"153
-[e $ ! == % _cpt -> 20 `i -> 1 `i 1277  ]
-[; ;T1.c: 154: {
-"154
-{
-[; ;T1.c: 155: vitesseCourante --;
-"155
-[e -- _vitesseCourante -> -> 1 `i `uc ]
-[; ;T1.c: 156: newVitesse = setBit(newVitesse,vitesseCourante);
-"156
-[e = _newVitesse ( _setBit (2 , _newVitesse -> _vitesseCourante `i ]
-[; ;T1.c: 157: goto_lico(5,0);
-"157
-[e ( _goto_lico (2 , -> -> 5 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 158: draw_string("Vitesse:");
-"158
-[e ( _draw_string (1 -> :s 1C `*uc ]
-[; ;T1.c: 160: if (PORTEbits.RE0==0)
-"160
-[e $ ! == -> . . _PORTEbits 0 0 `i -> 0 `i 1278  ]
-[; ;T1.c: 161: vitesse++;
-"161
-[e ++ _vitesse -> -> 1 `i `uc ]
-[e :U 1278 ]
-[; ;T1.c: 162: if (PORTEbits.RE1==0)
-"162
-[e $ ! == -> . . _PORTEbits 0 1 `i -> 0 `i 1279  ]
-[; ;T1.c: 163: vitesse--;
-"163
-[e -- _vitesse -> -> 1 `i `uc ]
-[e :U 1279 ]
-[; ;T1.c: 164: draw_hex8(vitesse);
-"164
-[e ( _draw_hex8 (1 _vitesse ]
-"167
-}
-[e :U 1277 ]
-"168
-}
-[e :U 1274 ]
-"150
-[e $ != -> _vitesseCourante `i -> 0 `i 1275  ]
-[e :U 1276 ]
-[; ;T1.c: 167: }
-[; ;T1.c: 168: }
-[; ;T1.c: 169: }
-"169
-[e :UE 1273 ]
-}
-"172
-[v _tache1 `(v ~T0 @X0 1 ef ]
-{
-[; ;T1.c: 171: void tache1()
-[; ;T1.c: 172: {
-[e :U _tache1 ]
-[f ]
-"173
-[v _i `uc ~T0 @X0 1 a ]
-"175
-[v _alarmeEnCours `ui ~T0 @X0 1 a ]
-[; ;T1.c: 173: unsigned char i;
-[; ;T1.c: 175: unsigned int alarmeEnCours = 0;
-[e = _alarmeEnCours -> -> 0 `i `ui ]
-[; ;T1.c: 177: (INTCONbits.GIE = 0);
-"177
-[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-[; ;T1.c: 178: initialisation_des_ports();
-"178
-[e ( _initialisation_des_ports ..  ]
-[; ;T1.c: 179: initialisation_afficheur();
-"179
-[e ( _initialisation_afficheur ..  ]
-[; ;T1.c: 180: clear_text();
-"180
-[e ( _clear_text ..  ]
-[; ;T1.c: 181: clear_graphics();
-"181
-[e ( _clear_graphics ..  ]
-[; ;T1.c: 182: init_rxtx();
-"182
-[e ( _init_rxtx ..  ]
-[; ;T1.c: 183: Init(2);
-"183
-[e ( _Init (1 -> -> 2 `i `uc ]
-[; ;T1.c: 184: RXTX_libre=1;
-"184
-[e = _RXTX_libre -> -> 1 `i `uc ]
-[; ;T1.c: 185: TXREG1='R';
-"185
-[e = _TXREG1 -> -> 82 `ui `uc ]
-[; ;T1.c: 186: (INTCONbits.GIE = 1);
-"186
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;T1.c: 188: LATCbits.LATC2=0;LATCbits.LATC1=0;LATGbits.LATG0=0;
-"188
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
-[e = . . _LATGbits 0 0 -> -> 0 `i `uc ]
-[; ;T1.c: 190: vitesse=0;
-"190
-[e = _vitesse -> -> 0 `i `uc ]
-[; ;T1.c: 191: batterie=120;
-"191
-[e = _batterie -> -> 120 `i `uc ]
-[; ;T1.c: 192: n_octet_badge=0;
-"192
-[e = _n_octet_badge -> -> 0 `i `uc ]
-[; ;T1.c: 194: goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
-"194
-[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 82 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 86 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 66 `ui `uc ]
-[; ;T1.c: 195: goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
-"195
-[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[; ;T1.c: 196: goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
-"196
-[e ( _goto_lico (2 , -> -> 15 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[; ;T1.c: 199: draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
-"199
-[e ( _draw_box (4 , , , _fork_start_x_pos _fork_start_y_pos + _fork_start_x_pos _fork_size + _fork_start_y_pos _fork_size ]
-[; ;T1.c: 200: current_fork_x=fork_start_x_pos;
-"200
-[e = _current_fork_x _fork_start_x_pos ]
-[; ;T1.c: 201: current_fork_y=fork_start_y_pos;
-"201
-[e = _current_fork_y _fork_start_y_pos ]
-[; ;T1.c: 202: draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
-"202
-[e ( _draw_empty_box (4 , , , - - _fork_start_x_pos _fork_stop -> 1 `i - - _fork_start_y_pos _fork_stop -> 1 `i + + + _fork_start_x_pos _fork_size _fork_stop -> 1 `i + + + _fork_start_y_pos _fork_size _fork_stop -> 1 `i ]
-[; ;T1.c: 204: TP_appui=0;
-"204
-[e = _TP_appui -> -> 0 `i `uc ]
-[; ;T1.c: 205: alarme_pannel=0;
 "205
-[e = _alarme_pannel -> -> 0 `i `uc ]
-"207
-[v _flash_interval_alarm `i ~T0 @X0 1 a ]
-[; ;T1.c: 207: int flash_interval_alarm=0;
-[e = _flash_interval_alarm -> 0 `i ]
+[v _initialisation_du_systeme `(v ~T0 @X0 1 ef ]
+{
+[; ;systeme.c: 204: void initialisation_du_systeme()
+[; ;systeme.c: 205: {
+[e :U _initialisation_du_systeme ]
+[f ]
+"206
+[v _temp `uc ~T0 @X0 1 a ]
+[; ;systeme.c: 206: unsigned char temp;
+[; ;systeme.c: 208: DEMARRAGE=1;
 "208
-[v _flash_interval_error `i ~T0 @X0 1 a ]
-[; ;T1.c: 208: int flash_interval_error=0;
-[e = _flash_interval_error -> 0 `i ]
-[; ;T1.c: 210: while(1)
-"210
-[e :U 1282 ]
-[; ;T1.c: 211: {
+[e = _DEMARRAGE -> -> 1 `i `uc ]
+[; ;systeme.c: 211: queue[0]=1;
 "211
-{
-[; ;T1.c: 214: if (alarme_active != 0x00)
+[e = *U + &U _queue * -> -> -> 0 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 1 `i `uc ]
+[; ;systeme.c: 212: queue[1]=2;
+"212
+[e = *U + &U _queue * -> -> -> 1 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 2 `i `uc ]
+[; ;systeme.c: 213: queue[2]=3;
+"213
+[e = *U + &U _queue * -> -> -> 2 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 3 `i `uc ]
+[; ;systeme.c: 214: queue[3]=4;
 "214
-[e $ ! != -> _alarme_active `i -> 0 `i 1284  ]
-[; ;T1.c: 215: {
+[e = *U + &U _queue * -> -> -> 3 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 4 `i `uc ]
+[; ;systeme.c: 215: queue[4]=5;
 "215
-{
-[; ;T1.c: 216: flash_interval_alarm++;
+[e = *U + &U _queue * -> -> -> 4 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 5 `i `uc ]
+[; ;systeme.c: 216: queue[5]=6;
 "216
-[e ++ _flash_interval_alarm -> 1 `i ]
-[; ;T1.c: 217: if (flash_interval_alarm == 10)
-"217
-[e $ ! == _flash_interval_alarm -> 10 `i 1285  ]
-[; ;T1.c: 218: {
+[e = *U + &U _queue * -> -> -> 5 `i `ui `ux -> -> # *U &U _queue `ui `ux -> -> 6 `i `uc ]
+[; ;systeme.c: 218: pointeur_de_tache=6-1;
 "218
-{
-[; ;T1.c: 219: draw_empty_box(190, 10, 210, 30);
+[e = _pointeur_de_tache -> - -> 6 `i -> 1 `i `uc ]
+[; ;systeme.c: 219: tache_active=queue[pointeur_de_tache];
 "219
-[e ( _draw_empty_box (4 , , , -> 190 `i -> 10 `i -> 210 `i -> 30 `i ]
-[; ;T1.c: 220: alarm_icon(200, 20);
-"220
-[e ( _alarm_icon (2 , -> 200 `i -> 20 `i ]
-"221
-}
-[e :U 1285 ]
-[; ;T1.c: 221: }
-[; ;T1.c: 222: if (flash_interval_alarm == 20)
-"222
-[e $ ! == _flash_interval_alarm -> 20 `i 1286  ]
-[; ;T1.c: 223: {
-"223
-{
-[; ;T1.c: 224: clear_box(190, 10, 210, 30);
+[e = _tache_active *U + &U _queue * -> _pointeur_de_tache `ux -> -> # *U &U _queue `ui `ux ]
+[; ;systeme.c: 224: temp=STKPTR;
 "224
-[e ( _clear_box (4 , , , -> 190 `i -> 10 `i -> 210 `i -> 30 `i ]
-[; ;T1.c: 225: flash_interval_alarm=0;
-"225
-[e = _flash_interval_alarm -> 0 `i ]
-"226
-}
-[e :U 1286 ]
-"227
-}
-[e :U 1284 ]
-[; ;T1.c: 226: }
-[; ;T1.c: 227: }
-[; ;T1.c: 230: if (error_active != 0x00)
+[e = _temp _STKPTR ]
+[; ;systeme.c: 228: STKPTR=2;fptr=&tache1; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
+"228
+[e = _STKPTR -> -> 2 `i `uc ]
+[e = _fptr -> &U _tache1 `*F10201 ]
+[e = _val_tos -> _fptr `um ]
+[e = _puc -> &U _val_tos `*uc ]
+[e = _TOSL *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSH *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSU *U _puc ]
+[; ;systeme.c: 229: STKPTR=7;fptr=&tache2; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
+"229
+[e = _STKPTR -> -> 7 `i `uc ]
+[e = _fptr -> &U _tache2 `*F10201 ]
+[e = _val_tos -> _fptr `um ]
+[e = _puc -> &U _val_tos `*uc ]
+[e = _TOSL *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSH *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSU *U _puc ]
+[; ;systeme.c: 230: STKPTR=12;fptr=&tache3; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
 "230
-[e $ ! != -> _error_active `i -> 0 `i 1287  ]
-[; ;T1.c: 231: {
+[e = _STKPTR -> -> 12 `i `uc ]
+[e = _fptr -> &U _tache3 `*F10201 ]
+[e = _val_tos -> _fptr `um ]
+[e = _puc -> &U _val_tos `*uc ]
+[e = _TOSL *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSH *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSU *U _puc ]
+[; ;systeme.c: 231: STKPTR=17;fptr=&tache4; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
 "231
-{
-[; ;T1.c: 232: flash_interval_error++;
+[e = _STKPTR -> -> 17 `i `uc ]
+[e = _fptr -> &U _tache4 `*F10201 ]
+[e = _val_tos -> _fptr `um ]
+[e = _puc -> &U _val_tos `*uc ]
+[e = _TOSL *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSH *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSU *U _puc ]
+[; ;systeme.c: 232: STKPTR=22;fptr=&tache5; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
 "232
-[e ++ _flash_interval_error -> 1 `i ]
-[; ;T1.c: 233: if (flash_interval_error == 10)
+[e = _STKPTR -> -> 22 `i `uc ]
+[e = _fptr -> &U _tache5 `*F10201 ]
+[e = _val_tos -> _fptr `um ]
+[e = _puc -> &U _val_tos `*uc ]
+[e = _TOSL *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSH *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSU *U _puc ]
+[; ;systeme.c: 233: STKPTR=27;fptr=&tache6; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
 "233
-[e $ ! == _flash_interval_error -> 10 `i 1288  ]
-[; ;T1.c: 234: {
-"234
-{
-[; ;T1.c: 235: draw_empty_box(190, 35, 210, 55);
+[e = _STKPTR -> -> 27 `i `uc ]
+[e = _fptr -> &U _tache6 `*F10201 ]
+[e = _val_tos -> _fptr `um ]
+[e = _puc -> &U _val_tos `*uc ]
+[e = _TOSL *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSH *U _puc ]
+[e ++ _puc * -> -> 1 `i `x -> -> # *U _puc `i `x ]
+[e = _TOSU *U _puc ]
+[; ;systeme.c: 235: STKPTR=temp;
 "235
-[e ( _draw_empty_box (4 , , , -> 190 `i -> 35 `i -> 210 `i -> 55 `i ]
-[; ;T1.c: 236: error_icon(200, 45);
-"236
-[e ( _error_icon (2 , -> 200 `i -> 45 `i ]
-"237
-}
-[e :U 1288 ]
-[; ;T1.c: 237: }
-[; ;T1.c: 238: if (flash_interval_error == 20)
+[e = _STKPTR _temp ]
+[; ;systeme.c: 238: STKPTR_T1=2;
 "238
-[e $ ! == _flash_interval_error -> 20 `i 1289  ]
-[; ;T1.c: 239: {
+[e = _STKPTR_T1 -> -> 2 `i `uc ]
+[; ;systeme.c: 239: STKPTR_T2=7;
 "239
-{
-[; ;T1.c: 240: clear_box(190, 35, 210, 55);
+[e = _STKPTR_T2 -> -> 7 `i `uc ]
+[; ;systeme.c: 240: STKPTR_T3=12;
 "240
-[e ( _clear_box (4 , , , -> 190 `i -> 35 `i -> 210 `i -> 55 `i ]
-[; ;T1.c: 241: flash_interval_error=0;
+[e = _STKPTR_T3 -> -> 12 `i `uc ]
+[; ;systeme.c: 241: STKPTR_T4=17;
 "241
-[e = _flash_interval_error -> 0 `i ]
+[e = _STKPTR_T4 -> -> 17 `i `uc ]
+[; ;systeme.c: 242: STKPTR_T5=22;
 "242
-}
-[e :U 1289 ]
+[e = _STKPTR_T5 -> -> 22 `i `uc ]
+[; ;systeme.c: 243: STKPTR_T6=27;
 "243
+[e = _STKPTR_T6 -> -> 27 `i `uc ]
+[; ;systeme.c: 246: Tick_Count=0;
+"246
+[e = _Tick_Count -> -> 0 `i `ui ]
+[; ;systeme.c: 248: T0CON=0x01;
+"248
+[e = _T0CON -> -> 1 `i `uc ]
+[; ;systeme.c: 249: T0IE=1;
+"249
+[e = _T0IE -> -> 1 `i `b ]
+[; ;systeme.c: 250: }
+"250
+[e :UE 1252 ]
 }
-[e :U 1287 ]
-[; ;T1.c: 242: }
-[; ;T1.c: 243: }
-[; ;T1.c: 259: goto_lico(0,0);
-"259
-[e ( _goto_lico (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 260: draw_string("Marche:");
-"260
-[e ( _draw_string (1 -> :s 2C `*uc ]
-[; ;T1.c: 261: if (PORTBbits.RB0==0 && error_active==0)
-"261
-[e $ ! && == -> . . _PORTBbits 0 0 `i -> 0 `i == -> _error_active `i -> 0 `i 1290  ]
-[; ;T1.c: 262: {
-"262
-{
-[; ;T1.c: 263: draw_string("AV");
-"263
-[e ( _draw_string (1 -> :s 3C `*uc ]
-[; ;T1.c: 264: clear_box(120, 67, 130, 73);
-"264
-[e ( _clear_box (4 , , , -> 120 `i -> 67 `i -> 130 `i -> 73 `i ]
-[; ;T1.c: 265: front_arrow_icon(120, 70);
-"265
-[e ( _front_arrow_icon (2 , -> 120 `i -> 70 `i ]
-"266
-}
-[; ;T1.c: 266: }
-[e $U 1291  ]
-"267
-[e :U 1290 ]
-[; ;T1.c: 267: else
-[; ;T1.c: 268: {
-"268
-{
-[; ;T1.c: 269: if (PORTBbits.RB1==0 && error_active==0)
-"269
-[e $ ! && == -> . . _PORTBbits 0 1 `i -> 0 `i == -> _error_active `i -> 0 `i 1292  ]
-[; ;T1.c: 270: {
-"270
-{
-[; ;T1.c: 271: draw_string("AR");
-"271
-[e ( _draw_string (1 -> :s 4C `*uc ]
-[; ;T1.c: 272: clear_box(120, 67, 130, 73);
-"272
-[e ( _clear_box (4 , , , -> 120 `i -> 67 `i -> 130 `i -> 73 `i ]
-[; ;T1.c: 273: back_arrow_icon(120, 70);
-"273
-[e ( _back_arrow_icon (2 , -> 120 `i -> 70 `i ]
-"274
-}
-[; ;T1.c: 274: }
-[e $U 1293  ]
-"275
-[e :U 1292 ]
-[; ;T1.c: 275: else
-[; ;T1.c: 276: {
-"276
-{
-[; ;T1.c: 277: draw_string("N ");
-"277
-[e ( _draw_string (1 -> :s 5C `*uc ]
-[; ;T1.c: 278: clear_box(120, 67, 130, 73);
-"278
-[e ( _clear_box (4 , , , -> 120 `i -> 67 `i -> 130 `i -> 73 `i ]
-"279
-}
-[e :U 1293 ]
-"280
-}
-[e :U 1291 ]
-[; ;T1.c: 279: }
-[; ;T1.c: 280: }
-[; ;T1.c: 282: goto_lico(1,0);
-"282
-[e ( _goto_lico (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 283: draw_string("Siege:");
-"283
-[e ( _draw_string (1 -> :s 6C `*uc ]
-[; ;T1.c: 284: if (PORTBbits.RB2==0)
-"284
-[e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 1294  ]
-[; ;T1.c: 285: {draw_char('1');}
-"285
-{
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-}
-[e $U 1295  ]
-"286
-[e :U 1294 ]
-[; ;T1.c: 286: else
-[; ;T1.c: 287: {draw_char('0');}
-"287
-{
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-}
-[e :U 1295 ]
-[; ;T1.c: 289: goto_lico(2,0);
-"289
-[e ( _goto_lico (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 290: draw_string("Temp. Eau:");
-"290
-[e ( _draw_string (1 -> :s 7C `*uc ]
-[; ;T1.c: 291: draw_hex8(tempeau);
-"291
-[e ( _draw_hex8 (1 _tempeau ]
-[; ;T1.c: 293: goto_lico(3,0);
-"293
-[e ( _goto_lico (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 294: draw_string("Temp. Huile:");
-"294
-[e ( _draw_string (1 -> :s 8C `*uc ]
-[; ;T1.c: 295: draw_hex8(temphuile);
-"295
-[e ( _draw_hex8 (1 _temphuile ]
-[; ;T1.c: 297: goto_lico(4,0);
-"297
-[e ( _goto_lico (2 , -> -> 4 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 298: draw_string("Choc:");
-"298
-[e ( _draw_string (1 -> :s 9C `*uc ]
-[; ;T1.c: 299: if (PORTBbits.RB3==0)
-"299
-[e $ ! == -> . . _PORTBbits 0 3 `i -> 0 `i 1296  ]
-[; ;T1.c: 300: draw_char('1');
-"300
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e $U 1297  ]
-"301
-[e :U 1296 ]
-[; ;T1.c: 301: else
-[; ;T1.c: 302: draw_char('0');
-"302
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e :U 1297 ]
-[; ;T1.c: 304: goto_lico(5,0);
-"304
-[e ( _goto_lico (2 , -> -> 5 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 305: draw_string("Vitesse:");
-"305
-[e ( _draw_string (1 -> :s 10C `*uc ]
-[; ;T1.c: 306: draw_hex8(vitesse);
-"306
-[e ( _draw_hex8 (1 _vitesse ]
-[; ;T1.c: 307: goto_lico(10,15);
-"307
-[e ( _goto_lico (2 , -> -> 10 `i `uc -> -> 15 `i `uc ]
-[; ;T1.c: 308: draw_string("Vitesse reel:");
-"308
-[e ( _draw_string (1 -> :s 11C `*uc ]
-[; ;T1.c: 309: draw_hex8(vitesseReel);
-"309
-[e ( _draw_hex8 (1 _vitesseReel ]
-[; ;T1.c: 311: goto_lico(6,0);
-"311
-[e ( _goto_lico (2 , -> -> 6 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 312: draw_string("Batterie:");
-"312
-[e ( _draw_string (1 -> :s 12C `*uc ]
-[; ;T1.c: 313: draw_hex8(batterie);
-"313
-[e ( _draw_hex8 (1 _batterie ]
-[; ;T1.c: 314: goto_lico(11,15);
-"314
-[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 15 `i `uc ]
-[; ;T1.c: 315: draw_string("Batterie reel:");
-"315
-[e ( _draw_string (1 -> :s 13C `*uc ]
-[; ;T1.c: 316: draw_hex8(batterieReel);
-"316
-[e ( _draw_hex8 (1 _batterieReel ]
-[; ;T1.c: 317: goto_lico(12,15);
-"317
-[e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 15 `i `uc ]
-[; ;T1.c: 318: draw_string("E(c):");
-"318
-[e ( _draw_string (1 -> :s 14C `*uc ]
-[; ;T1.c: 319: draw_hex8(eauReel);
-"319
-[e ( _draw_hex8 (1 _eauReel ]
-[; ;T1.c: 320: goto_lico(12,25);
-"320
-[e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 25 `i `uc ]
-[; ;T1.c: 321: draw_string("H(c):");
-"321
-[e ( _draw_string (1 -> :s 15C `*uc ]
-[; ;T1.c: 322: draw_hex8(huileReel);
-"322
-[e ( _draw_hex8 (1 _huileReel ]
-[; ;T1.c: 324: goto_lico(7,0);
-"324
-[e ( _goto_lico (2 , -> -> 7 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 325: if (PORTEbits.RE4==0)
-"325
-[e $ ! == -> . . _PORTEbits 0 4 `i -> 0 `i 1298  ]
-[; ;T1.c: 326: draw_string("((!))");
-"326
-[e ( _draw_string (1 -> :s 16C `*uc ]
-[e $U 1299  ]
-"327
-[e :U 1298 ]
-[; ;T1.c: 327: else
-[; ;T1.c: 328: draw_string("     ");
-"328
-[e ( _draw_string (1 -> :s 17C `*uc ]
-[e :U 1299 ]
-[; ;T1.c: 330: goto_lico(8,0);
-"330
-[e ( _goto_lico (2 , -> -> 8 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 331: draw_string("Badge:");
-"331
-[e ( _draw_string (1 -> :s 18C `*uc ]
-[; ;T1.c: 332: if (n_octet_badge==0)
-"332
-[e $ ! == -> _n_octet_badge `i -> 0 `i 1300  ]
-[; ;T1.c: 333: draw_string(" AUCUN              ");
-"333
-[e ( _draw_string (1 -> :s 19C `*uc ]
-[e $U 1301  ]
-"334
-[e :U 1300 ]
-[; ;T1.c: 334: else
-[; ;T1.c: 335: {
-"335
-{
-[; ;T1.c: 336: for (i=0;i<n_octet_badge;i++)
-"336
-{
-[e = _i -> -> 0 `i `uc ]
-[e $U 1305  ]
-"337
-[e :U 1302 ]
-[; ;T1.c: 337: {
-{
-[; ;T1.c: 338: draw_hex8(badge[i]);
-"338
-[e ( _draw_hex8 (1 *U + &U _badge * -> _i `ux -> -> # *U &U _badge `ui `ux ]
-"339
-}
-"336
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 1305 ]
-[e $ < -> _i `i -> _n_octet_badge `i 1302  ]
-[e :U 1303 ]
-"339
-}
-"340
-}
-[e :U 1301 ]
-[; ;T1.c: 339: }
-[; ;T1.c: 340: }
-[; ;T1.c: 342: goto_lico(9,0);
-"342
-[e ( _goto_lico (2 , -> -> 9 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 343: draw_string("X-Joystick:");
-"343
-[e ( _draw_string (1 -> :s 20C `*uc ]
-[; ;T1.c: 344: draw_hex8(lecture_8bit_analogique(10));
-"344
-[e ( _draw_hex8 (1 ( _lecture_8bit_analogique (1 -> -> 10 `i `uc ]
-[; ;T1.c: 346: goto_lico(10,0);
-"346
-[e ( _goto_lico (2 , -> -> 10 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 347: draw_string("Y-Joystick:");
-"347
-[e ( _draw_string (1 -> :s 21C `*uc ]
-[; ;T1.c: 348: draw_hex8(lecture_8bit_analogique(11));
-"348
-[e ( _draw_hex8 (1 ( _lecture_8bit_analogique (1 -> -> 11 `i `uc ]
-[; ;T1.c: 350: if (TP_appui==1)
-"350
-[e $ ! == -> _TP_appui `i -> 1 `i 1306  ]
-[; ;T1.c: 351: {
-"351
-{
-[; ;T1.c: 352: goto_lico(0,20);
-"352
-[e ( _goto_lico (2 , -> -> 0 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 353: draw_string("x=");
-"353
-[e ( _draw_string (1 -> :s 22C `*uc ]
-[; ;T1.c: 354: draw_hex8(TP_x);
-"354
-[e ( _draw_hex8 (1 _TP_x ]
-[; ;T1.c: 355: draw_string(" y=");
-"355
-[e ( _draw_string (1 -> :s 23C `*uc ]
-[; ;T1.c: 356: draw_hex8(TP_y);
-"356
-[e ( _draw_hex8 (1 _TP_y ]
-[; ;T1.c: 357: plot1(TP_x,TP_y);
-"357
-[e ( _plot1 (2 , _TP_x _TP_y ]
-"358
-}
-[; ;T1.c: 358: }
-[e $U 1307  ]
-"359
-[e :U 1306 ]
-[; ;T1.c: 359: else
-[; ;T1.c: 360: {
-"360
-{
-[; ;T1.c: 361: asm(" nop");
-"361
-[; <"  nop ;# ">
-"362
-}
-[e :U 1307 ]
-[; ;T1.c: 362: }
-[; ;T1.c: 371: if (error_active == 0)
-"371
-[e $ ! == -> _error_active `i -> 0 `i 1308  ]
-[; ;T1.c: 372: {
-"372
-{
-[; ;T1.c: 373: if (lecture_8bit_analogique(10) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
-"373
-[e $ ! && == -> ( _lecture_8bit_analogique (1 -> -> 10 `i `uc `i -> 255 `i < + _current_fork_x -> 1 `i + _fork_start_x_pos _fork_stop 1309  ]
-[; ;T1.c: 374: {
-"374
-{
-[; ;T1.c: 375: clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
-"375
-[e ( _clear_box (4 , , , _current_fork_x _current_fork_y + _current_fork_x _fork_size + _current_fork_y _fork_size ]
-[; ;T1.c: 376: draw_box(current_fork_x+1, current_fork_y, current_fork_x+fork_size+1, current_fork_y+fork_size);
-"376
-[e ( _draw_box (4 , , , + _current_fork_x -> 1 `i _current_fork_y + + _current_fork_x _fork_size -> 1 `i + _current_fork_y _fork_size ]
-[; ;T1.c: 377: current_fork_x=current_fork_x+1;
-"377
-[e = _current_fork_x + _current_fork_x -> 1 `i ]
-"378
-}
-[e :U 1309 ]
-[; ;T1.c: 378: }
-[; ;T1.c: 379: if (lecture_8bit_analogique(10) == 0x00 && (current_fork_x-1)>(fork_start_x_pos-fork_stop))
-"379
-[e $ ! && == -> ( _lecture_8bit_analogique (1 -> -> 10 `i `uc `i -> 0 `i > - _current_fork_x -> 1 `i - _fork_start_x_pos _fork_stop 1310  ]
-[; ;T1.c: 380: {
-"380
-{
-[; ;T1.c: 381: clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
-"381
-[e ( _clear_box (4 , , , _current_fork_x _current_fork_y + _current_fork_x _fork_size + _current_fork_y _fork_size ]
-[; ;T1.c: 382: draw_box(current_fork_x-1, current_fork_y, current_fork_x+fork_size-1, current_fork_y+fork_size);
-"382
-[e ( _draw_box (4 , , , - _current_fork_x -> 1 `i _current_fork_y - + _current_fork_x _fork_size -> 1 `i + _current_fork_y _fork_size ]
-[; ;T1.c: 383: current_fork_x=current_fork_x-1;
-"383
-[e = _current_fork_x - _current_fork_x -> 1 `i ]
-"384
-}
-[e :U 1310 ]
-[; ;T1.c: 384: }
-[; ;T1.c: 385: if (lecture_8bit_analogique(11) == 0xFF && (current_fork_y-1)>(fork_start_y_pos-fork_stop))
-"385
-[e $ ! && == -> ( _lecture_8bit_analogique (1 -> -> 11 `i `uc `i -> 255 `i > - _current_fork_y -> 1 `i - _fork_start_y_pos _fork_stop 1311  ]
-[; ;T1.c: 386: {
-"386
-{
-[; ;T1.c: 387: clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
-"387
-[e ( _clear_box (4 , , , _current_fork_x _current_fork_y + _current_fork_x _fork_size + _current_fork_y _fork_size ]
-[; ;T1.c: 388: draw_box(current_fork_x, current_fork_y-1, current_fork_x+fork_size, current_fork_y+fork_size-1);
-"388
-[e ( _draw_box (4 , , , _current_fork_x - _current_fork_y -> 1 `i + _current_fork_x _fork_size - + _current_fork_y _fork_size -> 1 `i ]
-[; ;T1.c: 389: current_fork_y=current_fork_y-1;
-"389
-[e = _current_fork_y - _current_fork_y -> 1 `i ]
-"390
-}
-[e :U 1311 ]
-"391
-}
-[e :U 1308 ]
-[; ;T1.c: 390: }
-[; ;T1.c: 391: }
-[; ;T1.c: 393: if (lecture_8bit_analogique(11) == 0x00 && (current_fork_y+1)<(fork_start_y_pos+fork_stop))
-"393
-[e $ ! && == -> ( _lecture_8bit_analogique (1 -> -> 11 `i `uc `i -> 0 `i < + _current_fork_y -> 1 `i + _fork_start_y_pos _fork_stop 1312  ]
-[; ;T1.c: 394: {
-"394
-{
-[; ;T1.c: 395: clear_box(current_fork_x, current_fork_y, current_fork_x+10, current_fork_y+fork_size);
-"395
-[e ( _clear_box (4 , , , _current_fork_x _current_fork_y + _current_fork_x -> 10 `i + _current_fork_y _fork_size ]
-[; ;T1.c: 396: draw_box(current_fork_x, current_fork_y+1, current_fork_x+fork_size, current_fork_y+fork_size+1);
-"396
-[e ( _draw_box (4 , , , _current_fork_x + _current_fork_y -> 1 `i + _current_fork_x _fork_size + + _current_fork_y _fork_size -> 1 `i ]
-[; ;T1.c: 397: current_fork_y=current_fork_y+1;
-"397
-[e = _current_fork_y + _current_fork_y -> 1 `i ]
-"398
-}
-[e :U 1312 ]
-[; ;T1.c: 398: }
-[; ;T1.c: 401: goto_lico(11,0);
-"401
-[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 402: draw_string("chocint=");
-"402
-[e ( _draw_string (1 -> :s 24C `*uc ]
-[; ;T1.c: 403: draw_hex8(flagChoc);
-"403
-[e ( _draw_hex8 (1 _flagChoc ]
-[; ;T1.c: 404: goto_lico(12,0);
-"404
-[e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 405: draw_string("siegeint=");
-"405
-[e ( _draw_string (1 -> :s 25C `*uc ]
-[; ;T1.c: 406: draw_hex8(flagSiege);
-"406
-[e ( _draw_hex8 (1 _flagSiege ]
-[; ;T1.c: 407: goto_lico(13,0);
-"407
-[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 408: draw_string("avantint=");
-"408
-[e ( _draw_string (1 -> :s 26C `*uc ]
-[; ;T1.c: 409: draw_hex8(flagMarcheAvant);
-"409
-[e ( _draw_hex8 (1 _flagMarcheAvant ]
-[; ;T1.c: 410: goto_lico(14,0);
-"410
-[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 411: draw_string("arriereint=");
-"411
-[e ( _draw_string (1 -> :s 27C `*uc ]
-[; ;T1.c: 412: draw_hex8(flagMarcheArriere);
-"412
-[e ( _draw_hex8 (1 _flagMarcheArriere ]
-[; ;T1.c: 414: if(alarme_pannel==0xFF)
-"414
-[e $ ! == -> _alarme_pannel `i -> 255 `i 1313  ]
-[; ;T1.c: 415: {
-"415
-{
-[; ;T1.c: 416: clear_text();
-"416
-[e ( _clear_text ..  ]
-[; ;T1.c: 417: clear_graphics();
-"417
-[e ( _clear_graphics ..  ]
-[; ;T1.c: 418: while (alarme_pannel==0xFF)
-"418
-[e $U 1314  ]
-[e :U 1315 ]
-[; ;T1.c: 419: {
-"419
-{
-[; ;T1.c: 421: draw_empty_box(190, 10, 210, 30);
-"421
-[e ( _draw_empty_box (4 , , , -> 190 `i -> 10 `i -> 210 `i -> 30 `i ]
-[; ;T1.c: 422: alarm_icon(200, 20);
-"422
-[e ( _alarm_icon (2 , -> 200 `i -> 20 `i ]
-[; ;T1.c: 423: goto_lico(0,0);
-"423
-[e ( _goto_lico (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 424: draw_string("alarme_eau=");
-"424
-[e ( _draw_string (1 -> :s 28C `*uc ]
-[; ;T1.c: 425: draw_hex8((alarme_active >> 0) & 0x01);
-"425
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 0 `i -> 1 `i `uc ]
-[; ;T1.c: 426: goto_lico(1,0);
-"426
-[e ( _goto_lico (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 427: draw_string("alarme_huile=");
-"427
-[e ( _draw_string (1 -> :s 29C `*uc ]
-[; ;T1.c: 428: draw_hex8((alarme_active >> 1) & 0x01);
-"428
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 1 `i -> 1 `i `uc ]
-[; ;T1.c: 429: goto_lico(2,0);
-"429
-[e ( _goto_lico (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 430: draw_string("alarme_choc=");
-"430
-[e ( _draw_string (1 -> :s 30C `*uc ]
-[; ;T1.c: 431: draw_hex8((alarme_active >> 2) & 0x01);
-"431
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 2 `i -> 1 `i `uc ]
-[; ;T1.c: 432: goto_lico(3,0);
-"432
-[e ( _goto_lico (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 433: draw_string("alarme_batterie=");
-"433
-[e ( _draw_string (1 -> :s 31C `*uc ]
-[; ;T1.c: 434: draw_hex8((alarme_active >> 3) & 0x01);
-"434
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 3 `i -> 1 `i `uc ]
-[; ;T1.c: 435: goto_lico(0,20);
-"435
-[e ( _goto_lico (2 , -> -> 0 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 436: draw_string("alarme_cle=");
-"436
-[e ( _draw_string (1 -> :s 32C `*uc ]
-[; ;T1.c: 437: draw_hex8((alarme_active >> 4) & 0x01);
-"437
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 4 `i -> 1 `i `uc ]
-[; ;T1.c: 438: goto_lico(1,20);
-"438
-[e ( _goto_lico (2 , -> -> 1 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 439: draw_string("alarme_frein=");
-"439
-[e ( _draw_string (1 -> :s 33C `*uc ]
-[; ;T1.c: 440: draw_hex8((alarme_active >> 5) & 0x01);
-"440
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 5 `i -> 1 `i `uc ]
-[; ;T1.c: 441: goto_lico(2,20);
-"441
-[e ( _goto_lico (2 , -> -> 2 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 442: draw_string("alarme_siege=");
-"442
-[e ( _draw_string (1 -> :s 34C `*uc ]
-[; ;T1.c: 443: draw_hex8((alarme_active >> 6) & 0x01);
-"443
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 6 `i -> 1 `i `uc ]
-[; ;T1.c: 444: goto_lico(4,20);
-"444
-[e ( _goto_lico (2 , -> -> 4 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 445: draw_string("choc_time=");
-"445
-[e ( _draw_string (1 -> :s 35C `*uc ]
-[; ;T1.c: 446: draw_hex8(choc_time_1);
-"446
-[e ( _draw_hex8 (1 _choc_time_1 ]
-[; ;T1.c: 447: draw_hex8(choc_time_2);
-"447
-[e ( _draw_hex8 (1 _choc_time_2 ]
-[; ;T1.c: 448: draw_hex8(choc_time_3);
-"448
-[e ( _draw_hex8 (1 _choc_time_3 ]
-[; ;T1.c: 449: draw_hex8(choc_time_4);
-"449
-[e ( _draw_hex8 (1 _choc_time_4 ]
-[; ;T1.c: 451: goto_lico(6,0);
-"451
-[e ( _goto_lico (2 , -> -> 6 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 452: draw_string("erreur_choc=");
-"452
-[e ( _draw_string (1 -> :s 36C `*uc ]
-[; ;T1.c: 453: draw_hex8((error_active >> 2) & 0x01);
-"453
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 2 `i -> 1 `i `uc ]
-[; ;T1.c: 454: goto_lico(7,0);
-"454
-[e ( _goto_lico (2 , -> -> 7 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 455: draw_string("erreur_batterie=");
-"455
-[e ( _draw_string (1 -> :s 37C `*uc ]
-[; ;T1.c: 456: draw_hex8((error_active >> 3) & 0x01);
-"456
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 3 `i -> 1 `i `uc ]
-[; ;T1.c: 457: goto_lico(8,0);
-"457
-[e ( _goto_lico (2 , -> -> 8 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 458: draw_string("erreur_siege=");
-"458
-[e ( _draw_string (1 -> :s 38C `*uc ]
-[; ;T1.c: 459: draw_hex8((error_active >> 6) & 0x01);
-"459
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 6 `i -> 1 `i `uc ]
-[; ;T1.c: 460: goto_lico(6,20);
-"460
-[e ( _goto_lico (2 , -> -> 6 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 461: draw_string("erreur_eau=");
-"461
-[e ( _draw_string (1 -> :s 39C `*uc ]
-[; ;T1.c: 462: draw_hex8((error_active >> 0) & 0x01);
-"462
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 0 `i -> 1 `i `uc ]
-[; ;T1.c: 463: goto_lico(7,20);
-"463
-[e ( _goto_lico (2 , -> -> 7 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 464: draw_string("erreur_huile=");
-"464
-[e ( _draw_string (1 -> :s 40C `*uc ]
-[; ;T1.c: 465: draw_hex8((error_active >> 1) & 0x01);
-"465
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 1 `i -> 1 `i `uc ]
-"466
-}
-[e :U 1314 ]
-"418
-[e $ == -> _alarme_pannel `i -> 255 `i 1315  ]
-[e :U 1316 ]
-[; ;T1.c: 466: }
-[; ;T1.c: 467: clear_text();
-"467
-[e ( _clear_text ..  ]
-[; ;T1.c: 468: clear_graphics();
-"468
-[e ( _clear_graphics ..  ]
-[; ;T1.c: 469: goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
-"469
-[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 82 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 86 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 66 `ui `uc ]
-[; ;T1.c: 470: goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
-"470
-[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[; ;T1.c: 471: goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
-"471
-[e ( _goto_lico (2 , -> -> 15 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[; ;T1.c: 474: draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
-"474
-[e ( _draw_box (4 , , , _fork_start_x_pos _fork_start_y_pos + _fork_start_x_pos _fork_size + _fork_start_y_pos _fork_size ]
-[; ;T1.c: 475: current_fork_x=fork_start_x_pos;
-"475
-[e = _current_fork_x _fork_start_x_pos ]
-[; ;T1.c: 476: current_fork_y=fork_start_y_pos;
-"476
-[e = _current_fork_y _fork_start_y_pos ]
-[; ;T1.c: 477: draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
-"477
-[e ( _draw_empty_box (4 , , , - - _fork_start_x_pos _fork_stop -> 1 `i - - _fork_start_y_pos _fork_stop -> 1 `i + + + _fork_start_x_pos _fork_size _fork_stop -> 1 `i + + + _fork_start_y_pos _fork_size _fork_stop -> 1 `i ]
-[; ;T1.c: 480: draw_empty_box(190, 10, 210, 30);
-"480
-[e ( _draw_empty_box (4 , , , -> 190 `i -> 10 `i -> 210 `i -> 30 `i ]
-[; ;T1.c: 481: alarm_icon(200, 20);
-"481
-[e ( _alarm_icon (2 , -> 200 `i -> 20 `i ]
-"482
-}
-[e :U 1313 ]
-"484
-}
-[e :U 1281 ]
-"210
-[e $U 1282  ]
-[e :U 1283 ]
-[; ;T1.c: 482: }
-[; ;T1.c: 484: }
-[; ;T1.c: 485: }
-"485
-[e :UE 1280 ]
-}
-[a 3C 65 86 0 ]
-[a 4C 65 82 0 ]
-[a 23C 32 121 61 0 ]
-[a 22C 120 61 0 ]
-[a 39C 101 114 114 101 117 114 95 101 97 117 61 0 ]
-[a 28C 97 108 97 114 109 101 95 101 97 117 61 0 ]
-[a 26C 97 118 97 110 116 105 110 116 61 0 ]
-[a 27C 97 114 114 105 101 114 101 105 110 116 61 0 ]
-[a 25C 115 105 101 103 101 105 110 116 61 0 ]
-[a 24C 99 104 111 99 105 110 116 61 0 ]
-[a 33C 97 108 97 114 109 101 95 102 114 101 105 110 61 0 ]
-[a 35C 99 104 111 99 95 116 105 109 101 61 0 ]
-[a 40C 101 114 114 101 117 114 95 104 117 105 108 101 61 0 ]
-[a 29C 97 108 97 114 109 101 95 104 117 105 108 101 61 0 ]
-[a 32C 97 108 97 114 109 101 95 99 108 101 61 0 ]
-[a 37C 101 114 114 101 117 114 95 98 97 116 116 101 114 105 101 61 0 ]
-[a 31C 97 108 97 114 109 101 95 98 97 116 116 101 114 105 101 61 0 ]
-[a 38C 101 114 114 101 117 114 95 115 105 101 103 101 61 0 ]
-[a 34C 97 108 97 114 109 101 95 115 105 101 103 101 61 0 ]
-[a 36C 101 114 114 101 117 114 95 99 104 111 99 61 0 ]
-[a 30C 97 108 97 114 109 101 95 99 104 111 99 61 0 ]
-[a 7C 84 101 109 112 46 32 69 97 117 58 0 ]
-[a 11C 86 105 116 101 115 115 101 32 114 101 101 108 58 0 ]
-[a 13C 66 97 116 116 101 114 105 101 32 114 101 101 108 58 0 ]
-[a 21C 89 45 74 111 121 115 116 105 99 107 58 0 ]
-[a 20C 88 45 74 111 121 115 116 105 99 107 58 0 ]
-[a 1C 86 105 116 101 115 115 101 58 0 ]
-[a 10C 86 105 116 101 115 115 101 58 0 ]
-[a 8C 84 101 109 112 46 32 72 117 105 108 101 58 0 ]
-[a 12C 66 97 116 116 101 114 105 101 58 0 ]
-[a 2C 77 97 114 99 104 101 58 0 ]
-[a 6C 83 105 101 103 101 58 0 ]
-[a 18C 66 97 100 103 101 58 0 ]
-[a 9C 67 104 111 99 58 0 ]
-[a 15C 72 40 99 41 58 0 ]
-[a 14C 69 40 99 41 58 0 ]
-[a 16C 40 40 33 41 41 0 ]
-[a 5C 78 32 0 ]
-[a 19C 32 65 85 67 85 78 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
-[a 17C 32 32 32 32 32 0 ]

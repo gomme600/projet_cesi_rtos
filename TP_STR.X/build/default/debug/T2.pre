@@ -1,5 +1,5 @@
 
-# 1 "systeme.c"
+# 1 "T2.c"
 
 # 44 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h"
 extern volatile unsigned char PMD3 @ 0xF16;
@@ -11923,6 +11923,19 @@ extern void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern void _delay3(unsigned char);
 
+# 20 "systeme.h"
+void interrupt fonction_d_interruption();
+void initialisation_du_systeme();
+
+
+char setBit(char n, int k);
+
+
+char clearBit(char n, int k);
+
+
+char toggleBit(char n, int k);
+
 # 17 "interrupt.h"
 void interrupt high_priority HIGHISR ();
 
@@ -12053,10 +12066,6 @@ void init_rxtx();
 # 16 "T1.h"
 void tache1();
 
-# 17 "T2.h"
-void tache2();
-void tp_delai(unsigned int itpd);
-
 # 16 "T3.h"
 void tache3();
 
@@ -12089,246 +12098,153 @@ void tache6();
 void initialisation_des_ports();
 unsigned char lecture_8bit_analogique(unsigned char channel);
 
-# 20 "systeme.h"
-void interrupt fonction_d_interruption();
-void initialisation_du_systeme();
+# 17 "T2.h"
+void tache2();
+void tp_delai(unsigned int itpd);
 
-
-char setBit(char n, int k);
-
-
-char clearBit(char n, int k);
-
-
-char toggleBit(char n, int k);
-
-# 18 "systeme.c"
-char setBit(char n, int k)
+# 3 "T2.c"
+void tache2()
 {
-return (n | (1 << k));
-}
+unsigned char hx,lx,hy,ly;
+unsigned int ix,iy;
 
+TP_appui=0;
 
-char clearBit(char n, int k)
+while(1)
 {
-return (n & (~(1 << k)));
-}
+LATGbits.LATG3=1;
+LATGbits.LATG4=0;
+tp_delai(3000);
 
 
-char toggleBit(char n, int k)
+
+ADCON2=0x16;
+ADCON0=0x01;
+ADCON0=0x03;
+while(ADCON0bits.DONE==1)
+;
+hx=ADRESH;
+lx=ADRESL;
+
+
+
+if ((lx&0x0F)!=0){hx=0;lx=0;}
+
+
+if (hx>=10)
 {
-return (n ^ (1 << k));
-}
+LATGbits.LATG3=0;
+LATGbits.LATG4=1;
+tp_delai(3000);
 
 
-void interrupt fonction_d_interruption()
+
+ADCON2=0x16;
+ADCON0=0x05;
+ADCON0=0x07;
+while(ADCON0bits.DONE==1)
+;
+hy=ADRESH;
+ly=ADRESL;
+
+
+
+if ((ly&0x0F)!=0){hy=0;ly=0;}
+
+if (hy>=20)
 {
+ix=lx+(((unsigned int)(hx))<<8);
+iy=ly+(((unsigned int)(hy))<<8);
+ix=ix-3150;
+iy=iy-6500;
 
-# 44
-if (INTCONbits.INT0IF==1)
-{
-INTCONbits.INT0IF=0;
-tache_prioritaire=5;
-flagMarcheAvant = 1;
-}
+TP_x=ix/246;
+TP_y=127-(iy/409);
 
-
-
-if (INTCON3bits.INT3IF==1)
-{
-INTCON3bits.INT3IF=0;
-tache_prioritaire=5;
-flagChoc = 1;
-}
-
-
-if (INTCON3bits.INT1IF==1)
-{
-INTCON3bits.INT1IF=0;
-tache_prioritaire=5;
-flagMarcheArriere = 1;
-}
-
-
-if (INTCON3bits.INT2IF==1)
-{
-INTCON3bits.INT2IF=0;
-tache_prioritaire=5;
-flagSiege = 1;
-}
-
-
-STATUS_TEMPORAIRE=STATUS; W_TEMPORAIRE=WREG; BSR_TEMPORAIRE=BSR;
-FSR0H_TEMPORAIRE=FSR0H; FSR0L_TEMPORAIRE=FSR0L;
-
-
-if(T0IE && T0IF)
-{
-if (DEMARRAGE==1)
-{
-STKPTR=27;
-DEMARRAGE=0;
-}
-
-
-
-FSR0H=tache_active;
-FSR0L=0;
-POSTINC0=W_TEMPORAIRE; POSTINC0=STATUS_TEMPORAIRE; POSTINC0=BSR_TEMPORAIRE; POSTINC0=STKPTR;
-POSTINC0=FSR0H_TEMPORAIRE; POSTINC0=FSR0L_TEMPORAIRE; POSTINC0=FSR1H; POSTINC0=FSR1L;
-POSTINC0=FSR2H; POSTINC0=FSR2L; POSTINC0=PRODH; POSTINC0=PRODL;
-POSTINC0=TBLPTRU; POSTINC0=TBLPTRH; POSTINC0=TBLPTRL; POSTINC0=TABLAT;
-POSTINC0=PCLATU; POSTINC0=PCLATH;
-
-
-
-FSR1H=0;
-FSR1L=0;
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;POSTINC0=POSTINC1;
-
-
-TMR0=(0xFFFF-30000);
-T0IF=0;
-
-Tick_Count++;
-
-
-if (tache_prioritaire!=0)
-{
-previous_tache=pointeur_de_tache;
-pointeur_de_tache=tache_prioritaire;
-tache_prioritaire=0;
+# 68
+TP_appui=1;
 }
 else
 {
-if (previous_tache!=0)
+TP_appui=0;
+}
+}
+else
 {
-pointeur_de_tache=previous_tache;
-previous_tache=0;
-}
-pointeur_de_tache++;
-}
-
-if (pointeur_de_tache==6)
-pointeur_de_tache=0;
-tache_active=queue[pointeur_de_tache];
-
-
-
-
-FSR1H=0;
-FSR1L=0;
-FSR0H=tache_active;
-FSR0L=18;
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;POSTINC1=POSTINC0;
-
-
-
-FSR0H=tache_active;
-FSR0L=0;
-
-W_TEMPORAIRE=POSTINC0; STATUS_TEMPORAIRE=POSTINC0; BSR_TEMPORAIRE=POSTINC0; STKPTR=POSTINC0;
-FSR0H_TEMPORAIRE=POSTINC0; FSR0L_TEMPORAIRE=POSTINC0; FSR1H=POSTINC0; FSR1L=POSTINC0;
-FSR2H=POSTINC0; FSR2L=POSTINC0; PRODH=POSTINC0; PRODL=POSTINC0;
-TBLPTRU=POSTINC0; TBLPTRH=POSTINC0; TBLPTRL=POSTINC0; TABLAT=POSTINC0;
-PCLATU=POSTINC0; PCLATH=POSTINC0;
-
-
-FSR0L=FSR0L_TEMPORAIRE; FSR0H=FSR0H_TEMPORAIRE; BSR=BSR_TEMPORAIRE;
-WREG=W_TEMPORAIRE; STATUS=STATUS_TEMPORAIRE;
-
-asm("RETFIE");
-
-
-
+TP_appui=0;
 }
 
 
-FSR0L=FSR0L_TEMPORAIRE; FSR0H=FSR0H_TEMPORAIRE; BSR=BSR_TEMPORAIRE;
-WREG=W_TEMPORAIRE; STATUS=STATUS_TEMPORAIRE;
-
-asm("RETFIE");
-
-
-
-tache1();
-tache2();
-tache3();
-tache4();
-tache5();
-tache6();
-}
-
-void initialisation_du_systeme()
+if (TP_appui==1)
 {
-unsigned char temp;
-
-DEMARRAGE=1;
-
-
-queue[0]=1;
-queue[1]=2;
-queue[2]=3;
-queue[3]=4;
-queue[4]=5;
-queue[5]=6;
-
-pointeur_de_tache=6-1;
-tache_active=queue[pointeur_de_tache];
+if ((TP_x>=203)&&(TP_x<209))
+{
+if ((TP_y>=113)&&(TP_y<121))
+{
+LATCbits.LATC2=1;
+}
+if ((TP_y>=121)&&(TP_y<127))
+{
+LATCbits.LATC2=0;
+}
+}
+}
 
 
+if (TP_appui==1)
+{
+if ((TP_x>=215)&&(TP_x<221))
+{
+if ((TP_y>=113)&&(TP_y<121))
+{
+LATCbits.LATC1=1;
+}
+if ((TP_y>=121)&&(TP_y<127))
+{
+LATCbits.LATC1=0;
+}
+}
+}
+if (TP_appui==1)
+{
+if ((TP_x>=227)&&(TP_x<233))
+{
+if ((TP_y>=113)&&(TP_y<121))
+{
+LATGbits.LATG0=1;
+}
+if ((TP_y>=121)&&(TP_y<127))
+{
+LATGbits.LATG0=0;
+}
+}
+}
 
 
-temp=STKPTR;
+if (TP_appui==1)
+{
+if ((TP_x>=190)&&(TP_x<210))
+{
+if ((TP_y>=10)&&(TP_y<30))
+{
+alarme_pannel=~alarme_pannel;
+int a=0;
+
+for (a=0;a<100;a++)
+;
+}
+}
+}
 
 
+}
+}
 
-STKPTR=2;fptr=&tache1; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-STKPTR=7;fptr=&tache2; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-STKPTR=12;fptr=&tache3; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-STKPTR=17;fptr=&tache4; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-STKPTR=22;fptr=&tache5; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-STKPTR=27;fptr=&tache6; val_tos=(unsigned short long) fptr; puc=(unsigned char *)&val_tos; TOSL=*puc;puc++; TOSH=*puc;puc++; TOSU=*puc;
-
-STKPTR=temp;
-
-
-STKPTR_T1=2;
-STKPTR_T2=7;
-STKPTR_T3=12;
-STKPTR_T4=17;
-STKPTR_T5=22;
-STKPTR_T6=27;
-
-
-Tick_Count=0;
-
-T0CON=0x01;
-T0IE=1;
+void tp_delai(unsigned int itpd)
+{
+while(itpd>0)
+{
+asm(" nop");asm(" nop");asm(" nop");
+itpd--;
+}
 }

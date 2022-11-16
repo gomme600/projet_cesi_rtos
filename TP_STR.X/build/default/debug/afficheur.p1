@@ -1,72 +1,36 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "55 variables_globales.h
 [v F10213 `(v ~T0 @X0 0 tf ]
-"48 afficheur.h
-[v _plot1 `(v ~T0 @X0 0 ef2`uc`uc ]
-"49
-[v _plot0 `(v ~T0 @X0 0 ef2`uc`uc ]
-"44
-[v _goto_lico `(v ~T0 @X0 0 ef2`uc`uc ]
-"41
-[v _draw_char `(v ~T0 @X0 0 ef1`uc ]
-[s S577 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S577 . RE0 RE1 RE2 RE3 RE4 RE5 RE6 RE7 ]
-[s S578 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S578 . AD8 AD9 AD10 AD11 AD12 AD13 AD14 AD15 ]
-[s S579 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S579 . P2D P2C P2B P3C P3B P1C P1B P2A ]
-[s S580 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S580 . . CCP10 CCP9 CCP8 CCP7 CCP6 CCP2 ]
-[s S581 :1 `uc 1 ]
-[n S581 . NOT_RD ]
-[s S582 :1 `uc 1 :1 `uc 1 ]
-[n S582 . . NOT_WR ]
-[s S583 :2 `uc 1 :1 `uc 1 ]
-[n S583 . . NOT_CS ]
-[s S584 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S584 . nRD nWR nCS REFO ]
-[s S585 :7 `uc 1 :1 `uc 1 ]
-[n S585 . . CCP2E ]
-[s S586 :6 `uc 1 :1 `uc 1 ]
-[n S586 . . CCP6E ]
-[s S587 :5 `uc 1 :1 `uc 1 ]
-[n S587 . . CCP7E ]
-[s S588 :4 `uc 1 :1 `uc 1 ]
-[n S588 . . CCP8E ]
-[s S589 :3 `uc 1 :1 `uc 1 ]
-[n S589 . . CCP9E ]
-[s S590 :2 `uc 1 :1 `uc 1 ]
-[n S590 . . CS ]
-[s S591 :7 `uc 1 :1 `uc 1 ]
-[n S591 . . PA2E ]
-[s S592 :6 `uc 1 :1 `uc 1 ]
-[n S592 . . PB1E ]
-[s S593 :2 `uc 1 :1 `uc 1 ]
-[n S593 . . PB2 ]
-[s S594 :4 `uc 1 :1 `uc 1 ]
-[n S594 . . PB3E ]
-[s S595 :5 `uc 1 :1 `uc 1 ]
-[n S595 . . PC1E ]
-[s S596 :1 `uc 1 :1 `uc 1 ]
-[n S596 . . PC2 ]
-[s S597 :3 `uc 1 :1 `uc 1 ]
-[n S597 . . PC3E ]
-[s S598 :1 `uc 1 ]
-[n S598 . PD2 ]
-[s S599 :1 `uc 1 ]
-[n S599 . RDE ]
-[s S600 :1 `uc 1 :1 `uc 1 ]
-[n S600 . . WRE ]
-[u S576 `S577 1 `S578 1 `S579 1 `S580 1 `S581 1 `S582 1 `S583 1 `S584 1 `S585 1 `S586 1 `S587 1 `S588 1 `S589 1 `S590 1 `S591 1 `S592 1 `S593 1 `S594 1 `S595 1 `S596 1 `S597 1 `S598 1 `S599 1 `S600 1 ]
-[n S576 . . . . . . . . . . . . . . . . . . . . . . . . . ]
-"8979 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
-[v _PORTEbits `VS576 ~T0 @X0 0 e@3972 ]
-"24 systeme.h
-[v _setBit `(uc ~T0 @X0 0 ef2`uc`i ]
-"42 afficheur.h
-[v _draw_string `(v ~T0 @X0 0 ef1`*uc ]
-"43
-[v _draw_hex8 `(v ~T0 @X0 0 ef1`uc ]
+"10867 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
+[v _LATH `Vuc ~T0 @X0 0 e@3984 ]
+"11535
+[v _TRISH `Vuc ~T0 @X0 0 e@3993 ]
+[s S709 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S709 . LATJ0 LATJ1 LATJ2 LATJ3 LATJ4 LATJ5 LATJ6 LATJ7 ]
+[s S710 :1 `uc 1 ]
+[n S710 . LJ0 ]
+[s S711 :1 `uc 1 :1 `uc 1 ]
+[n S711 . . LJ1 ]
+[s S712 :2 `uc 1 :1 `uc 1 ]
+[n S712 . . LJ2 ]
+[s S713 :3 `uc 1 :1 `uc 1 ]
+[n S713 . . LJ3 ]
+[s S714 :4 `uc 1 :1 `uc 1 ]
+[n S714 . . LJ4 ]
+[s S715 :5 `uc 1 :1 `uc 1 ]
+[n S715 . . LJ5 ]
+[s S716 :6 `uc 1 :1 `uc 1 ]
+[n S716 . . LJ6 ]
+[s S717 :7 `uc 1 :1 `uc 1 ]
+[n S717 . . LJ7 ]
+[u S708 `S709 1 `S710 1 `S711 1 `S712 1 `S713 1 `S714 1 `S715 1 `S716 1 `S717 1 ]
+[n S708 . . . . . . . . . . ]
+"11047
+[v _LATJbits `VS708 ~T0 @X0 0 e@3985 ]
+"9673
+[v _PORTH `Vuc ~T0 @X0 0 e@3975 ]
+"39 afficheur.h
+[v _delai_us_char `(v ~T0 @X0 0 ef1`uc ]
 [s S1165 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1165 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
 [s S1166 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -81,20 +45,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1164 . . . . . . ]
 "18388 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [v _INTCONbits `VS1164 ~T0 @X0 0 e@4082 ]
-"143 main.h
-[v _initialisation_des_ports `(v ~T0 @X0 0 ef ]
-"40 afficheur.h
-[v _initialisation_afficheur `(v ~T0 @X0 0 ef ]
-"45
-[v _clear_text `(v ~T0 @X0 0 ef ]
-"46
-[v _clear_graphics `(v ~T0 @X0 0 ef ]
-"17 rxtx.h
-[v _init_rxtx `(v ~T0 @X0 0 ef ]
-"26 semaphore.h
-[v _Init `(v ~T0 @X0 0 ef1`uc ]
-"13426 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
-[v _TXREG1 `Vuc ~T0 @X0 0 e@4013 ]
 [s S652 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S652 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
 [s S653 :1 `uc 1 ]
@@ -133,24 +83,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S691 . . . . . . . ]
 "10813
 [v _LATGbits `VS691 ~T0 @X0 0 e@3983 ]
-[s S555 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S555 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-[s S556 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S556 . INT0 INT1 INT2 INT3 KBI0 KBI1 KBI2 KBI3 ]
-[s S557 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S557 . FLT0 . CTED1 CTED2 . T3CKI ]
-[s S558 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S558 . . CCP2_P2A . T1G ]
-[s S559 :5 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S559 . . PGM PGC PGD ]
-[s S560 :3 `uc 1 :1 `uc 1 ]
-[n S560 . . CCP2_PA2 ]
-[u S554 `S555 1 `S556 1 `S557 1 `S558 1 `S559 1 `S560 1 ]
-[n S554 . . . . . . . ]
-"8296
-[v _PORTBbits `VS554 ~T0 @X0 0 e@3969 ]
-"144 main.h
-[v _lecture_8bit_analogique `(uc ~T0 @X0 0 ef1`uc ]
+"10999
+[v _LATJ `Vuc ~T0 @X0 0 e@3985 ]
+"11596
+[v _TRISJ `Vuc ~T0 @X0 0 e@3994 ]
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -9469,24 +9405,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "119
 [v _previous_use_time `d ~T0 @X0 1 e ]
 [; ;variables_globales.h: 119: double previous_use_time;
-[; ;afficheur.h: 32: void write_d_aff(unsigned char data);
-[; ;afficheur.h: 33: void write_c_aff(unsigned char command);
-[; ;afficheur.h: 34: unsigned char check_status_ok();
-[; ;afficheur.h: 35: unsigned char wait_status_ok();
-[; ;afficheur.h: 36: unsigned char command(unsigned char cmd);
-[; ;afficheur.h: 37: unsigned char d1command(unsigned char d1, unsigned char cmd);
-[; ;afficheur.h: 38: unsigned char d2command(unsigned char d1, unsigned char d2, unsigned char cmd);
-[; ;afficheur.h: 39: void delai_us_char(unsigned char ucdelai);
-[; ;afficheur.h: 40: void initialisation_afficheur();
-[; ;afficheur.h: 41: void draw_char(unsigned char dccar);
-[; ;afficheur.h: 42: void draw_string(unsigned char * tableau);
-[; ;afficheur.h: 43: void draw_hex8(unsigned char octet);
-[; ;afficheur.h: 44: void goto_lico(unsigned char ligne, unsigned char colonne);
-[; ;afficheur.h: 45: void clear_text();
-[; ;afficheur.h: 46: void clear_graphics();
-[; ;afficheur.h: 47: void clear_cgram();
-[; ;afficheur.h: 48: void plot1(unsigned char x, unsigned char y);
-[; ;afficheur.h: 49: void plot0(unsigned char x, unsigned char y);
 "22 semaphore.h
 [v _Val_sem_cna `uc ~T0 @X0 1 e ]
 [; ;semaphore.h: 22: unsigned char Val_sem_cna;
@@ -9499,6 +9417,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stid.h: 17: unsigned char lecture_normale(unsigned char * stid_id);
 [; ;stid.h: 18: void stid_delai_us(unsigned int isdu);
 [; ;rxtx.h: 17: void init_rxtx();
+[; ;T1.h: 16: void tache1();
 [; ;T2.h: 17: void tache2();
 [; ;T2.h: 18: void tp_delai(unsigned int itpd);
 [; ;T3.h: 16: void tache3();
@@ -9576,1472 +9495,1094 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBRTB=OFF ]
 [; ;main.h: 143: void initialisation_des_ports();
 [; ;main.h: 144: unsigned char lecture_8bit_analogique(unsigned char channel);
-[; ;T1.h: 16: void tache1();
-"4 T1.c
-[v _fork_start_x_pos `i ~T0 @X0 1 e ]
-[i _fork_start_x_pos
--> 120 `i
-]
-[; ;T1.c: 4: int fork_start_x_pos=120;
-"5
-[v _fork_start_y_pos `i ~T0 @X0 1 e ]
-[i _fork_start_y_pos
--> 40 `i
-]
-[; ;T1.c: 5: int fork_start_y_pos=40;
-"6
-[v _current_fork_x `i ~T0 @X0 1 e ]
-[i _current_fork_x
--> 0 `i
-]
-[; ;T1.c: 6: int current_fork_x=0;
-"7
-[v _current_fork_y `i ~T0 @X0 1 e ]
-[i _current_fork_y
--> 0 `i
-]
-[; ;T1.c: 7: int current_fork_y=0;
-"8
-[v _fork_size `i ~T0 @X0 1 e ]
-[i _fork_size
--> 5 `i
-]
-[; ;T1.c: 8: int fork_size=5;
-"9
-[v _fork_stop `i ~T0 @X0 1 e ]
-[i _fork_stop
--> 20 `i
-]
-[; ;T1.c: 9: int fork_stop=20;
-"12
-[v _alarm_icon `(v ~T0 @X0 1 ef2`i`i ]
+[; ;afficheur.h: 32: void write_d_aff(unsigned char data);
+[; ;afficheur.h: 33: void write_c_aff(unsigned char command);
+[; ;afficheur.h: 34: unsigned char check_status_ok();
+[; ;afficheur.h: 35: unsigned char wait_status_ok();
+[; ;afficheur.h: 36: unsigned char command(unsigned char cmd);
+[; ;afficheur.h: 37: unsigned char d1command(unsigned char d1, unsigned char cmd);
+[; ;afficheur.h: 38: unsigned char d2command(unsigned char d1, unsigned char d2, unsigned char cmd);
+[; ;afficheur.h: 39: void delai_us_char(unsigned char ucdelai);
+[; ;afficheur.h: 40: void initialisation_afficheur();
+[; ;afficheur.h: 41: void draw_char(unsigned char dccar);
+[; ;afficheur.h: 42: void draw_string(unsigned char * tableau);
+[; ;afficheur.h: 43: void draw_hex8(unsigned char octet);
+[; ;afficheur.h: 44: void goto_lico(unsigned char ligne, unsigned char colonne);
+[; ;afficheur.h: 45: void clear_text();
+[; ;afficheur.h: 46: void clear_graphics();
+[; ;afficheur.h: 47: void clear_cgram();
+[; ;afficheur.h: 48: void plot1(unsigned char x, unsigned char y);
+[; ;afficheur.h: 49: void plot0(unsigned char x, unsigned char y);
+"5 afficheur.c
+[v _write_d_aff `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;T1.c: 11: void alarm_icon(int start_point_x, int start_point_y)
-[; ;T1.c: 12: {
-[e :U _alarm_icon ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
+[; ;afficheur.c: 4: void write_d_aff(unsigned char data)
+[; ;afficheur.c: 5: {
+[e :U _write_d_aff ]
+[v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;T1.c: 13: plot1(start_point_x, start_point_y-4);
+[; ;afficheur.c: 6: LATH=data;
+"6
+[e = _LATH _data ]
+[; ;afficheur.c: 7: TRISH=0x00;
+"7
+[e = _TRISH -> -> 0 `i `uc ]
+[; ;afficheur.c: 8: LATJbits.LATJ0=0;
+"8
+[e = . . _LATJbits 0 0 -> -> 0 `i `uc ]
+[; ;afficheur.c: 9: LATJbits.LATJ3=0;
+"9
+[e = . . _LATJbits 0 3 -> -> 0 `i `uc ]
+[; ;afficheur.c: 10: LATJbits.LATJ2=0;
+"10
+[e = . . _LATJbits 0 2 -> -> 0 `i `uc ]
+[; ;afficheur.c: 11: asm(" nop");
+"11
+[; <"  nop ;# ">
+[; ;afficheur.c: 12: asm(" nop");
+"12
+[; <"  nop ;# ">
+[; ;afficheur.c: 13: LATJbits.LATJ2=1;
 "13
-[e ( _plot1 (2 , -> _start_point_x `uc -> - _start_point_y -> 4 `i `uc ]
-[; ;T1.c: 14: plot1(start_point_x, start_point_y-3);
+[e = . . _LATJbits 0 2 -> -> 1 `i `uc ]
+[; ;afficheur.c: 14: LATJbits.LATJ3=1;
 "14
-[e ( _plot1 (2 , -> _start_point_x `uc -> - _start_point_y -> 3 `i `uc ]
-[; ;T1.c: 15: plot1(start_point_x, start_point_y-2);
+[e = . . _LATJbits 0 3 -> -> 1 `i `uc ]
+[; ;afficheur.c: 15: }
 "15
-[e ( _plot1 (2 , -> _start_point_x `uc -> - _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 16: plot1(start_point_x, start_point_y-1);
-"16
-[e ( _plot1 (2 , -> _start_point_x `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 17: plot1(start_point_x, start_point_y);
-"17
-[e ( _plot1 (2 , -> _start_point_x `uc -> _start_point_y `uc ]
-[; ;T1.c: 18: plot1(start_point_x, start_point_y+2);
-"18
-[e ( _plot1 (2 , -> _start_point_x `uc -> + _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 19: plot1(start_point_x, start_point_y+3);
-"19
-[e ( _plot1 (2 , -> _start_point_x `uc -> + _start_point_y -> 3 `i `uc ]
-[; ;T1.c: 20: }
-"20
 [e :UE 1238 ]
 }
-"23
-[v _error_icon `(v ~T0 @X0 1 ef2`i`i ]
+"18
+[v _write_c_aff `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;T1.c: 22: void error_icon(int start_point_x, int start_point_y)
-[; ;T1.c: 23: {
-[e :U _error_icon ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
+[; ;afficheur.c: 17: void write_c_aff(unsigned char command)
+[; ;afficheur.c: 18: {
+[e :U _write_c_aff ]
+[v _command `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;T1.c: 24: plot1(start_point_x, start_point_y-4);
+[; ;afficheur.c: 19: LATH=command;
+"19
+[e = _LATH _command ]
+[; ;afficheur.c: 20: TRISH=0x00;
+"20
+[e = _TRISH -> -> 0 `i `uc ]
+[; ;afficheur.c: 21: LATJbits.LATJ0=1;
+"21
+[e = . . _LATJbits 0 0 -> -> 1 `i `uc ]
+[; ;afficheur.c: 22: LATJbits.LATJ3=0;
+"22
+[e = . . _LATJbits 0 3 -> -> 0 `i `uc ]
+[; ;afficheur.c: 23: LATJbits.LATJ2=0;
+"23
+[e = . . _LATJbits 0 2 -> -> 0 `i `uc ]
+[; ;afficheur.c: 24: asm(" nop");
 "24
-[e ( _plot1 (2 , -> _start_point_x `uc -> - _start_point_y -> 4 `i `uc ]
-[; ;T1.c: 25: plot1(start_point_x-1, start_point_y-3);
+[; <"  nop ;# ">
+[; ;afficheur.c: 25: asm(" nop");
 "25
-[e ( _plot1 (2 , -> - _start_point_x -> 1 `i `uc -> - _start_point_y -> 3 `i `uc ]
-[; ;T1.c: 26: plot1(start_point_x+1, start_point_y-3);
+[; <"  nop ;# ">
+[; ;afficheur.c: 26: LATJbits.LATJ2=1;
 "26
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> - _start_point_y -> 3 `i `uc ]
-[; ;T1.c: 27: plot1(start_point_x-2, start_point_y-2);
+[e = . . _LATJbits 0 2 -> -> 1 `i `uc ]
+[; ;afficheur.c: 27: LATJbits.LATJ3=1;
 "27
-[e ( _plot1 (2 , -> - _start_point_x -> 2 `i `uc -> - _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 28: plot1(start_point_x+2, start_point_y-2);
+[e = . . _LATJbits 0 3 -> -> 1 `i `uc ]
+[; ;afficheur.c: 28: }
 "28
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> - _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 29: plot1(start_point_x-3, start_point_y-1);
-"29
-[e ( _plot1 (2 , -> - _start_point_x -> 3 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 30: plot1(start_point_x+3, start_point_y-1);
-"30
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 31: plot1(start_point_x-2, start_point_y);
-"31
-[e ( _plot1 (2 , -> - _start_point_x -> 2 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 32: plot1(start_point_x+2, start_point_y);
-"32
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 33: plot1(start_point_x-1, start_point_y+2);
-"33
-[e ( _plot1 (2 , -> - _start_point_x -> 1 `i `uc -> + _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 34: plot1(start_point_x+1, start_point_y+2);
-"34
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> + _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 35: plot1(start_point_x, start_point_y+3);
-"35
-[e ( _plot1 (2 , -> _start_point_x `uc -> + _start_point_y -> 3 `i `uc ]
-[; ;T1.c: 36: }
-"36
 [e :UE 1239 ]
 }
-"39
-[v _back_arrow_icon `(v ~T0 @X0 1 ef2`i`i ]
+"31
+[v _check_status_ok `(uc ~T0 @X0 1 ef ]
 {
-[; ;T1.c: 38: void back_arrow_icon(int start_point_x, int start_point_y)
-[; ;T1.c: 39: {
-[e :U _back_arrow_icon ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
+[; ;afficheur.c: 30: unsigned char check_status_ok()
+[; ;afficheur.c: 31: {
+[e :U _check_status_ok ]
 [f ]
-[; ;T1.c: 40: plot1(start_point_x, start_point_y);
+"32
+[v _res `uc ~T0 @X0 1 a ]
+[; ;afficheur.c: 32: unsigned char res;
+[; ;afficheur.c: 35: TRISH=0xFF;
+"35
+[e = _TRISH -> -> 255 `i `uc ]
+[; ;afficheur.c: 36: LATJbits.LATJ0=1;
+"36
+[e = . . _LATJbits 0 0 -> -> 1 `i `uc ]
+[; ;afficheur.c: 37: LATJbits.LATJ3=0;
+"37
+[e = . . _LATJbits 0 3 -> -> 0 `i `uc ]
+[; ;afficheur.c: 38: LATJbits.LATJ1=0;
+"38
+[e = . . _LATJbits 0 1 -> -> 0 `i `uc ]
+[; ;afficheur.c: 39: asm(" nop");
+"39
+[; <"  nop ;# ">
+[; ;afficheur.c: 40: asm(" nop");
 "40
-[e ( _plot1 (2 , -> _start_point_x `uc -> _start_point_y `uc ]
-[; ;T1.c: 41: plot1(start_point_x+1, start_point_y);
+[; <"  nop ;# ">
+[; ;afficheur.c: 41: asm(" nop");
 "41
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 42: plot1(start_point_x+2, start_point_y);
+[; <"  nop ;# ">
+[; ;afficheur.c: 42: res=PORTH;
 "42
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 43: plot1(start_point_x+3, start_point_y);
+[e = _res _PORTH ]
+[; ;afficheur.c: 43: LATJbits.LATJ1=1;
 "43
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 44: plot1(start_point_x+4, start_point_y);
+[e = . . _LATJbits 0 1 -> -> 1 `i `uc ]
+[; ;afficheur.c: 44: LATJbits.LATJ3=1;
 "44
-[e ( _plot1 (2 , -> + _start_point_x -> 4 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 45: plot1(start_point_x+5, start_point_y);
-"45
-[e ( _plot1 (2 , -> + _start_point_x -> 5 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 47: plot1(start_point_x+1, start_point_y+1);
+[e = . . _LATJbits 0 3 -> -> 1 `i `uc ]
+[; ;afficheur.c: 46: if ((res&0x03)==0x03)
+"46
+[e $ ! == & -> _res `i -> 3 `i -> 3 `i 1241  ]
+[; ;afficheur.c: 47: res=1;
 "47
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> + _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 48: plot1(start_point_x+2, start_point_y+1);
+[e = _res -> -> 1 `i `uc ]
+[e $U 1242  ]
 "48
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> + _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 49: plot1(start_point_x+3, start_point_y+1);
+[e :U 1241 ]
+[; ;afficheur.c: 48: else
+[; ;afficheur.c: 49: res=0;
 "49
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> + _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 50: plot1(start_point_x+4, start_point_y+1);
+[e = _res -> -> 0 `i `uc ]
+[e :U 1242 ]
+[; ;afficheur.c: 50: return res;
 "50
-[e ( _plot1 (2 , -> + _start_point_x -> 4 `i `uc -> + _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 52: plot1(start_point_x+2, start_point_y+2);
-"52
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> + _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 53: plot1(start_point_x+3, start_point_y+2);
-"53
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> + _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 54: }
-"54
+[e ) _res ]
+[e $UE 1240  ]
+[; ;afficheur.c: 51: }
+"51
 [e :UE 1240 ]
 }
+"54
+[v _wait_status_ok `(uc ~T0 @X0 1 ef ]
+{
+[; ;afficheur.c: 53: unsigned char wait_status_ok()
+[; ;afficheur.c: 54: {
+[e :U _wait_status_ok ]
+[f ]
+"55
+[v _err `uc ~T0 @X0 1 a ]
+[v _res `uc ~T0 @X0 1 a ]
+[v _status `uc ~T0 @X0 1 a ]
+[; ;afficheur.c: 55: unsigned char err,res,status;
+[; ;afficheur.c: 57: err=0;
 "57
-[v _front_arrow_icon `(v ~T0 @X0 1 ef2`i`i ]
-{
-[; ;T1.c: 56: void front_arrow_icon(int start_point_x, int start_point_y)
-[; ;T1.c: 57: {
-[e :U _front_arrow_icon ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
-[f ]
-[; ;T1.c: 58: plot1(start_point_x, start_point_y);
+[e = _err -> -> 0 `i `uc ]
+[; ;afficheur.c: 58: res=2;
 "58
-[e ( _plot1 (2 , -> _start_point_x `uc -> _start_point_y `uc ]
-[; ;T1.c: 59: plot1(start_point_x+1, start_point_y);
+[e = _res -> -> 2 `i `uc ]
+[; ;afficheur.c: 59: while (res==2)
 "59
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 60: plot1(start_point_x+2, start_point_y);
+[e $U 1244  ]
+[e :U 1245 ]
+[; ;afficheur.c: 60: {
 "60
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 61: plot1(start_point_x+3, start_point_y);
+{
+[; ;afficheur.c: 61: TRISH=0xFF;
 "61
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 62: plot1(start_point_x+4, start_point_y);
+[e = _TRISH -> -> 255 `i `uc ]
+[; ;afficheur.c: 62: LATJbits.LATJ0=1;
 "62
-[e ( _plot1 (2 , -> + _start_point_x -> 4 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 63: plot1(start_point_x+5, start_point_y);
+[e = . . _LATJbits 0 0 -> -> 1 `i `uc ]
+[; ;afficheur.c: 63: LATJbits.LATJ3=0;
 "63
-[e ( _plot1 (2 , -> + _start_point_x -> 5 `i `uc -> _start_point_y `uc ]
-[; ;T1.c: 65: plot1(start_point_x+1, start_point_y-1);
+[e = . . _LATJbits 0 3 -> -> 0 `i `uc ]
+[; ;afficheur.c: 64: LATJbits.LATJ1=0;
+"64
+[e = . . _LATJbits 0 1 -> -> 0 `i `uc ]
+[; ;afficheur.c: 65: asm(" nop");
 "65
-[e ( _plot1 (2 , -> + _start_point_x -> 1 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 66: plot1(start_point_x+2, start_point_y-1);
+[; <"  nop ;# ">
+[; ;afficheur.c: 66: status=PORTH;
 "66
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 67: plot1(start_point_x+3, start_point_y-1);
+[e = _status _PORTH ]
+[; ;afficheur.c: 67: LATJbits.LATJ1=1;
 "67
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 68: plot1(start_point_x+4, start_point_y-1);
+[e = . . _LATJbits 0 1 -> -> 1 `i `uc ]
+[; ;afficheur.c: 68: LATJbits.LATJ3=1;
 "68
-[e ( _plot1 (2 , -> + _start_point_x -> 4 `i `uc -> - _start_point_y -> 1 `i `uc ]
-[; ;T1.c: 70: plot1(start_point_x+2, start_point_y-2);
+[e = . . _LATJbits 0 3 -> -> 1 `i `uc ]
+[; ;afficheur.c: 70: status=(status&0x03);
 "70
-[e ( _plot1 (2 , -> + _start_point_x -> 2 `i `uc -> - _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 71: plot1(start_point_x+3, start_point_y-2);
+[e = _status -> & -> _status `i -> 3 `i `uc ]
+[; ;afficheur.c: 71: if (status!=0x03)
 "71
-[e ( _plot1 (2 , -> + _start_point_x -> 3 `i `uc -> - _start_point_y -> 2 `i `uc ]
-[; ;T1.c: 72: }
+[e $ ! != -> _status `i -> 3 `i 1247  ]
+[; ;afficheur.c: 72: {
 "72
-[e :UE 1241 ]
-}
+{
+[; ;afficheur.c: 73: err++;
+"73
+[e ++ _err -> -> 1 `i `uc ]
+[; ;afficheur.c: 74: delai_us_char(12);
+"74
+[e ( _delai_us_char (1 -> -> 12 `i `uc ]
+[; ;afficheur.c: 75: if (err>=250)
 "75
-[v _draw_box `(v ~T0 @X0 1 ef4`i`i`i`i ]
-{
-[; ;T1.c: 74: void draw_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
-[; ;T1.c: 75: {
-[e :U _draw_box ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
-[v _end_point_x `i ~T0 @X0 1 r3 ]
-[v _end_point_y `i ~T0 @X0 1 r4 ]
-[f ]
+[e $ ! >= -> _err `i -> 250 `i 1248  ]
+[; ;afficheur.c: 76: {
 "76
-[v _i `i ~T0 @X0 1 a ]
-[; ;T1.c: 76: int i=0;
-[e = _i -> 0 `i ]
+{
+[; ;afficheur.c: 77: (INTCONbits.GIE = 0);
 "77
-[v _j `i ~T0 @X0 1 a ]
-[; ;T1.c: 77: int j=0;
-[e = _j -> 0 `i ]
-[; ;T1.c: 79: for (i = start_point_x; i < end_point_x; i++ )
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+[; ;afficheur.c: 78: LATCbits.LATC2=0;LATCbits.LATC1=1;LATGbits.LATG0=1;
+"78
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+[e = . . _LATGbits 0 0 -> -> 1 `i `uc ]
+[; ;afficheur.c: 79: res=0;
 "79
-{
-[e = _i _start_point_x ]
-[e $U 1246  ]
+[e = _res -> -> 0 `i `uc ]
 "80
-[e :U 1243 ]
-[; ;T1.c: 80: {
-{
-[; ;T1.c: 81: for (j = start_point_y; j < end_point_y; j++ )
+}
+[e :U 1248 ]
 "81
-{
-[e = _j _start_point_y ]
-[e $U 1250  ]
+}
+[; ;afficheur.c: 80: }
+[; ;afficheur.c: 81: }
+[e $U 1249  ]
 "82
 [e :U 1247 ]
-[; ;T1.c: 82: {
-{
-[; ;T1.c: 83: plot1(i, j);
+[; ;afficheur.c: 82: else
+[; ;afficheur.c: 83: {
 "83
-[e ( _plot1 (2 , -> _i `uc -> _j `uc ]
+{
+[; ;afficheur.c: 84: res=1;
 "84
-}
-"81
-[e ++ _j -> 1 `i ]
-[e :U 1250 ]
-[e $ < _j _end_point_y 1247  ]
-[e :U 1248 ]
-"84
-}
+[e = _res -> -> 1 `i `uc ]
 "85
 }
-"79
-[e ++ _i -> 1 `i ]
-[e :U 1246 ]
-[e $ < _i _end_point_x 1243  ]
-[e :U 1244 ]
-"85
-}
-[; ;T1.c: 84: }
-[; ;T1.c: 85: }
-[; ;T1.c: 86: }
+[e :U 1249 ]
 "86
-[e :UE 1242 ]
 }
-"89
-[v _draw_empty_box `(v ~T0 @X0 1 ef4`i`i`i`i ]
-{
-[; ;T1.c: 88: void draw_empty_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
-[; ;T1.c: 89: {
-[e :U _draw_empty_box ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
-[v _end_point_x `i ~T0 @X0 1 r3 ]
-[v _end_point_y `i ~T0 @X0 1 r4 ]
-[f ]
-"90
-[v _i `i ~T0 @X0 1 a ]
-[; ;T1.c: 90: int i=0;
-[e = _i -> 0 `i ]
+[e :U 1244 ]
+"59
+[e $ == -> _res `i -> 2 `i 1245  ]
+[e :U 1246 ]
+[; ;afficheur.c: 85: }
+[; ;afficheur.c: 86: }
+[; ;afficheur.c: 87: return res;
+"87
+[e ) _res ]
+[e $UE 1243  ]
+[; ;afficheur.c: 88: }
+"88
+[e :UE 1243 ]
+}
 "91
-[v _j `i ~T0 @X0 1 a ]
-[; ;T1.c: 91: int j=0;
-[e = _j -> 0 `i ]
-[; ;T1.c: 93: for (i = start_point_x; i < end_point_x; i++ )
-"93
+[v _command `(uc ~T0 @X0 1 ef1`uc ]
 {
-[e = _i _start_point_x ]
-[e $U 1255  ]
+[; ;afficheur.c: 90: unsigned char command(unsigned char cmd)
+[; ;afficheur.c: 91: {
+[e :U _command ]
+[v _cmd `uc ~T0 @X0 1 r1 ]
+[f ]
+"92
+[v _res `uc ~T0 @X0 1 a ]
+[; ;afficheur.c: 92: unsigned char res;
+[; ;afficheur.c: 94: res=0;
 "94
-[e :U 1252 ]
-[; ;T1.c: 94: {
-{
-[; ;T1.c: 95: if(i==start_point_x || i==end_point_x-1)
-"95
-[e $ ! || == _i _start_point_x == _i - _end_point_x -> 1 `i 1256  ]
-[; ;T1.c: 96: {
+[e = _res -> -> 0 `i `uc ]
+[; ;afficheur.c: 96: if(wait_status_ok()==1)
 "96
-{
-[; ;T1.c: 97: for (j = start_point_y; j < end_point_y; j++ )
+[e $ ! == -> ( _wait_status_ok ..  `i -> 1 `i 1251  ]
+[; ;afficheur.c: 97: {
 "97
 {
-[e = _j _start_point_y ]
-[e $U 1260  ]
+[; ;afficheur.c: 98: delai_us_char(12);
 "98
-[e :U 1257 ]
-[; ;T1.c: 98: {
-{
-[; ;T1.c: 99: plot1(i, j);
+[e ( _delai_us_char (1 -> -> 12 `i `uc ]
+[; ;afficheur.c: 99: write_c_aff(cmd);
 "99
-[e ( _plot1 (2 , -> _i `uc -> _j `uc ]
+[e ( _write_c_aff (1 _cmd ]
+[; ;afficheur.c: 100: res=1;
 "100
-}
-"97
-[e ++ _j -> 1 `i ]
-[e :U 1260 ]
-[e $ < _j _end_point_y 1257  ]
-[e :U 1258 ]
-"100
-}
+[e = _res -> -> 1 `i `uc ]
 "101
 }
-[; ;T1.c: 100: }
-[; ;T1.c: 101: }
-[e $U 1261  ]
-"102
-[e :U 1256 ]
-[; ;T1.c: 102: else
-[; ;T1.c: 103: {
+[e :U 1251 ]
+[; ;afficheur.c: 101: }
+[; ;afficheur.c: 103: return res;
 "103
-{
-[; ;T1.c: 104: plot1(i, start_point_y);
+[e ) _res ]
+[e $UE 1250  ]
+[; ;afficheur.c: 104: }
 "104
-[e ( _plot1 (2 , -> _i `uc -> _start_point_y `uc ]
-[; ;T1.c: 105: plot1(i, end_point_y-1);
-"105
-[e ( _plot1 (2 , -> _i `uc -> - _end_point_y -> 1 `i `uc ]
-"106
+[e :UE 1250 ]
 }
-[e :U 1261 ]
 "107
-}
-"93
-[e ++ _i -> 1 `i ]
-[e :U 1255 ]
-[e $ < _i _end_point_x 1252  ]
-[e :U 1253 ]
-"107
-}
-[; ;T1.c: 106: }
-[; ;T1.c: 107: }
-[; ;T1.c: 108: }
+[v _d1command `(uc ~T0 @X0 1 ef2`uc`uc ]
+{
+[; ;afficheur.c: 106: unsigned char d1command(unsigned char d1, unsigned char cmd)
+[; ;afficheur.c: 107: {
+[e :U _d1command ]
+[v _d1 `uc ~T0 @X0 1 r1 ]
+[v _cmd `uc ~T0 @X0 1 r2 ]
+[f ]
 "108
-[e :UE 1251 ]
-}
-"111
-[v _clear_box `(v ~T0 @X0 1 ef4`i`i`i`i ]
-{
-[; ;T1.c: 110: void clear_box(int start_point_x, int start_point_y, int end_point_x, int end_point_y)
-[; ;T1.c: 111: {
-[e :U _clear_box ]
-[v _start_point_x `i ~T0 @X0 1 r1 ]
-[v _start_point_y `i ~T0 @X0 1 r2 ]
-[v _end_point_x `i ~T0 @X0 1 r3 ]
-[v _end_point_y `i ~T0 @X0 1 r4 ]
-[f ]
+[v _res `uc ~T0 @X0 1 a ]
+[; ;afficheur.c: 108: unsigned char res;
+[; ;afficheur.c: 110: res=0;
+"110
+[e = _res -> -> 0 `i `uc ]
+[; ;afficheur.c: 112: if (wait_status_ok()==1)
 "112
-[v _i `i ~T0 @X0 1 a ]
-[; ;T1.c: 112: int i=0;
-[e = _i -> 0 `i ]
+[e $ ! == -> ( _wait_status_ok ..  `i -> 1 `i 1253  ]
+[; ;afficheur.c: 113: {
 "113
-[v _j `i ~T0 @X0 1 a ]
-[; ;T1.c: 113: int j=0;
-[e = _j -> 0 `i ]
-[; ;T1.c: 115: for (i = start_point_x; i < end_point_x; i++ )
-"115
 {
-[e = _i _start_point_x ]
-[e $U 1266  ]
+[; ;afficheur.c: 114: delai_us_char(12);
+"114
+[e ( _delai_us_char (1 -> -> 12 `i `uc ]
+[; ;afficheur.c: 115: write_d_aff(d1);
+"115
+[e ( _write_d_aff (1 _d1 ]
+[; ;afficheur.c: 116: if (wait_status_ok()==1)
 "116
-[e :U 1263 ]
-[; ;T1.c: 116: {
-{
-[; ;T1.c: 117: for (j = start_point_y; j < end_point_y; j++ )
+[e $ ! == -> ( _wait_status_ok ..  `i -> 1 `i 1254  ]
+[; ;afficheur.c: 117: {
 "117
 {
-[e = _j _start_point_y ]
-[e $U 1270  ]
+[; ;afficheur.c: 118: delai_us_char(12);
 "118
-[e :U 1267 ]
-[; ;T1.c: 118: {
-{
-[; ;T1.c: 119: plot0(i, j);
+[e ( _delai_us_char (1 -> -> 12 `i `uc ]
+[; ;afficheur.c: 119: write_c_aff(cmd);
 "119
-[e ( _plot0 (2 , -> _i `uc -> _j `uc ]
-"120
-}
-"117
-[e ++ _j -> 1 `i ]
-[e :U 1270 ]
-[e $ < _j _end_point_y 1267  ]
-[e :U 1268 ]
-"120
-}
+[e ( _write_c_aff (1 _cmd ]
+[; ;afficheur.c: 121: res=1;
 "121
-}
-"115
-[e ++ _i -> 1 `i ]
-[e :U 1266 ]
-[e $ < _i _end_point_x 1263  ]
-[e :U 1264 ]
-"121
-}
-[; ;T1.c: 120: }
-[; ;T1.c: 121: }
-[; ;T1.c: 122: }
+[e = _res -> -> 1 `i `uc ]
 "122
-[e :UE 1262 ]
 }
+[e :U 1254 ]
+"124
+}
+[e :U 1253 ]
+[; ;afficheur.c: 122: }
+[; ;afficheur.c: 124: }
+[; ;afficheur.c: 125: return res;
 "125
-[v _initial_draw `(v ~T0 @X0 1 ef ]
-{
-[; ;T1.c: 124: void initial_draw()
-[; ;T1.c: 125: {
-[e :U _initial_draw ]
-[f ]
-[; ;T1.c: 126: goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
+[e ) _res ]
+[e $UE 1252  ]
+[; ;afficheur.c: 126: }
 "126
-[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 82 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 86 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 66 `ui `uc ]
-[; ;T1.c: 127: goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
-"127
-[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[; ;T1.c: 128: goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
-"128
-[e ( _goto_lico (2 , -> -> 15 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[; ;T1.c: 131: draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
-"131
-[e ( _draw_box (4 , , , _fork_start_x_pos _fork_start_y_pos + _fork_start_x_pos _fork_size + _fork_start_y_pos _fork_size ]
-[; ;T1.c: 132: current_fork_x=fork_start_x_pos;
+[e :UE 1252 ]
+}
+"129
+[v _d2command `(uc ~T0 @X0 1 ef3`uc`uc`uc ]
+{
+[; ;afficheur.c: 128: unsigned char d2command(unsigned char d1, unsigned char d2, unsigned char cmd)
+[; ;afficheur.c: 129: {
+[e :U _d2command ]
+[v _d1 `uc ~T0 @X0 1 r1 ]
+[v _d2 `uc ~T0 @X0 1 r2 ]
+[v _cmd `uc ~T0 @X0 1 r3 ]
+[f ]
+"130
+[v _res `uc ~T0 @X0 1 a ]
+[; ;afficheur.c: 130: unsigned char res;
+[; ;afficheur.c: 132: res=0;
 "132
-[e = _current_fork_x _fork_start_x_pos ]
-[; ;T1.c: 133: current_fork_y=fork_start_y_pos;
-"133
-[e = _current_fork_y _fork_start_y_pos ]
-[; ;T1.c: 134: draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
+[e = _res -> -> 0 `i `uc ]
+[; ;afficheur.c: 134: if (wait_status_ok()==1)
 "134
-[e ( _draw_empty_box (4 , , , - - _fork_start_x_pos _fork_stop -> 1 `i - - _fork_start_y_pos _fork_stop -> 1 `i + + + _fork_start_x_pos _fork_size _fork_stop -> 1 `i + + + _fork_start_y_pos _fork_size _fork_stop -> 1 `i ]
-[; ;T1.c: 137: alarm_icon(200, 20);
+[e $ ! == -> ( _wait_status_ok ..  `i -> 1 `i 1256  ]
+[; ;afficheur.c: 135: {
+"135
+{
+[; ;afficheur.c: 136: delai_us_char(12);
+"136
+[e ( _delai_us_char (1 -> -> 12 `i `uc ]
+[; ;afficheur.c: 137: write_d_aff(d1);
 "137
-[e ( _alarm_icon (2 , -> 200 `i -> 20 `i ]
-[; ;T1.c: 138: }
+[e ( _write_d_aff (1 _d1 ]
+[; ;afficheur.c: 138: if (wait_status_ok()==1)
 "138
-[e :UE 1271 ]
-}
+[e $ ! == -> ( _wait_status_ok ..  `i -> 1 `i 1257  ]
+[; ;afficheur.c: 139: {
+"139
+{
+[; ;afficheur.c: 140: delai_us_char(12);
+"140
+[e ( _delai_us_char (1 -> -> 12 `i `uc ]
+[; ;afficheur.c: 141: write_d_aff(d2);
 "141
-[v _blockVitesse `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;T1.c: 140: void blockVitesse(unsigned char vitesseCourante)
-[; ;T1.c: 141: {
-[e :U _blockVitesse ]
-[v _vitesseCourante `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;T1.c: 142: PORTEbits.RE0 = vitesseCourante;
+[e ( _write_d_aff (1 _d2 ]
+[; ;afficheur.c: 142: if (wait_status_ok()==1)
 "142
-[e = . . _PORTEbits 0 0 _vitesseCourante ]
-[; ;T1.c: 143: }
+[e $ ! == -> ( _wait_status_ok ..  `i -> 1 `i 1258  ]
+[; ;afficheur.c: 143: {
 "143
-[e :UE 1272 ]
-}
-"146
-[v _stopVitess `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;T1.c: 145: void stopVitess(unsigned char vitesseCourante)
-[; ;T1.c: 146: {
-[e :U _stopVitess ]
-[v _vitesseCourante `uc ~T0 @X0 1 r1 ]
-[f ]
+[; ;afficheur.c: 144: delai_us_char(12);
+"144
+[e ( _delai_us_char (1 -> -> 12 `i `uc ]
+[; ;afficheur.c: 145: write_c_aff(cmd);
+"145
+[e ( _write_c_aff (1 _cmd ]
+[; ;afficheur.c: 147: res=1;
 "147
-[v _cpt `i ~T0 @X0 1 a ]
+[e = _res -> -> 1 `i `uc ]
 "148
-[v _newVitesse `uc ~T0 @X0 1 a ]
-[; ;T1.c: 147: int cpt;
-[; ;T1.c: 148: char newVitesse;
-[; ;T1.c: 150: while (vitesseCourante != 0)
+}
+[e :U 1258 ]
+"149
+}
+[e :U 1257 ]
 "150
-[e $U 1274  ]
-[e :U 1275 ]
-[; ;T1.c: 151: {
+}
+[e :U 1256 ]
+[; ;afficheur.c: 148: }
+[; ;afficheur.c: 149: }
+[; ;afficheur.c: 150: }
+[; ;afficheur.c: 151: return res;
 "151
-{
-[; ;T1.c: 152: cpt ++;
+[e ) _res ]
+[e $UE 1255  ]
+[; ;afficheur.c: 152: }
 "152
-[e ++ _cpt -> 1 `i ]
-[; ;T1.c: 153: if ((cpt %20)==1)
-"153
-[e $ ! == % _cpt -> 20 `i -> 1 `i 1277  ]
-[; ;T1.c: 154: {
-"154
-{
-[; ;T1.c: 155: vitesseCourante --;
+[e :UE 1255 ]
+}
 "155
-[e -- _vitesseCourante -> -> 1 `i `uc ]
-[; ;T1.c: 156: newVitesse = setBit(newVitesse,vitesseCourante);
-"156
-[e = _newVitesse ( _setBit (2 , _newVitesse -> _vitesseCourante `i ]
-[; ;T1.c: 157: goto_lico(5,0);
-"157
-[e ( _goto_lico (2 , -> -> 5 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 158: draw_string("Vitesse:");
-"158
-[e ( _draw_string (1 -> :s 1C `*uc ]
-[; ;T1.c: 160: if (PORTEbits.RE0==0)
-"160
-[e $ ! == -> . . _PORTEbits 0 0 `i -> 0 `i 1278  ]
-[; ;T1.c: 161: vitesse++;
-"161
-[e ++ _vitesse -> -> 1 `i `uc ]
-[e :U 1278 ]
-[; ;T1.c: 162: if (PORTEbits.RE1==0)
-"162
-[e $ ! == -> . . _PORTEbits 0 1 `i -> 0 `i 1279  ]
-[; ;T1.c: 163: vitesse--;
-"163
-[e -- _vitesse -> -> 1 `i `uc ]
-[e :U 1279 ]
-[; ;T1.c: 164: draw_hex8(vitesse);
-"164
-[e ( _draw_hex8 (1 _vitesse ]
-"167
-}
-[e :U 1277 ]
-"168
-}
-[e :U 1274 ]
-"150
-[e $ != -> _vitesseCourante `i -> 0 `i 1275  ]
-[e :U 1276 ]
-[; ;T1.c: 167: }
-[; ;T1.c: 168: }
-[; ;T1.c: 169: }
-"169
-[e :UE 1273 ]
-}
-"172
-[v _tache1 `(v ~T0 @X0 1 ef ]
+[v _delai_us_char `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;T1.c: 171: void tache1()
-[; ;T1.c: 172: {
-[e :U _tache1 ]
+[; ;afficheur.c: 154: void delai_us_char(unsigned char ucdelai)
+[; ;afficheur.c: 155: {
+[e :U _delai_us_char ]
+[v _ucdelai `uc ~T0 @X0 1 r1 ]
 [f ]
+[; ;afficheur.c: 157: while (ucdelai>0)
+"157
+[e $U 1260  ]
+[e :U 1261 ]
+[; ;afficheur.c: 158: {
+"158
+{
+[; ;afficheur.c: 159: asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");asm(" nop");
+"159
+[; <"  nop ;# ">
+[; <"  nop ;# ">
+[; <"  nop ;# ">
+[; <"  nop ;# ">
+[; <"  nop ;# ">
+[; <"  nop ;# ">
+[; <"  nop ;# ">
+[; <"  nop ;# ">
+[; <"  nop ;# ">
+[; <"  nop ;# ">
+[; ;afficheur.c: 160: ucdelai--;
+"160
+[e -- _ucdelai -> -> 1 `i `uc ]
+"161
+}
+[e :U 1260 ]
+"157
+[e $ > -> _ucdelai `i -> 0 `i 1261  ]
+[e :U 1262 ]
+[; ;afficheur.c: 161: }
+[; ;afficheur.c: 162: }
+"162
+[e :UE 1259 ]
+}
+"165
+[v _initialisation_afficheur `(v ~T0 @X0 1 ef ]
+{
+[; ;afficheur.c: 164: void initialisation_afficheur()
+[; ;afficheur.c: 165: {
+[e :U _initialisation_afficheur ]
+[f ]
+"167
+[v _error_count `uc ~T0 @X0 1 a ]
+[; ;afficheur.c: 167: unsigned char error_count;
+[; ;afficheur.c: 169: error_count=0;
+"169
+[e = _error_count -> -> 0 `i `uc ]
+[; ;afficheur.c: 172: LATH=0;
+"172
+[e = _LATH -> -> 0 `i `uc ]
+[; ;afficheur.c: 173: LATJ=0x1F;
 "173
-[v _i `uc ~T0 @X0 1 a ]
-"175
-[v _alarmeEnCours `ui ~T0 @X0 1 a ]
-[; ;T1.c: 173: unsigned char i;
-[; ;T1.c: 175: unsigned int alarmeEnCours = 0;
-[e = _alarmeEnCours -> -> 0 `i `ui ]
-[; ;T1.c: 177: (INTCONbits.GIE = 0);
+[e = _LATJ -> -> 31 `i `uc ]
+[; ;afficheur.c: 176: TRISH=0;
+"176
+[e = _TRISH -> -> 0 `i `uc ]
+[; ;afficheur.c: 177: TRISJ=0;
 "177
-[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-[; ;T1.c: 178: initialisation_des_ports();
-"178
-[e ( _initialisation_des_ports ..  ]
-[; ;T1.c: 179: initialisation_afficheur();
-"179
-[e ( _initialisation_afficheur ..  ]
-[; ;T1.c: 180: clear_text();
+[e = _TRISJ -> -> 0 `i `uc ]
+[; ;afficheur.c: 180: LATJbits.LATJ5=0;
 "180
-[e ( _clear_text ..  ]
-[; ;T1.c: 181: clear_graphics();
+[e = . . _LATJbits 0 5 -> -> 0 `i `uc ]
+[; ;afficheur.c: 181: LATJbits.LATJ6=1;
 "181
-[e ( _clear_graphics ..  ]
-[; ;T1.c: 182: init_rxtx();
-"182
-[e ( _init_rxtx ..  ]
-[; ;T1.c: 183: Init(2);
-"183
-[e ( _Init (1 -> -> 2 `i `uc ]
-[; ;T1.c: 184: RXTX_libre=1;
+[e = . . _LATJbits 0 6 -> -> 1 `i `uc ]
+[; ;afficheur.c: 184: LATJbits.LATJ4=0;
 "184
-[e = _RXTX_libre -> -> 1 `i `uc ]
-[; ;T1.c: 185: TXREG1='R';
+[e = . . _LATJbits 0 4 -> -> 0 `i `uc ]
+[; ;afficheur.c: 185: delai_us_char(4);
 "185
-[e = _TXREG1 -> -> 82 `ui `uc ]
-[; ;T1.c: 186: (INTCONbits.GIE = 1);
+[e ( _delai_us_char (1 -> -> 4 `i `uc ]
+[; ;afficheur.c: 186: LATJbits.LATJ4=1;
 "186
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;T1.c: 188: LATCbits.LATC2=0;LATCbits.LATC1=0;LATGbits.LATG0=0;
-"188
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
-[e = . . _LATGbits 0 0 -> -> 0 `i `uc ]
-[; ;T1.c: 190: vitesse=0;
+[e = . . _LATJbits 0 4 -> -> 1 `i `uc ]
+[; ;afficheur.c: 190: delai_us_char(12);
 "190
-[e = _vitesse -> -> 0 `i `uc ]
-[; ;T1.c: 191: batterie=120;
+[e ( _delai_us_char (1 -> -> 12 `i `uc ]
+[; ;afficheur.c: 191: while(check_status_ok()==00)
 "191
-[e = _batterie -> -> 120 `i `uc ]
-[; ;T1.c: 192: n_octet_badge=0;
+[e $U 1264  ]
+[e :U 1265 ]
+[; ;afficheur.c: 192: {
 "192
-[e = _n_octet_badge -> -> 0 `i `uc ]
-[; ;T1.c: 194: goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
+{
+[; ;afficheur.c: 193: error_count++;
+"193
+[e ++ _error_count -> -> 1 `i `uc ]
+[; ;afficheur.c: 194: delai_us_char(12);
 "194
-[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 82 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 86 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 66 `ui `uc ]
-[; ;T1.c: 195: goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
+[e ( _delai_us_char (1 -> -> 12 `i `uc ]
+[; ;afficheur.c: 195: if (error_count>200)
 "195
-[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[; ;T1.c: 196: goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
+[e $ ! > -> _error_count `i -> 200 `i 1267  ]
+[; ;afficheur.c: 196: {
 "196
-[e ( _goto_lico (2 , -> -> 15 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[; ;T1.c: 199: draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
+{
+[; ;afficheur.c: 197: LATCbits.LATC1=1;LATGbits.LATG0=1;LATCbits.LATC2=0;
+"197
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+[e = . . _LATGbits 0 0 -> -> 1 `i `uc ]
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+[; ;afficheur.c: 198: (INTCONbits.GIE = 0);
+"198
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+[; ;afficheur.c: 199: while(1);
 "199
-[e ( _draw_box (4 , , , _fork_start_x_pos _fork_start_y_pos + _fork_start_x_pos _fork_size + _fork_start_y_pos _fork_size ]
-[; ;T1.c: 200: current_fork_x=fork_start_x_pos;
+[e :U 1269 ]
+[e :U 1268 ]
+[e $U 1269  ]
+[e :U 1270 ]
+[; ;afficheur.c: 200: error_count=0;
 "200
-[e = _current_fork_x _fork_start_x_pos ]
-[; ;T1.c: 201: current_fork_y=fork_start_y_pos;
+[e = _error_count -> -> 0 `i `uc ]
 "201
-[e = _current_fork_y _fork_start_y_pos ]
-[; ;T1.c: 202: draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
+}
+[e :U 1267 ]
 "202
-[e ( _draw_empty_box (4 , , , - - _fork_start_x_pos _fork_stop -> 1 `i - - _fork_start_y_pos _fork_stop -> 1 `i + + + _fork_start_x_pos _fork_size _fork_stop -> 1 `i + + + _fork_start_y_pos _fork_size _fork_stop -> 1 `i ]
-[; ;T1.c: 204: TP_appui=0;
-"204
-[e = _TP_appui -> -> 0 `i `uc ]
-[; ;T1.c: 205: alarme_pannel=0;
+}
+[e :U 1264 ]
+"191
+[e $ == -> ( _check_status_ok ..  `i -> 0 `i 1265  ]
+[e :U 1266 ]
+[; ;afficheur.c: 201: }
+[; ;afficheur.c: 202: }
+[; ;afficheur.c: 205: d2command(39,15,0x21);
 "205
-[e = _alarme_pannel -> -> 0 `i `uc ]
+[e ( _d2command (3 , , -> -> 39 `i `uc -> -> 15 `i `uc -> -> 33 `i `uc ]
+[; ;afficheur.c: 206: d2command(0,0,0x22);
+"206
+[e ( _d2command (3 , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 34 `i `uc ]
+[; ;afficheur.c: 207: d2command(0,0,0x24);
 "207
-[v _flash_interval_alarm `i ~T0 @X0 1 a ]
-[; ;T1.c: 207: int flash_interval_alarm=0;
-[e = _flash_interval_alarm -> 0 `i ]
-"208
-[v _flash_interval_error `i ~T0 @X0 1 a ]
-[; ;T1.c: 208: int flash_interval_error=0;
-[e = _flash_interval_error -> 0 `i ]
-[; ;T1.c: 210: while(1)
+[e ( _d2command (3 , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 36 `i `uc ]
+[; ;afficheur.c: 210: d2command(0,0x7B,0x40);
 "210
-[e :U 1282 ]
-[; ;T1.c: 211: {
+[e ( _d2command (3 , , -> -> 0 `i `uc -> -> 123 `i `uc -> -> 64 `i `uc ]
+[; ;afficheur.c: 211: d2command(40,0,0x41);
 "211
-{
-[; ;T1.c: 214: if (alarme_active != 0x00)
-"214
-[e $ ! != -> _alarme_active `i -> 0 `i 1284  ]
-[; ;T1.c: 215: {
-"215
-{
-[; ;T1.c: 216: flash_interval_alarm++;
+[e ( _d2command (3 , , -> -> 40 `i `uc -> -> 0 `i `uc -> -> 65 `i `uc ]
+[; ;afficheur.c: 212: d2command(0x00,0x80,0x42);
+"212
+[e ( _d2command (3 , , -> -> 0 `i `uc -> -> 128 `i `uc -> -> 66 `i `uc ]
+[; ;afficheur.c: 213: d2command(40,0,0x43);
+"213
+[e ( _d2command (3 , , -> -> 40 `i `uc -> -> 0 `i `uc -> -> 67 `i `uc ]
+[; ;afficheur.c: 216: command(0x80);
 "216
-[e ++ _flash_interval_alarm -> 1 `i ]
-[; ;T1.c: 217: if (flash_interval_alarm == 10)
-"217
-[e $ ! == _flash_interval_alarm -> 10 `i 1285  ]
-[; ;T1.c: 218: {
-"218
-{
-[; ;T1.c: 219: draw_empty_box(190, 10, 210, 30);
+[e ( _command (1 -> -> 128 `i `uc ]
+[; ;afficheur.c: 219: command(0x9C);
 "219
-[e ( _draw_empty_box (4 , , , -> 190 `i -> 10 `i -> 210 `i -> 30 `i ]
-[; ;T1.c: 220: alarm_icon(200, 20);
-"220
-[e ( _alarm_icon (2 , -> 200 `i -> 20 `i ]
-"221
-}
-[e :U 1285 ]
-[; ;T1.c: 221: }
-[; ;T1.c: 222: if (flash_interval_alarm == 20)
+[e ( _command (1 -> -> 156 `i `uc ]
+[; ;afficheur.c: 222: command(0xA0);
 "222
-[e $ ! == _flash_interval_alarm -> 20 `i 1286  ]
-[; ;T1.c: 223: {
-"223
-{
-[; ;T1.c: 224: clear_box(190, 10, 210, 30);
-"224
-[e ( _clear_box (4 , , , -> 190 `i -> 10 `i -> 210 `i -> 30 `i ]
-[; ;T1.c: 225: flash_interval_alarm=0;
+[e ( _command (1 -> -> 160 `i `uc ]
+[; ;afficheur.c: 225: d1command(0x02,0x70);
 "225
-[e = _flash_interval_alarm -> 0 `i ]
+[e ( _d1command (2 , -> -> 2 `i `uc -> -> 112 `i `uc ]
+[; ;afficheur.c: 226: }
 "226
+[e :UE 1263 ]
 }
-[e :U 1286 ]
-"227
-}
-[e :U 1284 ]
-[; ;T1.c: 226: }
-[; ;T1.c: 227: }
-[; ;T1.c: 230: if (error_active != 0x00)
+"229
+[v _draw_char `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;afficheur.c: 228: void draw_char(unsigned char dccar)
+[; ;afficheur.c: 229: {
+[e :U _draw_char ]
+[v _dccar `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;afficheur.c: 230: if (dccar<32)
 "230
-[e $ ! != -> _error_active `i -> 0 `i 1287  ]
-[; ;T1.c: 231: {
+[e $ ! < -> _dccar `i -> 32 `i 1272  ]
+[; ;afficheur.c: 231: {
 "231
 {
-[; ;T1.c: 232: flash_interval_error++;
+[; ;afficheur.c: 232: dccar=0x3F;
 "232
-[e ++ _flash_interval_error -> 1 `i ]
-[; ;T1.c: 233: if (flash_interval_error == 10)
+[e = _dccar -> -> 63 `i `uc ]
 "233
-[e $ ! == _flash_interval_error -> 10 `i 1288  ]
-[; ;T1.c: 234: {
+}
+[e :U 1272 ]
+[; ;afficheur.c: 233: }
+[; ;afficheur.c: 234: if (dccar>0x9F)
 "234
-{
-[; ;T1.c: 235: draw_empty_box(190, 35, 210, 55);
+[e $ ! > -> _dccar `i -> 159 `i 1273  ]
+[; ;afficheur.c: 235: {
 "235
-[e ( _draw_empty_box (4 , , , -> 190 `i -> 35 `i -> 210 `i -> 55 `i ]
-[; ;T1.c: 236: error_icon(200, 45);
+{
+[; ;afficheur.c: 236: dccar=0x3F;
 "236
-[e ( _error_icon (2 , -> 200 `i -> 45 `i ]
+[e = _dccar -> -> 63 `i `uc ]
 "237
 }
-[e :U 1288 ]
-[; ;T1.c: 237: }
-[; ;T1.c: 238: if (flash_interval_error == 20)
+[e :U 1273 ]
+[; ;afficheur.c: 237: }
+[; ;afficheur.c: 238: dccar=dccar-32;
 "238
-[e $ ! == _flash_interval_error -> 20 `i 1289  ]
-[; ;T1.c: 239: {
+[e = _dccar -> - -> _dccar `i -> 32 `i `uc ]
+[; ;afficheur.c: 239: while(d1command(dccar,0xC0)==0) asm(" nop");
 "239
-{
-[; ;T1.c: 240: clear_box(190, 35, 210, 55);
+[e $U 1274  ]
+[e :U 1275 ]
+[; <"  nop ;# ">
+[e :U 1274 ]
+[e $ == -> ( _d1command (2 , _dccar -> -> 192 `i `uc `i -> 0 `i 1275  ]
+[e :U 1276 ]
+[; ;afficheur.c: 240: }
 "240
-[e ( _clear_box (4 , , , -> 190 `i -> 35 `i -> 210 `i -> 55 `i ]
-[; ;T1.c: 241: flash_interval_error=0;
-"241
-[e = _flash_interval_error -> 0 `i ]
-"242
+[e :UE 1271 ]
 }
-[e :U 1289 ]
-"243
+"244
+[v _draw_string `(v ~T0 @X0 1 ef1`*uc ]
+{
+[; ;afficheur.c: 243: void draw_string(unsigned char * tableau)
+[; ;afficheur.c: 244: {
+[e :U _draw_string ]
+[v _tableau `*uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;afficheur.c: 245: while(tableau[0]!=0)
+"245
+[e $U 1278  ]
+[e :U 1279 ]
+[; ;afficheur.c: 246: {
+"246
+{
+[; ;afficheur.c: 247: while(d1command(tableau[0]-32,0xC0)==0)
+"247
+[e $U 1281  ]
+[e :U 1282 ]
+[; ;afficheur.c: 248: asm(" nop");
+"248
+[; <"  nop ;# ">
+[e :U 1281 ]
+"247
+[e $ == -> ( _d1command (2 , -> - -> *U + _tableau * -> -> 0 `i `x -> -> # *U _tableau `i `x `i -> 32 `i `uc -> -> 192 `i `uc `i -> 0 `i 1282  ]
+[e :U 1283 ]
+[; ;afficheur.c: 249: tableau++;
+"249
+[e ++ _tableau * -> -> 1 `i `x -> -> # *U _tableau `i `x ]
+"250
 }
-[e :U 1287 ]
-[; ;T1.c: 242: }
-[; ;T1.c: 243: }
-[; ;T1.c: 259: goto_lico(0,0);
+[e :U 1278 ]
+"245
+[e $ != -> *U + _tableau * -> -> 0 `i `x -> -> # *U _tableau `i `x `i -> 0 `i 1279  ]
+[e :U 1280 ]
+[; ;afficheur.c: 250: }
+[; ;afficheur.c: 251: }
+"251
+[e :UE 1277 ]
+}
+"254
+[v _draw_hex8 `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;afficheur.c: 253: void draw_hex8(unsigned char octet)
+[; ;afficheur.c: 254: {
+[e :U _draw_hex8 ]
+[v _octet `uc ~T0 @X0 1 r1 ]
+[f ]
+"255
+[v _c `uc ~T0 @X0 1 a ]
+[; ;afficheur.c: 255: unsigned char c;
+[; ;afficheur.c: 257: c=(octet>>4);
+"257
+[e = _c -> >> -> _octet `i -> 4 `i `uc ]
+[; ;afficheur.c: 258: if (c>9)
+"258
+[e $ ! > -> _c `i -> 9 `i 1285  ]
+[; ;afficheur.c: 259: c=c+0x17;
 "259
-[e ( _goto_lico (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 260: draw_string("Marche:");
+[e = _c -> + -> _c `i -> 23 `i `uc ]
+[e $U 1286  ]
 "260
-[e ( _draw_string (1 -> :s 2C `*uc ]
-[; ;T1.c: 261: if (PORTBbits.RB0==0 && error_active==0)
+[e :U 1285 ]
+[; ;afficheur.c: 260: else
+[; ;afficheur.c: 261: c=c+0x10;
 "261
-[e $ ! && == -> . . _PORTBbits 0 0 `i -> 0 `i == -> _error_active `i -> 0 `i 1290  ]
-[; ;T1.c: 262: {
+[e = _c -> + -> _c `i -> 16 `i `uc ]
+[e :U 1286 ]
+[; ;afficheur.c: 262: while(d1command(c,0xC0)==0)
 "262
-{
-[; ;T1.c: 263: draw_string("AV");
+[e $U 1287  ]
+[e :U 1288 ]
+[; ;afficheur.c: 263: asm(" nop");
 "263
-[e ( _draw_string (1 -> :s 3C `*uc ]
-[; ;T1.c: 264: clear_box(120, 67, 130, 73);
-"264
-[e ( _clear_box (4 , , , -> 120 `i -> 67 `i -> 130 `i -> 73 `i ]
-[; ;T1.c: 265: front_arrow_icon(120, 70);
+[; <"  nop ;# ">
+[e :U 1287 ]
+"262
+[e $ == -> ( _d1command (2 , _c -> -> 192 `i `uc `i -> 0 `i 1288  ]
+[e :U 1289 ]
+[; ;afficheur.c: 265: c=(octet&0x0F);
 "265
-[e ( _front_arrow_icon (2 , -> 120 `i -> 70 `i ]
+[e = _c -> & -> _octet `i -> 15 `i `uc ]
+[; ;afficheur.c: 266: if (c>9)
 "266
-}
-[; ;T1.c: 266: }
-[e $U 1291  ]
+[e $ ! > -> _c `i -> 9 `i 1290  ]
+[; ;afficheur.c: 267: c=c+0x17;
 "267
-[e :U 1290 ]
-[; ;T1.c: 267: else
-[; ;T1.c: 268: {
+[e = _c -> + -> _c `i -> 23 `i `uc ]
+[e $U 1291  ]
 "268
-{
-[; ;T1.c: 269: if (PORTBbits.RB1==0 && error_active==0)
+[e :U 1290 ]
+[; ;afficheur.c: 268: else
+[; ;afficheur.c: 269: c=c+0x10;
 "269
-[e $ ! && == -> . . _PORTBbits 0 1 `i -> 0 `i == -> _error_active `i -> 0 `i 1292  ]
-[; ;T1.c: 270: {
-"270
-{
-[; ;T1.c: 271: draw_string("AR");
-"271
-[e ( _draw_string (1 -> :s 4C `*uc ]
-[; ;T1.c: 272: clear_box(120, 67, 130, 73);
-"272
-[e ( _clear_box (4 , , , -> 120 `i -> 67 `i -> 130 `i -> 73 `i ]
-[; ;T1.c: 273: back_arrow_icon(120, 70);
-"273
-[e ( _back_arrow_icon (2 , -> 120 `i -> 70 `i ]
-"274
-}
-[; ;T1.c: 274: }
-[e $U 1293  ]
-"275
-[e :U 1292 ]
-[; ;T1.c: 275: else
-[; ;T1.c: 276: {
-"276
-{
-[; ;T1.c: 277: draw_string("N ");
-"277
-[e ( _draw_string (1 -> :s 5C `*uc ]
-[; ;T1.c: 278: clear_box(120, 67, 130, 73);
-"278
-[e ( _clear_box (4 , , , -> 120 `i -> 67 `i -> 130 `i -> 73 `i ]
-"279
-}
-[e :U 1293 ]
-"280
-}
+[e = _c -> + -> _c `i -> 16 `i `uc ]
 [e :U 1291 ]
-[; ;T1.c: 279: }
-[; ;T1.c: 280: }
-[; ;T1.c: 282: goto_lico(1,0);
-"282
-[e ( _goto_lico (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 283: draw_string("Siege:");
-"283
-[e ( _draw_string (1 -> :s 6C `*uc ]
-[; ;T1.c: 284: if (PORTBbits.RB2==0)
-"284
-[e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 1294  ]
-[; ;T1.c: 285: {draw_char('1');}
-"285
-{
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-}
-[e $U 1295  ]
-"286
+[; ;afficheur.c: 270: while(d1command(c,0xC0)==0)
+"270
+[e $U 1292  ]
+[e :U 1293 ]
+[; ;afficheur.c: 271: asm(" nop");
+"271
+[; <"  nop ;# ">
+[e :U 1292 ]
+"270
+[e $ == -> ( _d1command (2 , _c -> -> 192 `i `uc `i -> 0 `i 1293  ]
 [e :U 1294 ]
-[; ;T1.c: 286: else
-[; ;T1.c: 287: {draw_char('0');}
-"287
-{
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
+[; ;afficheur.c: 273: }
+"273
+[e :UE 1284 ]
 }
-[e :U 1295 ]
-[; ;T1.c: 289: goto_lico(2,0);
-"289
-[e ( _goto_lico (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 290: draw_string("Temp. Eau:");
-"290
-[e ( _draw_string (1 -> :s 7C `*uc ]
-[; ;T1.c: 291: draw_hex8(tempeau);
-"291
-[e ( _draw_hex8 (1 _tempeau ]
-[; ;T1.c: 293: goto_lico(3,0);
-"293
-[e ( _goto_lico (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 294: draw_string("Temp. Huile:");
-"294
-[e ( _draw_string (1 -> :s 8C `*uc ]
-[; ;T1.c: 295: draw_hex8(temphuile);
-"295
-[e ( _draw_hex8 (1 _temphuile ]
-[; ;T1.c: 297: goto_lico(4,0);
-"297
-[e ( _goto_lico (2 , -> -> 4 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 298: draw_string("Choc:");
-"298
-[e ( _draw_string (1 -> :s 9C `*uc ]
-[; ;T1.c: 299: if (PORTBbits.RB3==0)
-"299
-[e $ ! == -> . . _PORTBbits 0 3 `i -> 0 `i 1296  ]
-[; ;T1.c: 300: draw_char('1');
-"300
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e $U 1297  ]
-"301
+"276
+[v _goto_lico `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[; ;afficheur.c: 275: void goto_lico(unsigned char ligne, unsigned char colonne)
+[; ;afficheur.c: 276: {
+[e :U _goto_lico ]
+[v _ligne `uc ~T0 @X0 1 r1 ]
+[v _colonne `uc ~T0 @X0 1 r2 ]
+[f ]
+"277
+[v _adr `ui ~T0 @X0 1 a ]
+[; ;afficheur.c: 277: unsigned int adr;
+[; ;afficheur.c: 279: adr=0x7B00;
+"279
+[e = _adr -> -> 31488 `i `ui ]
+[; ;afficheur.c: 280: if (ligne>15) ligne=0;
+"280
+[e $ ! > -> _ligne `i -> 15 `i 1296  ]
+[e = _ligne -> -> 0 `i `uc ]
 [e :U 1296 ]
-[; ;T1.c: 301: else
-[; ;T1.c: 302: draw_char('0');
-"302
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
+[; ;afficheur.c: 281: if (colonne>39) colonne=0;
+"281
+[e $ ! > -> _colonne `i -> 39 `i 1297  ]
+[e = _colonne -> -> 0 `i `uc ]
 [e :U 1297 ]
-[; ;T1.c: 304: goto_lico(5,0);
-"304
-[e ( _goto_lico (2 , -> -> 5 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 305: draw_string("Vitesse:");
-"305
-[e ( _draw_string (1 -> :s 10C `*uc ]
-[; ;T1.c: 306: draw_hex8(vitesse);
-"306
-[e ( _draw_hex8 (1 _vitesse ]
-[; ;T1.c: 307: goto_lico(10,15);
-"307
-[e ( _goto_lico (2 , -> -> 10 `i `uc -> -> 15 `i `uc ]
-[; ;T1.c: 308: draw_string("Vitesse reel:");
-"308
-[e ( _draw_string (1 -> :s 11C `*uc ]
-[; ;T1.c: 309: draw_hex8(vitesseReel);
-"309
-[e ( _draw_hex8 (1 _vitesseReel ]
-[; ;T1.c: 311: goto_lico(6,0);
-"311
-[e ( _goto_lico (2 , -> -> 6 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 312: draw_string("Batterie:");
-"312
-[e ( _draw_string (1 -> :s 12C `*uc ]
-[; ;T1.c: 313: draw_hex8(batterie);
-"313
-[e ( _draw_hex8 (1 _batterie ]
-[; ;T1.c: 314: goto_lico(11,15);
-"314
-[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 15 `i `uc ]
-[; ;T1.c: 315: draw_string("Batterie reel:");
-"315
-[e ( _draw_string (1 -> :s 13C `*uc ]
-[; ;T1.c: 316: draw_hex8(batterieReel);
-"316
-[e ( _draw_hex8 (1 _batterieReel ]
-[; ;T1.c: 317: goto_lico(12,15);
-"317
-[e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 15 `i `uc ]
-[; ;T1.c: 318: draw_string("E(c):");
-"318
-[e ( _draw_string (1 -> :s 14C `*uc ]
-[; ;T1.c: 319: draw_hex8(eauReel);
-"319
-[e ( _draw_hex8 (1 _eauReel ]
-[; ;T1.c: 320: goto_lico(12,25);
-"320
-[e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 25 `i `uc ]
-[; ;T1.c: 321: draw_string("H(c):");
-"321
-[e ( _draw_string (1 -> :s 15C `*uc ]
-[; ;T1.c: 322: draw_hex8(huileReel);
-"322
-[e ( _draw_hex8 (1 _huileReel ]
-[; ;T1.c: 324: goto_lico(7,0);
-"324
-[e ( _goto_lico (2 , -> -> 7 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 325: if (PORTEbits.RE4==0)
-"325
-[e $ ! == -> . . _PORTEbits 0 4 `i -> 0 `i 1298  ]
-[; ;T1.c: 326: draw_string("((!))");
-"326
-[e ( _draw_string (1 -> :s 16C `*uc ]
-[e $U 1299  ]
-"327
-[e :U 1298 ]
-[; ;T1.c: 327: else
-[; ;T1.c: 328: draw_string("     ");
-"328
-[e ( _draw_string (1 -> :s 17C `*uc ]
+[; ;afficheur.c: 282: adr=adr+40*ligne+colonne;
+"282
+[e = _adr + + _adr -> * -> 40 `i -> _ligne `i `ui -> _colonne `ui ]
+[; ;afficheur.c: 283: while(d2command((unsigned char)(adr&0x00FF),(unsigned char)(adr>>8),0x24)==0)
+"283
+[e $U 1298  ]
 [e :U 1299 ]
-[; ;T1.c: 330: goto_lico(8,0);
-"330
-[e ( _goto_lico (2 , -> -> 8 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 331: draw_string("Badge:");
-"331
-[e ( _draw_string (1 -> :s 18C `*uc ]
-[; ;T1.c: 332: if (n_octet_badge==0)
-"332
-[e $ ! == -> _n_octet_badge `i -> 0 `i 1300  ]
-[; ;T1.c: 333: draw_string(" AUCUN              ");
-"333
-[e ( _draw_string (1 -> :s 19C `*uc ]
-[e $U 1301  ]
-"334
+[; ;afficheur.c: 284: asm(" nop");
+"284
+[; <"  nop ;# ">
+[e :U 1298 ]
+"283
+[e $ == -> ( _d2command (3 , , -> & _adr -> -> 255 `i `ui `uc -> >> _adr -> 8 `i `uc -> -> 36 `i `uc `i -> 0 `i 1299  ]
 [e :U 1300 ]
-[; ;T1.c: 334: else
-[; ;T1.c: 335: {
-"335
+[; ;afficheur.c: 285: }
+"285
+[e :UE 1295 ]
+}
+"288
+[v _clear_text `(v ~T0 @X0 1 ef ]
 {
-[; ;T1.c: 336: for (i=0;i<n_octet_badge;i++)
-"336
+[; ;afficheur.c: 287: void clear_text()
+[; ;afficheur.c: 288: {
+[e :U _clear_text ]
+[f ]
+"289
+[v _add `ui ~T0 @X0 1 a ]
+[; ;afficheur.c: 289: unsigned int add;
+[; ;afficheur.c: 291: d2command(0,0,0x24);
+"291
+[e ( _d2command (3 , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 36 `i `uc ]
+[; ;afficheur.c: 292: for (add=0;add!=0x8000;add++)
+"292
 {
-[e = _i -> -> 0 `i `uc ]
-[e $U 1305  ]
-"337
+[e = _add -> -> 0 `i `ui ]
+[e $ != _add -> 32768 `ui 1302  ]
+[e $U 1303  ]
+"293
 [e :U 1302 ]
-[; ;T1.c: 337: {
+[; ;afficheur.c: 293: {
 {
-[; ;T1.c: 338: draw_hex8(badge[i]);
-"338
-[e ( _draw_hex8 (1 *U + &U _badge * -> _i `ux -> -> # *U &U _badge `ui `ux ]
-"339
+[; ;afficheur.c: 294: d1command(0x00,0xC0);
+"294
+[e ( _d1command (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"295
 }
-"336
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 1305 ]
-[e $ < -> _i `i -> _n_octet_badge `i 1302  ]
+"292
+[e ++ _add -> -> 1 `i `ui ]
+[e $ != _add -> 32768 `ui 1302  ]
 [e :U 1303 ]
-"339
+"295
 }
-"340
+[; ;afficheur.c: 295: }
+[; ;afficheur.c: 296: }
+"296
+[e :UE 1301 ]
 }
-[e :U 1301 ]
-[; ;T1.c: 339: }
-[; ;T1.c: 340: }
-[; ;T1.c: 342: goto_lico(9,0);
-"342
-[e ( _goto_lico (2 , -> -> 9 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 343: draw_string("X-Joystick:");
-"343
-[e ( _draw_string (1 -> :s 20C `*uc ]
-[; ;T1.c: 344: draw_hex8(lecture_8bit_analogique(10));
-"344
-[e ( _draw_hex8 (1 ( _lecture_8bit_analogique (1 -> -> 10 `i `uc ]
-[; ;T1.c: 346: goto_lico(10,0);
-"346
-[e ( _goto_lico (2 , -> -> 10 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 347: draw_string("Y-Joystick:");
-"347
-[e ( _draw_string (1 -> :s 21C `*uc ]
-[; ;T1.c: 348: draw_hex8(lecture_8bit_analogique(11));
-"348
-[e ( _draw_hex8 (1 ( _lecture_8bit_analogique (1 -> -> 11 `i `uc ]
-[; ;T1.c: 350: if (TP_appui==1)
-"350
-[e $ ! == -> _TP_appui `i -> 1 `i 1306  ]
-[; ;T1.c: 351: {
-"351
+"299
+[v _clear_graphics `(v ~T0 @X0 1 ef ]
 {
-[; ;T1.c: 352: goto_lico(0,20);
+[; ;afficheur.c: 298: void clear_graphics()
+[; ;afficheur.c: 299: {
+[e :U _clear_graphics ]
+[f ]
+"300
+[v _add `ui ~T0 @X0 1 a ]
+[; ;afficheur.c: 300: unsigned int add;
+[; ;afficheur.c: 302: d2command(0,0x80,0x24);
+"302
+[e ( _d2command (3 , , -> -> 0 `i `uc -> -> 128 `i `uc -> -> 36 `i `uc ]
+[; ;afficheur.c: 303: for (add=0x8000;add!=0xF800;add++)
+"303
+{
+[e = _add -> 32768 `ui ]
+[e $ != _add -> 63488 `ui 1306  ]
+[e $U 1307  ]
+"304
+[e :U 1306 ]
+[; ;afficheur.c: 304: {
+{
+[; ;afficheur.c: 305: d1command(0x00,0xC0);
+"305
+[e ( _d1command (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"306
+}
+"303
+[e ++ _add -> -> 1 `i `ui ]
+[e $ != _add -> 63488 `ui 1306  ]
+[e :U 1307 ]
+"306
+}
+[; ;afficheur.c: 306: }
+[; ;afficheur.c: 307: }
+"307
+[e :UE 1305 ]
+}
+"310
+[v _clear_cgram `(v ~T0 @X0 1 ef ]
+{
+[; ;afficheur.c: 309: void clear_cgram()
+[; ;afficheur.c: 310: {
+[e :U _clear_cgram ]
+[f ]
+"311
+[v _add `ui ~T0 @X0 1 a ]
+[; ;afficheur.c: 311: unsigned int add;
+[; ;afficheur.c: 313: d2command(0,0xF8,0x24);
+"313
+[e ( _d2command (3 , , -> -> 0 `i `uc -> -> 248 `i `uc -> -> 36 `i `uc ]
+[; ;afficheur.c: 314: for (add=0xF800;add!=0x0000;add++)
+"314
+{
+[e = _add -> 63488 `ui ]
+[e $ != _add -> -> 0 `i `ui 1310  ]
+[e $U 1311  ]
+"315
+[e :U 1310 ]
+[; ;afficheur.c: 315: {
+{
+[; ;afficheur.c: 316: d1command(0x00,0xC0);
+"316
+[e ( _d1command (2 , -> -> 0 `i `uc -> -> 192 `i `uc ]
+"317
+}
+"314
+[e ++ _add -> -> 1 `i `ui ]
+[e $ != _add -> -> 0 `i `ui 1310  ]
+[e :U 1311 ]
+"317
+}
+[; ;afficheur.c: 317: }
+[; ;afficheur.c: 318: }
+"318
+[e :UE 1309 ]
+}
+"321
+[v _plot1 `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[; ;afficheur.c: 320: void plot1(unsigned char x, unsigned char y)
+[; ;afficheur.c: 321: {
+[e :U _plot1 ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[v _y `uc ~T0 @X0 1 r2 ]
+[f ]
+"322
+[v _add `ui ~T0 @X0 1 a ]
+[; ;afficheur.c: 322: unsigned int add;
+[; ;afficheur.c: 324: add=40*y+x/6;
+"324
+[e = _add -> + * -> 40 `i -> _y `i / -> _x `i -> 6 `i `ui ]
+[; ;afficheur.c: 325: d2command((char)(add&0xff),(char)(add>>8),0x24);
+"325
+[e ( _d2command (3 , , -> & _add -> -> 255 `i `ui `uc -> >> _add -> 8 `i `uc -> -> 36 `i `uc ]
+[; ;afficheur.c: 327: switch(x%6)
+"327
+[e $U 1315  ]
+[; ;afficheur.c: 328: {
+"328
+{
+[; ;afficheur.c: 330: case 0: command(0xFD); break;
+"330
+[e :U 1316 ]
+[e ( _command (1 -> -> 253 `i `uc ]
+[e $U 1314  ]
+[; ;afficheur.c: 331: case 1: command(0xFC); break;
+"331
+[e :U 1317 ]
+[e ( _command (1 -> -> 252 `i `uc ]
+[e $U 1314  ]
+[; ;afficheur.c: 332: case 2: command(0xFB); break;
+"332
+[e :U 1318 ]
+[e ( _command (1 -> -> 251 `i `uc ]
+[e $U 1314  ]
+[; ;afficheur.c: 333: case 3: command(0xFA); break;
+"333
+[e :U 1319 ]
+[e ( _command (1 -> -> 250 `i `uc ]
+[e $U 1314  ]
+[; ;afficheur.c: 334: case 4: command(0xF9); break;
+"334
+[e :U 1320 ]
+[e ( _command (1 -> -> 249 `i `uc ]
+[e $U 1314  ]
+[; ;afficheur.c: 335: case 5: command(0xF8); break;
+"335
+[e :U 1321 ]
+[e ( _command (1 -> -> 248 `i `uc ]
+[e $U 1314  ]
+[; ;afficheur.c: 336: default:break;
+"336
+[e :U 1322 ]
+[e $U 1314  ]
+"337
+}
+[; ;afficheur.c: 337: }
+[e $U 1314  ]
+"327
+[e :U 1315 ]
+[e [\ % -> _x `i -> 6 `i , $ -> 0 `i 1316
+ , $ -> 1 `i 1317
+ , $ -> 2 `i 1318
+ , $ -> 3 `i 1319
+ , $ -> 4 `i 1320
+ , $ -> 5 `i 1321
+ 1322 ]
+"337
+[e :U 1314 ]
+[; ;afficheur.c: 339: }
+"339
+[e :UE 1313 ]
+}
+"342
+[v _plot0 `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[; ;afficheur.c: 341: void plot0(unsigned char x, unsigned char y)
+[; ;afficheur.c: 342: {
+[e :U _plot0 ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[v _y `uc ~T0 @X0 1 r2 ]
+[f ]
+"343
+[v _add `ui ~T0 @X0 1 a ]
+[; ;afficheur.c: 343: unsigned int add;
+[; ;afficheur.c: 345: add=40*y+x/6;
+"345
+[e = _add -> + * -> 40 `i -> _y `i / -> _x `i -> 6 `i `ui ]
+[; ;afficheur.c: 346: d2command((char)(add&0xff),(char)(add>>8),0x24);
+"346
+[e ( _d2command (3 , , -> & _add -> -> 255 `i `ui `uc -> >> _add -> 8 `i `uc -> -> 36 `i `uc ]
+[; ;afficheur.c: 348: switch(x%6)
+"348
+[e $U 1325  ]
+[; ;afficheur.c: 349: {
+"349
+{
+[; ;afficheur.c: 351: case 0: command(0xF5); break;
+"351
+[e :U 1326 ]
+[e ( _command (1 -> -> 245 `i `uc ]
+[e $U 1324  ]
+[; ;afficheur.c: 352: case 1: command(0xF4); break;
 "352
-[e ( _goto_lico (2 , -> -> 0 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 353: draw_string("x=");
+[e :U 1327 ]
+[e ( _command (1 -> -> 244 `i `uc ]
+[e $U 1324  ]
+[; ;afficheur.c: 353: case 2: command(0xF3); break;
 "353
-[e ( _draw_string (1 -> :s 22C `*uc ]
-[; ;T1.c: 354: draw_hex8(TP_x);
+[e :U 1328 ]
+[e ( _command (1 -> -> 243 `i `uc ]
+[e $U 1324  ]
+[; ;afficheur.c: 354: case 3: command(0xF2); break;
 "354
-[e ( _draw_hex8 (1 _TP_x ]
-[; ;T1.c: 355: draw_string(" y=");
+[e :U 1329 ]
+[e ( _command (1 -> -> 242 `i `uc ]
+[e $U 1324  ]
+[; ;afficheur.c: 355: case 4: command(0xF1); break;
 "355
-[e ( _draw_string (1 -> :s 23C `*uc ]
-[; ;T1.c: 356: draw_hex8(TP_y);
+[e :U 1330 ]
+[e ( _command (1 -> -> 241 `i `uc ]
+[e $U 1324  ]
+[; ;afficheur.c: 356: case 5: command(0xF0); break;
 "356
-[e ( _draw_hex8 (1 _TP_y ]
-[; ;T1.c: 357: plot1(TP_x,TP_y);
+[e :U 1331 ]
+[e ( _command (1 -> -> 240 `i `uc ]
+[e $U 1324  ]
+[; ;afficheur.c: 357: default:break;
 "357
-[e ( _plot1 (2 , _TP_x _TP_y ]
+[e :U 1332 ]
+[e $U 1324  ]
 "358
 }
-[; ;T1.c: 358: }
-[e $U 1307  ]
-"359
-[e :U 1306 ]
-[; ;T1.c: 359: else
-[; ;T1.c: 360: {
+[; ;afficheur.c: 358: }
+[e $U 1324  ]
+"348
+[e :U 1325 ]
+[e [\ % -> _x `i -> 6 `i , $ -> 0 `i 1326
+ , $ -> 1 `i 1327
+ , $ -> 2 `i 1328
+ , $ -> 3 `i 1329
+ , $ -> 4 `i 1330
+ , $ -> 5 `i 1331
+ 1332 ]
+"358
+[e :U 1324 ]
+[; ;afficheur.c: 360: }
 "360
-{
-[; ;T1.c: 361: asm(" nop");
-"361
-[; <"  nop ;# ">
-"362
+[e :UE 1323 ]
 }
-[e :U 1307 ]
-[; ;T1.c: 362: }
-[; ;T1.c: 371: if (error_active == 0)
-"371
-[e $ ! == -> _error_active `i -> 0 `i 1308  ]
-[; ;T1.c: 372: {
-"372
-{
-[; ;T1.c: 373: if (lecture_8bit_analogique(10) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
-"373
-[e $ ! && == -> ( _lecture_8bit_analogique (1 -> -> 10 `i `uc `i -> 255 `i < + _current_fork_x -> 1 `i + _fork_start_x_pos _fork_stop 1309  ]
-[; ;T1.c: 374: {
-"374
-{
-[; ;T1.c: 375: clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
-"375
-[e ( _clear_box (4 , , , _current_fork_x _current_fork_y + _current_fork_x _fork_size + _current_fork_y _fork_size ]
-[; ;T1.c: 376: draw_box(current_fork_x+1, current_fork_y, current_fork_x+fork_size+1, current_fork_y+fork_size);
-"376
-[e ( _draw_box (4 , , , + _current_fork_x -> 1 `i _current_fork_y + + _current_fork_x _fork_size -> 1 `i + _current_fork_y _fork_size ]
-[; ;T1.c: 377: current_fork_x=current_fork_x+1;
-"377
-[e = _current_fork_x + _current_fork_x -> 1 `i ]
-"378
-}
-[e :U 1309 ]
-[; ;T1.c: 378: }
-[; ;T1.c: 379: if (lecture_8bit_analogique(10) == 0x00 && (current_fork_x-1)>(fork_start_x_pos-fork_stop))
-"379
-[e $ ! && == -> ( _lecture_8bit_analogique (1 -> -> 10 `i `uc `i -> 0 `i > - _current_fork_x -> 1 `i - _fork_start_x_pos _fork_stop 1310  ]
-[; ;T1.c: 380: {
-"380
-{
-[; ;T1.c: 381: clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
-"381
-[e ( _clear_box (4 , , , _current_fork_x _current_fork_y + _current_fork_x _fork_size + _current_fork_y _fork_size ]
-[; ;T1.c: 382: draw_box(current_fork_x-1, current_fork_y, current_fork_x+fork_size-1, current_fork_y+fork_size);
-"382
-[e ( _draw_box (4 , , , - _current_fork_x -> 1 `i _current_fork_y - + _current_fork_x _fork_size -> 1 `i + _current_fork_y _fork_size ]
-[; ;T1.c: 383: current_fork_x=current_fork_x-1;
-"383
-[e = _current_fork_x - _current_fork_x -> 1 `i ]
-"384
-}
-[e :U 1310 ]
-[; ;T1.c: 384: }
-[; ;T1.c: 385: if (lecture_8bit_analogique(11) == 0xFF && (current_fork_y-1)>(fork_start_y_pos-fork_stop))
-"385
-[e $ ! && == -> ( _lecture_8bit_analogique (1 -> -> 11 `i `uc `i -> 255 `i > - _current_fork_y -> 1 `i - _fork_start_y_pos _fork_stop 1311  ]
-[; ;T1.c: 386: {
-"386
-{
-[; ;T1.c: 387: clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
-"387
-[e ( _clear_box (4 , , , _current_fork_x _current_fork_y + _current_fork_x _fork_size + _current_fork_y _fork_size ]
-[; ;T1.c: 388: draw_box(current_fork_x, current_fork_y-1, current_fork_x+fork_size, current_fork_y+fork_size-1);
-"388
-[e ( _draw_box (4 , , , _current_fork_x - _current_fork_y -> 1 `i + _current_fork_x _fork_size - + _current_fork_y _fork_size -> 1 `i ]
-[; ;T1.c: 389: current_fork_y=current_fork_y-1;
-"389
-[e = _current_fork_y - _current_fork_y -> 1 `i ]
-"390
-}
-[e :U 1311 ]
-"391
-}
-[e :U 1308 ]
-[; ;T1.c: 390: }
-[; ;T1.c: 391: }
-[; ;T1.c: 393: if (lecture_8bit_analogique(11) == 0x00 && (current_fork_y+1)<(fork_start_y_pos+fork_stop))
-"393
-[e $ ! && == -> ( _lecture_8bit_analogique (1 -> -> 11 `i `uc `i -> 0 `i < + _current_fork_y -> 1 `i + _fork_start_y_pos _fork_stop 1312  ]
-[; ;T1.c: 394: {
-"394
-{
-[; ;T1.c: 395: clear_box(current_fork_x, current_fork_y, current_fork_x+10, current_fork_y+fork_size);
-"395
-[e ( _clear_box (4 , , , _current_fork_x _current_fork_y + _current_fork_x -> 10 `i + _current_fork_y _fork_size ]
-[; ;T1.c: 396: draw_box(current_fork_x, current_fork_y+1, current_fork_x+fork_size, current_fork_y+fork_size+1);
-"396
-[e ( _draw_box (4 , , , _current_fork_x + _current_fork_y -> 1 `i + _current_fork_x _fork_size + + _current_fork_y _fork_size -> 1 `i ]
-[; ;T1.c: 397: current_fork_y=current_fork_y+1;
-"397
-[e = _current_fork_y + _current_fork_y -> 1 `i ]
-"398
-}
-[e :U 1312 ]
-[; ;T1.c: 398: }
-[; ;T1.c: 401: goto_lico(11,0);
-"401
-[e ( _goto_lico (2 , -> -> 11 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 402: draw_string("chocint=");
-"402
-[e ( _draw_string (1 -> :s 24C `*uc ]
-[; ;T1.c: 403: draw_hex8(flagChoc);
-"403
-[e ( _draw_hex8 (1 _flagChoc ]
-[; ;T1.c: 404: goto_lico(12,0);
-"404
-[e ( _goto_lico (2 , -> -> 12 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 405: draw_string("siegeint=");
-"405
-[e ( _draw_string (1 -> :s 25C `*uc ]
-[; ;T1.c: 406: draw_hex8(flagSiege);
-"406
-[e ( _draw_hex8 (1 _flagSiege ]
-[; ;T1.c: 407: goto_lico(13,0);
-"407
-[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 408: draw_string("avantint=");
-"408
-[e ( _draw_string (1 -> :s 26C `*uc ]
-[; ;T1.c: 409: draw_hex8(flagMarcheAvant);
-"409
-[e ( _draw_hex8 (1 _flagMarcheAvant ]
-[; ;T1.c: 410: goto_lico(14,0);
-"410
-[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 411: draw_string("arriereint=");
-"411
-[e ( _draw_string (1 -> :s 27C `*uc ]
-[; ;T1.c: 412: draw_hex8(flagMarcheArriere);
-"412
-[e ( _draw_hex8 (1 _flagMarcheArriere ]
-[; ;T1.c: 414: if(alarme_pannel==0xFF)
-"414
-[e $ ! == -> _alarme_pannel `i -> 255 `i 1313  ]
-[; ;T1.c: 415: {
-"415
-{
-[; ;T1.c: 416: clear_text();
-"416
-[e ( _clear_text ..  ]
-[; ;T1.c: 417: clear_graphics();
-"417
-[e ( _clear_graphics ..  ]
-[; ;T1.c: 418: while (alarme_pannel==0xFF)
-"418
-[e $U 1314  ]
-[e :U 1315 ]
-[; ;T1.c: 419: {
-"419
-{
-[; ;T1.c: 421: draw_empty_box(190, 10, 210, 30);
-"421
-[e ( _draw_empty_box (4 , , , -> 190 `i -> 10 `i -> 210 `i -> 30 `i ]
-[; ;T1.c: 422: alarm_icon(200, 20);
-"422
-[e ( _alarm_icon (2 , -> 200 `i -> 20 `i ]
-[; ;T1.c: 423: goto_lico(0,0);
-"423
-[e ( _goto_lico (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 424: draw_string("alarme_eau=");
-"424
-[e ( _draw_string (1 -> :s 28C `*uc ]
-[; ;T1.c: 425: draw_hex8((alarme_active >> 0) & 0x01);
-"425
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 0 `i -> 1 `i `uc ]
-[; ;T1.c: 426: goto_lico(1,0);
-"426
-[e ( _goto_lico (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 427: draw_string("alarme_huile=");
-"427
-[e ( _draw_string (1 -> :s 29C `*uc ]
-[; ;T1.c: 428: draw_hex8((alarme_active >> 1) & 0x01);
-"428
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 1 `i -> 1 `i `uc ]
-[; ;T1.c: 429: goto_lico(2,0);
-"429
-[e ( _goto_lico (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 430: draw_string("alarme_choc=");
-"430
-[e ( _draw_string (1 -> :s 30C `*uc ]
-[; ;T1.c: 431: draw_hex8((alarme_active >> 2) & 0x01);
-"431
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 2 `i -> 1 `i `uc ]
-[; ;T1.c: 432: goto_lico(3,0);
-"432
-[e ( _goto_lico (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 433: draw_string("alarme_batterie=");
-"433
-[e ( _draw_string (1 -> :s 31C `*uc ]
-[; ;T1.c: 434: draw_hex8((alarme_active >> 3) & 0x01);
-"434
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 3 `i -> 1 `i `uc ]
-[; ;T1.c: 435: goto_lico(0,20);
-"435
-[e ( _goto_lico (2 , -> -> 0 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 436: draw_string("alarme_cle=");
-"436
-[e ( _draw_string (1 -> :s 32C `*uc ]
-[; ;T1.c: 437: draw_hex8((alarme_active >> 4) & 0x01);
-"437
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 4 `i -> 1 `i `uc ]
-[; ;T1.c: 438: goto_lico(1,20);
-"438
-[e ( _goto_lico (2 , -> -> 1 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 439: draw_string("alarme_frein=");
-"439
-[e ( _draw_string (1 -> :s 33C `*uc ]
-[; ;T1.c: 440: draw_hex8((alarme_active >> 5) & 0x01);
-"440
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 5 `i -> 1 `i `uc ]
-[; ;T1.c: 441: goto_lico(2,20);
-"441
-[e ( _goto_lico (2 , -> -> 2 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 442: draw_string("alarme_siege=");
-"442
-[e ( _draw_string (1 -> :s 34C `*uc ]
-[; ;T1.c: 443: draw_hex8((alarme_active >> 6) & 0x01);
-"443
-[e ( _draw_hex8 (1 -> & >> -> _alarme_active `i -> 6 `i -> 1 `i `uc ]
-[; ;T1.c: 444: goto_lico(4,20);
-"444
-[e ( _goto_lico (2 , -> -> 4 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 445: draw_string("choc_time=");
-"445
-[e ( _draw_string (1 -> :s 35C `*uc ]
-[; ;T1.c: 446: draw_hex8(choc_time_1);
-"446
-[e ( _draw_hex8 (1 _choc_time_1 ]
-[; ;T1.c: 447: draw_hex8(choc_time_2);
-"447
-[e ( _draw_hex8 (1 _choc_time_2 ]
-[; ;T1.c: 448: draw_hex8(choc_time_3);
-"448
-[e ( _draw_hex8 (1 _choc_time_3 ]
-[; ;T1.c: 449: draw_hex8(choc_time_4);
-"449
-[e ( _draw_hex8 (1 _choc_time_4 ]
-[; ;T1.c: 451: goto_lico(6,0);
-"451
-[e ( _goto_lico (2 , -> -> 6 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 452: draw_string("erreur_choc=");
-"452
-[e ( _draw_string (1 -> :s 36C `*uc ]
-[; ;T1.c: 453: draw_hex8((error_active >> 2) & 0x01);
-"453
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 2 `i -> 1 `i `uc ]
-[; ;T1.c: 454: goto_lico(7,0);
-"454
-[e ( _goto_lico (2 , -> -> 7 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 455: draw_string("erreur_batterie=");
-"455
-[e ( _draw_string (1 -> :s 37C `*uc ]
-[; ;T1.c: 456: draw_hex8((error_active >> 3) & 0x01);
-"456
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 3 `i -> 1 `i `uc ]
-[; ;T1.c: 457: goto_lico(8,0);
-"457
-[e ( _goto_lico (2 , -> -> 8 `i `uc -> -> 0 `i `uc ]
-[; ;T1.c: 458: draw_string("erreur_siege=");
-"458
-[e ( _draw_string (1 -> :s 38C `*uc ]
-[; ;T1.c: 459: draw_hex8((error_active >> 6) & 0x01);
-"459
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 6 `i -> 1 `i `uc ]
-[; ;T1.c: 460: goto_lico(6,20);
-"460
-[e ( _goto_lico (2 , -> -> 6 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 461: draw_string("erreur_eau=");
-"461
-[e ( _draw_string (1 -> :s 39C `*uc ]
-[; ;T1.c: 462: draw_hex8((error_active >> 0) & 0x01);
-"462
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 0 `i -> 1 `i `uc ]
-[; ;T1.c: 463: goto_lico(7,20);
-"463
-[e ( _goto_lico (2 , -> -> 7 `i `uc -> -> 20 `i `uc ]
-[; ;T1.c: 464: draw_string("erreur_huile=");
-"464
-[e ( _draw_string (1 -> :s 40C `*uc ]
-[; ;T1.c: 465: draw_hex8((error_active >> 1) & 0x01);
-"465
-[e ( _draw_hex8 (1 -> & >> -> _error_active `i -> 1 `i -> 1 `i `uc ]
-"466
-}
-[e :U 1314 ]
-"418
-[e $ == -> _alarme_pannel `i -> 255 `i 1315  ]
-[e :U 1316 ]
-[; ;T1.c: 466: }
-[; ;T1.c: 467: clear_text();
-"467
-[e ( _clear_text ..  ]
-[; ;T1.c: 468: clear_graphics();
-"468
-[e ( _clear_graphics ..  ]
-[; ;T1.c: 469: goto_lico(13,34);draw_char('R');draw_char(' ');draw_char('V');draw_char(' ');draw_char('B');
-"469
-[e ( _goto_lico (2 , -> -> 13 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 82 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 86 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 66 `ui `uc ]
-[; ;T1.c: 470: goto_lico(14,34);draw_char('0');draw_char(' ');draw_char('0');draw_char(' ');draw_char('0');
-"470
-[e ( _goto_lico (2 , -> -> 14 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 48 `ui `uc ]
-[; ;T1.c: 471: goto_lico(15,34);draw_char('1');draw_char(' ');draw_char('1');draw_char(' ');draw_char('1');
-"471
-[e ( _goto_lico (2 , -> -> 15 `i `uc -> -> 34 `i `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[e ( _draw_char (1 -> -> 32 `ui `uc ]
-[e ( _draw_char (1 -> -> 49 `ui `uc ]
-[; ;T1.c: 474: draw_box(fork_start_x_pos, fork_start_y_pos, fork_start_x_pos+fork_size, fork_start_y_pos+fork_size);
-"474
-[e ( _draw_box (4 , , , _fork_start_x_pos _fork_start_y_pos + _fork_start_x_pos _fork_size + _fork_start_y_pos _fork_size ]
-[; ;T1.c: 475: current_fork_x=fork_start_x_pos;
-"475
-[e = _current_fork_x _fork_start_x_pos ]
-[; ;T1.c: 476: current_fork_y=fork_start_y_pos;
-"476
-[e = _current_fork_y _fork_start_y_pos ]
-[; ;T1.c: 477: draw_empty_box(fork_start_x_pos-fork_stop-1, fork_start_y_pos-fork_stop-1, fork_start_x_pos+fork_size+fork_stop+1, fork_start_y_pos+fork_size+fork_stop+1);
-"477
-[e ( _draw_empty_box (4 , , , - - _fork_start_x_pos _fork_stop -> 1 `i - - _fork_start_y_pos _fork_stop -> 1 `i + + + _fork_start_x_pos _fork_size _fork_stop -> 1 `i + + + _fork_start_y_pos _fork_size _fork_stop -> 1 `i ]
-[; ;T1.c: 480: draw_empty_box(190, 10, 210, 30);
-"480
-[e ( _draw_empty_box (4 , , , -> 190 `i -> 10 `i -> 210 `i -> 30 `i ]
-[; ;T1.c: 481: alarm_icon(200, 20);
-"481
-[e ( _alarm_icon (2 , -> 200 `i -> 20 `i ]
-"482
-}
-[e :U 1313 ]
-"484
-}
-[e :U 1281 ]
-"210
-[e $U 1282  ]
-[e :U 1283 ]
-[; ;T1.c: 482: }
-[; ;T1.c: 484: }
-[; ;T1.c: 485: }
-"485
-[e :UE 1280 ]
-}
-[a 3C 65 86 0 ]
-[a 4C 65 82 0 ]
-[a 23C 32 121 61 0 ]
-[a 22C 120 61 0 ]
-[a 39C 101 114 114 101 117 114 95 101 97 117 61 0 ]
-[a 28C 97 108 97 114 109 101 95 101 97 117 61 0 ]
-[a 26C 97 118 97 110 116 105 110 116 61 0 ]
-[a 27C 97 114 114 105 101 114 101 105 110 116 61 0 ]
-[a 25C 115 105 101 103 101 105 110 116 61 0 ]
-[a 24C 99 104 111 99 105 110 116 61 0 ]
-[a 33C 97 108 97 114 109 101 95 102 114 101 105 110 61 0 ]
-[a 35C 99 104 111 99 95 116 105 109 101 61 0 ]
-[a 40C 101 114 114 101 117 114 95 104 117 105 108 101 61 0 ]
-[a 29C 97 108 97 114 109 101 95 104 117 105 108 101 61 0 ]
-[a 32C 97 108 97 114 109 101 95 99 108 101 61 0 ]
-[a 37C 101 114 114 101 117 114 95 98 97 116 116 101 114 105 101 61 0 ]
-[a 31C 97 108 97 114 109 101 95 98 97 116 116 101 114 105 101 61 0 ]
-[a 38C 101 114 114 101 117 114 95 115 105 101 103 101 61 0 ]
-[a 34C 97 108 97 114 109 101 95 115 105 101 103 101 61 0 ]
-[a 36C 101 114 114 101 117 114 95 99 104 111 99 61 0 ]
-[a 30C 97 108 97 114 109 101 95 99 104 111 99 61 0 ]
-[a 7C 84 101 109 112 46 32 69 97 117 58 0 ]
-[a 11C 86 105 116 101 115 115 101 32 114 101 101 108 58 0 ]
-[a 13C 66 97 116 116 101 114 105 101 32 114 101 101 108 58 0 ]
-[a 21C 89 45 74 111 121 115 116 105 99 107 58 0 ]
-[a 20C 88 45 74 111 121 115 116 105 99 107 58 0 ]
-[a 1C 86 105 116 101 115 115 101 58 0 ]
-[a 10C 86 105 116 101 115 115 101 58 0 ]
-[a 8C 84 101 109 112 46 32 72 117 105 108 101 58 0 ]
-[a 12C 66 97 116 116 101 114 105 101 58 0 ]
-[a 2C 77 97 114 99 104 101 58 0 ]
-[a 6C 83 105 101 103 101 58 0 ]
-[a 18C 66 97 100 103 101 58 0 ]
-[a 9C 67 104 111 99 58 0 ]
-[a 15C 72 40 99 41 58 0 ]
-[a 14C 69 40 99 41 58 0 ]
-[a 16C 40 40 33 41 41 0 ]
-[a 5C 78 32 0 ]
-[a 19C 32 65 85 67 85 78 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
-[a 17C 32 32 32 32 32 0 ]
