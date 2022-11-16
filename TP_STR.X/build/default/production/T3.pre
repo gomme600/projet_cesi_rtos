@@ -12103,6 +12103,8 @@ unsigned char lecture_8bit_analogique(unsigned char channel);
 void tache3();
 
 # 3 "T3.c"
+int seuil_vitesse_haut=0;
+
 void tache3()
 {
 while(1)
@@ -12111,8 +12113,23 @@ while(1)
 tempeau = lecture_8bit_analogique(2);
 temphuile = lecture_8bit_analogique(3);
 
+
+if (alarme_active != 0x00)
+{
+
+seuil_vitesse_haut=0x40;
+if (vitesse > seuil_vitesse_haut)
+{
+vitesse=seuil_vitesse_haut;
+}
+}
+else
+{
+seuil_vitesse_haut=0xFE;
+}
+
 if (PORTEbits.RE0==0)
-if ( vitesse <= 0xFE)
+if ( vitesse <= seuil_vitesse_haut)
 vitesse++;
 if (PORTEbits.RE1==0)
 if ( vitesse > 0)

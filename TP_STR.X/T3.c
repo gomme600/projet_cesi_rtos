@@ -1,5 +1,7 @@
 #include "T3.h"
 
+int seuil_vitesse_haut=0;
+
 void tache3()
 {
     while(1)
@@ -8,8 +10,23 @@ void tache3()
         tempeau = lecture_8bit_analogique(TEMPERATURE_EAU);
         temphuile = lecture_8bit_analogique(TEMPERATURE_HUILE);
         
+        //Mode degrade
+        if (alarme_active != 0x00)
+        {
+            //4 fois moins en mode dégradé
+            seuil_vitesse_haut=0x40;
+            if (vitesse > seuil_vitesse_haut)
+            {
+                vitesse=seuil_vitesse_haut;
+            }
+        }
+        else
+        {
+            seuil_vitesse_haut=0xFE;
+        }
+        
         if (VITESSE_PLUS==0)
-            if ( vitesse <= 0xFE)
+            if ( vitesse <= seuil_vitesse_haut)
                 vitesse++;
         if (VITESSE_MOINS==0)
             if ( vitesse > 0)
