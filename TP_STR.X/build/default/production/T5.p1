@@ -9553,16 +9553,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T5.c: 27: choc_time++;
 "27
 [e ++ _choc_time -> -> 1 `i `ui ]
-[; ;T5.c: 28: if (choc_time>2000)
+[; ;T5.c: 28: if (choc_time>4000)
 "28
-[e $ ! > _choc_time -> -> 2000 `i `ui 1246  ]
+[e $ ! > _choc_time -> -> 4000 `i `ui 1246  ]
 [; ;T5.c: 29: alarme_active = setBit(alarme_active, 2);
 "29
 [e = _alarme_active ( _setBit (2 , _alarme_active -> 2 `i ]
 [e :U 1246 ]
-[; ;T5.c: 30: if (choc_time>4000)
+[; ;T5.c: 30: if (choc_time>8000)
 "30
-[e $ ! > _choc_time -> -> 4000 `i `ui 1247  ]
+[e $ ! > _choc_time -> -> 8000 `i `ui 1247  ]
 [; ;T5.c: 31: error_active = setBit(error_active, 2);
 "31
 [e = _error_active ( _setBit (2 , _error_active -> 2 `i ]
@@ -9683,9 +9683,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _alarme_active ( _clearBit (2 , _alarme_active -> 3 `i ]
 [e :U 1263 ]
 [e :U 1261 ]
-[; ;T5.c: 76: if (alarme_active > 0 || error_active > 0)
+[; ;T5.c: 76: if (alarme_active > 0 || error_active > 0 || PORTBbits.RB1==0)
 "76
-[e $ ! || > -> _alarme_active `i -> 0 `i > -> _error_active `i -> 0 `i 1264  ]
+[e $ ! || || > -> _alarme_active `i -> 0 `i > -> _error_active `i -> 0 `i == -> . . _PORTBbits 0 1 `i -> 0 `i 1264  ]
 [; ;T5.c: 77: {
 "77
 {

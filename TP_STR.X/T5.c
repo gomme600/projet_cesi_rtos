@@ -25,9 +25,9 @@ void tache5()
         if (CHOC==0)
         {
             choc_time++;
-            if (choc_time>2000)
-                alarme_active = setBit(alarme_active, 2);
             if (choc_time>4000)
+                alarme_active = setBit(alarme_active, 2);
+            if (choc_time>8000)
                 error_active = setBit(error_active, 2);
         }
         else
@@ -73,7 +73,7 @@ void tache5()
         
         
         // Buzzer alume
-        if (alarme_active > 0 || error_active > 0)
+        if (alarme_active > 0 || error_active > 0 || MARCHE_ARRIERE==0)
         {
             RJ7=buz;
             buz=!buz;
