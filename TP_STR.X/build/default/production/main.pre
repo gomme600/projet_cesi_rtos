@@ -12020,6 +12020,13 @@ unsigned char huileReel;
 unsigned char tempeau;
 unsigned char temphuile;
 
+
+double millis;
+
+
+double machine_use_time;
+double previous_use_time;
+
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
 void write_c_aff(unsigned char command);
@@ -12174,6 +12181,12 @@ tache_prioritaire=0;
 
 flagVitesse=0;
 flagChoc=0;
+
+
+millis=0;
+
+machine_use_time=0;
+previous_use_time=0;
 
 }
 

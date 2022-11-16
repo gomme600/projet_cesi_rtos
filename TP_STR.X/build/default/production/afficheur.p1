@@ -9396,6 +9396,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 "112
 [v _temphuile `uc ~T0 @X0 1 e ]
 [; ;variables_globales.h: 112: unsigned char temphuile;
+"115
+[v _millis `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 115: double millis;
+"118
+[v _machine_use_time `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 118: double machine_use_time;
+"119
+[v _previous_use_time `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 119: double previous_use_time;
 "22 semaphore.h
 [v _Val_sem_cna `uc ~T0 @X0 1 e ]
 [; ;semaphore.h: 22: unsigned char Val_sem_cna;

@@ -73,6 +73,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S576 . . . . . . . . . . . . . . . . . . . . . . . . . ]
 "8979 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [v _PORTEbits `VS576 ~T0 @X0 0 e@3972 ]
+"20859
+[v _RJ7 `Vb ~T0 @X0 0 e@31815 ]
 [; ;pic18f87k22.h: 44: extern volatile unsigned char PMD3 @ 0xF16;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.12\include\pic18f87k22.h
 [; ;pic18f87k22.h: 46: asm("PMD3 equ 0F16h");
@@ -9382,6 +9384,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 "112
 [v _temphuile `uc ~T0 @X0 1 e ]
 [; ;variables_globales.h: 112: unsigned char temphuile;
+"115
+[v _millis `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 115: double millis;
+"118
+[v _machine_use_time `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 118: double machine_use_time;
+"119
+[v _previous_use_time `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 119: double previous_use_time;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9575,127 +9586,143 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;T5.c: 38: choc_time++;
 "38
 [e ++ _choc_time -> -> 1 `i `ui ]
+[; ;T5.c: 39: alarme_active = clearBit(alarme_active, 2);
 "39
+[e = _alarme_active ( _clearBit (2 , _alarme_active -> 2 `i ]
+"40
 }
 [e :U 1249 ]
-[; ;T5.c: 39: }
-[; ;T5.c: 41: choc_time--;
-"41
-[e -- _choc_time -> -> 1 `i `ui ]
+[; ;T5.c: 40: }
+[; ;T5.c: 42: choc_time--;
 "42
+[e -- _choc_time -> -> 1 `i `ui ]
+"43
 }
 [e :U 1248 ]
-[; ;T5.c: 42: }
-[; ;T5.c: 44: if (PORTEbits.RE4==0 && vitesse>0)
-"44
-[e $ ! && == -> . . _PORTEbits 0 4 `i -> 0 `i > -> _vitesse `i -> 0 `i 1250  ]
-[; ;T5.c: 45: alarme_active = setBit(alarme_active, 5);
+[; ;T5.c: 43: }
+[; ;T5.c: 45: if (PORTEbits.RE4==0 && vitesse>0)
 "45
+[e $ ! && == -> . . _PORTEbits 0 4 `i -> 0 `i > -> _vitesse `i -> 0 `i 1250  ]
+[; ;T5.c: 46: alarme_active = setBit(alarme_active, 5);
+"46
 [e = _alarme_active ( _setBit (2 , _alarme_active -> 5 `i ]
 [e $U 1251  ]
-"46
-[e :U 1250 ]
-[; ;T5.c: 46: else
-[; ;T5.c: 47: alarme_active = clearBit(alarme_active, 5);
 "47
+[e :U 1250 ]
+[; ;T5.c: 47: else
+[; ;T5.c: 48: alarme_active = clearBit(alarme_active, 5);
+"48
 [e = _alarme_active ( _clearBit (2 , _alarme_active -> 5 `i ]
 [e :U 1251 ]
-[; ;T5.c: 50: if (tempeau>200)
-"50
-[e $ ! > -> _tempeau `i -> 200 `i 1252  ]
-[; ;T5.c: 51: alarme_active = setBit(alarme_active, 0);
+[; ;T5.c: 51: if (tempeau>200)
 "51
+[e $ ! > -> _tempeau `i -> 200 `i 1252  ]
+[; ;T5.c: 52: alarme_active = setBit(alarme_active, 0);
+"52
 [e = _alarme_active ( _setBit (2 , _alarme_active -> 0 `i ]
 [e $U 1253  ]
-"52
-[e :U 1252 ]
-[; ;T5.c: 52: else if (tempeau>230)
-[e $ ! > -> _tempeau `i -> 230 `i 1254  ]
-[; ;T5.c: 53: error_active = setBit(error_active, 0);
 "53
+[e :U 1252 ]
+[; ;T5.c: 53: else if (tempeau>230)
+[e $ ! > -> _tempeau `i -> 230 `i 1254  ]
+[; ;T5.c: 54: error_active = setBit(error_active, 0);
+"54
 [e = _error_active ( _setBit (2 , _error_active -> 0 `i ]
 [e $U 1255  ]
-"54
-[e :U 1254 ]
-[; ;T5.c: 54: else
-[; ;T5.c: 55: alarme_active = clearBit(alarme_active, 0);
 "55
+[e :U 1254 ]
+[; ;T5.c: 55: else
+[; ;T5.c: 56: alarme_active = clearBit(alarme_active, 0);
+"56
 [e = _alarme_active ( _clearBit (2 , _alarme_active -> 0 `i ]
 [e :U 1255 ]
 [e :U 1253 ]
-[; ;T5.c: 58: if (temphuile>200)
-"58
-[e $ ! > -> _temphuile `i -> 200 `i 1256  ]
-[; ;T5.c: 59: alarme_active = setBit(alarme_active, 1);
+[; ;T5.c: 59: if (temphuile>200)
 "59
+[e $ ! > -> _temphuile `i -> 200 `i 1256  ]
+[; ;T5.c: 60: alarme_active = setBit(alarme_active, 1);
+"60
 [e = _alarme_active ( _setBit (2 , _alarme_active -> 1 `i ]
 [e $U 1257  ]
-"60
-[e :U 1256 ]
-[; ;T5.c: 60: else if (temphuile>230)
-[e $ ! > -> _temphuile `i -> 230 `i 1258  ]
-[; ;T5.c: 61: error_active = setBit(error_active, 1);
 "61
+[e :U 1256 ]
+[; ;T5.c: 61: else if (temphuile>230)
+[e $ ! > -> _temphuile `i -> 230 `i 1258  ]
+[; ;T5.c: 62: error_active = setBit(error_active, 1);
+"62
 [e = _error_active ( _setBit (2 , _error_active -> 1 `i ]
 [e $U 1259  ]
-"62
-[e :U 1258 ]
-[; ;T5.c: 62: else
-[; ;T5.c: 63: alarme_active = clearBit(alarme_active, 1);
 "63
+[e :U 1258 ]
+[; ;T5.c: 63: else
+[; ;T5.c: 64: alarme_active = clearBit(alarme_active, 1);
+"64
 [e = _alarme_active ( _clearBit (2 , _alarme_active -> 1 `i ]
 [e :U 1259 ]
 [e :U 1257 ]
-[; ;T5.c: 66: if (batterie<25)
-"66
-[e $ ! < -> _batterie `i -> 25 `i 1260  ]
-[; ;T5.c: 67: alarme_active = setBit(alarme_active, 3);
+[; ;T5.c: 67: if (batterie<25)
 "67
+[e $ ! < -> _batterie `i -> 25 `i 1260  ]
+[; ;T5.c: 68: alarme_active = setBit(alarme_active, 3);
+"68
 [e = _alarme_active ( _setBit (2 , _alarme_active -> 3 `i ]
 [e $U 1261  ]
-"68
-[e :U 1260 ]
-[; ;T5.c: 68: else if (batterie<12)
-[e $ ! < -> _batterie `i -> 12 `i 1262  ]
-[; ;T5.c: 69: error_active = setBit(error_active, 3);
 "69
+[e :U 1260 ]
+[; ;T5.c: 69: else if (batterie<12)
+[e $ ! < -> _batterie `i -> 12 `i 1262  ]
+[; ;T5.c: 70: error_active = setBit(error_active, 3);
+"70
 [e = _error_active ( _setBit (2 , _error_active -> 3 `i ]
 [e $U 1263  ]
-"70
-[e :U 1262 ]
-[; ;T5.c: 70: else
-[; ;T5.c: 71: alarme_active = clearBit(alarme_active, 3);
 "71
+[e :U 1262 ]
+[; ;T5.c: 71: else
+[; ;T5.c: 72: alarme_active = clearBit(alarme_active, 3);
+"72
 [e = _alarme_active ( _clearBit (2 , _alarme_active -> 3 `i ]
 [e :U 1263 ]
 [e :U 1261 ]
-[; ;T5.c: 75: buz=!buz;
-"75
-[e = _buz -> ! != _buz -> 0 `i `i ]
-[; ;T5.c: 79: if (PORTEbits.RE0==0 & PORTEbits.RE1==0)
-"79
-[e $ ! & == -> . . _PORTEbits 0 0 `i -> 0 `i == -> . . _PORTEbits 0 1 `i -> 0 `i 1264  ]
-[; ;T5.c: 80: {
-"80
+[; ;T5.c: 76: if (alarme_active > 0 || error_active > 0)
+"76
+[e $ ! || > -> _alarme_active `i -> 0 `i > -> _error_active `i -> 0 `i 1264  ]
+[; ;T5.c: 77: {
+"77
 {
-[; ;T5.c: 81: alarme_active = 0;
-"81
-[e = _alarme_active -> -> 0 `i `uc ]
-[; ;T5.c: 82: error_active = 0;
-"82
-[e = _error_active -> -> 0 `i `uc ]
-"83
+[; ;T5.c: 78: RJ7=buz;
+"78
+[e = _RJ7 -> _buz `b ]
+[; ;T5.c: 79: buz=!buz;
+"79
+[e = _buz -> ! != _buz -> 0 `i `i ]
+"80
 }
 [e :U 1264 ]
+[; ;T5.c: 80: }
+[; ;T5.c: 83: if (PORTEbits.RE0==0 & PORTEbits.RE1==0)
+"83
+[e $ ! & == -> . . _PORTEbits 0 0 `i -> 0 `i == -> . . _PORTEbits 0 1 `i -> 0 `i 1265  ]
+[; ;T5.c: 84: {
+"84
+{
+[; ;T5.c: 85: alarme_active = 0;
 "85
+[e = _alarme_active -> -> 0 `i `uc ]
+[; ;T5.c: 86: error_active = 0;
+"86
+[e = _error_active -> -> 0 `i `uc ]
+"87
+}
+[e :U 1265 ]
+"89
 }
 [e :U 1239 ]
 "11
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;T5.c: 83: }
-[; ;T5.c: 85: }
-[; ;T5.c: 86: }
-"86
+[; ;T5.c: 87: }
+[; ;T5.c: 89: }
+[; ;T5.c: 90: }
+"90
 [e :UE 1238 ]
 }

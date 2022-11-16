@@ -9364,6 +9364,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 "112
 [v _temphuile `uc ~T0 @X0 1 e ]
 [; ;variables_globales.h: 112: unsigned char temphuile;
+"115
+[v _millis `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 115: double millis;
+"118
+[v _machine_use_time `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 118: double machine_use_time;
+"119
+[v _previous_use_time `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 119: double previous_use_time;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9541,27 +9550,43 @@ Version 3.2 HI-TECH Software Intermediate Code
 "25
 [e -- _batterie -> -> 1 `i `uc ]
 [e :U 1250 ]
-"27
-[e :U 1249 ]
-[; ;T3.c: 27: vitesseReel=vitesse/10;
-[e = _vitesseReel -> / -> _vitesse `i -> 10 `i `uc ]
-[; ;T3.c: 28: batterieReel=batterie/10;
 "28
-[e = _batterieReel -> / -> _batterie `i -> 10 `i `uc ]
-[; ;T3.c: 29: eauReel=tempeau/2.5;
+[e :U 1249 ]
+[; ;T3.c: 28: vitesseReel=vitesse/10;
+[e = _vitesseReel -> / -> _vitesse `i -> 10 `i `uc ]
+[; ;T3.c: 29: batterieReel=batterie/10;
 "29
-[e = _eauReel -> / -> _tempeau `d .2.5 `uc ]
-[; ;T3.c: 30: huileReel=temphuile/2.5;
+[e = _batterieReel -> / -> _batterie `i -> 10 `i `uc ]
+[; ;T3.c: 30: eauReel=tempeau/2.5;
 "30
+[e = _eauReel -> / -> _tempeau `d .2.5 `uc ]
+[; ;T3.c: 31: huileReel=temphuile/2.5;
+"31
 [e = _huileReel -> / -> _temphuile `d .2.5 `uc ]
+[; ;T3.c: 34: if (n_octet_badge != 0)
 "34
+[e $ ! != -> _n_octet_badge `i -> 0 `i 1251  ]
+[; ;T3.c: 35: {
+"35
+{
+[; ;T3.c: 36: machine_use_time=machine_use_time+(millis-previous_use_time);
+"36
+[e = _machine_use_time + _machine_use_time - _millis _previous_use_time ]
+"37
+}
+[e :U 1251 ]
+[; ;T3.c: 37: }
+[; ;T3.c: 38: previous_use_time=millis;
+"38
+[e = _previous_use_time _millis ]
+"40
 }
 [e :U 1239 ]
 "5
 [e $U 1240  ]
 [e :U 1241 ]
-[; ;T3.c: 34: }
-[; ;T3.c: 36: }
-"36
+[; ;T3.c: 40: }
+[; ;T3.c: 42: }
+"42
 [e :UE 1238 ]
 }

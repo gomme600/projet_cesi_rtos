@@ -214,12 +214,12 @@ void tache1()
         if (alarme_active != 0x00)
         {
         flash_interval_alarm++;
-        if (flash_interval_alarm = 4000)
+        if (flash_interval_alarm == 4000)
         {
             draw_empty_box(190, 10, 210, 30);
             alarm_icon(200, 20);
         }
-        if (flash_interval_alarm = 8000)
+        if (flash_interval_alarm == 8000)
         {
             clear_box(190, 10, 210, 30);
             flash_interval_alarm=0;
@@ -230,12 +230,12 @@ void tache1()
         if (error_active != 0x00)
         {
         flash_interval_error++;
-        if (flash_interval_error = 4000)
+        if (flash_interval_error == 4000)
         {
             draw_empty_box(190, 35, 210, 55);
             error_icon(200, 45);
         }
-        if (flash_interval_error = 8000)
+        if (flash_interval_error == 8000)
         {
             clear_box(190, 35, 210, 55);
             flash_interval_error=0;

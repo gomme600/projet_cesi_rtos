@@ -12020,6 +12020,13 @@ unsigned char huileReel;
 unsigned char tempeau;
 unsigned char temphuile;
 
+
+double millis;
+
+
+double machine_use_time;
+double previous_use_time;
+
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
 void write_c_aff(unsigned char command);
@@ -12309,12 +12316,12 @@ while(1)
 if (alarme_active != 0x00)
 {
 flash_interval_alarm++;
-if (flash_interval_alarm = 4000)
+if (flash_interval_alarm == 4000)
 {
 draw_empty_box(190, 10, 210, 30);
 alarm_icon(200, 20);
 }
-if (flash_interval_alarm = 8000)
+if (flash_interval_alarm == 8000)
 {
 clear_box(190, 10, 210, 30);
 flash_interval_alarm=0;
@@ -12325,12 +12332,12 @@ flash_interval_alarm=0;
 if (error_active != 0x00)
 {
 flash_interval_error++;
-if (flash_interval_error = 4000)
+if (flash_interval_error == 4000)
 {
 draw_empty_box(190, 35, 210, 55);
 error_icon(200, 45);
 }
-if (flash_interval_error = 8000)
+if (flash_interval_error == 8000)
 {
 clear_box(190, 35, 210, 55);
 flash_interval_error=0;
@@ -12444,6 +12451,8 @@ asm(" nop");
 }
 
 # 371
+if (error_active == 0)
+{
 if (lecture_8bit_analogique(10) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
 {
 clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
@@ -12462,12 +12471,15 @@ clear_box(current_fork_x, current_fork_y, current_fork_x+10, current_fork_y+fork
 draw_box(current_fork_x, current_fork_y+1, current_fork_x+fork_size, current_fork_y+fork_size+1);
 current_fork_y=current_fork_y+1;
 }
+}
+
 if (lecture_8bit_analogique(11) == 0xFF && (current_fork_y-1)>(fork_start_y_pos-fork_stop))
 {
 clear_box(current_fork_x, current_fork_y, current_fork_x+fork_size, current_fork_y+fork_size);
 draw_box(current_fork_x, current_fork_y-1, current_fork_x+fork_size, current_fork_y+fork_size-1);
 current_fork_y=current_fork_y-1;
 }
+
 
 goto_lico(11,0);
 draw_string("chocint=");

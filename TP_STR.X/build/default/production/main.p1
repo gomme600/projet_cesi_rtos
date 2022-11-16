@@ -9537,6 +9537,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 "112
 [v _temphuile `uc ~T0 @X0 1 e ]
 [; ;variables_globales.h: 112: unsigned char temphuile;
+"115
+[v _millis `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 115: double millis;
+"118
+[v _machine_use_time `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 118: double machine_use_time;
+"119
+[v _previous_use_time `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 119: double previous_use_time;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();
@@ -9809,68 +9818,77 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 101: flagChoc=0;
 "101
 [e = _flagChoc -> -> 0 `i `uc ]
-[; ;main.c: 103: }
-"103
+[; ;main.c: 104: millis=0;
+"104
+[e = _millis -> -> 0 `i `d ]
+[; ;main.c: 106: machine_use_time=0;
+"106
+[e = _machine_use_time -> -> 0 `i `d ]
+[; ;main.c: 107: previous_use_time=0;
+"107
+[e = _previous_use_time -> -> 0 `i `d ]
+[; ;main.c: 109: }
+"109
 [e :UE 1243 ]
 }
-"106
+"112
 [v _lecture_8bit_analogique `(uc ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 105: unsigned char lecture_8bit_analogique(unsigned char channel)
-[; ;main.c: 106: {
+[; ;main.c: 111: unsigned char lecture_8bit_analogique(unsigned char channel)
+[; ;main.c: 112: {
 [e :U _lecture_8bit_analogique ]
 [v _channel `uc ~T0 @X0 1 r1 ]
 [f ]
-"107
-[v _ret `uc ~T0 @X0 1 a ]
-[; ;main.c: 107: unsigned char ret;
-[; ;main.c: 110: ADCON1=0;
-"110
-[e = _ADCON1 -> -> 0 `i `uc ]
-[; ;main.c: 111: ADCON2=0x16;
-"111
-[e = _ADCON2 -> -> 22 `i `uc ]
-[; ;main.c: 112: channel=channel&0x1F;
-"112
-[e = _channel -> & -> _channel `i -> 31 `i `uc ]
-[; ;main.c: 113: channel=channel<<2;
 "113
-[e = _channel -> << -> _channel `i -> 2 `i `uc ]
-[; ;main.c: 114: ADCON0=channel|0x01;
-"114
-[e = _ADCON0 -> | -> _channel `i -> 1 `i `uc ]
-[; ;main.c: 116: ADCON0bits.GO=1;
+[v _ret `uc ~T0 @X0 1 a ]
+[; ;main.c: 113: unsigned char ret;
+[; ;main.c: 116: ADCON1=0;
 "116
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
-[; ;main.c: 117: while(ADCON0bits.DONE==1)
+[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;main.c: 117: ADCON2=0x16;
 "117
+[e = _ADCON2 -> -> 22 `i `uc ]
+[; ;main.c: 118: channel=channel&0x1F;
+"118
+[e = _channel -> & -> _channel `i -> 31 `i `uc ]
+[; ;main.c: 119: channel=channel<<2;
+"119
+[e = _channel -> << -> _channel `i -> 2 `i `uc ]
+[; ;main.c: 120: ADCON0=channel|0x01;
+"120
+[e = _ADCON0 -> | -> _channel `i -> 1 `i `uc ]
+[; ;main.c: 122: ADCON0bits.GO=1;
+"122
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+[; ;main.c: 123: while(ADCON0bits.DONE==1)
+"123
 [e $U 1245  ]
 [e :U 1246 ]
-[; ;main.c: 118: ;
-"118
+[; ;main.c: 124: ;
+"124
 [e :U 1245 ]
-"117
+"123
 [e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 1246  ]
 [e :U 1247 ]
-[; ;main.c: 120: if ((ADRESL&0x01)==0x01)
-"120
+[; ;main.c: 126: if ((ADRESL&0x01)==0x01)
+"126
 [e $ ! == & -> _ADRESL `i -> 1 `i -> 1 `i 1248  ]
-[; ;main.c: 121: ret=0;
-"121
+[; ;main.c: 127: ret=0;
+"127
 [e = _ret -> -> 0 `i `uc ]
 [e $U 1249  ]
-"122
+"128
 [e :U 1248 ]
-[; ;main.c: 122: else
-[; ;main.c: 123: ret=ADRESH;
-"123
+[; ;main.c: 128: else
+[; ;main.c: 129: ret=ADRESH;
+"129
 [e = _ret _ADRESH ]
 [e :U 1249 ]
-[; ;main.c: 126: return ret;
-"126
+[; ;main.c: 132: return ret;
+"132
 [e ) _ret ]
 [e $UE 1244  ]
-[; ;main.c: 127: }
-"127
+[; ;main.c: 133: }
+"133
 [e :UE 1244 ]
 }

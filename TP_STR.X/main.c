@@ -102,6 +102,9 @@ void initialisation_des_ports()
     
     //Init millis
     millis=0;
+    //Init temps utilisation
+    machine_use_time=0;
+    previous_use_time=0;
     
 }
 

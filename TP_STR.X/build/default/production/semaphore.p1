@@ -9310,6 +9310,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 "112
 [v _temphuile `uc ~T0 @X0 1 e ]
 [; ;variables_globales.h: 112: unsigned char temphuile;
+"115
+[v _millis `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 115: double millis;
+"118
+[v _machine_use_time `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 118: double machine_use_time;
+"119
+[v _previous_use_time `d ~T0 @X0 1 e ]
+[; ;variables_globales.h: 119: double previous_use_time;
 [; ;afficheur.h: 32: void write_d_aff(unsigned char data);
 [; ;afficheur.h: 33: void write_c_aff(unsigned char command);
 [; ;afficheur.h: 34: unsigned char check_status_ok();

@@ -12020,6 +12020,13 @@ unsigned char huileReel;
 unsigned char tempeau;
 unsigned char temphuile;
 
+
+double millis;
+
+
+double machine_use_time;
+double previous_use_time;
+
 # 32 "afficheur.h"
 void write_d_aff(unsigned char data);
 void write_c_aff(unsigned char command);
@@ -12129,6 +12136,7 @@ if (choc_time==0)
 {
 
 choc_time++;
+alarme_active = clearBit(alarme_active, 2);
 }
 
 choc_time--;
@@ -12165,8 +12173,11 @@ alarme_active = clearBit(alarme_active, 3);
 
 
 
+if (alarme_active > 0 || error_active > 0)
+{
+RJ7=buz;
 buz=!buz;
-
+}
 
 
 if (PORTEbits.RE0==0 & PORTEbits.RE1==0)

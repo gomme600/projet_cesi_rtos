@@ -112,11 +112,11 @@ unsigned char tempeau;
 unsigned char temphuile;
 
 //Time turned on
-unsigned double millis = 0;
+double millis;
 
 //Use time
-unsigned double machine_use_time = 0;
-unsigned double previous_use_time = 0;
+double machine_use_time;
+double previous_use_time;
 
 #ifdef	__cplusplus
 }
