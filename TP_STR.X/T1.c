@@ -367,7 +367,9 @@ void tache1()
         //draw_line_y(140, 140, 160);
         //draw_fork(120, 40);
         
-        //Fork (no active erreurs)
+        //Fork (no active erreurs) and frein a main active
+        if (FREIN_A_MAIN==0)
+        {
         if (error_active == 0)
         {
         if (lecture_8bit_analogique(JOYSTICK_X) == 0xFF && (current_fork_x+1)<(fork_start_x_pos+fork_stop))
@@ -395,6 +397,7 @@ void tache1()
             clear_box(current_fork_x, current_fork_y, current_fork_x+10, current_fork_y+fork_size);
             draw_box(current_fork_x, current_fork_y+1, current_fork_x+fork_size, current_fork_y+fork_size+1);
             current_fork_y=current_fork_y+1;
+        }
         }
 
         
