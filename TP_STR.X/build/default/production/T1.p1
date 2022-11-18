@@ -10087,9 +10087,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 "147
 [v _cpt `i ~T0 @X0 1 a ]
+[; ;T1.c: 147: int cpt = 0;
+[e = _cpt -> 0 `i ]
 "148
 [v _newVitesse `uc ~T0 @X0 1 a ]
-[; ;T1.c: 147: int cpt;
 [; ;T1.c: 148: char newVitesse;
 [; ;T1.c: 150: while (vitesseCourante != 0)
 "150

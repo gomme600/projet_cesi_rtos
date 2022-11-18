@@ -47,7 +47,17 @@ void data()
     while (PIR1bits.TX1IF==0);   TXREG1='a';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='u';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='=';while (TXSTA1bits.TRMT==0);
-    while (PIR1bits.TX1IF==0);   TXREG1=eauReel;while (TXSTA1bits.TRMT==0);
+    
+    // Debut ajout
+    
+    for (int cpt =0; cpt< sizeof(eauReel); cpt ++)
+    {
+    unsigned char val_decalage = (sizeof(eauReel)-cpt)&0x01; // Sert a avor 1 bit ecrit a la fois
+    
+    while (PIR1bits.TX1IF==0);   TXREG1=val_decalage;while (TXSTA1bits.TRMT==0);
+    }
+    
+    //Fin ajout
     new_line();
     
     while (PIR1bits.TX1IF==0);   TXREG1='T';while (TXSTA1bits.TRMT==0);

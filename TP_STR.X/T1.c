@@ -144,7 +144,7 @@ void blockVitesse(unsigned char vitesseCourante)
 
 void stopVitess(unsigned char  vitesseCourante)
 {
-    int cpt; 
+    int cpt = 0; 
     char newVitesse;
     
     while (vitesseCourante != 0)
