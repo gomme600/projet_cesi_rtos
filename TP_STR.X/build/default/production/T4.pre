@@ -12102,10 +12102,88 @@ unsigned char lecture_8bit_analogique(unsigned char channel);
 # 16 "T4.h"
 void tache4();
 
-# 3 "T4.c"
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 23 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdio.h"
+extern int errno;
+
+# 54
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 17 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\conio.h"
+extern int errno;
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 31
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 99 "C:\Program Files (x86)\Microchip\xc8\v1.12\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 191
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...);
+extern int sscanf(const char *, const char *, ...);
+extern int vprintf(const char *, va_list);
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap);
+extern int vsscanf(const char *, const char *, va_list);
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 4 "T4.c"
 void write_to_serial()
 {
 
+}
+
+void write_number(char bufferin[10])
+{
+char buffer[10];
+int l= 0;
+
+int value = bufferin;
+
+
+while(buffer[l]!='\0')
+{
+while (PIR1bits.TX1IF==0); TXREG1=buffer[l];while (TXSTA1bits.TRMT==0);
+l++;
+}
 }
 
 void write_title()
@@ -12150,7 +12228,7 @@ while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='a';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='u';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1=eauReel;while (TXSTA1bits.TRMT==0);
+write_number(eauReel);
 new_line();
 
 while (PIR1bits.TX1IF==0); TXREG1='T';while (TXSTA1bits.TRMT==0);
@@ -12160,7 +12238,7 @@ while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='l';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1=huileReel;while (TXSTA1bits.TRMT==0);
+write_number(huileReel);
 new_line();
 
 while (PIR1bits.TX1IF==0); TXREG1='V';while (TXSTA1bits.TRMT==0);
@@ -12171,7 +12249,7 @@ while (PIR1bits.TX1IF==0); TXREG1='s';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='s';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1=vitesseReel;while (TXSTA1bits.TRMT==0);
+write_number(vitesseReel);
 new_line();
 
 while (PIR1bits.TX1IF==0); TXREG1='B';while (TXSTA1bits.TRMT==0);
@@ -12183,23 +12261,10 @@ while (PIR1bits.TX1IF==0); TXREG1='r';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
 while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1=batterieReel;while (TXSTA1bits.TRMT==0);
+write_number(batterieReel);
 new_line();
 
-while (PIR1bits.TX1IF==0); TXREG1='U';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='t';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='l';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='s';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='a';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='t';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='o';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='n';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
-while (PIR1bits.TX1IF==0); TXREG1=machine_use_time;while (TXSTA1bits.TRMT==0);
-new_line();
+# 116
 }
 
 void tache4()

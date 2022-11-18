@@ -1,8 +1,24 @@
 #include "T4.h"
+#include <stdio.h>
 
 void write_to_serial()
 {
     
+}
+
+void write_number(char bufferin[10])
+{
+    char buffer[10];
+    int l= 0;
+    
+    int value = bufferin;
+    //snprintf(buffer, 10, "%d", value);
+    
+    while(buffer[l]!='\0')
+    {
+       while (PIR1bits.TX1IF==0);   TXREG1=buffer[l];while (TXSTA1bits.TRMT==0);
+       l++;
+    }
 }
 
 void write_title()
@@ -47,7 +63,7 @@ void data()
     while (PIR1bits.TX1IF==0);   TXREG1='a';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='u';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='=';while (TXSTA1bits.TRMT==0);
-    while (PIR1bits.TX1IF==0);   TXREG1=eauReel;while (TXSTA1bits.TRMT==0);
+    write_number(eauReel);
     new_line();
     
     while (PIR1bits.TX1IF==0);   TXREG1='T';while (TXSTA1bits.TRMT==0);
@@ -57,7 +73,7 @@ void data()
     while (PIR1bits.TX1IF==0);   TXREG1='l';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='e';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='=';while (TXSTA1bits.TRMT==0);
-    while (PIR1bits.TX1IF==0);   TXREG1=huileReel;while (TXSTA1bits.TRMT==0);
+    write_number(huileReel);
     new_line();
     
     while (PIR1bits.TX1IF==0);   TXREG1='V';while (TXSTA1bits.TRMT==0);
@@ -68,7 +84,7 @@ void data()
     while (PIR1bits.TX1IF==0);   TXREG1='s';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='e';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='=';while (TXSTA1bits.TRMT==0);
-    while (PIR1bits.TX1IF==0);   TXREG1=vitesseReel;while (TXSTA1bits.TRMT==0);
+    write_number(vitesseReel);
     new_line();
     
     while (PIR1bits.TX1IF==0);   TXREG1='B';while (TXSTA1bits.TRMT==0);
@@ -80,10 +96,10 @@ void data()
     while (PIR1bits.TX1IF==0);   TXREG1='i';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='e';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='=';while (TXSTA1bits.TRMT==0);
-    while (PIR1bits.TX1IF==0);   TXREG1=batterieReel;while (TXSTA1bits.TRMT==0);
+    write_number(batterieReel);
     new_line();
 
-    while (PIR1bits.TX1IF==0);   TXREG1='U';while (TXSTA1bits.TRMT==0);
+    /*while (PIR1bits.TX1IF==0);   TXREG1='U';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='t';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='i';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='l';while (TXSTA1bits.TRMT==0);
@@ -95,8 +111,8 @@ void data()
     while (PIR1bits.TX1IF==0);   TXREG1='o';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='n';while (TXSTA1bits.TRMT==0);
     while (PIR1bits.TX1IF==0);   TXREG1='=';while (TXSTA1bits.TRMT==0);
-    while (PIR1bits.TX1IF==0);   TXREG1=machine_use_time;while (TXSTA1bits.TRMT==0);
-    new_line();
+    write_number(machine_use_time);
+    new_line();*/
 }
 
 void tache4()

@@ -6,7 +6,7 @@ _new_line: CODE, 80476 0 58
 _alarm_icon: CODE, 79568 0 96
 _setBit: CODE, 81046 0 28
 i2_PWM1_Init: CODE, 81144 0 22
-__stringdata: MEDIUMCONST, 65138 0 397
+__stringdata: MEDIUMCONST, 65130 0 405
 _write_d_aff: CODE, 81098 0 24
 _tache2: CODE, 71950 0 810
 _init_rxtx: CODE, 80918 0 34
@@ -61,4 +61,4 @@ _d1command: CODE, 79470 0 98
 _V: CODE, 80648 0 50
 ___ftdiv: CODE, 75716 0 286
 _check_status_ok: CODE, 80414 0 62
-Total: 17157
+Total: 17165

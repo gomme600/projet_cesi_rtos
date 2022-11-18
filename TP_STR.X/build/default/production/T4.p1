@@ -9455,1000 +9455,871 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.h: 143: void initialisation_des_ports();
 [; ;main.h: 144: unsigned char lecture_8bit_analogique(unsigned char channel);
 [; ;T4.h: 16: void tache4();
-"4 T4.c
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 23: extern int errno;
+[; ;stdio.h: 54: struct __prbuf
+[; ;stdio.h: 55: {
+[; ;stdio.h: 56: char * ptr;
+[; ;stdio.h: 57: void (* func)(char);
+[; ;stdio.h: 58: };
+[; ;conio.h: 17: extern int errno;
+[; ;conio.h: 20: extern void init_uart(void);
+[; ;conio.h: 22: extern char getch(void);
+[; ;conio.h: 23: extern char getche(void);
+[; ;conio.h: 24: extern void putch(char);
+[; ;conio.h: 25: extern void ungetch(char);
+[; ;conio.h: 27: extern __bit kbhit(void);
+[; ;conio.h: 31: extern char * cgets(char *);
+[; ;conio.h: 32: extern void cputs(const char *);
+[; ;stdio.h: 99: extern int cprintf(char *, ...);
+[; ;stdio.h: 104: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 194: extern char * gets(char *);
+[; ;stdio.h: 195: extern int puts(const char *);
+[; ;stdio.h: 196: extern int scanf(const char *, ...);
+[; ;stdio.h: 197: extern int sscanf(const char *, const char *, ...);
+[; ;stdio.h: 198: extern int vprintf(const char *, va_list);
+[; ;stdio.h: 199: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 200: extern int vscanf(const char *, va_list ap);
+[; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list);
+[; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 206: extern int printf(const char *, ...);
+"5 T4.c
 [v _write_to_serial `(v ~T0 @X0 1 ef ]
 {
-[; ;T4.c: 3: void write_to_serial()
-[; ;T4.c: 4: {
+[; ;T4.c: 4: void write_to_serial()
+[; ;T4.c: 5: {
 [e :U _write_to_serial ]
 [f ]
-[; ;T4.c: 6: }
-"6
-[e :UE 1238 ]
-}
-"9
-[v _write_title `(v ~T0 @X0 1 ef ]
-{
-[; ;T4.c: 8: void write_title()
-[; ;T4.c: 9: {
-[e :U _write_title ]
-[f ]
-[; ;T4.c: 10: while (PIR1bits.TX1IF==0); TXREG1='T';while (TXSTA1bits.TRMT==0);
-"10
-[e $U 1240  ]
-[e :U 1241 ]
-[e :U 1240 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1241  ]
-[e :U 1242 ]
-[e = _TXREG1 -> -> 84 `ui `uc ]
-[e $U 1243  ]
-[e :U 1244 ]
-[e :U 1243 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1244  ]
-[e :U 1245 ]
-[; ;T4.c: 11: while (PIR1bits.TX1IF==0); TXREG1='A';while (TXSTA1bits.TRMT==0);
-"11
-[e $U 1246  ]
-[e :U 1247 ]
-[e :U 1246 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1247  ]
-[e :U 1248 ]
-[e = _TXREG1 -> -> 65 `ui `uc ]
-[e $U 1249  ]
-[e :U 1250 ]
-[e :U 1249 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1250  ]
-[e :U 1251 ]
-[; ;T4.c: 12: while (PIR1bits.TX1IF==0); TXREG1='C';while (TXSTA1bits.TRMT==0);
-"12
-[e $U 1252  ]
-[e :U 1253 ]
-[e :U 1252 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1253  ]
-[e :U 1254 ]
-[e = _TXREG1 -> -> 67 `ui `uc ]
-[e $U 1255  ]
-[e :U 1256 ]
-[e :U 1255 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1256  ]
-[e :U 1257 ]
-[; ;T4.c: 13: while (PIR1bits.TX1IF==0); TXREG1='H';while (TXSTA1bits.TRMT==0);
-"13
-[e $U 1258  ]
-[e :U 1259 ]
-[e :U 1258 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1259  ]
-[e :U 1260 ]
-[e = _TXREG1 -> -> 72 `ui `uc ]
-[e $U 1261  ]
-[e :U 1262 ]
-[e :U 1261 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1262  ]
-[e :U 1263 ]
-[; ;T4.c: 14: while (PIR1bits.TX1IF==0); TXREG1='E';while (TXSTA1bits.TRMT==0);
-"14
-[e $U 1264  ]
-[e :U 1265 ]
-[e :U 1264 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1265  ]
-[e :U 1266 ]
-[e = _TXREG1 -> -> 69 `ui `uc ]
-[e $U 1267  ]
-[e :U 1268 ]
-[e :U 1267 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1268  ]
-[e :U 1269 ]
-[; ;T4.c: 15: while (PIR1bits.TX1IF==0); TXREG1='4';while (TXSTA1bits.TRMT==0);
-"15
-[e $U 1270  ]
-[e :U 1271 ]
-[e :U 1270 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1271  ]
-[e :U 1272 ]
-[e = _TXREG1 -> -> 52 `ui `uc ]
-[e $U 1273  ]
-[e :U 1274 ]
-[e :U 1273 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1274  ]
-[e :U 1275 ]
-[; ;T4.c: 16: while (PIR1bits.TX1IF==0); TXREG1='_';while (TXSTA1bits.TRMT==0);
-"16
-[e $U 1276  ]
-[e :U 1277 ]
-[e :U 1276 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1277  ]
-[e :U 1278 ]
-[e = _TXREG1 -> -> 95 `ui `uc ]
-[e $U 1279  ]
-[e :U 1280 ]
-[e :U 1279 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1280  ]
-[e :U 1281 ]
-[; ;T4.c: 17: while (PIR1bits.TX1IF==0); TXREG1='E';while (TXSTA1bits.TRMT==0);
-"17
-[e $U 1282  ]
-[e :U 1283 ]
-[e :U 1282 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1283  ]
-[e :U 1284 ]
-[e = _TXREG1 -> -> 69 `ui `uc ]
-[e $U 1285  ]
-[e :U 1286 ]
-[e :U 1285 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1286  ]
-[e :U 1287 ]
-[; ;T4.c: 18: while (PIR1bits.TX1IF==0); TXREG1='N';while (TXSTA1bits.TRMT==0);
-"18
-[e $U 1288  ]
-[e :U 1289 ]
-[e :U 1288 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1289  ]
-[e :U 1290 ]
-[e = _TXREG1 -> -> 78 `ui `uc ]
-[e $U 1291  ]
-[e :U 1292 ]
-[e :U 1291 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1292  ]
-[e :U 1293 ]
-[; ;T4.c: 19: while (PIR1bits.TX1IF==0); TXREG1='_';while (TXSTA1bits.TRMT==0);
-"19
-[e $U 1294  ]
-[e :U 1295 ]
-[e :U 1294 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1295  ]
-[e :U 1296 ]
-[e = _TXREG1 -> -> 95 `ui `uc ]
-[e $U 1297  ]
-[e :U 1298 ]
-[e :U 1297 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1298  ]
-[e :U 1299 ]
-[; ;T4.c: 20: while (PIR1bits.TX1IF==0); TXREG1='C';while (TXSTA1bits.TRMT==0);
-"20
-[e $U 1300  ]
-[e :U 1301 ]
-[e :U 1300 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1301  ]
-[e :U 1302 ]
-[e = _TXREG1 -> -> 67 `ui `uc ]
-[e $U 1303  ]
-[e :U 1304 ]
-[e :U 1303 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1304  ]
-[e :U 1305 ]
-[; ;T4.c: 21: while (PIR1bits.TX1IF==0); TXREG1='O';while (TXSTA1bits.TRMT==0);
-"21
-[e $U 1306  ]
-[e :U 1307 ]
-[e :U 1306 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1307  ]
-[e :U 1308 ]
-[e = _TXREG1 -> -> 79 `ui `uc ]
-[e $U 1309  ]
-[e :U 1310 ]
-[e :U 1309 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1310  ]
-[e :U 1311 ]
-[; ;T4.c: 22: while (PIR1bits.TX1IF==0); TXREG1='U';while (TXSTA1bits.TRMT==0);
-"22
-[e $U 1312  ]
-[e :U 1313 ]
-[e :U 1312 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1313  ]
-[e :U 1314 ]
-[e = _TXREG1 -> -> 85 `ui `uc ]
-[e $U 1315  ]
-[e :U 1316 ]
-[e :U 1315 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1316  ]
-[e :U 1317 ]
-[; ;T4.c: 23: while (PIR1bits.TX1IF==0); TXREG1='R';while (TXSTA1bits.TRMT==0);
-"23
-[e $U 1318  ]
-[e :U 1319 ]
-[e :U 1318 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1319  ]
-[e :U 1320 ]
-[e = _TXREG1 -> -> 82 `ui `uc ]
-[e $U 1321  ]
-[e :U 1322 ]
-[e :U 1321 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1322  ]
-[e :U 1323 ]
-[; ;T4.c: 24: while (PIR1bits.TX1IF==0); TXREG1='S';while (TXSTA1bits.TRMT==0);
-"24
-[e $U 1324  ]
-[e :U 1325 ]
-[e :U 1324 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1325  ]
-[e :U 1326 ]
-[e = _TXREG1 -> -> 83 `ui `uc ]
-[e $U 1327  ]
-[e :U 1328 ]
-[e :U 1327 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1328  ]
-[e :U 1329 ]
-[; ;T4.c: 25: }
-"25
+[; ;T4.c: 7: }
+"7
 [e :UE 1239 ]
 }
+"10
+[v _write_number `(v ~T0 @X0 1 ef1`*uc ]
+{
+[; ;T4.c: 9: void write_number(char bufferin[10])
+[; ;T4.c: 10: {
+[e :U _write_number ]
+[v _bufferin `*uc ~T0 @X0 1 r1 ]
+[f ]
+"11
+[v _buffer `uc ~T0 @X0 -> 10 `i a ]
+"12
+[v _l `i ~T0 @X0 1 a ]
+[; ;T4.c: 11: char buffer[10];
+[; ;T4.c: 12: int l= 0;
+[e = _l -> 0 `i ]
+"14
+[v _value `i ~T0 @X0 1 a ]
+[; ;T4.c: 14: int value = bufferin;
+[e = _value -> _bufferin `i ]
+[; ;T4.c: 17: while(buffer[l]!='\0')
+"17
+[e $U 1241  ]
+[e :U 1242 ]
+[; ;T4.c: 18: {
+"18
+{
+[; ;T4.c: 19: while (PIR1bits.TX1IF==0); TXREG1=buffer[l];while (TXSTA1bits.TRMT==0);
+"19
+[e $U 1244  ]
+[e :U 1245 ]
+[e :U 1244 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1245  ]
+[e :U 1246 ]
+[e = _TXREG1 *U + &U _buffer * -> -> _l `ui `ux -> -> # *U &U _buffer `ui `ux ]
+[e $U 1247  ]
+[e :U 1248 ]
+[e :U 1247 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1248  ]
+[e :U 1249 ]
+[; ;T4.c: 20: l++;
+"20
+[e ++ _l -> 1 `i ]
+"21
+}
+[e :U 1241 ]
+"17
+[e $ != -> *U + &U _buffer * -> -> _l `ui `ux -> -> # *U &U _buffer `ui `ux `ui -> 0 `ui 1242  ]
+[e :U 1243 ]
+[; ;T4.c: 21: }
+[; ;T4.c: 22: }
+"22
+[e :UE 1240 ]
+}
+"25
+[v _write_title `(v ~T0 @X0 1 ef ]
+{
+[; ;T4.c: 24: void write_title()
+[; ;T4.c: 25: {
+[e :U _write_title ]
+[f ]
+[; ;T4.c: 26: while (PIR1bits.TX1IF==0); TXREG1='T';while (TXSTA1bits.TRMT==0);
+"26
+[e $U 1251  ]
+[e :U 1252 ]
+[e :U 1251 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1252  ]
+[e :U 1253 ]
+[e = _TXREG1 -> -> 84 `ui `uc ]
+[e $U 1254  ]
+[e :U 1255 ]
+[e :U 1254 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1255  ]
+[e :U 1256 ]
+[; ;T4.c: 27: while (PIR1bits.TX1IF==0); TXREG1='A';while (TXSTA1bits.TRMT==0);
+"27
+[e $U 1257  ]
+[e :U 1258 ]
+[e :U 1257 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1258  ]
+[e :U 1259 ]
+[e = _TXREG1 -> -> 65 `ui `uc ]
+[e $U 1260  ]
+[e :U 1261 ]
+[e :U 1260 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1261  ]
+[e :U 1262 ]
+[; ;T4.c: 28: while (PIR1bits.TX1IF==0); TXREG1='C';while (TXSTA1bits.TRMT==0);
 "28
-[v _new_line `(v ~T0 @X0 1 ef ]
-{
-[; ;T4.c: 27: void new_line()
-[; ;T4.c: 28: {
-[e :U _new_line ]
-[f ]
-[; ;T4.c: 30: while (PIR1bits.TX1IF==0); TXREG1=0x0A;while (TXSTA1bits.TRMT==0);
+[e $U 1263  ]
+[e :U 1264 ]
+[e :U 1263 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1264  ]
+[e :U 1265 ]
+[e = _TXREG1 -> -> 67 `ui `uc ]
+[e $U 1266  ]
+[e :U 1267 ]
+[e :U 1266 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1267  ]
+[e :U 1268 ]
+[; ;T4.c: 29: while (PIR1bits.TX1IF==0); TXREG1='H';while (TXSTA1bits.TRMT==0);
+"29
+[e $U 1269  ]
+[e :U 1270 ]
+[e :U 1269 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1270  ]
+[e :U 1271 ]
+[e = _TXREG1 -> -> 72 `ui `uc ]
+[e $U 1272  ]
+[e :U 1273 ]
+[e :U 1272 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1273  ]
+[e :U 1274 ]
+[; ;T4.c: 30: while (PIR1bits.TX1IF==0); TXREG1='E';while (TXSTA1bits.TRMT==0);
 "30
-[e $U 1331  ]
-[e :U 1332 ]
-[e :U 1331 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1332  ]
-[e :U 1333 ]
-[e = _TXREG1 -> -> 10 `i `uc ]
-[e $U 1334  ]
-[e :U 1335 ]
-[e :U 1334 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1335  ]
-[e :U 1336 ]
-[; ;T4.c: 32: while (PIR1bits.TX1IF==0); TXREG1=0x0d;while (TXSTA1bits.TRMT==0);
+[e $U 1275  ]
+[e :U 1276 ]
+[e :U 1275 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1276  ]
+[e :U 1277 ]
+[e = _TXREG1 -> -> 69 `ui `uc ]
+[e $U 1278  ]
+[e :U 1279 ]
+[e :U 1278 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1279  ]
+[e :U 1280 ]
+[; ;T4.c: 31: while (PIR1bits.TX1IF==0); TXREG1='4';while (TXSTA1bits.TRMT==0);
+"31
+[e $U 1281  ]
+[e :U 1282 ]
+[e :U 1281 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1282  ]
+[e :U 1283 ]
+[e = _TXREG1 -> -> 52 `ui `uc ]
+[e $U 1284  ]
+[e :U 1285 ]
+[e :U 1284 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1285  ]
+[e :U 1286 ]
+[; ;T4.c: 32: while (PIR1bits.TX1IF==0); TXREG1='_';while (TXSTA1bits.TRMT==0);
 "32
-[e $U 1337  ]
-[e :U 1338 ]
-[e :U 1337 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1338  ]
-[e :U 1339 ]
-[e = _TXREG1 -> -> 13 `i `uc ]
-[e $U 1340  ]
-[e :U 1341 ]
-[e :U 1340 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1341  ]
-[e :U 1342 ]
-[; ;T4.c: 33: }
+[e $U 1287  ]
+[e :U 1288 ]
+[e :U 1287 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1288  ]
+[e :U 1289 ]
+[e = _TXREG1 -> -> 95 `ui `uc ]
+[e $U 1290  ]
+[e :U 1291 ]
+[e :U 1290 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1291  ]
+[e :U 1292 ]
+[; ;T4.c: 33: while (PIR1bits.TX1IF==0); TXREG1='E';while (TXSTA1bits.TRMT==0);
 "33
-[e :UE 1330 ]
-}
+[e $U 1293  ]
+[e :U 1294 ]
+[e :U 1293 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1294  ]
+[e :U 1295 ]
+[e = _TXREG1 -> -> 69 `ui `uc ]
+[e $U 1296  ]
+[e :U 1297 ]
+[e :U 1296 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1297  ]
+[e :U 1298 ]
+[; ;T4.c: 34: while (PIR1bits.TX1IF==0); TXREG1='N';while (TXSTA1bits.TRMT==0);
+"34
+[e $U 1299  ]
+[e :U 1300 ]
+[e :U 1299 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1300  ]
+[e :U 1301 ]
+[e = _TXREG1 -> -> 78 `ui `uc ]
+[e $U 1302  ]
+[e :U 1303 ]
+[e :U 1302 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1303  ]
+[e :U 1304 ]
+[; ;T4.c: 35: while (PIR1bits.TX1IF==0); TXREG1='_';while (TXSTA1bits.TRMT==0);
+"35
+[e $U 1305  ]
+[e :U 1306 ]
+[e :U 1305 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1306  ]
+[e :U 1307 ]
+[e = _TXREG1 -> -> 95 `ui `uc ]
+[e $U 1308  ]
+[e :U 1309 ]
+[e :U 1308 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1309  ]
+[e :U 1310 ]
+[; ;T4.c: 36: while (PIR1bits.TX1IF==0); TXREG1='C';while (TXSTA1bits.TRMT==0);
 "36
-[v _clear_term `(v ~T0 @X0 1 ef ]
-{
-[; ;T4.c: 35: void clear_term()
-[; ;T4.c: 36: {
-[e :U _clear_term ]
-[f ]
+[e $U 1311  ]
+[e :U 1312 ]
+[e :U 1311 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1312  ]
+[e :U 1313 ]
+[e = _TXREG1 -> -> 67 `ui `uc ]
+[e $U 1314  ]
+[e :U 1315 ]
+[e :U 1314 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1315  ]
+[e :U 1316 ]
+[; ;T4.c: 37: while (PIR1bits.TX1IF==0); TXREG1='O';while (TXSTA1bits.TRMT==0);
 "37
-[v _b `ui ~T0 @X0 1 a ]
-[; ;T4.c: 37: unsigned int b;
-[; ;T4.c: 38: for (b=0;b<25;b++)
+[e $U 1317  ]
+[e :U 1318 ]
+[e :U 1317 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1318  ]
+[e :U 1319 ]
+[e = _TXREG1 -> -> 79 `ui `uc ]
+[e $U 1320  ]
+[e :U 1321 ]
+[e :U 1320 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1321  ]
+[e :U 1322 ]
+[; ;T4.c: 38: while (PIR1bits.TX1IF==0); TXREG1='U';while (TXSTA1bits.TRMT==0);
 "38
-{
-[e = _b -> -> 0 `i `ui ]
-[e $ < _b -> -> 25 `i `ui 1344  ]
-[e $U 1345  ]
+[e $U 1323  ]
+[e :U 1324 ]
+[e :U 1323 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1324  ]
+[e :U 1325 ]
+[e = _TXREG1 -> -> 85 `ui `uc ]
+[e $U 1326  ]
+[e :U 1327 ]
+[e :U 1326 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1327  ]
+[e :U 1328 ]
+[; ;T4.c: 39: while (PIR1bits.TX1IF==0); TXREG1='R';while (TXSTA1bits.TRMT==0);
 "39
-[e :U 1344 ]
-[; ;T4.c: 39: new_line();
-[e ( _new_line ..  ]
-"38
-[e ++ _b -> -> 1 `i `ui ]
-[e $ < _b -> -> 25 `i `ui 1344  ]
-[e :U 1345 ]
-"39
-}
-[; ;T4.c: 40: ;
+[e $U 1329  ]
+[e :U 1330 ]
+[e :U 1329 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1330  ]
+[e :U 1331 ]
+[e = _TXREG1 -> -> 82 `ui `uc ]
+[e $U 1332  ]
+[e :U 1333 ]
+[e :U 1332 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1333  ]
+[e :U 1334 ]
+[; ;T4.c: 40: while (PIR1bits.TX1IF==0); TXREG1='S';while (TXSTA1bits.TRMT==0);
+"40
+[e $U 1335  ]
+[e :U 1336 ]
+[e :U 1335 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1336  ]
+[e :U 1337 ]
+[e = _TXREG1 -> -> 83 `ui `uc ]
+[e $U 1338  ]
+[e :U 1339 ]
+[e :U 1338 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1339  ]
+[e :U 1340 ]
 [; ;T4.c: 41: }
 "41
-[e :UE 1343 ]
+[e :UE 1250 ]
 }
 "44
-[v _data `(v ~T0 @X0 1 ef ]
+[v _new_line `(v ~T0 @X0 1 ef ]
 {
-[; ;T4.c: 43: void data()
+[; ;T4.c: 43: void new_line()
 [; ;T4.c: 44: {
-[e :U _data ]
+[e :U _new_line ]
 [f ]
-[; ;T4.c: 45: while (PIR1bits.TX1IF==0); TXREG1='T';while (TXSTA1bits.TRMT==0);
-"45
+[; ;T4.c: 46: while (PIR1bits.TX1IF==0); TXREG1=0x0A;while (TXSTA1bits.TRMT==0);
+"46
+[e $U 1342  ]
+[e :U 1343 ]
+[e :U 1342 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1343  ]
+[e :U 1344 ]
+[e = _TXREG1 -> -> 10 `i `uc ]
+[e $U 1345  ]
+[e :U 1346 ]
+[e :U 1345 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1346  ]
+[e :U 1347 ]
+[; ;T4.c: 48: while (PIR1bits.TX1IF==0); TXREG1=0x0d;while (TXSTA1bits.TRMT==0);
+"48
 [e $U 1348  ]
 [e :U 1349 ]
 [e :U 1348 ]
 [e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1349  ]
 [e :U 1350 ]
-[e = _TXREG1 -> -> 84 `ui `uc ]
+[e = _TXREG1 -> -> 13 `i `uc ]
 [e $U 1351  ]
 [e :U 1352 ]
 [e :U 1351 ]
 [e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1352  ]
 [e :U 1353 ]
-[; ;T4.c: 46: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
-"46
-[e $U 1354  ]
-[e :U 1355 ]
-[e :U 1354 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1355  ]
-[e :U 1356 ]
-[e = _TXREG1 -> -> 101 `ui `uc ]
-[e $U 1357  ]
-[e :U 1358 ]
-[e :U 1357 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1358  ]
-[e :U 1359 ]
-[; ;T4.c: 47: while (PIR1bits.TX1IF==0); TXREG1='a';while (TXSTA1bits.TRMT==0);
-"47
-[e $U 1360  ]
-[e :U 1361 ]
-[e :U 1360 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1361  ]
-[e :U 1362 ]
-[e = _TXREG1 -> -> 97 `ui `uc ]
-[e $U 1363  ]
-[e :U 1364 ]
-[e :U 1363 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1364  ]
-[e :U 1365 ]
-[; ;T4.c: 48: while (PIR1bits.TX1IF==0); TXREG1='u';while (TXSTA1bits.TRMT==0);
-"48
-[e $U 1366  ]
-[e :U 1367 ]
-[e :U 1366 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1367  ]
-[e :U 1368 ]
-[e = _TXREG1 -> -> 117 `ui `uc ]
-[e $U 1369  ]
-[e :U 1370 ]
-[e :U 1369 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1370  ]
-[e :U 1371 ]
-[; ;T4.c: 49: while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
+[; ;T4.c: 49: }
 "49
-[e $U 1372  ]
-[e :U 1373 ]
-[e :U 1372 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1373  ]
-[e :U 1374 ]
-[e = _TXREG1 -> -> 61 `ui `uc ]
-[e $U 1375  ]
-[e :U 1376 ]
-[e :U 1375 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1376  ]
-[e :U 1377 ]
-[; ;T4.c: 50: while (PIR1bits.TX1IF==0); TXREG1=eauReel;while (TXSTA1bits.TRMT==0);
-"50
-[e $U 1378  ]
-[e :U 1379 ]
-[e :U 1378 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1379  ]
-[e :U 1380 ]
-[e = _TXREG1 _eauReel ]
-[e $U 1381  ]
-[e :U 1382 ]
-[e :U 1381 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1382  ]
-[e :U 1383 ]
-[; ;T4.c: 51: new_line();
-"51
-[e ( _new_line ..  ]
-[; ;T4.c: 53: while (PIR1bits.TX1IF==0); TXREG1='T';while (TXSTA1bits.TRMT==0);
+[e :UE 1341 ]
+}
+"52
+[v _clear_term `(v ~T0 @X0 1 ef ]
+{
+[; ;T4.c: 51: void clear_term()
+[; ;T4.c: 52: {
+[e :U _clear_term ]
+[f ]
 "53
-[e $U 1384  ]
-[e :U 1385 ]
-[e :U 1384 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1385  ]
-[e :U 1386 ]
-[e = _TXREG1 -> -> 84 `ui `uc ]
-[e $U 1387  ]
-[e :U 1388 ]
-[e :U 1387 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1388  ]
-[e :U 1389 ]
-[; ;T4.c: 54: while (PIR1bits.TX1IF==0); TXREG1='h';while (TXSTA1bits.TRMT==0);
+[v _b `ui ~T0 @X0 1 a ]
+[; ;T4.c: 53: unsigned int b;
+[; ;T4.c: 54: for (b=0;b<25;b++)
 "54
-[e $U 1390  ]
-[e :U 1391 ]
-[e :U 1390 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1391  ]
-[e :U 1392 ]
-[e = _TXREG1 -> -> 104 `ui `uc ]
-[e $U 1393  ]
-[e :U 1394 ]
-[e :U 1393 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1394  ]
-[e :U 1395 ]
-[; ;T4.c: 55: while (PIR1bits.TX1IF==0); TXREG1='u';while (TXSTA1bits.TRMT==0);
+{
+[e = _b -> -> 0 `i `ui ]
+[e $ < _b -> -> 25 `i `ui 1355  ]
+[e $U 1356  ]
 "55
-[e $U 1396  ]
-[e :U 1397 ]
-[e :U 1396 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1397  ]
-[e :U 1398 ]
-[e = _TXREG1 -> -> 117 `ui `uc ]
-[e $U 1399  ]
-[e :U 1400 ]
-[e :U 1399 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1400  ]
-[e :U 1401 ]
-[; ;T4.c: 56: while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
-"56
-[e $U 1402  ]
-[e :U 1403 ]
-[e :U 1402 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1403  ]
-[e :U 1404 ]
-[e = _TXREG1 -> -> 105 `ui `uc ]
-[e $U 1405  ]
-[e :U 1406 ]
-[e :U 1405 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1406  ]
-[e :U 1407 ]
-[; ;T4.c: 57: while (PIR1bits.TX1IF==0); TXREG1='l';while (TXSTA1bits.TRMT==0);
+[e :U 1355 ]
+[; ;T4.c: 55: new_line();
+[e ( _new_line ..  ]
+"54
+[e ++ _b -> -> 1 `i `ui ]
+[e $ < _b -> -> 25 `i `ui 1355  ]
+[e :U 1356 ]
+"55
+}
+[; ;T4.c: 56: ;
+[; ;T4.c: 57: }
 "57
-[e $U 1408  ]
-[e :U 1409 ]
-[e :U 1408 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1409  ]
-[e :U 1410 ]
-[e = _TXREG1 -> -> 108 `ui `uc ]
-[e $U 1411  ]
-[e :U 1412 ]
-[e :U 1411 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1412  ]
-[e :U 1413 ]
-[; ;T4.c: 58: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
-"58
-[e $U 1414  ]
-[e :U 1415 ]
-[e :U 1414 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1415  ]
-[e :U 1416 ]
-[e = _TXREG1 -> -> 101 `ui `uc ]
-[e $U 1417  ]
-[e :U 1418 ]
-[e :U 1417 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1418  ]
-[e :U 1419 ]
-[; ;T4.c: 59: while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
-"59
-[e $U 1420  ]
-[e :U 1421 ]
-[e :U 1420 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1421  ]
-[e :U 1422 ]
-[e = _TXREG1 -> -> 61 `ui `uc ]
-[e $U 1423  ]
-[e :U 1424 ]
-[e :U 1423 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1424  ]
-[e :U 1425 ]
-[; ;T4.c: 60: while (PIR1bits.TX1IF==0); TXREG1=huileReel;while (TXSTA1bits.TRMT==0);
+[e :UE 1354 ]
+}
 "60
-[e $U 1426  ]
-[e :U 1427 ]
-[e :U 1426 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1427  ]
-[e :U 1428 ]
-[e = _TXREG1 _huileReel ]
-[e $U 1429  ]
-[e :U 1430 ]
-[e :U 1429 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1430  ]
-[e :U 1431 ]
-[; ;T4.c: 61: new_line();
+[v _data `(v ~T0 @X0 1 ef ]
+{
+[; ;T4.c: 59: void data()
+[; ;T4.c: 60: {
+[e :U _data ]
+[f ]
+[; ;T4.c: 61: while (PIR1bits.TX1IF==0); TXREG1='T';while (TXSTA1bits.TRMT==0);
 "61
-[e ( _new_line ..  ]
-[; ;T4.c: 63: while (PIR1bits.TX1IF==0); TXREG1='V';while (TXSTA1bits.TRMT==0);
+[e $U 1359  ]
+[e :U 1360 ]
+[e :U 1359 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1360  ]
+[e :U 1361 ]
+[e = _TXREG1 -> -> 84 `ui `uc ]
+[e $U 1362  ]
+[e :U 1363 ]
+[e :U 1362 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1363  ]
+[e :U 1364 ]
+[; ;T4.c: 62: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
+"62
+[e $U 1365  ]
+[e :U 1366 ]
+[e :U 1365 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1366  ]
+[e :U 1367 ]
+[e = _TXREG1 -> -> 101 `ui `uc ]
+[e $U 1368  ]
+[e :U 1369 ]
+[e :U 1368 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1369  ]
+[e :U 1370 ]
+[; ;T4.c: 63: while (PIR1bits.TX1IF==0); TXREG1='a';while (TXSTA1bits.TRMT==0);
 "63
-[e $U 1432  ]
-[e :U 1433 ]
-[e :U 1432 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1433  ]
-[e :U 1434 ]
-[e = _TXREG1 -> -> 86 `ui `uc ]
-[e $U 1435  ]
-[e :U 1436 ]
-[e :U 1435 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1436  ]
-[e :U 1437 ]
-[; ;T4.c: 64: while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
-"64
-[e $U 1438  ]
-[e :U 1439 ]
-[e :U 1438 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1439  ]
-[e :U 1440 ]
-[e = _TXREG1 -> -> 105 `ui `uc ]
-[e $U 1441  ]
-[e :U 1442 ]
-[e :U 1441 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1442  ]
-[e :U 1443 ]
-[; ;T4.c: 65: while (PIR1bits.TX1IF==0); TXREG1='t';while (TXSTA1bits.TRMT==0);
-"65
-[e $U 1444  ]
-[e :U 1445 ]
-[e :U 1444 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1445  ]
-[e :U 1446 ]
-[e = _TXREG1 -> -> 116 `ui `uc ]
-[e $U 1447  ]
-[e :U 1448 ]
-[e :U 1447 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1448  ]
-[e :U 1449 ]
-[; ;T4.c: 66: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
-"66
-[e $U 1450  ]
-[e :U 1451 ]
-[e :U 1450 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1451  ]
-[e :U 1452 ]
-[e = _TXREG1 -> -> 101 `ui `uc ]
-[e $U 1453  ]
-[e :U 1454 ]
-[e :U 1453 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1454  ]
-[e :U 1455 ]
-[; ;T4.c: 67: while (PIR1bits.TX1IF==0); TXREG1='s';while (TXSTA1bits.TRMT==0);
-"67
-[e $U 1456  ]
-[e :U 1457 ]
-[e :U 1456 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1457  ]
-[e :U 1458 ]
-[e = _TXREG1 -> -> 115 `ui `uc ]
-[e $U 1459  ]
-[e :U 1460 ]
-[e :U 1459 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1460  ]
-[e :U 1461 ]
-[; ;T4.c: 68: while (PIR1bits.TX1IF==0); TXREG1='s';while (TXSTA1bits.TRMT==0);
-"68
-[e $U 1462  ]
-[e :U 1463 ]
-[e :U 1462 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1463  ]
-[e :U 1464 ]
-[e = _TXREG1 -> -> 115 `ui `uc ]
-[e $U 1465  ]
-[e :U 1466 ]
-[e :U 1465 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1466  ]
-[e :U 1467 ]
-[; ;T4.c: 69: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
-"69
-[e $U 1468  ]
-[e :U 1469 ]
-[e :U 1468 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1469  ]
-[e :U 1470 ]
-[e = _TXREG1 -> -> 101 `ui `uc ]
-[e $U 1471  ]
-[e :U 1472 ]
-[e :U 1471 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1472  ]
-[e :U 1473 ]
-[; ;T4.c: 70: while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
-"70
-[e $U 1474  ]
-[e :U 1475 ]
-[e :U 1474 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1475  ]
-[e :U 1476 ]
-[e = _TXREG1 -> -> 61 `ui `uc ]
-[e $U 1477  ]
-[e :U 1478 ]
-[e :U 1477 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1478  ]
-[e :U 1479 ]
-[; ;T4.c: 71: while (PIR1bits.TX1IF==0); TXREG1=vitesseReel;while (TXSTA1bits.TRMT==0);
-"71
-[e $U 1480  ]
-[e :U 1481 ]
-[e :U 1480 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1481  ]
-[e :U 1482 ]
-[e = _TXREG1 _vitesseReel ]
-[e $U 1483  ]
-[e :U 1484 ]
-[e :U 1483 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1484  ]
-[e :U 1485 ]
-[; ;T4.c: 72: new_line();
-"72
-[e ( _new_line ..  ]
-[; ;T4.c: 74: while (PIR1bits.TX1IF==0); TXREG1='B';while (TXSTA1bits.TRMT==0);
-"74
-[e $U 1486  ]
-[e :U 1487 ]
-[e :U 1486 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1487  ]
-[e :U 1488 ]
-[e = _TXREG1 -> -> 66 `ui `uc ]
-[e $U 1489  ]
-[e :U 1490 ]
-[e :U 1489 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1490  ]
-[e :U 1491 ]
-[; ;T4.c: 75: while (PIR1bits.TX1IF==0); TXREG1='a';while (TXSTA1bits.TRMT==0);
-"75
-[e $U 1492  ]
-[e :U 1493 ]
-[e :U 1492 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1493  ]
-[e :U 1494 ]
+[e $U 1371  ]
+[e :U 1372 ]
+[e :U 1371 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1372  ]
+[e :U 1373 ]
 [e = _TXREG1 -> -> 97 `ui `uc ]
-[e $U 1495  ]
-[e :U 1496 ]
-[e :U 1495 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1496  ]
-[e :U 1497 ]
-[; ;T4.c: 76: while (PIR1bits.TX1IF==0); TXREG1='t';while (TXSTA1bits.TRMT==0);
-"76
-[e $U 1498  ]
-[e :U 1499 ]
-[e :U 1498 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1499  ]
-[e :U 1500 ]
-[e = _TXREG1 -> -> 116 `ui `uc ]
-[e $U 1501  ]
-[e :U 1502 ]
-[e :U 1501 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1502  ]
-[e :U 1503 ]
-[; ;T4.c: 77: while (PIR1bits.TX1IF==0); TXREG1='t';while (TXSTA1bits.TRMT==0);
-"77
-[e $U 1504  ]
-[e :U 1505 ]
-[e :U 1504 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1505  ]
-[e :U 1506 ]
-[e = _TXREG1 -> -> 116 `ui `uc ]
-[e $U 1507  ]
-[e :U 1508 ]
-[e :U 1507 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1508  ]
-[e :U 1509 ]
-[; ;T4.c: 78: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
-"78
-[e $U 1510  ]
-[e :U 1511 ]
-[e :U 1510 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1511  ]
-[e :U 1512 ]
+[e $U 1374  ]
+[e :U 1375 ]
+[e :U 1374 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1375  ]
+[e :U 1376 ]
+[; ;T4.c: 64: while (PIR1bits.TX1IF==0); TXREG1='u';while (TXSTA1bits.TRMT==0);
+"64
+[e $U 1377  ]
+[e :U 1378 ]
+[e :U 1377 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1378  ]
+[e :U 1379 ]
+[e = _TXREG1 -> -> 117 `ui `uc ]
+[e $U 1380  ]
+[e :U 1381 ]
+[e :U 1380 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1381  ]
+[e :U 1382 ]
+[; ;T4.c: 65: while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
+"65
+[e $U 1383  ]
+[e :U 1384 ]
+[e :U 1383 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1384  ]
+[e :U 1385 ]
+[e = _TXREG1 -> -> 61 `ui `uc ]
+[e $U 1386  ]
+[e :U 1387 ]
+[e :U 1386 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1387  ]
+[e :U 1388 ]
+[; ;T4.c: 66: write_number(eauReel);
+"66
+[e ( _write_number (1 -> _eauReel `*uc ]
+[; ;T4.c: 67: new_line();
+"67
+[e ( _new_line ..  ]
+[; ;T4.c: 69: while (PIR1bits.TX1IF==0); TXREG1='T';while (TXSTA1bits.TRMT==0);
+"69
+[e $U 1389  ]
+[e :U 1390 ]
+[e :U 1389 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1390  ]
+[e :U 1391 ]
+[e = _TXREG1 -> -> 84 `ui `uc ]
+[e $U 1392  ]
+[e :U 1393 ]
+[e :U 1392 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1393  ]
+[e :U 1394 ]
+[; ;T4.c: 70: while (PIR1bits.TX1IF==0); TXREG1='h';while (TXSTA1bits.TRMT==0);
+"70
+[e $U 1395  ]
+[e :U 1396 ]
+[e :U 1395 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1396  ]
+[e :U 1397 ]
+[e = _TXREG1 -> -> 104 `ui `uc ]
+[e $U 1398  ]
+[e :U 1399 ]
+[e :U 1398 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1399  ]
+[e :U 1400 ]
+[; ;T4.c: 71: while (PIR1bits.TX1IF==0); TXREG1='u';while (TXSTA1bits.TRMT==0);
+"71
+[e $U 1401  ]
+[e :U 1402 ]
+[e :U 1401 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1402  ]
+[e :U 1403 ]
+[e = _TXREG1 -> -> 117 `ui `uc ]
+[e $U 1404  ]
+[e :U 1405 ]
+[e :U 1404 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1405  ]
+[e :U 1406 ]
+[; ;T4.c: 72: while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
+"72
+[e $U 1407  ]
+[e :U 1408 ]
+[e :U 1407 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1408  ]
+[e :U 1409 ]
+[e = _TXREG1 -> -> 105 `ui `uc ]
+[e $U 1410  ]
+[e :U 1411 ]
+[e :U 1410 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1411  ]
+[e :U 1412 ]
+[; ;T4.c: 73: while (PIR1bits.TX1IF==0); TXREG1='l';while (TXSTA1bits.TRMT==0);
+"73
+[e $U 1413  ]
+[e :U 1414 ]
+[e :U 1413 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1414  ]
+[e :U 1415 ]
+[e = _TXREG1 -> -> 108 `ui `uc ]
+[e $U 1416  ]
+[e :U 1417 ]
+[e :U 1416 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1417  ]
+[e :U 1418 ]
+[; ;T4.c: 74: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
+"74
+[e $U 1419  ]
+[e :U 1420 ]
+[e :U 1419 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1420  ]
+[e :U 1421 ]
 [e = _TXREG1 -> -> 101 `ui `uc ]
-[e $U 1513  ]
-[e :U 1514 ]
-[e :U 1513 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1514  ]
-[e :U 1515 ]
-[; ;T4.c: 79: while (PIR1bits.TX1IF==0); TXREG1='r';while (TXSTA1bits.TRMT==0);
+[e $U 1422  ]
+[e :U 1423 ]
+[e :U 1422 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1423  ]
+[e :U 1424 ]
+[; ;T4.c: 75: while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
+"75
+[e $U 1425  ]
+[e :U 1426 ]
+[e :U 1425 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1426  ]
+[e :U 1427 ]
+[e = _TXREG1 -> -> 61 `ui `uc ]
+[e $U 1428  ]
+[e :U 1429 ]
+[e :U 1428 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1429  ]
+[e :U 1430 ]
+[; ;T4.c: 76: write_number(huileReel);
+"76
+[e ( _write_number (1 -> _huileReel `*uc ]
+[; ;T4.c: 77: new_line();
+"77
+[e ( _new_line ..  ]
+[; ;T4.c: 79: while (PIR1bits.TX1IF==0); TXREG1='V';while (TXSTA1bits.TRMT==0);
 "79
-[e $U 1516  ]
-[e :U 1517 ]
-[e :U 1516 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1517  ]
-[e :U 1518 ]
-[e = _TXREG1 -> -> 114 `ui `uc ]
-[e $U 1519  ]
-[e :U 1520 ]
-[e :U 1519 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1520  ]
-[e :U 1521 ]
+[e $U 1431  ]
+[e :U 1432 ]
+[e :U 1431 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1432  ]
+[e :U 1433 ]
+[e = _TXREG1 -> -> 86 `ui `uc ]
+[e $U 1434  ]
+[e :U 1435 ]
+[e :U 1434 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1435  ]
+[e :U 1436 ]
 [; ;T4.c: 80: while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
 "80
-[e $U 1522  ]
-[e :U 1523 ]
-[e :U 1522 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1523  ]
-[e :U 1524 ]
+[e $U 1437  ]
+[e :U 1438 ]
+[e :U 1437 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1438  ]
+[e :U 1439 ]
 [e = _TXREG1 -> -> 105 `ui `uc ]
-[e $U 1525  ]
-[e :U 1526 ]
-[e :U 1525 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1526  ]
-[e :U 1527 ]
-[; ;T4.c: 81: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
+[e $U 1440  ]
+[e :U 1441 ]
+[e :U 1440 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1441  ]
+[e :U 1442 ]
+[; ;T4.c: 81: while (PIR1bits.TX1IF==0); TXREG1='t';while (TXSTA1bits.TRMT==0);
 "81
-[e $U 1528  ]
-[e :U 1529 ]
-[e :U 1528 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1529  ]
-[e :U 1530 ]
-[e = _TXREG1 -> -> 101 `ui `uc ]
-[e $U 1531  ]
-[e :U 1532 ]
-[e :U 1531 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1532  ]
-[e :U 1533 ]
-[; ;T4.c: 82: while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
+[e $U 1443  ]
+[e :U 1444 ]
+[e :U 1443 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1444  ]
+[e :U 1445 ]
+[e = _TXREG1 -> -> 116 `ui `uc ]
+[e $U 1446  ]
+[e :U 1447 ]
+[e :U 1446 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1447  ]
+[e :U 1448 ]
+[; ;T4.c: 82: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
 "82
-[e $U 1534  ]
-[e :U 1535 ]
-[e :U 1534 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1535  ]
-[e :U 1536 ]
+[e $U 1449  ]
+[e :U 1450 ]
+[e :U 1449 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1450  ]
+[e :U 1451 ]
+[e = _TXREG1 -> -> 101 `ui `uc ]
+[e $U 1452  ]
+[e :U 1453 ]
+[e :U 1452 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1453  ]
+[e :U 1454 ]
+[; ;T4.c: 83: while (PIR1bits.TX1IF==0); TXREG1='s';while (TXSTA1bits.TRMT==0);
+"83
+[e $U 1455  ]
+[e :U 1456 ]
+[e :U 1455 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1456  ]
+[e :U 1457 ]
+[e = _TXREG1 -> -> 115 `ui `uc ]
+[e $U 1458  ]
+[e :U 1459 ]
+[e :U 1458 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1459  ]
+[e :U 1460 ]
+[; ;T4.c: 84: while (PIR1bits.TX1IF==0); TXREG1='s';while (TXSTA1bits.TRMT==0);
+"84
+[e $U 1461  ]
+[e :U 1462 ]
+[e :U 1461 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1462  ]
+[e :U 1463 ]
+[e = _TXREG1 -> -> 115 `ui `uc ]
+[e $U 1464  ]
+[e :U 1465 ]
+[e :U 1464 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1465  ]
+[e :U 1466 ]
+[; ;T4.c: 85: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
+"85
+[e $U 1467  ]
+[e :U 1468 ]
+[e :U 1467 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1468  ]
+[e :U 1469 ]
+[e = _TXREG1 -> -> 101 `ui `uc ]
+[e $U 1470  ]
+[e :U 1471 ]
+[e :U 1470 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1471  ]
+[e :U 1472 ]
+[; ;T4.c: 86: while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
+"86
+[e $U 1473  ]
+[e :U 1474 ]
+[e :U 1473 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1474  ]
+[e :U 1475 ]
 [e = _TXREG1 -> -> 61 `ui `uc ]
+[e $U 1476  ]
+[e :U 1477 ]
+[e :U 1476 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1477  ]
+[e :U 1478 ]
+[; ;T4.c: 87: write_number(vitesseReel);
+"87
+[e ( _write_number (1 -> _vitesseReel `*uc ]
+[; ;T4.c: 88: new_line();
+"88
+[e ( _new_line ..  ]
+[; ;T4.c: 90: while (PIR1bits.TX1IF==0); TXREG1='B';while (TXSTA1bits.TRMT==0);
+"90
+[e $U 1479  ]
+[e :U 1480 ]
+[e :U 1479 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1480  ]
+[e :U 1481 ]
+[e = _TXREG1 -> -> 66 `ui `uc ]
+[e $U 1482  ]
+[e :U 1483 ]
+[e :U 1482 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1483  ]
+[e :U 1484 ]
+[; ;T4.c: 91: while (PIR1bits.TX1IF==0); TXREG1='a';while (TXSTA1bits.TRMT==0);
+"91
+[e $U 1485  ]
+[e :U 1486 ]
+[e :U 1485 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1486  ]
+[e :U 1487 ]
+[e = _TXREG1 -> -> 97 `ui `uc ]
+[e $U 1488  ]
+[e :U 1489 ]
+[e :U 1488 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1489  ]
+[e :U 1490 ]
+[; ;T4.c: 92: while (PIR1bits.TX1IF==0); TXREG1='t';while (TXSTA1bits.TRMT==0);
+"92
+[e $U 1491  ]
+[e :U 1492 ]
+[e :U 1491 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1492  ]
+[e :U 1493 ]
+[e = _TXREG1 -> -> 116 `ui `uc ]
+[e $U 1494  ]
+[e :U 1495 ]
+[e :U 1494 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1495  ]
+[e :U 1496 ]
+[; ;T4.c: 93: while (PIR1bits.TX1IF==0); TXREG1='t';while (TXSTA1bits.TRMT==0);
+"93
+[e $U 1497  ]
+[e :U 1498 ]
+[e :U 1497 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1498  ]
+[e :U 1499 ]
+[e = _TXREG1 -> -> 116 `ui `uc ]
+[e $U 1500  ]
+[e :U 1501 ]
+[e :U 1500 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1501  ]
+[e :U 1502 ]
+[; ;T4.c: 94: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
+"94
+[e $U 1503  ]
+[e :U 1504 ]
+[e :U 1503 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1504  ]
+[e :U 1505 ]
+[e = _TXREG1 -> -> 101 `ui `uc ]
+[e $U 1506  ]
+[e :U 1507 ]
+[e :U 1506 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1507  ]
+[e :U 1508 ]
+[; ;T4.c: 95: while (PIR1bits.TX1IF==0); TXREG1='r';while (TXSTA1bits.TRMT==0);
+"95
+[e $U 1509  ]
+[e :U 1510 ]
+[e :U 1509 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1510  ]
+[e :U 1511 ]
+[e = _TXREG1 -> -> 114 `ui `uc ]
+[e $U 1512  ]
+[e :U 1513 ]
+[e :U 1512 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1513  ]
+[e :U 1514 ]
+[; ;T4.c: 96: while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
+"96
+[e $U 1515  ]
+[e :U 1516 ]
+[e :U 1515 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1516  ]
+[e :U 1517 ]
+[e = _TXREG1 -> -> 105 `ui `uc ]
+[e $U 1518  ]
+[e :U 1519 ]
+[e :U 1518 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1519  ]
+[e :U 1520 ]
+[; ;T4.c: 97: while (PIR1bits.TX1IF==0); TXREG1='e';while (TXSTA1bits.TRMT==0);
+"97
+[e $U 1521  ]
+[e :U 1522 ]
+[e :U 1521 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1522  ]
+[e :U 1523 ]
+[e = _TXREG1 -> -> 101 `ui `uc ]
+[e $U 1524  ]
+[e :U 1525 ]
+[e :U 1524 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1525  ]
+[e :U 1526 ]
+[; ;T4.c: 98: while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
+"98
+[e $U 1527  ]
+[e :U 1528 ]
+[e :U 1527 ]
+[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1528  ]
+[e :U 1529 ]
+[e = _TXREG1 -> -> 61 `ui `uc ]
+[e $U 1530  ]
+[e :U 1531 ]
+[e :U 1530 ]
+[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1531  ]
+[e :U 1532 ]
+[; ;T4.c: 99: write_number(batterieReel);
+"99
+[e ( _write_number (1 -> _batterieReel `*uc ]
+[; ;T4.c: 100: new_line();
+"100
+[e ( _new_line ..  ]
+[; ;T4.c: 116: }
+"116
+[e :UE 1358 ]
+}
+"119
+[v _tache4 `(v ~T0 @X0 1 ef ]
+{
+[; ;T4.c: 118: void tache4()
+[; ;T4.c: 119: {
+[e :U _tache4 ]
+[f ]
+"120
+[v _a `ui ~T0 @X0 1 a ]
+[; ;T4.c: 120: unsigned int a;
+[; ;T4.c: 121: while(1)
+"121
+[e :U 1535 ]
+[; ;T4.c: 122: {
+"122
+{
+[; ;T4.c: 123: P(2);
+"123
+[e ( _P (1 -> -> 2 `i `uc ]
+[; ;T4.c: 124: while(RXTX_libre==0);
+"124
 [e $U 1537  ]
 [e :U 1538 ]
 [e :U 1537 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1538  ]
+[e $ == -> _RXTX_libre `i -> 0 `i 1538  ]
 [e :U 1539 ]
-[; ;T4.c: 83: while (PIR1bits.TX1IF==0); TXREG1=batterieReel;while (TXSTA1bits.TRMT==0);
-"83
-[e $U 1540  ]
-[e :U 1541 ]
-[e :U 1540 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1541  ]
-[e :U 1542 ]
-[e = _TXREG1 _batterieReel ]
-[e $U 1543  ]
-[e :U 1544 ]
-[e :U 1543 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1544  ]
-[e :U 1545 ]
-[; ;T4.c: 84: new_line();
-"84
-[e ( _new_line ..  ]
-[; ;T4.c: 86: while (PIR1bits.TX1IF==0); TXREG1='U';while (TXSTA1bits.TRMT==0);
-"86
-[e $U 1546  ]
-[e :U 1547 ]
-[e :U 1546 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1547  ]
-[e :U 1548 ]
-[e = _TXREG1 -> -> 85 `ui `uc ]
-[e $U 1549  ]
-[e :U 1550 ]
-[e :U 1549 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1550  ]
-[e :U 1551 ]
-[; ;T4.c: 87: while (PIR1bits.TX1IF==0); TXREG1='t';while (TXSTA1bits.TRMT==0);
-"87
-[e $U 1552  ]
-[e :U 1553 ]
-[e :U 1552 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1553  ]
-[e :U 1554 ]
-[e = _TXREG1 -> -> 116 `ui `uc ]
-[e $U 1555  ]
-[e :U 1556 ]
-[e :U 1555 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1556  ]
-[e :U 1557 ]
-[; ;T4.c: 88: while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
-"88
-[e $U 1558  ]
-[e :U 1559 ]
-[e :U 1558 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1559  ]
-[e :U 1560 ]
-[e = _TXREG1 -> -> 105 `ui `uc ]
-[e $U 1561  ]
-[e :U 1562 ]
-[e :U 1561 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1562  ]
-[e :U 1563 ]
-[; ;T4.c: 89: while (PIR1bits.TX1IF==0); TXREG1='l';while (TXSTA1bits.TRMT==0);
-"89
-[e $U 1564  ]
-[e :U 1565 ]
-[e :U 1564 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1565  ]
-[e :U 1566 ]
-[e = _TXREG1 -> -> 108 `ui `uc ]
-[e $U 1567  ]
-[e :U 1568 ]
-[e :U 1567 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1568  ]
-[e :U 1569 ]
-[; ;T4.c: 90: while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
-"90
-[e $U 1570  ]
-[e :U 1571 ]
-[e :U 1570 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1571  ]
-[e :U 1572 ]
-[e = _TXREG1 -> -> 105 `ui `uc ]
-[e $U 1573  ]
-[e :U 1574 ]
-[e :U 1573 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1574  ]
-[e :U 1575 ]
-[; ;T4.c: 91: while (PIR1bits.TX1IF==0); TXREG1='s';while (TXSTA1bits.TRMT==0);
-"91
-[e $U 1576  ]
-[e :U 1577 ]
-[e :U 1576 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1577  ]
-[e :U 1578 ]
-[e = _TXREG1 -> -> 115 `ui `uc ]
-[e $U 1579  ]
-[e :U 1580 ]
-[e :U 1579 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1580  ]
-[e :U 1581 ]
-[; ;T4.c: 92: while (PIR1bits.TX1IF==0); TXREG1='a';while (TXSTA1bits.TRMT==0);
-"92
-[e $U 1582  ]
-[e :U 1583 ]
-[e :U 1582 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1583  ]
-[e :U 1584 ]
-[e = _TXREG1 -> -> 97 `ui `uc ]
-[e $U 1585  ]
-[e :U 1586 ]
-[e :U 1585 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1586  ]
-[e :U 1587 ]
-[; ;T4.c: 93: while (PIR1bits.TX1IF==0); TXREG1='t';while (TXSTA1bits.TRMT==0);
-"93
-[e $U 1588  ]
-[e :U 1589 ]
-[e :U 1588 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1589  ]
-[e :U 1590 ]
-[e = _TXREG1 -> -> 116 `ui `uc ]
-[e $U 1591  ]
-[e :U 1592 ]
-[e :U 1591 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1592  ]
-[e :U 1593 ]
-[; ;T4.c: 94: while (PIR1bits.TX1IF==0); TXREG1='i';while (TXSTA1bits.TRMT==0);
-"94
-[e $U 1594  ]
-[e :U 1595 ]
-[e :U 1594 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1595  ]
-[e :U 1596 ]
-[e = _TXREG1 -> -> 105 `ui `uc ]
-[e $U 1597  ]
-[e :U 1598 ]
-[e :U 1597 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1598  ]
-[e :U 1599 ]
-[; ;T4.c: 95: while (PIR1bits.TX1IF==0); TXREG1='o';while (TXSTA1bits.TRMT==0);
-"95
-[e $U 1600  ]
-[e :U 1601 ]
-[e :U 1600 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1601  ]
-[e :U 1602 ]
-[e = _TXREG1 -> -> 111 `ui `uc ]
-[e $U 1603  ]
-[e :U 1604 ]
-[e :U 1603 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1604  ]
-[e :U 1605 ]
-[; ;T4.c: 96: while (PIR1bits.TX1IF==0); TXREG1='n';while (TXSTA1bits.TRMT==0);
-"96
-[e $U 1606  ]
-[e :U 1607 ]
-[e :U 1606 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1607  ]
-[e :U 1608 ]
-[e = _TXREG1 -> -> 110 `ui `uc ]
-[e $U 1609  ]
-[e :U 1610 ]
-[e :U 1609 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1610  ]
-[e :U 1611 ]
-[; ;T4.c: 97: while (PIR1bits.TX1IF==0); TXREG1='=';while (TXSTA1bits.TRMT==0);
-"97
-[e $U 1612  ]
-[e :U 1613 ]
-[e :U 1612 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1613  ]
-[e :U 1614 ]
-[e = _TXREG1 -> -> 61 `ui `uc ]
-[e $U 1615  ]
-[e :U 1616 ]
-[e :U 1615 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1616  ]
-[e :U 1617 ]
-[; ;T4.c: 98: while (PIR1bits.TX1IF==0); TXREG1=machine_use_time;while (TXSTA1bits.TRMT==0);
-"98
-[e $U 1618  ]
-[e :U 1619 ]
-[e :U 1618 ]
-[e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 1619  ]
-[e :U 1620 ]
-[e = _TXREG1 -> _machine_use_time `uc ]
-[e $U 1621  ]
-[e :U 1622 ]
-[e :U 1621 ]
-[e $ == -> . . _TXSTA1bits 0 1 `i -> 0 `i 1622  ]
-[e :U 1623 ]
-[; ;T4.c: 99: new_line();
-"99
-[e ( _new_line ..  ]
-[; ;T4.c: 100: }
-"100
-[e :UE 1347 ]
-}
-"103
-[v _tache4 `(v ~T0 @X0 1 ef ]
-{
-[; ;T4.c: 102: void tache4()
-[; ;T4.c: 103: {
-[e :U _tache4 ]
-[f ]
-"104
-[v _a `ui ~T0 @X0 1 a ]
-[; ;T4.c: 104: unsigned int a;
-[; ;T4.c: 105: while(1)
-"105
-[e :U 1626 ]
-[; ;T4.c: 106: {
-"106
-{
-[; ;T4.c: 107: P(2);
-"107
-[e ( _P (1 -> -> 2 `i `uc ]
-[; ;T4.c: 108: while(RXTX_libre==0);
-"108
-[e $U 1628  ]
-[e :U 1629 ]
-[e :U 1628 ]
-[e $ == -> _RXTX_libre `i -> 0 `i 1629  ]
-[e :U 1630 ]
-[; ;T4.c: 109: RXTX_libre=0;
-"109
+[; ;T4.c: 125: RXTX_libre=0;
+"125
 [e = _RXTX_libre -> -> 0 `i `uc ]
-[; ;T4.c: 111: clear_term();
-"111
+[; ;T4.c: 127: clear_term();
+"127
 [e ( _clear_term ..  ]
-[; ;T4.c: 112: write_title();
-"112
+[; ;T4.c: 128: write_title();
+"128
 [e ( _write_title ..  ]
-[; ;T4.c: 113: new_line();
-"113
+[; ;T4.c: 129: new_line();
+"129
 [e ( _new_line ..  ]
-[; ;T4.c: 114: data();
-"114
+[; ;T4.c: 130: data();
+"130
 [e ( _data ..  ]
-[; ;T4.c: 116: RXTX_libre=1;
-"116
+[; ;T4.c: 132: RXTX_libre=1;
+"132
 [e = _RXTX_libre -> -> 1 `i `uc ]
-[; ;T4.c: 117: V(2);
-"117
+[; ;T4.c: 133: V(2);
+"133
 [e ( _V (1 -> -> 2 `i `uc ]
-[; ;T4.c: 118: for (a=0;a<65000;a++)
-"118
+[; ;T4.c: 134: for (a=0;a<65000;a++)
+"134
 {
 [e = _a -> -> 0 `i `ui ]
-[e $ < -> _a `l -> 65000 `l 1631  ]
-[e $U 1632  ]
-"119
-[e :U 1631 ]
-[; ;T4.c: 119: ;
-"118
+[e $ < -> _a `l -> 65000 `l 1540  ]
+[e $U 1541  ]
+"135
+[e :U 1540 ]
+[; ;T4.c: 135: ;
+"134
 [e ++ _a -> -> 1 `i `ui ]
-[e $ < -> _a `l -> 65000 `l 1631  ]
-[e :U 1632 ]
-"119
+[e $ < -> _a `l -> 65000 `l 1540  ]
+[e :U 1541 ]
+"135
 }
-[; ;T4.c: 120: for (a=0;a<65000;a++)
-"120
+[; ;T4.c: 136: for (a=0;a<65000;a++)
+"136
 {
 [e = _a -> -> 0 `i `ui ]
-[e $ < -> _a `l -> 65000 `l 1634  ]
-[e $U 1635  ]
-"121
-[e :U 1634 ]
-[; ;T4.c: 121: ;
-"120
+[e $ < -> _a `l -> 65000 `l 1543  ]
+[e $U 1544  ]
+"137
+[e :U 1543 ]
+[; ;T4.c: 137: ;
+"136
 [e ++ _a -> -> 1 `i `ui ]
-[e $ < -> _a `l -> 65000 `l 1634  ]
-[e :U 1635 ]
+[e $ < -> _a `l -> 65000 `l 1543  ]
+[e :U 1544 ]
+"137
+}
+"138
+}
+[e :U 1534 ]
 "121
-}
-"122
-}
-[e :U 1625 ]
-"105
-[e $U 1626  ]
-[e :U 1627 ]
-[; ;T4.c: 122: }
-[; ;T4.c: 123: }
-"123
-[e :UE 1624 ]
+[e $U 1535  ]
+[e :U 1536 ]
+[; ;T4.c: 138: }
+[; ;T4.c: 139: }
+"139
+[e :UE 1533 ]
 }
